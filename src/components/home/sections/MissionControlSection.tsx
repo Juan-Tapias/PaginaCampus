@@ -11,6 +11,7 @@ export default function MissionControlSection() {
   const [isClient, setIsClient] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showTour, setShowTour] = useState(false);
+  const [hasLocked, setHasLocked] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -31,16 +32,14 @@ export default function MissionControlSection() {
   if (!isClient) return null;
 
   return (
-    <section className="relative w-full bg-transparent pt-12 pb-12 overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10 min-h-[700px] flex flex-col justify-center">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-center relative z-20">
-
+    <>
+    <section className="relative w-full min-h-screen bg-transparent overflow-hidden">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ amount: 0.99, once: true }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_0_80px_rgba(62,216,150,0.1)] border border-white/10 group"
+            className="relative w-full h-screen overflow-hidden shadow-[0_0_80px_rgba(62,216,150,0.1)] border border-white/10 group"
           >
             <video 
               ref={videoRef}
@@ -83,10 +82,13 @@ export default function MissionControlSection() {
                 </AnimatePresence>
               </motion.button>
             </div>
-
-            {/* Overlay sutil para integración visual */}
             <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-transparent pointer-events-none opacity-60" />
           </motion.div>
+    </section>
+      <div className="container mx-auto px-4 relative z-10 min-h-[700px] flex flex-col justify-center">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-center relative z-20">
+
 
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.p
@@ -159,6 +161,6 @@ export default function MissionControlSection() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </>
   );
 }
