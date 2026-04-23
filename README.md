@@ -1,75 +1,66 @@
-# React + TypeScript + Vite
+# Campuslands Recruitment Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma interactiva de reclutamiento y exhibición de talento tecnológico para Campuslands. Este proyecto combina una arquitectura moderna de frontend con experiencias inmersivas en tres dimensiones.
 
-Currently, two official plugins are available:
+## Arquitectura Tecnológica
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El ecosistema está construido sobre las siguientes tecnologías principales:
 
-## React Compiler
+*   **Framework**: Next.js 14 con App Router para una navegación optimizada y SEO.
+*   **Renderizado 3D**: Three.js integrado mediante React Three Fiber y Drei para modelos interactivos.
+*   **Animaciones**: Framer Motion para transiciones de interfaz y estados visuales fluidos.
+*   **Estilos**: Tailwind CSS con un sistema de diseño basado en glassmorphism y estética espacial.
+*   **Infraestructura de Activos**: Firebase Storage para la gestión de modelos 3D, videos y activos pesados, reduciendo el peso del repositorio.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Estructura de Datos
 
-Note: This will impact Vite dev & build performances.
+El contenido de la plataforma está centralizado en un sistema de diccionarios JSON ubicado en:
+`src/data/es.json`
 
-## Expanding the ESLint configuration
+Este archivo controla:
+*   Textos y etiquetas de navegación.
+*   Rutas de acceso a modelos 3D en la nube.
+*   Configuración del tour virtual y hotspots.
+*   Información de aliados estratégicos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Configuración y Desarrollo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Requisitos Previos
+*   Node.js (versión 18 o superior)
+*   Firebase CLI (para despliegues)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalación de Dependencias
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Ejecución en Entorno Local
+```bash
+npm run dev
 ```
+
+### Proceso de Construcción
+```bash
+npm run build
+```
+
+## Despliegue en Producción
+
+La plataforma está optimizada para ser desplegada en Firebase Hosting.
+
+1. Genere el paquete de producción:
+```bash
+npm run build
+```
+
+2. Ejecute el despliegue:
+```bash
+firebase deploy
+```
+
+## Optimización de Activos
+
+Para mantener un rendimiento óptimo, todos los activos multimedia superiores a 5MB deben ser alojados en Firebase Storage. Las referencias locales en el código deben ser actualizadas en el archivo de datos central para reflejar las URLs públicas del almacenamiento en la nube.
+
+---
+Campuslands // Base Location: Orbit Talent Platform

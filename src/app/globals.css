@@ -22,6 +22,11 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 263.4 70% 50.4%;
+}
+
+html, body {
+  background-color: #090A0F;
+  overscroll-behavior: none;
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
