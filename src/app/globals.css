@@ -24,11 +24,16 @@
   --ring: 263.4 70% 50.4%;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   background-color: #090A0F;
-  overscroll-behavior: none;
+  color: white;
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 @keyframes twinkle {
