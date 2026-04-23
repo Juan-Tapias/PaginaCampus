@@ -1,0 +1,349 @@
+{
+  "navbar": {
+    "logo": "campuslands",
+    "links": [
+      "INICIO",
+      "SÉ UN CAMPER",
+      "PARTNERS",
+      "FULL SERVICE"
+    ],
+    "action_button": "Contactar"
+  },
+  "status_badge": {
+    "status": "ABIERTA",
+    "text": "ÓRBITA TALENT: ABIERTA"
+  },
+  "hero_content": {
+    "background_element": "Código de programación difuminado simulando una consola",
+    "main_image": "Astronauta con un parche de la bandera de Colombia",
+    "heading": "Forjando el software que el futuro demanda.",
+    "subheading": "Campuslands: El ecosistema de alto rendimiento para la próxima generación de ingenieros.",
+    "call_to_actions": [
+      {
+        "text": "INICIA TU MISIÓN",
+        "type": "primary",
+        "color": "purple"
+      },
+      {
+        "text": "RECLUTA TALENTO",
+        "type": "secondary",
+        "style": "outline"
+      }
+    ]
+  },
+  "mission_control":{
+    "heading": "Módulos de aprendizaje",
+    "subheading": "Pilares Operativos",
+    "description": "Programas intensivos diseñados para triunfar en las industria tecnologica",
+    "cards": [
+      {
+        "title": "Programación",
+        "description": "Desde fundamentos hasta herramientas avanzadas, prepárate para los desafíos de la industria.",
+        "link": "<QUIERO SER CAMPER />"
+      },
+      {
+        "title": "Inglés",
+        "description": "Domina el idioma global y amplía tus oportunidades para colaborar con equipos internacionales.",
+        "link": "<QUIERO SER CAMPER />"
+      },
+      {
+        "title": "Habilidades socioemocionales",
+        "description": "Desarrolla el liderazgo, la comunicación y el trabajo en equipo, habilidades clave que las empresas Tech buscan hoy.",
+        "link": "<QUIERO SER CAMPER />"
+      }
+    ]
+  },
+  "strategic_partners":{
+    "heading": "Nuestros aliados estratégicos",
+    "subheading": "Ecosistema de Alianzas",
+    "description": "Estas empresas ya contratan y patrocinan talento Campuslands.",
+      "companies": [
+        { "name": "2nv", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.webp?alt=media", "type": "partner" },
+        { "name": "Aliaddo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.webp?alt=media", "type": "partner" },
+        { "name": "Amaris", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.webp?alt=media", "type": "partner" },
+        { "name": "Applus", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.webp?alt=media", "type": "partner" },
+        { "name": "Conexalab", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.webp?alt=media", "type": "main" },
+        { "name": "Construsoft", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConstrusoft.webp?alt=media", "type": "partner" },
+        { "name": "Cure Latam", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.webp?alt=media", "type": "partner" },
+        { "name": "Denario", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.webp?alt=media", "type": "partner" },
+        { "name": "Essa", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.webp?alt=media", "type": "partner" },
+        { "name": "Foscal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.webp?alt=media", "type": "partner" },
+        { "name": "Galapago", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.webp?alt=media", "type": "partner" },
+        { "name": "Globant", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.webp?alt=media", "type": "partner" },
+        { "name": "Grafo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.webp?alt=media", "type": "partner" },
+        { "name": "Mantis", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmantis.webp?alt=media", "type": "partner" },
+        { "name": "Mbc", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.webp?alt=media", "type": "partner" },
+        { "name": "Planetalp", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetaIp.webp?alt=media", "type": "partner" },
+        { "name": "PrismHr", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.webp?alt=media", "type": "partner" },
+        { "name": "SIO", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSIO.webp?alt=media", "type": "partner" },
+        { "name": "Solvo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.webp?alt=media", "type": "partner" },
+        { "name": "Syscom", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.webp?alt=media", "type": "partner" },
+        { "name": "TecnoEduca", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.webp?alt=media", "type": "partner" },
+        { "name": "Todosistemas", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodosistemas.webp?alt=media", "type": "partner" },
+        { "name": "Wiedii", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwiedii.webp?alt=media", "type": "partner" },
+        { "name": "Xrm", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.webp?alt=media", "type": "partner" },
+        { "name": "Alpes Solutionn", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.webp?alt=media", "type": "partner" },
+        { "name": "Arcetec", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Farcetec.webp?alt=media", "type": "partner" },
+        { "name": "Copower", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.webp?alt=media", "type": "partner" },
+        { "name": "Dataglobbal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.webp?alt=media", "type": "partner" },
+        { "name": "Digital Process", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.webp?alt=media", "type": "partner" },
+        { "name": "Disfarma", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.webp?alt=media", "type": "partner" },
+        { "name": "Electro Software", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FElectro%20Software.webp?alt=media", "type": "partner" },
+        { "name": "Facilpos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.webp?alt=media", "type": "partner" },
+        { "name": "Factura Powered by Detecno", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFactura%20Powered%20by%20detecno.webp?alt=media", "type": "partner" },
+        { "name": "Inncube", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FInncube.webp?alt=media", "type": "partner" },
+        { "name": "Iridian", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIridian.webp?alt=media", "type": "partner" },
+        { "name": "IvoLegal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIvoLegal.webp?alt=media", "type": "partner" },
+        { "name": "Kontrol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FKontrol.webp?alt=media", "type": "partner" },
+        { "name": "La Esmeralda", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.webp?alt=media", "type": "partner" },
+        { "name": "Lechecol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLechecol.webp?alt=media", "type": "partner" },
+        { "name": "Macondo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmacondo.webp?alt=media", "type": "partner" },
+        { "name": "Masabi", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.webp?alt=media", "type": "partner" },
+        { "name": "Pensemos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPensemos.webp?alt=media", "type": "partner" },
+        { "name": "Pix Robotics", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.webp?alt=media", "type": "partner" },
+        { "name": "Qnt", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.webp?alt=media", "type": "partner" },
+        { "name": "Quibor", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQuibor.webp?alt=media", "type": "partner" },
+        { "name": "Sistemas y Computadores", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSistemas%20y%20computadores.webp?alt=media", "type": "partner" },
+        { "name": "SmartData", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.webp?alt=media", "type": "partner" },
+        { "name": "Software Medico", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.webp?alt=media", "type": "partner" },
+        { "name": "Vensure", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.webp?alt=media", "type": "partner" },
+        { "name": "Wmwise", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media", "type": "partner" }
+      ]
+  },
+  "models_3d": {
+    "orbit_run": "/3Dmodels/orbit_run_fast_draco.glb",
+    "moon": "/3Dmodels/moon.webp",
+    "orbit_head": "/3Dmodels/orbit_cara_optimized.glb"
+  },
+  "tour_virtual": {
+    "loading_text": "Cargando Entorno...",
+    "instruction_text": "Usa el cursor para explorar tu entorno",
+    "status_prefix": "En línea:",
+    "views": {
+      "frontal": {
+        "name": "Salón Principal",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFrontal.webp?alt=media",
+        "links": [
+          { "key": "lateral-izquierdo", "label": "Lateral izquierdo", "position": { "x": 15, "y": 60 }, "direction": "left" },
+          { "key": "lateral-derecho", "label": "Lateral derecho", "position": { "x": 82, "y": 60 }, "direction": "right" }
+        ]
+      },
+      "lateral-izquierdo": {
+        "name": "Lateral izquierdo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralzquierdo.webp?alt=media",
+        "links": [
+          { "key": "fondo", "label": "Explorar el Fondo", "position": { "x": 30, "y": 40 }, "direction": "forward" },
+          { "key": "frontal", "label": "Volver al Inicio", "position": { "x": 85, "y": 65 }, "direction": "right" }
+        ]
+      },
+      "lateral-derecho": {
+        "name": "Lateral derecho",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralDerecho.webp?alt=media",
+        "links": [
+          { "key": "frontal", "label": "Volver al Inicio", "position": { "x": 15, "y": 65 }, "direction": "left" },
+          { "key": "fondo", "label": "Ir al Fondo", "position": { "x": 70, "y": 40 }, "direction": "forward" }
+        ]
+      },
+      "fondo": {
+        "name": "Fondo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFondo.webp?alt=media",
+        "links": [
+          { "key": "lateral-derecho", "label": "lateral derecho", "position": { "x": 25, "y": 55 }, "direction": "left" },
+          { "key": "lateral-izquierdo", "label": "lateral izquierdo", "position": { "x": 75, "y": 55 }, "direction": "right" },
+          { "key": "frontal", "label": "Regresar al Inicio", "position": { "x": 50, "y": 80 }, "direction": "forward" }
+        ]
+      }
+    }
+  },
+  "orbit_chat": {
+    "system_name": "ÓRBIT CONSOLE v1.0",
+    "greeting": "Hola, Soy Órbit,\n¡Estoy aquí para ayudarte!",
+    "placeholder": "Escribe tu mensaje...",
+    "typing_indicator": "Órbit está escribiendo...",
+    "empty_state": "SIN MENSAJES PREVIOS. INICIE CONEXIÓN...",
+    "ui": {
+      "heading": "Pregúntale a Órbit.",
+      "subheading": "CHATBOT AGENT | INFORMATION CAMPBASE",
+      "description": "¿Tienes alguna duda? Órbit está listo para responder a cualquier pregunta que tengas sobre nuestros programas.",
+      "cta_button": "Iniciar chat",
+      "input_label": "HACER PREGUNTA"
+    }
+  },
+  "footer": {
+    "mission_control": {
+      "heading": "Conoce nuestras instalaciones",
+      "description": "Visita nuestras sedes y descubre cómo Campuslands está transformando el talento tech a nivel continental.",
+      "cta_button": "Agendar visita",
+      "cta_button_2": "Tour Virtual",
+      "video_url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
+      "badge": "BASE LOCATION | COORDENATES"
+    },
+    "social_heading": "Más detalles de nuestra misión en redes",
+    "social_links": [
+      { "name": "INSTAGRAM", "url": "https://www.instagram.com/campuslands/", "icon": "/icons/Instagram.svg" },
+      { "name": "TIKTOK", "url": "https://www.tiktok.com/@campuslands", "icon": "/icons/Tiktok.svg" },
+      { "name": "LINKEDIN", "url": "https://www.linkedin.com/school/campuslands/", "icon": "/icons/LinkedIn.svg" },
+      { "name": "FACEBOOK", "url": "https://www.facebook.com/campuslands", "icon": "/icons/Facebook.svg" }
+    ],
+    "legal": {
+      "privacy": "Politicas de Tratamiento de datos personales",
+      "terms": "Términos y condiciones",
+      "copyright": "© 2026 CAMPUSLANDS // ALL RIGHTS RESERVED"
+    }
+  },
+  "privacy_policy": {
+    "title": "Políticas de Privacidad y Tratamiento de Datos",
+    "back_button": "Volver",
+    "sections": [
+      "INTRODUCCIÓN",
+      "1. ALCANCE DE LA POLÍTICA",
+      "2. FINALIDADES DEL TRATAMIENTO DE LA INFORMACIÓN SEGÚN LAS BASES DE DATOS",
+      "3. TRATAMIENTO DE DATOS PERSONALES",
+      "4. AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES Y MEDIDAS DE SEGURIDAD",
+      "5. DEBERES DE LAS PARTES INVOLUCRADAS EN EL TRATAMIENTO DE LA INFORMACIÓN",
+      "6. DERECHOS DE LOS TITULARES Y PROCEDIMIENTOS PARA EL EJERCICIO DEL DERECHO DE HÁBEAS DATA",
+      "7. DISPOSICIONES FINALES PARA EL CUMPLIMIENTO DE LA POLÍTICA"
+    ],
+    "content": [
+      { "title": "INTRODUCCIÓN",
+        "text": "En cumplimiento a lo dispuesto en la Ley 1581 de 2012 y su Decreto Reglamentario 1377 de 2013, CAMPUSLANDS S.A.S. BIC reconoce la importancia de salvaguardar la información personal de los estudiantes, docentes, colaboradores y padres de familia, al tiempo que reconoce su compromiso con las prácticas comerciales responsables y éticas.\n\nEsta Política de Tratamiento de Datos Personales evidencia el crecimiento empresarial responsable, al igual que nuestra obediencia a las disposiciones legales establecidas, con la finalidad garantizar nuestro compromiso con la seguridad y privacidad de datos del público en general con quienes podamos llegar a tener algún tipo de interacción en sentido general.\n\nCAMPUSLANDS S.A.S. BIC comprende que los datos personales deben ser administrados con extremo cuidado dado su valor, es por ello que se establece la presente política por medio de la cual se dictan los parámetros a través de los cuales se recopilará, almacenará, procesará, transferirá y se eliminarán los datos personales.\n\nLa sinergia entre nuestra labor educativa y nuestros intereses empresariales se materializa en nuestra voluntad de no solo cumplir con las leyes y regulaciones pertinentes en materia de protección de datos, sino también de educar a nuestra comunidad y colaboradores sobre la importancia de la privacidad y la seguridad en un mundo digitalizado." },
+       {"title":"1. ALCANCE DE LA POLÍTICA",
+        "subtitle":"1.1. RESPONSABLE DEL TRATAMIENTO DE DATOS PERSONALES",
+        "text":"CAMPUSLANDS S.A.S. BIC, en adelante, Campuslands, institución privada de carácter social, con NIT 901.628.406-1, actuando como responsable de la información y en cumplimiento de la Ley de protección de Datos personales 1581 de 2012 y sus decretos reglamentarios, se identifica a través de los siguientes datos:\n\nPERSONERÍA JURÍDICA: Reconocida mediante registro de matrícula el 31 de agosto de 2022 por Cámara de Comercio de Bucaramanga.\n\nDOMICILIO PRINCIPAL: Edificio Zenith Piso 6 – Zona Franca Santander - Floridablanca\n\nTELÉFONO: 3118807659\n\nCORREO ELECTRÓNICO: contacto@Campuslands.com\n\nPÁGINA WEB: www.Campuslands.com"
+       },
+       {"title":"1.2. DEFINICIONES",
+        "text":"Para el desarrollo e implementación de esta política, Campuslands adopta las definiciones establecidas en la Ley 1581 de 2012 y el capítulo I del Decreto 1377 de 2013, para una comprensión adecuada de la presente política:\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
+       },
+       {"title":"1.3. PRINCIPIOS PARA EL TRATAMIENTO DE DATOS PERSONALES",
+        "text":"Principio de legalidad en materia de tratamiento de datos: Campuslands busca garantizar el cumplimiento de la normatividad de protección de datos personales, estableciendo obligaciones y procedimientos para sus empleados, proveedores, estudiantes, profesores y demás partes interesadas de la institución./Principio de finalidad: El tratamiento de datos personales que realiza Campuslands está sometida y atiende una finalidad legítima, la cual es informada al respectivo titular de los datos personales en el momento de la recolección de su información./nPrincipio de libertad: El tratamiento de datos personales solo puede efectuarse con el consentimiento, previo, expreso e informado del titular. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización, o en ausencia de mandato legal o judicial que revele el consentimiento.\nPrincipio de veracidad o calidad: Campuslands internamente ha dispuesto mecanismos de actualización de la información personal, con el propósito que ésta sea veraz, completa, exacta y actualizada.\nPrincipio de transparencia: En cumplimiento de este principio, Campuslands garantiza el derecho del titular a obtener de ésta, en cualquier momento y sin restricciones, información acerca de la existencia de cualquier tipo de información o dato personal que sea de su interés o titularidad.\nPrincipio de acceso y circulación restringida: Campuslands ha dispuesto controles de acceso a la información personal contenida en las bases de datos. También ha dispuesto internamente, mecanismos para que sus funcionarios puedan tener acceso solo a la información que de acuerdo a su cargo deban conocer.\nPrincipio de confidencialidad: Todas y cada una de las personas que interactúen en el tratamiento de datos personales realizado por Campuslands, y que administren, manejen, actualicen o tenga acceso a otro tipo que se encuentre en bases de datos o que sea suministrada en la ejecución y ejercicio de sus funciones se comprometen a conservar y mantener de manera estrictamente confidencial y a no revelarla a terceros.\nPrincipio de responsabilidad demostrada: Campuslands está en capacidad de demostrar ante la Superintendencia de industria y comercio, que ha implementado las obligaciones exigidas por la legislación colombiana en protección de datos personales.\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
+       },
+       {"title":"1.4. OBJETIVO Y ALCANCE DE LA POLÍTICA",
+        "text":"El objetivo principal de la presente política es establecer parámetros claros y consecuentes para el manejo, protección y uso adecuado de los datos personales de estudiantes, proveedores, docentes, personal administrativo y cualquier otra persona que tenga relación con la institución que reposen en bases de datos, archivos físicos y electrónicos.\n\nEl alcance de la política de tratamientos de datos personales abarca todos los procesos, sistemas y actividades relacionadas con la recolección, almacenamiento, uso, circulación, actualización y supresión de datos personales llevadas a cabo por Campuslands."
+      },
+       {"title":"1.5. TITULARES A QUIEN VA DIRIGIDA LA POLÍTICA",
+        "text":"Se entiende por titulares las personas cuyos datos personales son objeto de tratamiento en la institución. La presente política está dirigida a cualquier titular de la información, ya sea actuando en su nombre o como representante legal que, con ocasión, a las actividades para las cuales se encuentre vinculado con la institución, se requiera de su información personal para el desarrollo de las mismas. Entre estos, sin limitarse a: estudiantes inscritos, admitidos, prospectos, egresados, profesores y empleados."
+      },
+       {"title":"1.6. CUMPLIMIENTO NORMATIVO DEL RÉGIMEN DE PROTECCIÓN DE DATOS PERSONALES",
+        "text":"Esta política de tratamiento de datos personales de cumplimiento al régimen de protección de datos personales en Colombia, en especial, los artículo 15 y 20 de la constitución política nacional, la ley 1581 de 2012, el capítulo 25 del decreto 1074 de 2015 y demás normas que la modifiquen, complementen o adicionen."
+      },
+       {"title":"2. FINALIDADES DEL TRATAMIENTO DE LA INFORMACIÓN SEGÚN LAS BASES DE DATOS",
+        "text":"Conforme a la clasificación de los datos personales, establecida en el Registro Nacional de Bases de Datos, los datos personales a los cuales la institución realiza tratamiento son los siguientes:\n\nDatos generales y específicos de identificación de la persona: nombres, apellidos, tipo de identificación, número de identificación, fecha y lugar de expedición, nombre, estado civil, sexo, nacionalidad, lugar y fecha de nacimiento, edad.\nDatos específicos de la identificación de la persona: firma, firma electrónica, otros documentos de identificación, datos de la familia.\nDatos de ubicación relacionados con actividad comercial o profesional de la persona: dirección, teléfono, celular, dirección de correo electrónico.\nDatos socioeconómicos como estrato, propiedad de la vivienda, bienes muebles e inmuebles, ingreso, egresos, inversiones, etc.\nDatos de información tributaria de la persona.\nDatos de información tributaria de la persona.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de nivel educativo, capacitación y/o historial académico de la persona.\nDatos generales relacionados con la afiliación y aportes al sistema integral de seguridad social: EPS, IPS, ARL, AFP, etc.\nDatos de antecedentes judiciales y/o disciplinarios de la persona.\nDatos personales de acceso a sistemas de información: usuarios, IP, claves, perfiles, etc.\nDatos biométricos de la persona: fotografía, voz, videos, etc.\nDatos de la descripción morfológica de la persona: color de piel, color de iris, color y tipo de cabellos, señales particulares, estatura, peso, complexión, etc.\nDatos relacionados con la salud de la persona y su estado incluyendo: resultados de laboratorio, estudios, diagnósticos médicos, psicológicos, psiquiátricos, medicamentos, tratamientos terapéuticos.\nDatos sobre la pertenencia a sindicatos, organizaciones sociales, de derechos humanos, religiosos, políticas, convicciones religiosas, filosóficas o políticas.\nDatos de preferencia, identidad y orientación sexual de la persona, origen étnico-racial.\nDatos sobre población en condición vulnerable.\nDatos sobre personas en situación de discapacidad."
+      },
+      {"title":"2.1. DE LA BASE DE DATOS ESTUDIANTES PROSPECTOS",
+        "text":"Recolección de los datos personales\n\nCampuslands recoge la información de los estudiantes prospectos a través de los canales habilitados por la institución como: Chat, encuestas, formularios, convenios, eventos académicos y culturales, entre otros que se consideren importantes de implementar para esta finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nFinalidades del tratamiento de los datos personales"
+      },
+      {"title":"2.2. BASES DE DATOS INSCRITOS Y ADMITIDOS",
+        "text":"Recolección de datos personales\n\nLa institución recoge información de personas inscritas y admitidas a través de los siguientes medios: formulario de inscripción y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nLa recolección de esta información tiene las siguientes finalidades: La promoción y difusión de programas académicos; el seguimiento del proceso de inscripción y admisión al programa académico de interés, contacto con el prospecto (entrevistas, admitidos y no admitidos); reportes ante entes externos nacionales; la investigación institucional; invitaciones para participar en actividades académicas, científicas o culturales, recepción de información sobre la oferta académica, envío de encuestas para mejoramiento del servicio y fines estadísticos, conocimiento de noticias de interés, así como también para verificar las inscripciones y garantizar espacios de atención a los estudiantes en situación de discapacidad."
+      },
+      {"title":"2.3. BASES DE DATOS ESTUDIANTES",
+        "text":"Recolección de datos personales\n\nCampuslands recolecta información de estudiantes a través de los siguientes medios: sistemas de información de notas, calificaciones académicas, historia académica, hojas de vida con sus respectivos soporte, formularios físicos y digitales de servicios culturales, académicos y de bienestar, encuestas, votaciones, evaluaciones, pruebas diagnósticas, aplicativos web y móviles, video, fotografía, redes sociales, video vigilancia, cookies y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la información personal recolectada por la institución son:\n\nEl seguimiento a la administración académica y la permanencia efectiva de los estudiantes, en línea con las estrategias de la institución sujeta a las disposiciones legales vigentes.\nLa gestión sobre el programa de empleabilidad nacionales e internacionales (remisión de hoja de vida a terceras entidades para tales efectos y afiliación a riesgos laborales), en el caso de nuestros estudiantes.\nGeneración de reportes, informes y estadísticas para gestión interna.\nGestión de evaluación de perfiles para determinar el nivel de reconocimiento por méritos académicos.\nPrestación de servicios académicos y administrativos.\nProgramas de educación no formal.\nInvestigación de conductas de los estudiantes.\nContacto, gestión e información.\nBecas e incentivos.\nFelicitaciones, sugerencias, quejas y reclamos.\nTramites de actividades culturales, deportivas, de prevención y promoción de la salud.\nComunicaciones internas y externas.\nRegistro y control académico.\nEnvió de encuestas para el mejoramiento del servicio y fines estadísticos.\nRevisión de situaciones de violencia, con el propósito de presentar posibles rutas de intervención: psicológica, académica y/o jurídica."
+      },
+      {"title":"2.4. BASE DE DATOS EGRESADOS",
+       "text":"Recolección de datos personales\nLa institución recolecta la información de los egresados a través de los siguientes medios dispuestos durante su estadía en Campuslands como estudiante: sistemas de información de actualización de datos de egresados, formularios virtuales y físicos y otros medios que se estipulen con el tiempo.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de uso por las cuales Campuslands recolecta datos personales de egresados son:\n\nConstrucción y consolidación de canales de comunicación permanente en calidad de egresado.\nPromoción, divulgación y aplicación de ofertas académicas y de empleo.\nGestión de beneficios a través de alianzas, convenios, descuentos en productos y servicios en salud, deporte, recreación, servicios profesionales y publicaciones.\nGestión de la información sobre oferta de educación no formal.\nTodas las actividades que genere la institución dirigida a los egresados en investigación, docencia y extensión, incluyendo las labores de investigación institucional para el mejoramiento continuo de los procesos sustantivos de Campuslands."
+      },
+      {"title":"2.5. BASE DE DATOS DE PROFESORES",
+       "text":"Recolección de datos personales\nCampuslands recolecta información, a través de los siguientes medios: línea telefónica, chat, encuestas, eventos académicos y culturales, hojas de vida y soportes profesionales, correos electrónicos, planillas de asistencia, video vigilancia, sistemas de gestión institucionales y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nContratación.\nEstudio de las hojas de vida.\nVerificación de cumplimiento de disposiciones del reglamento del profesor y demás normas institucionales.\nComunicación con fines de movilidad nacional e internacional, oferta académica.\nDesarrollo profesoral y de la investigación."
+      },
+      {"title":"2.6. BASE DE DATOS EMPLEADOS",
+       "text":"Recolección de datos personales\nCampuslands recolecta información de sus servidores públicos a través de los siguientes medios: sistemas de información de nómina y recursos humanos, contratos, hojas de vida y soportes, sistemas de gestión institucionales, video vigilancia y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nProcesos de selección de personal, capacitación, procesos formativos.\nEstudios de seguridad para el candidato seleccionado.\nContratación y gestión de nómina, gestión de incapacidades, afiliación, actividades de prevención y gestión de la salud.\nExamen médico ocupacional.\nEntrevistas de seguimiento recomendaciones médicas de orden laboral, diagnósticos médicos, incapacidades por accidentes de trabajo, enfermedad laboral, pérdida de capacidad laboral.\nMediciones ambientales, ocupacionales, diagnósticos de salud, encuestas de morbilidad sentida\nCaracterización de la población en niveles de actividad física.\nEjecución de actividades de fotografía, video de vigilancia y seguridad en las instalaciones.\nGestión de recursos para el aprendizaje.\nProgramas de educación no formal.\nLegalización de gastos de viaje."
+      },
+      {"title":"2.7. BASE DE DATOS DE LOS CONTRATISTAS",
+       "text":"Recolección de la información\nCampuslands recolecta información de la base de datos de los contratistas, a través de los siguientes medios: formularios físicos y virtuales, hojas de vida con soportes profesionales y otros medios que la institución considere pertinentes a la finalidad.\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de los datos personales son:\n1. Gestión de contratación de personas naturales para la prestación de servicios.\n2. Contratación de conferencias extranjeros.\n3. Gestión administrativa, manejo de información financiera, contable, fiscal y legal.\n4. Gestión de cuentas de cobro para los respectivos pagos.\n5. Formalización de contratos.\n6. Reporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\n7. Comunicación para la verificación de la prestación del servicio."
+      },
+      {
+    "title": "2.8. BASE DE DATOS PROVEEDORES, ACREEDORES Y OTROS",
+    "text": "Recolección de la información\nCampuslands recolecta información de los proveedores, acreedores, donantes, entre otros, a través de los siguientes medios: formulario de inscripción de proveedores, físicos, virtuales y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLa institución de recolección de información personal de esta base de datos es:\n\nCreación y actualización de proveedores, acreedores, deudores y donantes.\nGeneración y remisión de certificado de ingresos y retenciones.\nContabilización de facturas proveedores, causación para crear la cuenta por pagar, salarios, retenciones.\nComunicaciones sobre campañas informativas.\nComunicaciones dirigidas a donantes y agradecimientos.\nGestión de certificados tributarios.\nReporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\nGestión administrativa, manejo de información financiera, contable, fiscal y legal.\nSeguimiento a ingresos y donantes."
+  },
+  {
+    "title": "2.9. BASE DE DATOS PETICIONES, QUEJAS Y RECLAMOS",
+    "text": "Recolección de los datos personales\nCampuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de los siguientes medios: buzones físicos de peticiones, quejas y reclamos – PQR, formulario virtual, apertura de cuentas de correo electrónico, mensajería instantánea y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de datos personales de esta base de datos son: conocer los intereses, reclamaciones y sugerencias de los usuarios internos o externos y dar trámite a la solicitud ya sea felicitación, queja, de consulta y reclamo o sugerencia, sobre los servicios que presta la institución, ejercer el derecho de conocer, actualizar y rectificar la información personal que tienen bajo custodia Campuslands."
+  },
+    {
+      "title": "2.10. BASE DE DATOS VIDEO VIGILANCIA",
+      "text": "Campuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de cámaras de video vigilancia, en aras de propender por la seguridad de los bienes y personas que se encuentran en las instalaciones."
+    },
+    {
+      "title": "2.11. DATOS PERSONALES SENSIBLES",
+      "text": "La recolección de datos personales sensibles de titulares Campuslands tiene las finalidades que se especifican para cada caso:"
+    },
+    {
+    "title": "2.12. DATOS PERSONALES DE NIÑOS, NIÑAS Y ADOLESCENTES",
+    "text": "Campuslands realiza tratamiento de datos personales de niños, niñas y adolescentes con el fin de garantizar el derecho a la educación, la formación integral y el bienestar de los estudiantes, hijos menores o adolescentes de los profesores y empleados administrativos. El tratamiento se realiza siempre y cuando:\n\nLa finalidad del tratamiento responda al interés superior de los niños, niñas y adolescentes.\nEl tratamiento realizado por Campuslands asegure el respeto de sus derechos fundamentales.\nSe respete el derecho que le asiste al menor de ser escuchado, opinión que será valorada teniendo en cuenta la madurez, autonomía y capacidad para entender el tratamiento del dato.\nSe cumplan con los requisitos previstos en la ley 1581 de 2012 para el tratamiento de datos personales.\nLa institución recolecta datos personales de menores de edad en los siguientes eventos:\n\nProceso de admisión e inscripción a los programas formativos de la institución.\nServicios académicos, administrativos y culturales que ofrece la institución y que benefician a estudiantes menores de edad.\nActividades extracurriculares organizadas por Campuslands en las que asistan estudiantes de instituciones educativas que tienen alianza o independientes a Campuslands.\nPor parte de los hijos menores de edad, de funcionarios de Campuslands para efectos de afiliación al sistema de seguridad social, para el beneficio de actividades de bienestar laboral, entre otros.\nEn eventos curriculares y extracurriculares para la toma de fotografías y videos para su difusión."
+  },
+  {
+    "title": "3.1. RECOLECCIÓN",
+    "text": "Campuslands realiza la recolección de la información personal, a través de los siguientes medios. Sin limitarse a ellos:\n\n• a. Aplicativos y formularios virtuales: Cuando ingresa a los diferentes servicios soportados por sistemas de información y aplicaciones.\n• b. Chat: cuando se solicita información a través de medios virtuales.\n• c. Llamadas telefónicas: en consulta por vía telefónica se capturan datos personales, incluida la grabación de la llamada.\nd. Formularios físicos: Cuando acceden a algunos de nuestros servicios por los canales presenciales, se obtienen sus datos personales a través de formularios físicos, encuestas dirigidas a la comunidad académica, entre otros.\n• e. Cuando se encuentra en las instalaciones de Campuslands con el propósito de velar por la seguridad de los bienes y las personas.\n\nLa institución garantiza que, en los instrumentos de recolección de información personal, se solicita la autorización para el tratamiento de datos personales, de manera libre, previa, expresa y en general, cuenta con todos los requisitos establecidos en las disposiciones legales para la protección de datos personales."
+  },
+  {
+    "title": "3.2. ALMACENAMIENTO",
+    "text": "El almacenamiento de la información personal de bases de datos y archivos con información personal puede ser efectuado por Campuslands mediante las siguientes formas:\n1. Servidor propio\n2. Servidor externo a cargo de un tercero\n3. Archivo en custodia de un tercero\n4. Archivo propio interno\n5. Computador institucional personal\n\nCampuslands cuenta con medidas de seguridad física, técnicas y administrativas para evitar la consulta y el acceso no autorizado a las bases de datos y archivos con información personal. Así mismo, exige a los encargados de la información, medidas conducentes a la seguridad y confidencialidad de la información suministrada."
+  },
+  {
+    "title": "3.3. CIRCULACIÓN",
+    "text": "La circulación de la información personal en Campuslands opera de manera restringida hacia nuestros encargados de la información, implementando las medidas de seguridad para evitar un uso no adecuado."
+  },
+  {
+    "title": "3.4. TRANSMISIÓN NACIONAL DE DATOS PERSONALES",
+    "text": "Los procesos de tratamiento de datos personales en recolección, circulación, almacenamiento, uso y supresión podrán ser transmitidos a terceros con los que tenga relación contractual a nivel nacional o internacional para la custodia y almacenamiento, siempre que cuenten con los estándares de seguridad en la protección de datos personales fijados por la superintendencia de industria y comercio.\n\nLa transmisión de datos personales que realiza Campuslands se puede generar en algunos casos en las siguientes operaciones del tratamiento:\n\n• a. Recolección: cuando se le solicite al encargado capturar información personal a nombre de Campuslands.\n• b. Almacenamiento: cuando se le solicita a un encargado almacenar la información tanto física como electrónica con las debidas medidas de seguridad y confidencialidad.\n• c. Uso: cuando se solicita al encargado realizar ciertas operaciones a nombre de la institución, como llamadas telefónicas, digitalización de la información, entre otros."
+  },
+  {
+    "title": "3.5. TRANSMISIÓN INTERNACIONAL DE DATOS PERSONALES",
+    "text": "En algunos casos, la institución ha dispuesto proveedores internacionales para el almacenamiento de la información personal, de manera específica, dirección de correos electrónicos institucionales, gestión de información de la comunidad académica, como puede ser: información profesional y comercial, hábitos de vida saludable, experiencia laboral y profesional."
+  },
+  {
+    "title": "3.6. TRANSFERENCIA NACIONAL E INTERNACIONAL DE DATOS PERSONALES",
+    "text": "Campuslands por regla general, no realiza transferencias nacionales e internacionales de los datos personales que tiene bajo su custodia, salvo en el caso de que los estudiantes, profesores y empleados apliquen a una solicitud de internacionalización o en los convenios y/o contratos internacionales."
+  }
+    ]
+  },
+  "terms_and_conditions": {
+    "title": "Términos y Condiciones",
+    "back_button": "Volver",
+    "content": [
+      {
+        "title": "Introducción",
+        "text": "Al acceder, registrarse o participar en el bootcamp organizado y ofrecido por Campuslands, en adelante “la Organización”, el usuario, en adelante “el Participante”, acepta de forma voluntaria, expresa, informada e irrevocable todos los términos, condiciones, políticas y lineamientos aquí establecidos. La participación en el programa formativo implica una aceptación completa, sin reservas ni excepciones, de cada una de las cláusulas incluidas en este documento, por lo que se recomienda su lectura detallada antes de proceder con la inscripción."
+      },
+      {
+        "title": "1. Alcance del Programa Educativo:",
+        "text": "El bootcamp tiene como objetivo proporcionar formación intensiva, práctica y actualizada en áreas de desarrollo web, programación, tecnología y/o áreas afines. La Organización se compromete a ofrecer contenidos estructurados, facilitadores calificados, acceso a plataformas educativas, foros, documentación, ejercicios prácticos y cualquier otro material complementario considerado útil para el proceso de aprendizaje. No obstante, la estructura, modalidad, duración, tecnologías impartidas y temáticas específicas podrán estar sujetas a modificaciones sin previo aviso, con el objetivo de mejorar la calidad del servicio ofrecido o responder a cambios tecnológicos del sector."
+      },
+      {
+        "title": "2. Compromiso del Participante:",
+        "text": "El Participante se compromete a asistir a las sesiones en los horarios establecidos, cumplir con las actividades propuestas, respetar los plazos de entrega y mantener una actitud de respeto y colaboración tanto con sus compañeros como con los instructores y tutores. Asimismo, se compromete a utilizar los recursos proporcionados (clases grabadas, código fuente, plataformas, documentación, etc.) únicamente para fines educativos, y se prohíbe estrictamente su distribución, reproducción, alteración, reventa o uso con fines comerciales sin consentimiento previo, por escrito, de la Organización. El incumplimiento de estas normas podrá dar lugar a la expulsión inmediata del programa sin derecho a reembolso."
+      },
+      {
+        "title": "3. Derechos de Autor y Propiedad Intelectual:",
+        "text": "Todo el contenido entregado durante el bootcamp, incluyendo pero no limitado a guías, videos, imágenes, código de ejemplo, herramientas internas, presentaciones y documentación, se encuentra protegido por leyes de propiedad intelectual y derechos de autor. La titularidad de dicho contenido pertenece exclusivamente a la Organización o a terceros con los que se hayan suscrito acuerdos de cesión o licencia. El Participante podrá hacer uso personal y educativo de este contenido, pero no podrá compartirlo públicamente ni apropiarse de él bajo ninguna circunstancia."
+      },
+      {
+        "title": "4. Política de Pagos y Reembolsos:",
+        "text": "El valor total del bootcamp, las modalidades de pago, las fechas límite y las condiciones promocionales serán publicadas y comunicadas previamente al proceso de inscripción. Una vez realizado el pago correspondiente (ya sea parcial o total), no se admitirán devoluciones, salvo en casos de fuerza mayor debidamente justificados, y evaluados de manera individual y no vinculante por el equipo administrativo de la Organización. En caso de abandono voluntario, inasistencia prolongada o conducta inapropiada, el Participante no tendrá derecho a reembolso de ningún tipo ni podrá exigir compensaciones adicionales."
+      },
+      {
+        "title": "5. Certificación y Evaluación:",
+        "text": "La finalización del programa no implica automáticamente la obtención de un certificado. Para ello, el Participante deberá cumplir con todos los requisitos académicos establecidos: asistencia mínima, entrega de proyectos, participación en evaluaciones, y cumplimiento de criterios de calidad técnica definidos por los facilitadores. La entrega del certificado será digital, personal e intransferible, y no tendrá validez oficial ante organismos gubernamentales, salvo que se indique expresamente."
+      },
+      {
+        "title": "6. Responsabilidad Limitada:",
+        "text": "La Organización no se hace responsable por las decisiones profesionales, laborales o personales que el Participante tome basándose en el contenido del bootcamp. Asimismo, no garantiza la obtención de empleo, aumento salarial ni ningún tipo de resultado económico como consecuencia de la participación en el programa. La formación impartida tiene fines exclusivamente educativos, y su aprovechamiento dependerá en gran medida del esfuerzo, disciplina y dedicación del Participante."
+      },
+      {
+        "title": "7. Conducta y Uso de Plataformas:",
+        "text": "El Participante se obliga a mantener un comportamiento respetuoso, inclusivo y profesional en todo momento dentro de las plataformas oficiales del bootcamp (aulas virtuales, grupos de mensajería, chats, foros, etc.). Queda prohibido el uso de lenguaje ofensivo, discriminatorio o agresivo, así como la promoción de productos o servicios personales sin autorización. La Organización se reserva el derecho de limitar, suspender o cancelar el acceso de cualquier usuario que infrinja estas normas, sin necesidad de previo aviso."
+      },
+      {
+        "title": "8. Protección de Datos Personales:",
+        "text": "La Organización tratará los datos personales proporcionados por el Participante conforme a la legislación vigente en materia de protección de datos. La información recopilada será utilizada exclusivamente para fines administrativos, académicos, estadísticos y de mejora continua. En ningún caso se compartirá con terceros sin el consentimiento del titular, salvo que sea requerido por orden judicial o autoridad competente."
+      },
+      {
+        "title": "9. Modificaciones de los Términos:",
+        "text": "La Organización se reserva el derecho de modificar en cualquier momento los presentes Términos y Condiciones, así como su política de privacidad, siempre que dichas modificaciones no afecten negativamente los derechos adquiridos por el Participante. Los cambios serán debidamente comunicados a través de los medios oficiales, y se considerará que el Participante los acepta si continúa haciendo uso de los servicios formativos ofrecidos."
+      },
+      {
+        "title": "10. Legislación Aplicable y Jurisdicción:",
+        "text": "Cualquier controversia derivada de la interpretación, aplicación o cumplimiento de los presentes términos será sometida a las leyes del país donde esté registrada la Organización, y cualquier disputa se resolverá ante los tribunales competentes de dicha jurisdicción, salvo pacto expreso entre las partes."
+      }
+    ]
+  }
+}
