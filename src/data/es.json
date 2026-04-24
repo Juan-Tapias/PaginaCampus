@@ -134,24 +134,31 @@
     "connection_cycle": {
       "heading": "Ciclo de Conexión Tech Leap",
       "subheading": "Seis etapas de ingeniería diseñadas para garantizar el match perfecto entre tu stack y nuestro talento",
-      "code_lines": [
-        { "text": "// --- CAMPUSLANDS CORE: MAIN_MISSION_CONTROL ---", "color": "text-gray-400" },
-        { "text": "// Protocolo de Ignición de Talento v2.1", "color": "text-gray-400" },
-        { "text": "// Estado: ESPERANDO_LANZAMIENTO", "color": "text-gray-500" },
-        { "text": "", "color": "text-transparent" },
-        { "text": "const MISION = {", "color": "text-[#7E61E1]" },
-        { "text": "  id: 'CAMPUS_ALPHA',", "color": "text-[#009B74]" },
-        { "text": "  objetivo: 'Colonizar_Industria_Tech',", "color": "text-[#009B74]" },
-        { "text": "  coordenadas: ['LATAM', 'GLOBAL'],", "color": "text-[#009B74]" },
-        { "text": "  tripulacion: [] // Lista para nuevos Campers", "color": "text-gray-400" },
-        { "text": "};", "color": "text-gray-300" },
-        { "text": "// Validando sistemas...", "color": "text-gray-500" },
-        { "text": "if (rastroTalento.formacion === 'ALTO_RENDIMIENTO') {", "color": "text-[#7E61E1]" },
-        { "text": "  MISION.tripulacion.push(camperId);", "color": "text-gray-300" },
-        { "text": "  console.log('> Camper acoplado a la Misión');", "color": "text-[#009B74]" },
-        { "text": "  ejecutarPropulsionBoost();", "color": "text-[#56B4FF]" },
-        { "text": "}", "color": "text-gray-300" }
-      ],
+"code_lines": [
+  { "text": "// --- CAMPUSLANDS CORE: MAIN_MISSION_CONTROL ---", "color": "text-gray-300" },
+  { "text": "// Protocolo de Ignición de Talento v2.1", "color": "text-gray-300" },
+  { "text": "// Estado: ESPERANDO_LANZAMIENTO", "color": "text-gray-400" },
+  { "text": "", "color": "text-transparent" },
+  { "text": "const MISION = {", "color": "text-[#7E61E1]" },
+  { "text": "  id: \"CAMPUS_ALPHA\",", "color": "text-[#009B74]" },
+  { "text": "  objetivo: \"Colonizar_Industria_Tech\",", "color": "text-[#009B74]" },
+  { "text": "  coordenadas: [\"LATAM\", \"GLOBAL\"],", "color": "text-[#009B74]" },
+  { "text": "  tripulacion: [] // Lista para nuevos Campers", "color": "text-gray-300" },
+  { "text": "};", "color": "text-white/80" },
+  { "text": "", "color": "text-transparent" },
+  { "text": "// Validando sistemas...", "color": "text-gray-400" },
+  { "text": "if (rastroTalento.formacion === \"ALTO_RENDIMIENTO\") {", "color": "text-[#7E61E1]" },
+  { "text": "  MISION.tripulacion.push(camperId);", "color": "text-gray-300" },
+  { "text": "  console.log(`> Camper [${camperId}] acoplado a la Misión.`);", "color": "text-[#009B74]" },
+  { "text": "  actualizarEcosistema(rastroTalento.lenguajes);", "color": "text-gray-300" },
+  { "text": "  ejecutarPropulsionBoost(); // ALERTA: Potencia al 100%", "color": "text-[#56B4FF]" },
+  { "text": "} else {", "color": "text-[#7E61E1]" },
+  { "text": "  throw new Error(\"Formación insuficiente. Re-calibrando sistema...\");", "color": "text-[#7E61E1]" },
+  { "text": "}", "color": "text-gray-300" },
+  { "text": "}", "color": "text-gray-300" },
+  { "text": "", "color": "text-transparent" },
+  { "text": "}", "color": "text-gray-300" }
+    ],
       "steps": [
         {
           "title": "Requerimientos",
@@ -182,14 +189,16 @@
     "testimonials": {
       "items": [
         {
-          "quote": "Nos han permitido escalar el equipo sin sacrificar criterio técnico. Los perfiles llegan con bases sólidas y una actitud de aprendizaje muy alta.",
-          "author": "Claudia Morales",
-          "role": "Head of Talent Tech"
+          "quote": "Colaborar con un Camper fue una decisión clave para el crecimiento de nuestra empresa. Su preparación, junto con su disposición para aprender, adaptarse y contribuir de manera significativa, marcaron una gran diferencia en nuestro equipo. Estamos ansiosos de seguir contratando talento de alto calibre confiados plenamente en Campusland.",
+          "author": "CRISTIAN VELEZ",
+          "role": "Director @Mantis App",
+          "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcristian.webp?alt=media"
         },
         {
-          "quote": "Campuslands entiende la velocidad del negocio. El proceso de validación redujo tiempos y nos entregó candidatos alineados al stack real.",
-          "author": "Daniel Rincón",
-          "role": "CTO Partner"
+          "quote": "Nos ha encantado el talento TI proveniente de Campuslands, con quienes hemos desarrollado el proyecto Coding Queendom. Actualmente, 17 mujeres forman parte de esta iniciativa, y estamos comprometidos a incrementar este número en los próximos años.",
+          "author": "CLÉMENT MEMAIN",
+          "role": "CEO Consulting @Data/AI",
+          "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fclement.webp?alt=media"
         }
       ]
     },
