@@ -1,4 +1,3 @@
-'use client';
 
 import Navbar from "../../layout/Navbar";
 import StarField from "../../shared/StarField";
