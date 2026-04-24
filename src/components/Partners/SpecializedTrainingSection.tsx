@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { partnersPage } from './partnersData';
-import PartnersSpaceshipCanvas from './PartnersSpaceshipCanvas';
+import LazySpaceshipCanvas from './LazySpaceshipCanvas';
 
 const { training, assets } = partnersPage;
 
@@ -98,10 +98,8 @@ export default function SpecializedTrainingSection() {
             <div className="absolute bottom-0 left-1/2 h-16 w-[300px] -translate-x-1/2 rounded-[50%] bg-gradient-to-r from-transparent via-[#B0B0B0]/35 to-transparent blur-sm" />
           </motion.div>
 
-          <PartnersSpaceshipCanvas
-            modelUrl={assets.spaceship}
-            variant="training"
-            className="absolute bottom-8 left-1/2 h-[150px] w-[300px] -translate-x-1/2 opacity-80"
+          <LazySpaceshipCanvas
+            className="absolute bottom-8 left-1/2 h-[150px] w-[300px] -translate-x-1/2"
           />
         </div>
       </div>

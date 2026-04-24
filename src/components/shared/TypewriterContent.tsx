@@ -7,6 +7,7 @@ interface TypewriterProps {
   className?: string;
   lineClassName?: string;
   align?: 'center' | 'left';
+  scrolling?: boolean;
 }
 
 export default function TypewriterContent({
@@ -14,6 +15,7 @@ export default function TypewriterContent({
   className,
   lineClassName,
   align = 'center',
+  scrolling = true,
 }: TypewriterProps) {
   const [cursor, setCursor] = useState<[number, number]>([0, 0]);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -48,15 +50,15 @@ export default function TypewriterContent({
   const lineAlignmentClass = align === 'left' ? 'justify-start' : 'justify-center';
 
   return (
-    <div className={className ?? `h-[180px] md:h-[340px] overflow-hidden relative font-mono text-[11px] md:text-[20px] tracking-tight px-4 flex flex-col ${alignmentClass}`}>
+    <div className={`relative flex flex-col overflow-hidden font-mono tracking-tight ${alignmentClass} ${className ?? 'h-[180px] md:h-[340px] text-[11px] md:text-[20px] px-4'}`}>
       <div 
         className="transition-transform duration-800 ease-in-out"
-        style={{ transform: `translateY(-${Math.max(0, currentLine - 6) * 2.5}em)` }}
+        style={{ transform: scrolling ? `translateY(-${Math.max(0, currentLine - 6) * 2.5}em)` : 'none' }}
       >
         {lines.map((line, i) => {
           if (i < currentLine) {
             return (
-              <div key={i} className={`min-h-[2.5em] flex items-center ${lineAlignmentClass} opacity-40 transition-all duration-700 ${lineClassName ?? ''} ${line.color}`}>
+              <div key={i} className={`min-h-[2.5em] flex items-center ${lineAlignmentClass} transition-all duration-700 ${lineClassName ?? ''} ${line.color}`}>
                 {line.text}
               </div>
             );

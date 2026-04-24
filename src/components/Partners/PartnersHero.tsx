@@ -1,14 +1,24 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import StarField from '@/components/shared/StarField';
 import { partnersPage } from './partnersData';
-import PartnersSpaceshipCanvas from './PartnersSpaceshipCanvas';
+import LazySpaceshipCanvas from './LazySpaceshipCanvas';
 
 const { hero, assets } = partnersPage;
 
 export default function PartnersHero() {
+  const [isHired, setIsHired] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsHired(prev => !prev);
+    }, 6000); // 4s animation + 2s pause
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-black pt-28 lg:min-h-[696px] lg:pt-0">
       <Navbar />
@@ -52,37 +62,90 @@ export default function PartnersHero() {
           initial={{ opacity: 0, scale: 0.94, x: 36 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.95, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 min-h-[390px] lg:min-h-[570px]"
+          className="relative z-10 h-[390px] lg:h-[570px]"
         >
-          <PartnersSpaceshipCanvas
-            modelUrl={assets.spaceship}
-            className="absolute left-1/2 top-0 h-[300px] w-[112vw] -translate-x-1/2 sm:h-[360px] lg:left-[52%] lg:h-[390px] lg:w-[760px]"
+          <LazySpaceshipCanvas
+            modelScale={0.4}
+            modelRotation={[0.5, -0.5, 0]}
+            modelPosition={[0, 1, 0]}
+            className="absolute inset-0 h-full w-full"
           />
 
-          <div className="absolute bottom-7 left-1/2 flex w-full max-w-[520px] -translate-x-1/2 flex-col items-center lg:bottom-[72px]">
-            <div className="grid w-full grid-cols-4 gap-3 sm:gap-4">
-              {assets.campers.map((camper, index) => (
-                <motion.div
-                  key={camper}
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.55, delay: 0.5 + index * 0.08 }}
-                  className="flex flex-col items-center"
-                >
-                  <div className="relative flex size-[74px] items-center justify-center rounded-full border border-[#56B4FF] bg-black shadow-[0_0_26px_rgba(86,180,255,0.35)] sm:size-[88px] lg:size-[94px]">
-                    <div className="absolute inset-[-9px] rounded-full border border-[#54C6AA]/20" />
-                    <img
-                      src={camper}
-                      alt={`${hero.talent_label} ${index + 1}`}
-                      className="size-[66px] rounded-full object-cover sm:size-[78px] lg:size-[84px]"
-                    />
-                  </div>
-                  <span className="mt-3 whitespace-nowrap font-roboto-mono text-[10px] uppercase leading-[1.5] text-[#56B4FF] sm:text-xs">
-                    {hero.talent_label}
-                  </span>
-                </motion.div>
-              ))}
+          <div className="absolute bottom-7 left-1/2 flex w-full max-w-[580px] -translate-x-1/2 flex-col items-center lg:bottom-[72px]">
+            <div className="relative w-full p-4">
+              {/* Ping-Pong Scanner Line */}
+              <motion.div
+                initial={false}
+                animate={{ left: isHired ? '0%' : '100%' }}
+                transition={{ 
+                  duration: 4, 
+                  ease: "easeInOut",
+                }}
+                className="absolute top-0 bottom-0 z-50 w-[2px] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to bottom, transparent, #54C6AA, transparent)',
+                  boxShadow: '0 0 15px #54C6AA, 0 0 30px rgba(84,198,170,0.5)'
+                }}
+              />
+
+              <div className="grid w-full grid-cols-4 gap-3 sm:gap-4">
+                {assets.campers.map((camper, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.55, delay: 0.5 + index * 0.08 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className={`relative flex size-[74px] items-center justify-center rounded-full border transition-all duration-700 sm:size-[88px] lg:size-[94px] ${
+                      isHired 
+                        ? 'border-[#54C6AA] shadow-[0_0_26px_rgba(84,198,170,0.35)]' 
+                        : 'border-[#56B4FF] shadow-[0_0_26px_rgba(86,180,255,0.35)]'
+                    } bg-black`}>
+                      <div className="absolute inset-[-9px] rounded-full border border-[#54C6AA]/10" />
+                      
+                      <motion.div
+                        initial={false}
+                        animate={{ rotateY: isHired ? 180 : 0 }}
+                        transition={{ 
+                          duration: 1.2, 
+                          delay: isHired ? (3 - index) * 0.8 : index * 0.8,
+                          ease: "easeInOut" 
+                        }}
+                        className="relative h-full w-full [transform-style:preserve-3d]"
+                      >
+                        <img
+                          src={camper}
+                          alt="Talento"
+                          className="absolute inset-0 size-full rounded-full object-cover [backface-visibility:hidden]"
+                        />
+                        <img
+                          src={assets.helmet}
+                          alt="Contratado"
+                          className="absolute inset-0 size-full rounded-full object-cover [backface-visibility:hidden] [transform:rotateY(180deg)] p-2"
+                        />
+                      </motion.div>
+                    </div>
+                    
+                    <motion.span 
+                      animate={{ 
+                        color: isHired ? '#54C6AA' : '#56B4FF',
+                        opacity: [0, 1]
+                      }}
+                      transition={{ 
+                        delay: isHired ? (3 - index) * 0.8 : index * 0.8,
+                        duration: 0.4
+                      }}
+                      key={`${isHired}-${index}`}
+                      className="mt-3 whitespace-nowrap font-roboto-mono text-[9px] uppercase leading-[1.5] sm:text-xs"
+                    >
+                      {isHired ? hero.hired_label : hero.talent_label}
+                    </motion.span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+            
             <p className="mt-3 text-center font-poppins text-sm leading-[1.5] text-[#E9E9E9] sm:text-base">
               {hero.metric}
             </p>
