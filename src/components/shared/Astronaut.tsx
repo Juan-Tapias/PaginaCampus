@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect, useMemo } from 'react'
+import React, { useRef, useEffect, useMemo, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, Environment, PerspectiveCamera, Sphere, useAnimations, useTexture, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei'
@@ -125,6 +125,7 @@ function SpeedLines() {
 
 function ModeloSolido({ url }: { url: string }) {
   const groupRef = useRef<THREE.Group>(null)
+  const [isVisible, setIsVisible] = useState(false)
   
   const { scene, animations } = useGLTF(url, true) as any;
   const { actions, names } = useAnimations(animations, groupRef)
@@ -152,6 +153,10 @@ function ModeloSolido({ url }: { url: string }) {
         action.timeScale = 0.85;
       }
     }
+
+    // Ocultar el primer frame
+    const timer = setTimeout(() => setIsVisible(true), 150);
+    return () => clearTimeout(timer);
   }, [actions, names, scene])
 
   const lastScrollY = useRef(0)
@@ -196,6 +201,7 @@ function ModeloSolido({ url }: { url: string }) {
         object={scene}
         scale={sharedState.isMobile ? 3.0 : 4.4}
         position={[0, -1.4, 0]}
+        visible={isVisible}
       />
     </group>
   )
@@ -240,10 +246,12 @@ function SceneManager({ children }: { children: React.ReactNode }) {
 
 export default function Astronaut() {
   const [isClient, setIsClient] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
   const [paused, setPaused] = React.useState(false);
 
   React.useEffect(() => {
     setIsClient(true);
+    setMounted(true);
 
     const handleResize = () => {
       sharedState.viewport.width = window.innerWidth;
@@ -279,7 +287,7 @@ export default function Astronaut() {
     };
   }, []);
 
-  if (!isClient) return null;
+  if (!mounted) return null;
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none w-full h-full">

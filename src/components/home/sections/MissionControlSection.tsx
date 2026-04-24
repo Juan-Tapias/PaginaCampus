@@ -112,7 +112,7 @@ export default function MissionControlSection() {
         </motion.div>
       </section>
 
-      <div className="container mx-auto px-4 relative z-10 min-h-[700px] flex flex-col justify-center py-20">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10 min-h-[700px] flex flex-col justify-center py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center relative z-20">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.p

@@ -3,9 +3,14 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 
 export default function StarField() {
+  const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   const [shootingStars, setShootingStars] = useState<{ id: number; top: number; left: number; angle: number }[]>([]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Capas de estrellas 
   const layers = useMemo(() =>
@@ -28,6 +33,7 @@ export default function StarField() {
 
   // Lógica de Estrellas Fugaces
   useEffect(() => {
+    if (!mounted) return;
     const triggerShootingStar = () => {
       const id = Date.now();
       setShootingStars(prev => [...prev, {
@@ -81,6 +87,8 @@ export default function StarField() {
       cancelAnimationFrame(animationFrame);
     };
   }, [layers]);
+
+  if (!mounted) return null;
 
   return (
     <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none bg-transparent">
