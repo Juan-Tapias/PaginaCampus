@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
 

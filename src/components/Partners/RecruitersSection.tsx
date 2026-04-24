@@ -1,3 +1,5 @@
+'use client';
+
 import { partnerCompanies, partnersPage, type PartnerCompany } from './partnersData';
 
 const { recruiters } = partnersPage;

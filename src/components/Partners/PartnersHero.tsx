@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import StarField from '@/components/shared/StarField';

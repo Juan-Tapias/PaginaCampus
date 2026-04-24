@@ -1,3 +1,4 @@
+'use client';
 
 import { useRef, useMemo, useState, useEffect, MutableRefObject } from 'react'
 import { useFrame } from '@react-three/fiber'

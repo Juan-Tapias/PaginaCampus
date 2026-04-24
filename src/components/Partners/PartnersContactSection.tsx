@@ -1,3 +1,5 @@
+'use client';
+
 import { Send } from 'lucide-react';
 import { partnersPage } from './partnersData';
 

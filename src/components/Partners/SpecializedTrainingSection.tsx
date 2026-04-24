@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { partnersPage } from './partnersData';
 import PartnersSpaceshipCanvas from './PartnersSpaceshipCanvas';
