@@ -13,30 +13,15 @@ export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          if (currentScrollY < 50) {
-            setIsScrolled(false);
-            setIsVisible(true);
-          } else {
-            setIsScrolled(true);
-            setIsVisible(currentScrollY < lastScrollY);
-          }
-          setLastScrollY(currentScrollY);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
-  const isCollapsed = isScrolled && !isHovered;
   const getLinkHref = (link: string) => {
     if (link === 'INICIO') return '/';
     if (link === 'PARTNERS') return '/Partners';
@@ -51,14 +36,14 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-[9999] pointer-events-none flex justify-center w-full transition-transform duration-500 ease-in-out ${
-        isVisible ? 'translate-y-0' : '-translate-y-[150%]'
-      }`}
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-[9999] pointer-events-none flex justify-center w-full"
     >
       <div 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`bg-black/20 backdrop-blur-xl border border-white/10 rounded-full py-[7px] px-[24px] h-[44px] flex items-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto transition-all duration-500 ease-in-out hover:border-white/20 overflow-hidden ${isCollapsed ? 'gap-0' : 'gap-[32px]'}`}
+        className={`backdrop-blur-xl border border-white/10 rounded-full py-[7px] px-[24px] h-[44px] flex items-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto transition-all duration-500 ease-in-out hover:border-white/20 gap-[32px] ${
+          isScrolled ? 'bg-black/10' : 'bg-black/40'
+        }`}
       >
         
         <a href="/" className="flex items-center shrink-0" aria-label={logo}>
@@ -69,12 +54,8 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Contenedor que colapsa */}
-        <div 
-          className={`flex items-center transition-all duration-500 ease-in-out ${
-            isCollapsed ? 'max-w-0 opacity-0 overflow-hidden' : 'max-w-[800px] opacity-100'
-          }`}
-        >
+        {/* Contenedor que NO colapsa */}
+        <div className="flex items-center gap-[32px]">
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-[32px] shrink-0">
             {links.map((link) => (

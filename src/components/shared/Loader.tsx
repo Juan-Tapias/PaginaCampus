@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useProgress } from '@react-three/drei';
 import OrbitIntro3D from './OrbitIntro3D';
+import es from '../../data/es.json';
+import StarField from './StarField';
 
 import letterC from '../../assets/letter/c.svg';
 import letterA from '../../assets/letter/a.svg';
@@ -62,10 +64,16 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         x: [0, -4, 4, -4, 4, 0],
         transition: { duration: 0.4 }
       } : {}}
-      exit={{ y: '-100%' }}
-      transition={{ duration: 0.3, ease: "circOut" }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#08080a]"
+      exit={{ y: '-100%', opacity: 0 }}
+      transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050507] overflow-hidden"
     >
+      <div className="absolute inset-0 pointer-events-none opacity-40">
+        <StarField />
+      </div>
+
+
+
       <OrbitIntro3D onImpact={handleImpact} onReady={handleReady} />
 
       <AnimatePresence>
@@ -102,7 +110,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       </AnimatePresence>
 
       {/* Letras de CAMPUSLANDS */}
-      <motion.div className="flex gap-2 md:gap-4 mb-8 px-4 flex-wrap justify-center items-end relative z-20">
+      <motion.div className="flex gap-2 md:gap-4 mb-8 px-4 flex-wrap justify-center items-end relative z-50">
         {letters.map((src, i) => {
           const total = letters.length;
           const mid = (total - 1) / 2;
@@ -172,7 +180,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             }}
             exit={{ opacity: 1, y: -20 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-col items-center relative z-20"
+            className="flex flex-col items-center relative z-50"
           >
             <motion.p
               className="font-roboto-mono text-sm md:text-xl tracking-[0.5em] text-cyan-400 uppercase drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]"

@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, useAnimations, Environment, ContactShadows, SpotLight } from '@react-three/drei';
+import { useGLTF, useAnimations, Environment, Sphere, useTexture, PerspectiveCamera } from '@react-three/drei';
 import { useEffect, useRef, Suspense, useState } from 'react';
 import * as THREE from 'three';
 import es from '../../data/es.json';
@@ -69,11 +69,48 @@ function OrbitModel({ onImpact, onReady }: { onImpact: () => void; onReady?: () 
   return (
     <primitive
       object={scene}
-      position={[0, -2, -2]}
+      position={[0, -2, 0]}
       rotation={[0, Math.PI / 50, 0]}
       scale={2}
       visible={isVisible}
     />
+  );
+}
+
+function RealisticMoon() {
+  const moonRef = useRef<THREE.Mesh>(null);
+  const moonTexture = useTexture(es.models_3d.moon) as THREE.Texture;
+
+  useFrame((_, delta) => {
+    if (moonRef.current) {
+      moonRef.current.rotation.y = (moonRef.current.rotation.y - delta * 0.05) % (Math.PI * 2);
+    }
+  });
+
+  return (
+    <group position={[0, -12, 0]}>
+      <Sphere ref={moonRef} args={[10, 32, 32]}>
+        <meshStandardMaterial
+          map={moonTexture}
+          bumpMap={moonTexture}
+          bumpScale={0.8}
+          roughness={0.9}
+          metalness={0.1}
+          color="#999999"
+        />
+      </Sphere>
+      
+      {/* Resplandor atmosférico sutil */}
+      <Sphere args={[10.2, 32, 32]}>
+        <meshBasicMaterial
+          color="#5E39DA"
+          transparent={true}
+          opacity={0.08}
+          blending={THREE.AdditiveBlending}
+          side={THREE.BackSide}
+        />
+      </Sphere>
+    </group>
   );
 }
 
@@ -85,31 +122,19 @@ export default function OrbitIntro3D({ onImpact, onReady }: { onImpact: () => vo
         gl={{ alpha: true, antialias: true }}
         style={{ width: '100%', height: '100%' }}
       >
+        <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={35} />
+        
         <Suspense fallback={null}>
           <Environment preset="city" />
-          <ContactShadows position={[0, -4.5, 0]} opacity={0.6} scale={20} blur={2} />
           
-          {/* Portal de luz superior */}
-          <group position={[0, 18, 0]}>
-            <mesh>
-              <sphereGeometry args={[0.3, 32, 32]} />
-              <meshBasicMaterial color="#3ed896" />
-            </mesh>
-            <SpotLight 
-              angle={0.7} 
-              penumbra={1} 
-              intensity={40} 
-              color="#3ed896"
-              distance={40}
-              attenuation={5}
-              anglePower={4}
-            />
-          </group>
+          <RealisticMoon />
 
           <OrbitModel onImpact={onImpact} onReady={onReady} />
         </Suspense>
 
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.4} />
+        <pointLight position={[5, 5, 5]} intensity={1.5} color="#ffffff" />
+        <spotLight position={[0, 10, 0]} intensity={2} color="#3ed896" />
       </Canvas>
     </div>
   );
