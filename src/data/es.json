@@ -110,6 +110,110 @@
         { "name": "Wmwise", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media", "type": "partner" }
       ]
   },
+  "partners_page": {
+    "assets": {
+      "campers": [
+        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper3.webp?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper4.webp?alt=media"
+      ],
+      "helmet": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcasco.webp?alt=media",
+      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media"
+    },
+    "hero": {
+      "heading": "Potencia tu tripulación de stack tecnológico con",
+      "highlight": "talento de élite",
+      "subheading": "Elimina la carga operativa en la contratación. Nosotros validamos, tú escalas",
+      "primary_cta": "Solicitar talento",
+      "secondary_cta": "Ver modelos",
+      "metric": "+800 Talentos Campus trabajando en empresas tech",
+      "talent_label": "TALENTO TECH",
+      "hired_label": "CONTRATADO"
+    },
+    "connection_cycle": {
+      "heading": "Ciclo de Conexión Tech Leap",
+      "subheading": "Seis etapas de ingeniería diseñadas para garantizar el match perfecto entre tu stack y nuestro talento",
+      "code_lines": [
+        { "text": "// --- CAMPUSLANDS CORE: MAIN_MISSION_CONTROL ---", "color": "text-gray-400" },
+        { "text": "// Protocolo de Ignición de Talento v2.1", "color": "text-gray-400" },
+        { "text": "// Estado: ESPERANDO_LANZAMIENTO", "color": "text-gray-500" },
+        { "text": "", "color": "text-transparent" },
+        { "text": "const MISION = {", "color": "text-[#7E61E1]" },
+        { "text": "  id: 'CAMPUS_ALPHA',", "color": "text-[#009B74]" },
+        { "text": "  objetivo: 'Colonizar_Industria_Tech',", "color": "text-[#009B74]" },
+        { "text": "  coordenadas: ['LATAM', 'GLOBAL'],", "color": "text-[#009B74]" },
+        { "text": "  tripulacion: [] // Lista para nuevos Campers", "color": "text-gray-400" },
+        { "text": "};", "color": "text-gray-300" },
+        { "text": "// Validando sistemas...", "color": "text-gray-500" },
+        { "text": "if (rastroTalento.formacion === 'ALTO_RENDIMIENTO') {", "color": "text-[#7E61E1]" },
+        { "text": "  MISION.tripulacion.push(camperId);", "color": "text-gray-300" },
+        { "text": "  console.log('> Camper acoplado a la Misión');", "color": "text-[#009B74]" },
+        { "text": "  ejecutarPropulsionBoost();", "color": "text-[#56B4FF]" },
+        { "text": "}", "color": "text-gray-300" }
+      ],
+      "steps": [
+        {
+          "title": "Requerimientos",
+          "description": "Mapeamos tu stack y definimos las necesidades de tu operación."
+        },
+        {
+          "title": "Validación Talento",
+          "description": "Filtramos perfiles por nivel técnico, inglés y habilidades de equipo."
+        },
+        {
+          "title": "Postulaciones",
+          "description": "Presentamos candidatos listos para entrevistas técnicas y culturales."
+        },
+        {
+          "title": "Selección",
+          "description": "Acompañamos el proceso con evidencia de desempeño y soft skills."
+        },
+        {
+          "title": "Contratación",
+          "description": "Conectamos el talento elegido con tu operación sin fricción."
+        },
+        {
+          "title": "Seguimiento",
+          "description": "Medimos adaptación, desempeño y permanencia durante el aterrizaje."
+        }
+      ]
+    },
+    "testimonials": {
+      "items": [
+        {
+          "quote": "Nos han permitido escalar el equipo sin sacrificar criterio técnico. Los perfiles llegan con bases sólidas y una actitud de aprendizaje muy alta.",
+          "author": "Claudia Morales",
+          "role": "Head of Talent Tech"
+        },
+        {
+          "quote": "Campuslands entiende la velocidad del negocio. El proceso de validación redujo tiempos y nos entregó candidatos alineados al stack real.",
+          "author": "Daniel Rincón",
+          "role": "CTO Partner"
+        }
+      ]
+    },
+    "training": {
+      "heading": "Formación tech especializada",
+      "subheading": "Nuestro pensum acorde a las necesidades del mercado.",
+      "track": "INTELIGENCIA ARTIFICIAL - PROGRAMACIÓN - HABILIDADES SOCIOEMOCIONALES",
+      "technologies": ["Python", "Bootstrap", "React", "MySQL", "TypeScript", "PostgreSQL", "JavaScript", "HTML", "CSS"]
+    },
+    "recruiters": {
+      "eyebrow": "RECLUTADORES DE TALENTO",
+      "heading": "Empresas que contratan talento Campuslands",
+      "subheading": "Estas empresas ya contratan y patrocinan talento Campuslands."
+    },
+    "form": {
+      "fields": {
+        "name": "Nombre completo",
+        "email": "Email",
+        "reason": "Razón de requerimiento"
+      },
+      "cta": "Enviar solicitud",
+      "legal": "AL ENVIAR, ACEPTAS EL PROTOCOLO DE TRATAMIENTO DE DATOS_V2.0"
+    }
+  },
   "models_3d": {
     "orbit_run": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_run_fast_draco.glb?alt=media",
     "moon": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fmoon.webp?alt=media",

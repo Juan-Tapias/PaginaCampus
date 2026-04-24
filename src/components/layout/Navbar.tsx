@@ -1,10 +1,11 @@
-'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import data from '../../data/es.json';
 
 export default function Navbar() {
   const { logo, links, action_button } = data.navbar;
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -35,6 +36,17 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const isCollapsed = isScrolled && !isHovered;
+  const getLinkHref = (link: string) => {
+    if (link === 'INICIO') return '/';
+    if (link === 'PARTNERS') return '/Partners';
+    return `/#${link.toLowerCase().replace(/\s+/g, '-')}`;
+  };
+
+  const isActiveLink = (link: string) => {
+    if (link === 'INICIO') return pathname === '/';
+    if (link === 'PARTNERS') return pathname === '/Partners';
+    return false;
+  };
 
   return (
     <nav 
@@ -48,13 +60,13 @@ export default function Navbar() {
         className={`bg-black/20 backdrop-blur-xl border border-white/10 rounded-full py-[7px] px-[24px] h-[44px] flex items-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto transition-all duration-500 ease-in-out hover:border-white/20 overflow-hidden ${isCollapsed ? 'gap-0' : 'gap-[32px]'}`}
       >
         
-        <div className="flex items-center shrink-0">
+        <a href="/" className="flex items-center shrink-0" aria-label={logo}>
           <img 
             className="w-[125px] h-auto cursor-pointer hover:opacity-80 transition-opacity" 
             src="/Logo_Horizontal_Blanco.webp" 
             alt={logo} 
           />
-        </div>
+        </a>
 
         {/* Contenedor que colapsa */}
         <div 
@@ -67,8 +79,10 @@ export default function Navbar() {
             {links.map((link) => (
               <a
                 key={link}
-                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-gray-400 hover:text-white text-[12px] font-roboto-mono font-bold transition-all duration-300 uppercase tracking-[0.1em] relative group whitespace-nowrap"
+                href={getLinkHref(link)}
+                className={`text-[12px] font-roboto-mono font-bold transition-all duration-300 uppercase tracking-[0.1em] relative group whitespace-nowrap ${
+                  isActiveLink(link) ? 'text-[#937AE6]' : 'text-gray-400 hover:text-white'
+                }`}
               >
                 {link}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#54C6AA] transition-all duration-300 group-hover:w-full"></span>

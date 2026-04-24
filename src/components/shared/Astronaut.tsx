@@ -1,4 +1,3 @@
-'use client';
 
 import React, { useRef, useEffect, useMemo } from 'react'
 import * as THREE from 'three'
