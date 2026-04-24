@@ -1,9 +1,8 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, useAnimations } from '@react-three/drei';
-import { Environment, ContactShadows } from '@react-three/drei';
-import { useEffect, useRef, Suspense } from 'react';
+import { useGLTF, useAnimations, Environment, ContactShadows, SpotLight } from '@react-three/drei';
+import { useEffect, useRef, Suspense, useState } from 'react';
 import * as THREE from 'three';
 import es from '../../data/es.json';
 
@@ -13,13 +12,12 @@ function OrbitModel({ onImpact, onReady }: { onImpact: () => void; onReady?: () 
   const { scene, animations } = useGLTF(es.models_3d.orbit_intro, true);
   const { actions } = useAnimations(animations, scene);
   const impactTriggered = useRef(false);
-
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (scene) {
       scene.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
-          child.visible = true;
           const mesh = child as THREE.Mesh;
           mesh.castShadow = true;
           mesh.receiveShadow = true;
@@ -44,16 +42,24 @@ function OrbitModel({ onImpact, onReady }: { onImpact: () => void; onReady?: () 
         action.reset().play();
       }
     }
-    if (onReady) onReady();
-  }, [scene, actions, onReady]);
+  }, [scene, actions]);
 
   useFrame(() => {
     const animationName = Object.keys(actions)[0];
     const action = actions[animationName];
 
-    if (action && !impactTriggered.current && action.isRunning()) {
+    if (action && action.isRunning()) {
+      // Solo mostramos el modelo y llamamos a onReady cuando la animación ya arrancó
+      if (!isVisible) {
+        setIsVisible(true);
+        // Pequeño delay para asegurar que el motor ya renderizó el primer frame de movimiento
+        setTimeout(() => {
+          if (onReady) onReady();
+        }, 50);
+      }
+
       const duration = action.getClip().duration;
-      if (action.time >= duration * 0.18) {
+      if (action.time >= duration * 0.18 && !impactTriggered.current) {
         impactTriggered.current = true;
         onImpact();
       }
@@ -66,6 +72,7 @@ function OrbitModel({ onImpact, onReady }: { onImpact: () => void; onReady?: () 
       position={[0, -2, -2]}
       rotation={[0, Math.PI / 50, 0]}
       scale={2}
+      visible={isVisible}
     />
   );
 }
@@ -79,13 +86,26 @@ export default function OrbitIntro3D({ onImpact, onReady }: { onImpact: () => vo
         style={{ width: '100%', height: '100%' }}
       >
         <Suspense fallback={null}>
-          {/* 1. Iluminación global (Reemplaza al Stage) */}
           <Environment preset="city" />
-
-          {/* 2. Sombra de contacto opcional en el piso */}
           <ContactShadows position={[0, -4.5, 0]} opacity={0.6} scale={20} blur={2} />
+          
+          {/* Portal de luz superior */}
+          <group position={[0, 18, 0]}>
+            <mesh>
+              <sphereGeometry args={[0.3, 32, 32]} />
+              <meshBasicMaterial color="#3ed896" />
+            </mesh>
+            <SpotLight 
+              angle={0.7} 
+              penumbra={1} 
+              intensity={40} 
+              color="#3ed896"
+              distance={40}
+              attenuation={5}
+              anglePower={4}
+            />
+          </group>
 
-          {/* 3. Tu modelo libre de ataduras */}
           <OrbitModel onImpact={onImpact} onReady={onReady} />
         </Suspense>
 

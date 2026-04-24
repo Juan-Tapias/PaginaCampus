@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useProgress } from '@react-three/drei';
@@ -29,6 +29,11 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [isModelLoaded, setIsModelLoaded] = useState(false);
   const { progress } = useProgress();
 
+  // Pre-calculamos los valores para evitar el error de hidratación SSR/Client
+  const initialRotations = useMemo(() => 
+    letters.map((_, i) => ((i * 37 + 13) % 120) - 60), // Valores deterministas, no Math.random()
+  []);
+
   const getStatusMessage = (p: number) => {
     if (p < 20) return 'Iniciando protocolos...';
     if (p < 40) return 'Descargando módulos 3D...';
@@ -38,30 +43,29 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   };
 
   const handleReady = useCallback(() => {
-  setIsModelLoaded(true);
-}, []);
+    setIsModelLoaded(true);
+  }, []);
 
-const handleImpact = useCallback(() => {
-  setHasImpacted(true);
-  
-  setTimeout(() => {
-    onComplete();
-  }, 1200); 
-}, [onComplete]);
+  const handleImpact = useCallback(() => {
+    setHasImpacted(true);
+
+    setTimeout(() => {
+      onComplete();
+    }, 2300);
+  }, [onComplete]);
 
 
   return (
     <motion.div
       initial={{ y: 0 }}
-      animate={hasImpacted ? { 
+      animate={hasImpacted ? {
         x: [0, -4, 4, -4, 4, 0],
-        transition: { duration: 0.4 } 
+        transition: { duration: 0.4 }
       } : {}}
       exit={{ y: '-100%' }}
       transition={{ duration: 0.3, ease: "circOut" }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#08080a] overflow-hidden"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#08080a]"
     >
-      {/* Escena 3D */}
       <OrbitIntro3D onImpact={handleImpact} onReady={handleReady} />
 
       <AnimatePresence>
@@ -74,7 +78,7 @@ const handleImpact = useCallback(() => {
             className="absolute bottom-12 flex flex-col items-center gap-3 z-30"
           >
             <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden relative">
-              <motion.div 
+              <motion.div
                 className="absolute inset-y-0 left-0 bg-[#3ed896] shadow-[0_0_10px_#3ed896]"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
@@ -99,33 +103,56 @@ const handleImpact = useCallback(() => {
 
       {/* Letras de CAMPUSLANDS */}
       <motion.div className="flex gap-2 md:gap-4 mb-8 px-4 flex-wrap justify-center items-end relative z-20">
-        {letters.map((src, i) => (
-          <motion.img
-            key={i}
-            src={typeof src === 'string' ? src : src.src}
-            alt={`letter-${i}`}
-            initial={{ y: 30, opacity: 0 }}
-            animate={
-              hasImpacted
-                ? {
-                    y: [0, -80, 50],
-                    x: [0, (i - 5) * 30, (i - 5) * 45],
-                    rotate: [0, (i - 5) * 15, (i - 5) * 25],
-                    scale: [1, 1.2, 0.9],
-                    filter: ["brightness(1) blur(0px)", "brightness(4) blur(2px)", "brightness(0.8) blur(0px)"],
-                    transition: { duration: 0.5, ease: "easeOut", delay: i * 0.01 }
-                  }
-                : {
-                    y: 0,
+        {letters.map((src, i) => {
+          const total = letters.length;
+          const mid = (total - 1) / 2;
+          const distFromMid = i - mid;
+          const scrambledOffsets = [4, -3, 1, 5, -2, 0, 3, -5, 2, -1, -4];
+
+          return (
+            <motion.img
+              key={i}
+              src={typeof src === 'string' ? src : src.src}
+              alt={`letter-${i}`}
+              // Estado inicial: Desplazadas lateralmente para mezclar el orden
+              initial={{
+                opacity: 0,
+                y: 100,
+                x: scrambledOffsets[i] * 50,
+                rotate: initialRotations[i]
+              }}
+              animate={
+                hasImpacted
+                  ? {
+                    // ORDEN CORRECTO + ALINEACIÓN EN ARCO
                     opacity: 1,
-                    transition: { duration: 0.6, delay: i * 0.04, ease: "easeOut" }
+                    y: -180 + (Math.pow(distFromMid, 2) * 6),
+                    x: 0, // Vuelven a su posición real en la palabra
+                    rotate: distFromMid * 7,
+                    scale: 1,
+                    filter: ["brightness(1)", "brightness(2.5)", "brightness(1.3)"],
+                    transition: {
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 18,
+                      delay: i * 0.03
+                    }
                   }
-            }
-            exit={{ opacity: 1, y: -100 }}
-            transition={{ duration: 0.3 }}
-            className="h-12 sm:h-20 md:h-32 w-auto object-contain origin-bottom"
-          />
-        ))}
+                  : {
+                    // Se mantienen mezcladas mientras carga
+                    opacity: 1,
+                    y: 0,
+                    x: scrambledOffsets[i] * 40,
+                    rotate: i * 10,
+                    transition: { duration: 0.8, delay: i * 0.05 }
+                  }
+              }
+              exit={{ opacity: 1, y: -200 }}
+              transition={{ duration: 0.3 }}
+              className="h-10 sm:h-16 md:h-24 w-auto object-contain origin-bottom"
+            />
+          );
+        })}
       </motion.div>
 
       {/* Tagline */}
@@ -133,7 +160,16 @@ const handleImpact = useCallback(() => {
         {showTagline && (
           <motion.div
             initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            animate={hasImpacted ? {
+              opacity: 1,
+              y: 150,
+              scale: 1.1,
+              filter: 'blur(0px)'
+            } : {
+              opacity: 1,
+              y: 0,
+              filter: 'blur(0px)'
+            }}
             exit={{ opacity: 1, y: -20 }}
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex flex-col items-center relative z-20"
