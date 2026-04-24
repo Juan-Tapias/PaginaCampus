@@ -113,7 +113,9 @@
   "models_3d": {
     "orbit_run": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_run_fast_draco.glb?alt=media",
     "moon": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fmoon.webp?alt=media",
-    "orbit_head": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_cara_optimized.glb?alt=media"
+    "orbit_head": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_cara_optimized.glb?alt=media",
+    "orbit_intro": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_intro.glb?alt=media",
+    "orbit_entrada_nave": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_entrada_nave.glb?alt=media"
   },
   "tour_virtual": {
     "loading_text": "Cargando Entorno...",
