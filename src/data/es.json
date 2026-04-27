@@ -206,7 +206,18 @@
       "heading": "Formación tech especializada",
       "subheading": "Nuestro pensum acorde a las necesidades del mercado.",
       "track": "INTELIGENCIA ARTIFICIAL - PROGRAMACIÓN - HABILIDADES SOCIOEMOCIONALES",
-      "technologies": ["Python", "Bootstrap", "React", "MySQL", "TypeScript", "PostgreSQL", "JavaScript", "HTML", "CSS"]
+      "technologies": [
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2FJavascript-shield.svg?alt=media", "name": "Javascript"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fbootstrap-5%201.svg?alt=media", "name": "Bootstrap"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fcss-3-svgrepo-com.svg?alt=media", "name": "CSS"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fts-lettermark-blue%201.svg?alt=media", "name": "TypeScript"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fhtml-5-logo-svgrepo-com.svg?alt=media", "name": "HTML"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fmysql-horizontal%201.svg?alt=media", "name": "MySQL"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%20(1)%201.svg?alt=media", "name": "Postgre"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpython-logo-inkscape%201.svg?alt=media", "name": "Python"},
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media", "name": "ReactNative"}
+      ],
+      "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2FOrbit-remove.png?alt=media"
     },
     "recruiters": {
       "eyebrow": "RECLUTADORES DE TALENTO",

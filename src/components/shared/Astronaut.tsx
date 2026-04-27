@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useMemo, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, Environment, PerspectiveCamera, Sphere, useAnimations, useTexture, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei'
+import { useGLTF, Environment, PerspectiveCamera, Sphere, useAnimations, useTexture, AdaptiveDpr, AdaptiveEvents, ContactShadows } from '@react-three/drei'
 import data from '../../data/es.json'
 
 const { models_3d } = data;
@@ -49,7 +49,8 @@ function RealisticMoon() {
   })
 
   return (
-    <group position={[0, -18.2, 0]}>      <Sphere ref={moonRef} args={[17, 28, 28]}>
+    <group position={[0, -18.2, 0]}>
+      <Sphere ref={moonRef} args={[17, 28, 28]} receiveShadow>
         <meshStandardMaterial
           map={moonTexture}
           bumpMap={moonTexture}
@@ -203,6 +204,15 @@ function ModeloSolido({ url }: { url: string }) {
         position={[0, -1.4, 0]}
         visible={isVisible}
       />
+      {/* Sombra de contacto suave sobre la luna */}
+      <ContactShadows
+        position={[0, -1.4, 0]}
+        opacity={0.65}
+        scale={10}
+        blur={2.5}
+        far={4}
+        color="#000000"
+      />
     </group>
   )
 }
@@ -296,6 +306,7 @@ export default function Astronaut() {
         shadows={{ type: THREE.PCFShadowMap }}
         gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
         dpr={[1, 1.2]}
+        style={{ pointerEvents: 'none' }}
       >
         <PerspectiveCamera
           makeDefault
@@ -303,15 +314,24 @@ export default function Astronaut() {
           fov={45}
         />
 
-        <ambientLight intensity={0.2} color="#ffffff" />
+        <ambientLight intensity={0.25} color="#ffffff" />
 
         <directionalLight
           castShadow
-          position={[5, 12, 10]}
-          intensity={2.0}
+          position={[10, 15, 10]}
+          intensity={2.5}
           color="#ffffff"
-          shadow-mapSize={[512, 512]}
+          shadow-mapSize={[1024, 1024]}
           shadow-bias={-0.0001}
+        />
+
+        {/* Rim Light (Luz de contorno para resaltar el modelo) */}
+        <spotLight
+          position={[-10, 10, -10]}
+          intensity={4}
+          angle={0.3}
+          penumbra={1}
+          color="#8E6FE1"
         />
 
         {/* Luces de acento — intensidad reducida */}

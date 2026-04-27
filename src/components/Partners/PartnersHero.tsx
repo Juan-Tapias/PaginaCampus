@@ -21,7 +21,6 @@ export default function PartnersHero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black pt-28 lg:min-h-[696px] lg:pt-0">
-      <Navbar />
       <StarField />
 
       <div className="container relative z-20 mx-auto grid min-h-[calc(100vh-7rem)] grid-cols-1 items-center gap-8 px-6 pb-16 lg:min-h-[696px] lg:grid-cols-[0.82fr_1.18fr] lg:px-12 lg:pb-0">

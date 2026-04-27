@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
 
 const PartnersHero = dynamic(() => import('@/components/Partners/PartnersHero'), { ssr: false });
 const ConnectionCycle = dynamic(() => import('@/components/Partners/ConnectionCycle'), { ssr: false });
@@ -25,6 +26,8 @@ export default function PartnersPage() {
       <RecruitersSection />
       <PartnersContactSection />
       <Footer />
+      {/* Navbar al final para asegurar visibilidad sobre secciones 3D */}
+      <Navbar />
     </main>
   );
 }
