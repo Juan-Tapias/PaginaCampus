@@ -36,13 +36,15 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-[9999] pointer-events-none flex justify-center w-full"
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-[100000] pointer-events-none flex justify-center w-full"
     >
       <div 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`backdrop-blur-xl border border-white/10 rounded-full py-[7px] px-[24px] h-[44px] flex items-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto transition-all duration-500 ease-in-out hover:border-white/20 gap-[32px] ${
-          isScrolled ? 'bg-black/10' : 'bg-black/40'
+        className={`backdrop-blur-xl border rounded-full py-[7px] px-[24px] h-[44px] flex items-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto transition-all duration-700 ease-in-out gap-[32px] ${
+          isScrolled && !isHovered 
+            ? 'bg-black/20 opacity-80 border-white/5 scale-[0.98]' 
+            : 'bg-black/40 opacity-100 border-white/10 scale-100'
         }`}
       >
         

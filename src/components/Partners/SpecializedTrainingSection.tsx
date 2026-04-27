@@ -3,60 +3,66 @@
 import { motion } from 'framer-motion';
 import { partnersPage } from './partnersData';
 import LazySpaceshipCanvas from './LazySpaceshipCanvas';
+import { useMemo } from 'react';
+import data from '@/data/es.json';
 
-const { training, assets } = partnersPage;
-
-function TechOrbit({
-  items,
-  radiusX,
-  radiusY,
-  duration,
-  reverse = false,
-}: {
-  items: string[];
-  radiusX: number;
-  radiusY: number;
-  duration: number;
-  reverse?: boolean;
-}) {
-  return (
-    <motion.div
-      className="absolute left-1/2 top-1/2 h-[1px] w-[1px]"
-      animate={{ rotate: reverse ? -360 : 360 }}
-      transition={{ repeat: Infinity, duration, ease: 'linear' }}
-    >
-      {items.map((technology, index) => {
-        const angle = (index / items.length) * Math.PI * 2;
-        const x = Math.cos(angle) * radiusX;
-        const y = Math.sin(angle) * radiusY;
-
-        return (
-          <span
-            key={technology}
-            className="absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border border-white/10 bg-black/70 px-3 py-1 font-roboto-mono text-[11px] leading-[1.5] text-[#54C6AA] shadow-[0_0_18px_rgba(84,198,170,0.2)] backdrop-blur-md"
-            style={{ left: x, top: y }}
-          >
-            {technology}
-          </span>
-        );
-      })}
-    </motion.div>
-  );
-}
+const { training } = partnersPage;
 
 export default function SpecializedTrainingSection() {
-  const outerTechnologies = training.technologies.filter((_, index) => index % 2 === 0);
-  const innerTechnologies = training.technologies.filter((_, index) => index % 2 !== 0);
+  const tecnologias = data.partners_page.training.technologies;
+
+  const { positionedItems, getLogoSize } = useMemo(() => {
+
+    const layoutMap: Record<string, { x: number, y: number, scale: number, delay: number }> = {
+      python: { x: -260, y: -160, scale: 1.2, delay: 0 },
+      react: { x: 260, y: -140, scale: 1.2, delay: 0.3 },
+      reactnative: { x: 260, y: -140, scale: 1.2, delay: 0.3 },
+      bootstrap: { x: -420, y: -60, scale: 1.4, delay: 0.6 },
+      mysql: { x: 420, y: -40, scale: 1.4, delay: 0.9 },
+      postgresql: { x: -340, y: 40, scale: 1.1, delay: 1.2 },
+      postgre: { x: -340, y: 40, scale: 1.1, delay: 1.2 },
+      typescript: { x: 340, y: 30, scale: 1.1, delay: 1.5 },
+
+      javascript: { x: -110, y: 170, scale: 1.3, delay: 0.4 },
+      css: { x: 0, y: 190, scale: 1.3, delay: 0.7 },
+      html: { x: 110, y: 170, scale: 1.3, delay: 1.0 },
+    };
+
+    const items = tecnologias.map((tech: any) => {
+      const key = (tech.name || "").toLowerCase().trim();
+      return {
+        ...tech,
+        layout: layoutMap[key] || { x: 0, y: 0, scale: 1, delay: 0 }
+      };
+    });
+
+    const getLogoSize = (name: string) => {
+      const n = name?.toLowerCase() || "";
+      // logos grandes (Frontend)
+      if (['html', 'css', 'javascript', 'js'].includes(n)) return "h-20 w-20 sm:h-19 sm:w-19";
+      // Logos horizontales
+      if (['mysql', 'python', 'postgresql', 'postgre', 'bootstrap', 'reactnative'].includes(n)) return "h-15 w-15 sm:h-19 sm:w-19";
+      // Resto (TypeScript, React, etc)
+      return "h-15 w-15 sm:h-19 sm:w-19";
+    };
+
+    return { positionedItems: items, getLogoSize };
+  }, [tecnologias]);
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 lg:min-h-[928px]">
+    <section className="relative overflow-hidden bg-black py-24 lg:min-h-[1000px]">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-[#54C6AA]/5 blur-[160px] rounded-full" />
+      </div>
+
       <div className="container relative z-20 mx-auto px-6 lg:px-12">
+        {/* Textos del Encabezado */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.75 }}
-          className="mx-auto max-w-[1302px] text-center"
+          className="mx-auto max-w-[1302px] text-center mb-16"
         >
           <h2 className="font-poppins text-[32px] font-medium leading-[1.2] text-[#E9E9E9] sm:text-[40px]">
             {training.heading}
@@ -64,43 +70,77 @@ export default function SpecializedTrainingSection() {
           <p className="mt-2 font-poppins text-[22px] leading-[1.3] text-[#E9E9E9]/90 sm:text-[32px]">
             {training.subheading}
           </p>
-          <p className="mt-4 font-roboto-mono text-[11px] uppercase leading-[1.5] text-[#54C6AA] sm:text-xs">
+          <p className="mt-4 font-roboto-mono text-[11px] uppercase tracking-[0.2em] leading-[1.5] text-[#54C6AA] sm:text-xs">
             {training.track}
           </p>
         </motion.div>
 
-        <div className="relative mx-auto mt-12 h-[560px] max-w-[760px] sm:h-[650px]">
-          <div className="absolute left-1/2 top-[54%] h-[210px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#54C6AA]/20 [transform:translate(-50%,-50%)_rotate(-12deg)]" />
-          <div className="absolute left-1/2 top-[54%] h-[150px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#56B4FF]/20 [transform:translate(-50%,-50%)_rotate(10deg)]" />
+        {/* Contenedor del Escenario */}
+        <div className="relative mx-auto h-[800px] w-full max-w-[1200px] flex items-center justify-center">
 
-          <TechOrbit items={outerTechnologies} radiusX={310} radiusY={92} duration={30} />
-          <TechOrbit items={innerTechnologies} radiusX={242} radiusY={62} duration={22} reverse />
+          {/* Capa 0: Imagen Central Orbit (Atrás de todo) */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <motion.div
+              className="absolute left-1/2 top-1/2 pointer-events-auto"
+              style={{ x: '-50%', y: '-50%' }}
+            >
+              <div className="relative">
+                <img
+                  src={data.partners_page.training.orbit}
+                  alt="Orbit Center"
+                  className="w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] object-contain opacity-70 drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+                />
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-1/2 top-[50%] h-[360px] w-[250px] -translate-x-1/2 -translate-y-1/2"
-          >
-            <div className="absolute left-1/2 top-0 z-20 flex size-[150px] -translate-x-1/2 items-center justify-center rounded-full border border-white/10 bg-[#D9D9D9]/10 shadow-[0_0_40px_rgba(255,255,255,0.12)]">
-              <img
-                src={assets.helmet}
-                alt="Astronauta Campuslands"
-                className="h-[135px] w-[135px] object-contain"
-              />
-            </div>
-            <div className="absolute left-1/2 top-[128px] z-10 h-[190px] w-[138px] -translate-x-1/2 rounded-[46px_46px_34px_34px] border border-white/10 bg-gradient-to-b from-[#D8DCE2] via-[#9EA5AE] to-[#3F454F] shadow-[inset_0_0_32px_rgba(255,255,255,0.16),0_28px_80px_rgba(0,0,0,0.5)]">
-              <div className="absolute left-1/2 top-9 h-14 w-20 -translate-x-1/2 rounded-[18px] border border-black/20 bg-black/50" />
-              <div className="absolute -left-8 top-12 h-[118px] w-8 rotate-12 rounded-full bg-[#AAB0B8]" />
-              <div className="absolute -right-8 top-12 h-[118px] w-8 -rotate-12 rounded-full bg-[#AAB0B8]" />
-            </div>
-            <div className="absolute bottom-0 left-1/2 h-16 w-[300px] -translate-x-1/2 rounded-[50%] bg-gradient-to-r from-transparent via-[#B0B0B0]/35 to-transparent blur-sm" />
-          </motion.div>
+          {/* Capa 1: Logos Flotantes Individuales */}
+          <div className="absolute inset-0 z-20 pointer-events-none">
 
-          <LazySpaceshipCanvas
-            className="absolute bottom-8 left-1/2 h-[150px] w-[300px] -translate-x-1/2"
-          />
+            {positionedItems.map((item: any, index: number) => (
+              <motion.div
+                key={index}
+                className="absolute left-1/2 top-1/2 pointer-events-auto"
+                style={{
+                  translateX: '-50%',
+                  translateY: '-50%',
+                  x: item.layout.x,
+                  scale: item.layout.scale,
+                }}
+                animate={{ y: [item.layout.y, item.layout.y - 25, item.layout.y] }}
+                transition={{
+                  duration: 4 + Math.random() * 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: item.layout.delay
+                }}
+              >
+                <div className="group relative flex flex-col items-center">
+                  <div className="absolute inset-0 -z-10 bg-[#54C6AA]/10 blur-3xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-700" />
+
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className={`${getLogoSize(item.name)} object-contain drop-shadow-[0_0_20px_rgba(84,198,170,0.4)] transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_35px_rgba(84,198,170,0.6)]`}
+                  />
+
+                  <span className="mt-6 font-roboto-mono text-[11px] text-white/50 uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {item.name}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Capa 2: La Nave Espacial Base */}
+          <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
+            <LazySpaceshipCanvas
+              className="h-[1200px] w-full max-w-[1200px]"
+              modelScale={0.35}
+              modelPosition={[0, -2.2, 0]}
+              modelRotation={[0.01, -1.6, 0]}
+            />
+          </div>
         </div>
       </div>
     </section>

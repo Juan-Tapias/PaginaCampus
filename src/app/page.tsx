@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Loader from '../components/shared/Loader';
 import Astronaut from '../components/shared/Astronaut';
 import HeadSection from '../components/home/sections/HeadSection';
+import Navbar from '../components/layout/Navbar';
 
 // Solo dejamos dinámicos los componentes de UI que no tienen 3D pesado directo o que son secundarios
 const Hero = dynamic(() => import('../components/home/sections/Hero'), { ssr: false });
@@ -32,11 +33,11 @@ export default function Home() {
                 <Astronaut />
               </div>
 
-              {/* Contenido que scrollea encima - bajamos Z para que el astronauta no sea tapado si hay fondos */}
+              {/* Contenido que scrollea encima */}
               <div className="relative z-20 -mt-[100vh]">
                 <Hero />
                 <ModulesSection />
-                <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#08080a] to-transparent z-30 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#08080a] to-transparent z-10 pointer-events-none" />
               </div>
             </div>
             <div className="relative z-40">
@@ -46,6 +47,8 @@ export default function Home() {
               <MissionControlSection />
               <Footer />
             </div>
+            {/* Navbar al final del DOM para asegurar stacking por encima de todo */}
+            <Navbar />
           </div>
         )}
       </AnimatePresence>

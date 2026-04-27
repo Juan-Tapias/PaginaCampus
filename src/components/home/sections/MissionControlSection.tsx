@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import es from '../../../data/es.json';
 import MissionGlobe, { MissionGlobeHandle, Location } from '../../shared/MissionGlobe';
 
-const TourVirtual = dynamic(() => import('../TourVirtual'), { ssr: false });
+const TourVirtual = dynamic(() => import('../TourVirtual').then(mod => mod.TourVirtual), { ssr: false });
 
 const SEDES: Location[] = [
   { name: 'Bogotá', lat: 4.7110, lng: -74.0721, mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Campuslands+Bogota' },
