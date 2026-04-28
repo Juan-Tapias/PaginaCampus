@@ -67,14 +67,7 @@ export default function Spaceship({
     }
   }, [clonedScene, actions]);
 
-  // Hacemos flotar solo el grupo interno
-  useFrame((state) => {
-    if (floatGroup.current) {
-      // Ya no necesitamos sumarle el position[1] porque el grupo padre ya lo posicionó
-      floatGroup.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.15;
-    }
-  });
-
+  // Animaciones eliminadas para mantener estética estática
   return (
     // Grupo Padre: Se encarga de poner la nave donde tú le digas desde afuera
     <group scale={scale} position={position} rotation={rotation} dispose={null}>
