@@ -17,7 +17,7 @@ export default function Navbar() {
     { name: 'Emplea', href: '/servicio/emplea'},
     { name: 'FullService', href: '#'}, //Pendiente link 
     { name: 'Campuslands Internacional', href: '#'}, //Pendiente link
-    { name: 'Campuslands IA Academy', href: '#'}, //Pendiente link
+    { name: 'Campuslands IA Academy', href: '/servicio/IaAcademy'},
   ];
 
   useEffect(() => {
@@ -38,7 +38,14 @@ export default function Navbar() {
 
   const isActiveLink = (link: string) => {
     if (link === 'INICIO') return pathname === '/';
-    if (link === 'SERVICIOS') return pathname.includes('/servicio') || pathname.includes('/Partners') || pathname.includes('/Services');
+    if (link === 'SERVICIOS') {
+      return (
+        pathname.includes('/servicio') ||
+        pathname.includes('/Partners') ||
+        pathname.includes('/Services') ||
+        pathname.includes('/IaAcademy')
+      );
+    }
     return false;
   };
 

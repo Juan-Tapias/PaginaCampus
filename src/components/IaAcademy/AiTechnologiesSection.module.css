@@ -1,0 +1,123 @@
+.shelf {
+  perspective: 3600px;
+}
+
+.bookContainer {
+  --width: 44px;
+  --height: calc(var(--width) * 4.4);
+  --depth: calc(var(--width) * 2.8);
+  --padding: 22px;
+
+  width: calc(var(--width) + var(--padding));
+  height: var(--height);
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--depth) / -2));
+  transition: transform 0.32s ease, width 0.32s ease;
+  cursor: pointer;
+}
+
+.bookContainer:hover {
+  transform: translateY(-10px) translateZ(calc(var(--depth) / -2));
+}
+
+.bookContainer:has(input:checked) {
+  width: calc(var(--depth) + var(--padding));
+  transform: translateZ(0);
+}
+
+.book {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.32s ease;
+  color: #727272;
+}
+
+.book > div {
+  position: absolute;
+  transition: background-color 0.32s ease;
+}
+
+.book > div:nth-child(-n + 2) {
+  background: #d9d9d9;
+  height: var(--height);
+  width: var(--width);
+}
+
+.book > div:nth-child(1) {
+  transform: rotateY(0deg) translateZ(calc(var(--depth) / 2));
+}
+
+.book > div:nth-child(2) {
+  transform: rotateY(180deg) translateZ(calc(var(--depth) / 2));
+}
+
+.book > div:nth-child(3),
+.book > div:nth-child(4) {
+  background: #606060;
+  height: var(--height);
+  width: var(--depth);
+  left: calc(var(--width) * -1);
+}
+
+.book > div:nth-child(3) {
+  transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
+}
+
+.book > div:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
+}
+
+.book > input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.book:has(> input:checked) {
+  transform: translateZ(calc(var(--width) / -2)) rotateY(-90deg);
+}
+
+.book:has(> input:checked) > div:nth-child(3),
+.book:has(> input:checked) > div:nth-child(4) {
+  background: #f4f4f4;
+}
+
+.book:has(> input:checked) > div:nth-child(-n + 2) {
+  background: #666;
+}
+
+.frontLabel {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 18px auto;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #111111;
+  font-family: var(--font-roboto-mono), monospace;
+}
+
+.spineLabel {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  font-family: var(--font-roboto-mono), monospace;
+}
+
+.placeholder {
+  height: 74px;
+  width: 74px;
+  border-radius: 8px;
+  background: #e62828;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 24px rgba(230, 40, 40, 0.24);
+}
+
