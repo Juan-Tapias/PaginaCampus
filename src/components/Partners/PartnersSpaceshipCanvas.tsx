@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Suspense, useState, useEffect, useRef, useMemo } from 'react';
+import { Suspense, useState, useEffect, useRef } from 'react';
 import { Environment, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 import Spaceship from './Spaceship';
@@ -14,16 +14,18 @@ interface CanvasProps {
   customPosition?: any[];
 }
 
-// Detecta si el dispositivo tiene recursos limitados
+// Detecta si el dispositivo tiene recursos limitados — solo en cliente para evitar hydration mismatch
 function useDeviceTier(): 'low' | 'high' {
-  return useMemo(() => {
-    if (typeof window === 'undefined') return 'high';
+  const [tier, setTier] = useState<'low' | 'high'>('high'); // 'high' como valor SSR seguro
+
+  useEffect(() => {
     const nav = navigator as any;
     const cores = nav.hardwareConcurrency ?? 4;
     const mem = nav.deviceMemory ?? 4;
-    const isLow = cores <= 4 || mem <= 2;
-    return isLow ? 'low' : 'high';
+    setTier(cores <= 4 || mem <= 2 ? 'low' : 'high');
   }, []);
+
+  return tier;
 }
 
 function Scene({
