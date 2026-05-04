@@ -1,3 +1,4 @@
+'use client';
 import { motion, useInView } from 'framer-motion';
 import { partnersPage } from './partnersData';
 import { useMemo, useRef } from 'react';
@@ -25,13 +26,16 @@ export default function SpecializedTrainingSection() {
       html: { x: 100, y: 170, scale: 1.3, delay: 1.0 },
     };
 
-    const items = tecnologias.map((tech: any) => {
+    // Duración determinista basada en el nombre: sin Math.random() para evitar hydration mismatch
+    const items = tecnologias.map((tech: any, i: number) => {
       const key = (tech.name || "").toLowerCase().trim();
+      // Hash simple para generar un valor estable entre 0 y 4
+      const hash = (tech.name || "x").split('').reduce((acc: number, c: string) => acc + c.charCodeAt(0), 0);
+      const randomDuration = 8 + (hash % 40) / 10; // Rango [8, 12], determinista
       return {
         ...tech,
         layout: layoutMap[key] || { x: 0, y: 0, scale: 1, delay: 0 },
-        // Generamos un tiempo aleatorio estable para cada logo
-        randomDuration: 8 + Math.random() * 4
+        randomDuration,
       };
     });
 

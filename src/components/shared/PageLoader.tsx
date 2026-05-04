@@ -17,18 +17,22 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<'loading' | 'done'>('loading');
 
-  // Generamos las partículas UNA SOLA VEZ en el cliente para evitar hydration mismatch
-  const [particles] = useState<Particle[]>(() =>
-    Array.from({ length: 20 }, () => ({
-      width: Math.random() * 3 + 1,
-      height: Math.random() * 3 + 1,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      opacity: Math.random() * 0.3 + 0.1,
-      duration: 2 + Math.random() * 3,
-      delay: Math.random() * 2,
-    }))
-  );
+  // null en SSR, se genera solo en el cliente tras el mount
+  const [particles, setParticles] = useState<Particle[] | null>(null);
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 20 }, () => ({
+        width: Math.random() * 3 + 1,
+        height: Math.random() * 3 + 1,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        opacity: Math.random() * 0.3 + 0.1,
+        duration: 2 + Math.random() * 3,
+        delay: Math.random() * 2,
+      }))
+    );
+  }, []);
 
   useEffect(() => {
     // Simula la carga del bundle JS (rápida)
@@ -101,9 +105,9 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-black"
         >
-          {/* Partículas de fondo */}
+          {/* Partículas de fondo — solo aparecen en cliente, sin afectar SSR */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {particles.map((p, i) => (
+            {particles && particles.map((p, i) => (
               <motion.div
                 key={i}
                 className="absolute rounded-full bg-[#54C6AA]"
@@ -130,7 +134,7 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
             <img
               src="/Logo_Horizontal_Blanco.webp"
               alt="Campuslands"
-              className="h-8 w-auto opacity-90"
+              className="h-24 w-auto opacity-90"
             />
           </motion.div>
 

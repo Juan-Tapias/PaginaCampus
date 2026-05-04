@@ -92,7 +92,7 @@ function RecruiterCard({ company, index }: { company: PartnerCompany, index: num
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 h-full w-full"
             style={{
-              backgroundImage: `url(${assets.helmet})`,
+              backgroundImage: `url(${assets.mosaico})`,
               backgroundSize: '500% 400%',
               backgroundPosition: `${bgX}% ${bgY}%`,
               backgroundRepeat: 'no-repeat',

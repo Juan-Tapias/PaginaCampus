@@ -14,6 +14,7 @@ export default function Navbar() {
   const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   const serviceItems = [
+    { name: 'Staffing', href: '/servicio/staffing'},
     { name: 'Emplea', href: '/servicio/emplea'},
     { name: 'FullService', href: '#'}, //Pendiente link 
     { name: 'Campuslands Internacional', href: '#'}, //Pendiente link
