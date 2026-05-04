@@ -7,9 +7,28 @@ interface PageLoaderProps {
   onComplete: () => void;
 }
 
+interface Particle {
+  width: number; height: number;
+  left: number; top: number;
+  opacity: number; duration: number; delay: number;
+}
+
 export default function PageLoader({ onComplete }: PageLoaderProps) {
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<'loading' | 'done'>('loading');
+
+  // Generamos las partículas UNA SOLA VEZ en el cliente para evitar hydration mismatch
+  const [particles] = useState<Particle[]>(() =>
+    Array.from({ length: 20 }, () => ({
+      width: Math.random() * 3 + 1,
+      height: Math.random() * 3 + 1,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      opacity: Math.random() * 0.3 + 0.1,
+      duration: 2 + Math.random() * 3,
+      delay: Math.random() * 2,
+    }))
+  );
 
   useEffect(() => {
     // Simula la carga del bundle JS (rápida)
@@ -84,19 +103,19 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
         >
           {/* Partículas de fondo */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(20)].map((_, i) => (
+          {particles.map((p, i) => (
               <motion.div
                 key={i}
                 className="absolute rounded-full bg-[#54C6AA]"
                 style={{
-                  width: Math.random() * 3 + 1,
-                  height: Math.random() * 3 + 1,
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  opacity: Math.random() * 0.3 + 0.1,
+                  width: p.width,
+                  height: p.height,
+                  left: `${p.left}%`,
+                  top: `${p.top}%`,
+                  opacity: p.opacity,
                 }}
-                animate={{ opacity: [0.1, 0.5, 0.1] }}
-                transition={{ duration: 2 + Math.random() * 3, repeat: Infinity, delay: Math.random() * 2 }}
+                animate={{ opacity: [p.opacity * 0.4, p.opacity, p.opacity * 0.4] }}
+                transition={{ duration: p.duration, repeat: Infinity, delay: p.delay }}
               />
             ))}
           </div>
