@@ -119,7 +119,8 @@
         "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper4.webp?alt=media"
       ],
       "helmet": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcasco.webp?alt=media",
-      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media"
+      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media",
+      "mosaico": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fnave-mosaico.png?alt=media"
     },
     "hero": {
       "heading": "Potencia tu tripulación de stack tecnológico con",
@@ -486,6 +487,84 @@
       {
         "title": "10. Legislación Aplicable y Jurisdicción:",
         "text": "Cualquier controversia derivada de la interpretación, aplicación o cumplimiento de los presentes términos será sometida a las leyes del país donde esté registrada la Organización, y cualquier disputa se resolverá ante los tribunales competentes de dicha jurisdicción, salvo pacto expreso entre las partes."
+      }
+    ]
+  },
+  "staffing_page": {
+    "hero": {
+      "eyebrow": "CAMPUSLANDS STAFFING",
+      "heading": "Impulsa tu crecimiento con equipos de ingeniería de",
+      "highlight": "alto rendimiento.",
+      "description": "Conectamos la innovación de Campuslands con los desafíos técnicos de tu empresa. Equipos de alto rendimiento listos para integrarse y escalar tus proyectos tecnológicos.",
+      "cta": "↓ Nuestras opciones de Staffing ↓",
+      "hero_image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2FAstronautas.png?alt=media"
+    },
+    "services": [
+      {
+        "eyebrow": "NIVEL CORPORATIVO",
+        "tag": "WORLD CLASS",
+        "title": "Staffing Global",
+        "description": "Desarrollo BPO internacional de alto impacto para compañías que operan en mercados globales competitivos.",
+        "features": ["Gestión Centralizada", "Estándares Globales", "Equipos Remotos de élite", "Tracking de Alto Rendimiento"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fmundo.png?alt=media",
+        "imageSize": "contain",
+        "cta": "Solicitar talento",
+        "cta_href": "#contacto",
+        "levels": [
+          {
+            "name": "JUNIOR BÁSICO",
+            "summary": "Experiencia Campuslands",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia Campuslands"]
+          },
+          {
+            "name": "JUNIOR PLUS",
+            "summary": "Experiencia laboral previa",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+          },
+          {
+            "name": "DEV MID",
+            "summary": "Amplia experiencia laboral",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+          }
+        ]
+      },
+      {
+        "eyebrow": "NIVEL CORPORATIVO",
+        "tag": "LATAM CORE",
+        "title": "Staffing Nacional",
+        "description": "Soluciones ágiles diseñadas específicamente para medianas empresas locales que buscan robustecer sus departamentos técnicos.",
+        "features": ["Contratación Flexible", "Garantía de Reposición", "Talento Curado", "Niveles a Elección"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fcolombia.png?alt=media",
+        "cta": "Solicitar talento",
+        "cta_href": "#contacto",
+        "levels": [
+          {
+            "name": "JUNIOR BÁSICO",
+            "summary": "Experiencia Campuslands",
+            "details": ["Formación a medida.", "2 HdV por vacante.", "Garantía 1 mes.", "Experiencia Campuslands"]
+          },
+          {
+            "name": "JUNIOR PLUS",
+            "summary": "Experiencia laboral previa",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+          },
+          {
+            "name": "DEV MID",
+            "summary": "Amplia experiencia laboral",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+          }
+        ]
+      },
+      {
+        "eyebrow": "OUTSOURCING ESTRATÉGICO",
+        "tag": "BPO PROJECTS",
+        "title": "Staffing Full Service",
+        "description": "Delegue la ejecución técnica completa a células de trabajo gestionadas bajo los estándares de excelencia de nuestra academia.",
+        "features": ["Células Dedicadas", "Ejecución End-to-End", "Monitoreo Campuslands", "Agilidad Garantizada"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fengranaje.png?alt=media",
+        "cta": "Solicitar servicio",
+        "cta_href": "#contacto",
+        "levels": []
       }
     ]
   }

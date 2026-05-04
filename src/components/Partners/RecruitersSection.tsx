@@ -89,10 +89,10 @@ function RecruiterCard({ company, index }: { company: PartnerCompany, index: num
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -60, opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 h-full w-full"
             style={{
-              backgroundImage: `url(${assets.helmet})`,
+              backgroundImage: `url(${assets.mosaico})`,
               backgroundSize: '500% 400%',
               backgroundPosition: `${bgX}% ${bgY}%`,
               backgroundRepeat: 'no-repeat',
