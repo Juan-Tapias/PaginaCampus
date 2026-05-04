@@ -37,8 +37,8 @@ export default function PartnersTravelingSpaceship() {
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.04, 0.06, 0.13, 0.25, 0.38, 0.42],
-    [1, 1, 0.5, 0.5, 1, 1, 1]
+    [0, 0.04, 0.06, 0.13, 0.25, 0.30, 0.35],
+    [1, 1, 0.5, 0.5, 1, 0, 0]
   );
   const blur = useTransform(
     scrollYProgress,
