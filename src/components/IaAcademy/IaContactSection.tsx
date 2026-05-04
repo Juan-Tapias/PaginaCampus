@@ -8,7 +8,7 @@ export default function IaContactSection() {
     <section className="relative overflow-hidden bg-black px-6 py-24 lg:px-12 lg:py-28">
       <div className="container relative mx-auto max-w-[1302px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">DIAGNÓSTICO IA</p>
+          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">{iaContactForm.eyebrow}</p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px]">
             {iaContactForm.title}
           </h2>
@@ -45,7 +45,7 @@ export default function IaContactSection() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <label className="flex flex-col gap-3">
               <span className="font-roboto-mono text-[11px] uppercase tracking-[0.14em] text-[#CFCFCF]">
-                {iaContactForm.fields.teamSize}
+                {iaContactForm.fields.team_size}
               </span>
               <input
                 type="text"

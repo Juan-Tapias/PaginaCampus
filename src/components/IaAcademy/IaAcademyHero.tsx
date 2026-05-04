@@ -25,8 +25,8 @@ export default function IaAcademyHero() {
             <div className="flex size-12 items-center justify-center rounded-full border border-white/15 bg-white/5 p-2">
               <RemoteAssetImage
                 src={iaAcademyAssets.logo}
-                fallbackSrc={iaAcademyAssets.fallbackLogo}
-                alt="IA Academy"
+                fallbackSrc={iaAcademyAssets.fallback_logo}
+                alt={iaAcademyHero.logo_alt}
                 className="size-full object-contain"
               />
             </div>
@@ -49,32 +49,32 @@ export default function IaAcademyHero() {
               href="#ia-services-preview"
               className="inline-flex min-h-[50px] items-center justify-center rounded-[4px] bg-[#5E39DA] px-6 font-roboto-mono text-base text-[#E9E9E9] transition-colors hover:bg-[#6D4AE0]"
             >
-              {iaAcademyHero.primaryCta}
+              {iaAcademyHero.primary_cta}
             </a>
             <a
               href="#ia-plans"
               className="inline-flex min-h-[50px] items-center justify-center rounded-[4px] border border-white/30 bg-white/5 px-6 font-roboto-mono text-base text-[#E9E9E9] transition-colors hover:bg-white/10"
             >
-              {iaAcademyHero.secondaryCta}
+              {iaAcademyHero.secondary_cta}
             </a>
           </div>
 
           <Link
-            href={iaAcademyHero.nextMasterclass.href}
+            href={iaAcademyHero.next_masterclass.href}
             className="group mt-12 block max-w-[560px] rounded-xl border border-[#54C6AA]/35 bg-[#0B0D14]/90 p-5 transition-all hover:border-[#54C6AA] hover:shadow-[0_0_30px_rgba(84,198,170,0.18)]"
             id="ia-services-preview"
           >
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="font-roboto-mono text-[11px] uppercase tracking-[0.24em] text-[#54C6AA]">
-                  {iaAcademyHero.nextMasterclass.title}
+                  {iaAcademyHero.next_masterclass.title}
                 </p>
                 <h2 className="mt-2 font-poppins text-xl font-medium text-white">
-                  {iaAcademyHero.nextMasterclass.topic}
+                  {iaAcademyHero.next_masterclass.topic}
                 </h2>
                 <p className="mt-3 flex items-center gap-2 font-roboto-mono text-xs uppercase tracking-[0.18em] text-white/70">
                   <CalendarDays size={14} />
-                  {iaAcademyHero.nextMasterclass.date}
+                  {iaAcademyHero.next_masterclass.date}
                 </p>
               </div>
               <ArrowRight className="size-5 shrink-0 text-[#54C6AA] transition-transform group-hover:translate-x-1" />
@@ -92,9 +92,9 @@ export default function IaAcademyHero() {
           <div className="absolute inset-0 rounded-[28px] bg-[radial-gradient(circle_at_center,rgba(94,57,218,0.28)_0%,rgba(84,198,170,0.06)_52%,transparent_78%)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/45 p-6 backdrop-blur-xl">
             <RemoteAssetImage
-              src={iaAcademyAssets.heroRobot}
-              fallbackSrc={iaAcademyAssets.fallbackHero}
-              alt="Representación IA Academy"
+              src={iaAcademyAssets.hero_robot}
+              fallbackSrc={iaAcademyAssets.fallback_hero}
+              alt={iaAcademyHero.hero_image_alt}
               className="h-[440px] w-full object-contain lg:h-[540px]"
             />
           </div>

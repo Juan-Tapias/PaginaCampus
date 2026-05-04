@@ -251,6 +251,186 @@
       "legal": "AL ENVIAR, ACEPTAS EL PROTOCOLO DE TRATAMIENTO DE DATOS_V2.0"
     }
   },
+  "ia_academy": {
+    "assets": {
+      "hero_robot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation.svg?alt=media",
+      "hero_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation-hero.svg?alt=media",
+      "hero_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation-tiempo.svg?alt=media",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2Fia-logo.svg?alt=media",
+      "fallback_hero": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media",
+      "fallback_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media",
+      "fallback_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media",
+      "fallback_logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.webp?alt=media"
+    },
+    "landing": {
+      "hero": {
+        "eyebrow": "IA ACADEMY",
+        "heading": "Evoluciona a la velocidad de la",
+        "highlight": "tecnología",
+        "quote": "\"No es la especie más fuerte ni la más inteligente la que sobrevive, sino la que mejor se adapta a los cambio\"",
+        "quote_author": "- Charles Darwin",
+        "primary_cta": "Explorar servicios",
+        "secondary_cta": "Ver sesiones",
+        "logo_alt": "IA Academy",
+        "hero_image_alt": "Representación IA Academy",
+        "masterclass_badge": "Próxima Masterclass",
+        "next_masterclass": {
+          "title": "Ingeniería de Prompts aplicada a Gemini y otras herramientas",
+          "day": "30",
+          "month_year": "Abr 2026",
+          "speaker": "Alejandro Hernandez",
+          "role": "Especialista en IA",
+          "time": "9:00 AM",
+          "action_aria_label": "Abrir servicios IA Academy",
+          "href": "/IaAcademy/servicios"
+        }
+      },
+      "formation_plans": {
+        "eyebrow": "PLANES DE FORMACIÓN ESPACIAL",
+        "heading": "Nuestras misiones",
+        "description": "Elige el plan que mejor impulse tu misión hacia la Inteligencia Artificial",
+        "cards": [
+          {
+            "id": "talento",
+            "title": "Talento IA para equipos internos",
+            "subtitle": "Upskilling técnico",
+            "description": "Entrenamos perfiles de producto y desarrollo con frameworks de adopción rápida."
+          },
+          {
+            "id": "liderazgo",
+            "title": "Liderazgo y estrategia IA",
+            "subtitle": "Toma de decisión",
+            "description": "Alineamos dirección, métricas y riesgos para implementar IA con enfoque de negocio."
+          },
+          {
+            "id": "automatizacion",
+            "title": "Automatización operativa",
+            "subtitle": "Procesos y ROI",
+            "description": "Diseñamos casos de uso con impacto en tiempos, costos y calidad de ejecución."
+          },
+          {
+            "id": "gobernanza",
+            "title": "Gobernanza y escalabilidad",
+            "subtitle": "Seguridad y continuidad",
+            "description": "Estandarizamos prácticas de uso, seguridad y seguimiento para escalar sin fricción."
+          }
+        ]
+      },
+      "specialist": {
+        "eyebrow": "ESPECIALISTA EN TECNOLOGÍAS",
+        "heading": "Estructura técnica para convertir teoría en operación",
+        "image_alt": "Especialista IA Academy",
+        "items": [
+          "Diseño de casos de uso priorizados por impacto",
+          "Implementación guiada con sesiones hands-on",
+          "Métricas de productividad y performance por cohorte"
+        ]
+      },
+      "evolving_teams": {
+        "eyebrow": "EQUIPOS QUE EVOLUCIONARON",
+        "heading": "Historias de adopción con resultados medibles",
+        "item_aria_prefix": "Ver historia",
+        "items": [
+          {
+            "quote": "Pasamos de pruebas aisladas a procesos automatizados en menos de 6 semanas. El equipo entendió cómo implementar IA en producción.",
+            "author": "ANDRÉS MORA",
+            "role": "Head of Operations",
+            "company": "Logística LATAM"
+          },
+          {
+            "quote": "El programa nos dio un marco de decisión para priorizar casos con ROI real. Hoy tenemos un roadmap de IA sostenible.",
+            "author": "DIANA CASTRO",
+            "role": "Innovation Lead",
+            "company": "Fintech Regional"
+          },
+          {
+            "quote": "La diferencia estuvo en la ejecución: sesiones aplicadas a nuestros propios flujos y seguimiento por resultados.",
+            "author": "SANTIAGO RUIZ",
+            "role": "CTO",
+            "company": "HealthTech"
+          }
+        ]
+      },
+      "technologies": {
+        "eyebrow": "TECNOLOGÍAS DE IA",
+        "heading": "Biblioteca técnica para despliegues reales",
+        "description": "Explora las rutas de entrenamiento por tecnología. Las integraciones visuales finales de logos se mantienen en placeholder según diseño.",
+        "activate_book_aria_prefix": "Activar libro",
+        "placeholder_count": 6,
+        "books": [
+          "Prompts",
+          "Agents",
+          "RAG",
+          "MLOps",
+          "LangChain",
+          "n8n",
+          "LLM Ops",
+          "Guardrails",
+          "Vector DB",
+          "Evals"
+        ]
+      },
+      "contact": {
+        "eyebrow": "DIAGNÓSTICO IA",
+        "title": "Activa tu ruta IA Academy",
+        "subtitle": "Cuéntanos tu objetivo y armamos una sesión de diagnóstico.",
+        "fields": {
+          "name": "Nombre completo",
+          "email": "Email corporativo",
+          "team_size": "Tamaño del equipo",
+          "goal": "Objetivo principal"
+        },
+        "cta": "Solicitar diagnóstico"
+      }
+    },
+    "services_view": {
+      "hero": {
+        "back_href": "/IaAcademy",
+        "back_button_label": "Volver a IA Academy",
+        "title": "Servicios IA Academy",
+        "subtitle": "Sesiones en vivo, implementación guiada y roadmap operativo.",
+        "date_label": "Próxima transmisión",
+        "date": "16 MAY · 18:30 COT",
+        "countdown_target_iso": "2026-05-16T18:30:00-05:00",
+        "image_alt": "Robot IA en servicios"
+      },
+      "upcoming_sessions": {
+        "eyebrow": "PRÓXIMAS SESIONES",
+        "heading": "Agenda de masterclasses y workshops",
+        "items": [
+          {
+            "title": "Arquitectura de agentes IA para soporte interno",
+            "date": "16 MAY · 18:30 COT",
+            "duration": "60 min"
+          },
+          {
+            "title": "Automatización con RAG y workflows empresariales",
+            "date": "23 MAY · 18:30 COT",
+            "duration": "75 min"
+          },
+          {
+            "title": "Gobernanza y observabilidad en productos IA",
+            "date": "30 MAY · 18:30 COT",
+            "duration": "60 min"
+          },
+          {
+            "title": "Escalamiento de equipos IA: de piloto a operación",
+            "date": "06 JUN · 18:30 COT",
+            "duration": "60 min"
+          }
+        ]
+      },
+      "replay": {
+        "eyebrow": "VIDEO SESSION",
+        "title": "Última transmisión",
+        "description": "Revisa la sesión más reciente y comparte el enlace con tu equipo.",
+        "cta": "Ver transmisión",
+        "close_aria_label": "Cerrar modal",
+        "iframe_title": "Última transmisión IA Academy",
+        "youtube_embed": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      }
+    }
+  },
   "models_3d": {
     "orbit_run": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_run_fast_draco.glb?alt=media",
     "moon": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fmoon.webp?alt=media",

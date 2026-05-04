@@ -3,7 +3,7 @@
 import { useId, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './AiTechnologiesSection.module.css';
-import { aiTechBooks } from './iaAcademyData';
+import { aiTechBooks, iaTechnologies } from './iaAcademyData';
 
 export default function AiTechnologiesSection() {
   const [activeBook, setActiveBook] = useState(2);
@@ -19,13 +19,12 @@ export default function AiTechnologiesSection() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-[860px] text-center"
         >
-          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">TECNOLOGÍAS DE IA</p>
+          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">{iaTechnologies.eyebrow}</p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px] lg:text-[56px]">
-            Biblioteca técnica para despliegues reales
+            {iaTechnologies.heading}
           </h2>
           <p className="mx-auto mt-6 max-w-[700px] font-poppins text-[17px] leading-[1.7] text-white/75">
-            Explora las rutas de entrenamiento por tecnología. Las integraciones visuales finales de logos se mantienen en
-            placeholder según diseño.
+            {iaTechnologies.description}
           </p>
         </motion.div>
 
@@ -47,7 +46,7 @@ export default function AiTechnologiesSection() {
                     name={groupName}
                     checked={activeBook === index}
                     onChange={() => setActiveBook(index)}
-                    aria-label={`Activar libro ${book}`}
+                    aria-label={`${iaTechnologies.activate_book_aria_prefix} ${book}`}
                   />
                 </div>
               </label>
@@ -55,7 +54,7 @@ export default function AiTechnologiesSection() {
           </div>
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            {aiTechBooks.slice(0, 6).map((label) => (
+            {aiTechBooks.slice(0, iaTechnologies.placeholder_count).map((label) => (
               <div key={label} className="flex w-[110px] flex-col items-center gap-2">
                 <div className={styles.placeholder} />
                 <span className="text-center font-roboto-mono text-[10px] uppercase tracking-[0.16em] text-white/60">

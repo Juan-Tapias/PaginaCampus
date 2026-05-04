@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { evolvingTeams } from './iaAcademyData';
+import { evolvingTeams, iaEvolvingTeams } from './iaAcademyData';
 
 export default function EvolvingTeamsSection() {
   const [active, setActive] = useState(0);
@@ -22,10 +22,10 @@ export default function EvolvingTeamsSection() {
       <div className="container relative mx-auto max-w-[1302px]">
         <div className="mx-auto max-w-[860px] text-center">
           <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
-            EQUIPOS QUE EVOLUCIONARON
+            {iaEvolvingTeams.eyebrow}
           </p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.16] text-[#E9E9E9] sm:text-[44px] lg:text-[56px]">
-            Historias de adopción con resultados medibles
+            {iaEvolvingTeams.heading}
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export default function EvolvingTeamsSection() {
                 className={`h-1.5 rounded-full transition-all ${
                   index === active ? 'w-10 bg-[#54C6AA]' : 'w-3 bg-white/20 hover:bg-white/40'
                 }`}
-                aria-label={`Ver historia ${index + 1}`}
+                aria-label={`${iaEvolvingTeams.item_aria_prefix} ${index + 1}`}
               />
             ))}
           </div>

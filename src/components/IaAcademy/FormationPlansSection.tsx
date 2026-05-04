@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { iaPlans } from './iaAcademyData';
+import { iaFormationPlans, iaPlans } from './iaAcademyData';
 
 export default function FormationPlansSection() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -36,10 +36,10 @@ export default function FormationPlansSection() {
           className="mx-auto max-w-[820px] text-center"
         >
           <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
-            PLANES DE FORMACIÓN ESPACIAL
+            {iaFormationPlans.eyebrow}
           </p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px] lg:text-[56px]">
-            Diseñados para ejecución IA por etapas
+            {iaFormationPlans.heading}
           </h2>
         </motion.div>
 

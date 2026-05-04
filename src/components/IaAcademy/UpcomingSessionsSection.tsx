@@ -2,16 +2,18 @@
 
 import { motion } from 'framer-motion';
 import { Clock3 } from 'lucide-react';
-import { upcomingSessions } from './iaAcademyData';
+import { iaServicesView, upcomingSessions } from './iaAcademyData';
 
 export default function UpcomingSessionsSection() {
   return (
     <section className="relative overflow-hidden px-6 py-20 lg:px-12 lg:py-28">
       <div className="container relative mx-auto max-w-[1302px]">
         <div className="mx-auto max-w-[860px] text-center">
-          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">PRÓXIMAS SESIONES</p>
+          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
+            {iaServicesView.upcoming_sessions.eyebrow}
+          </p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px] lg:text-[52px]">
-            Agenda de masterclasses y workshops
+            {iaServicesView.upcoming_sessions.heading}
           </h2>
         </div>
 

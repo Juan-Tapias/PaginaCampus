@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import RemoteAssetImage from './RemoteAssetImage';
-import { iaAcademyAssets, specialistItems } from './iaAcademyData';
+import { iaAcademyAssets, iaTechSpecialist, specialistItems } from './iaAcademyData';
 
 export default function TechSpecialistSection() {
   return (
@@ -16,10 +16,10 @@ export default function TechSpecialistSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
-            ESPECIALISTA EN TECNOLOGÍAS
+            {iaTechSpecialist.eyebrow}
           </p>
           <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px] lg:text-[56px]">
-            Estructura técnica para convertir teoría en operación
+            {iaTechSpecialist.heading}
           </h2>
           <div className="mt-10 grid gap-4">
             {specialistItems.map((item) => (
@@ -41,9 +41,9 @@ export default function TechSpecialistSection() {
           <div className="absolute inset-0 rounded-[24px] bg-[radial-gradient(circle_at_center,rgba(84,198,170,0.25)_0%,transparent_72%)] blur-3xl" />
           <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-black/40 p-5">
             <RemoteAssetImage
-              src={iaAcademyAssets.heroCrossed}
-              fallbackSrc={iaAcademyAssets.fallbackCrossed}
-              alt="Especialista IA Academy"
+              src={iaAcademyAssets.hero_crossed}
+              fallbackSrc={iaAcademyAssets.fallback_crossed}
+              alt={iaTechSpecialist.image_alt}
               className="h-[420px] w-full object-contain"
             />
           </div>

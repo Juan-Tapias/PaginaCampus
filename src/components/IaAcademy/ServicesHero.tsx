@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import RemoteAssetImage from './RemoteAssetImage';
 import { iaAcademyAssets, servicesHero } from './iaAcademyData';
 
-const MOCK_DEADLINE = new Date('2026-05-16T18:30:00-05:00').getTime();
+const MOCK_DEADLINE = new Date(servicesHero.countdown_target_iso).getTime();
 
 function formatCountdown(ms: number) {
   if (ms <= 0) return '00:00:00';
@@ -43,11 +43,11 @@ export default function ServicesHero() {
           className="max-w-[600px]"
         >
           <Link
-            href="/IaAcademy"
+            href={servicesHero.back_href}
             className="inline-flex min-h-[42px] items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 font-roboto-mono text-[11px] uppercase tracking-[0.16em] text-white/80 transition-colors hover:bg-white/10"
           >
             <ArrowLeft size={14} />
-            Volver a IA Academy
+            {servicesHero.back_button_label}
           </Link>
 
           <h1 className="mt-8 font-poppins text-[38px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[52px] lg:text-[60px]">
@@ -56,7 +56,7 @@ export default function ServicesHero() {
           <p className="mt-6 font-poppins text-lg leading-[1.6] text-white/80 lg:text-[22px]">{servicesHero.subtitle}</p>
 
           <div className="mt-10 rounded-xl border border-[#54C6AA]/35 bg-[#0B0D14] p-6">
-            <p className="font-roboto-mono text-[11px] uppercase tracking-[0.2em] text-[#54C6AA]">{servicesHero.dateLabel}</p>
+            <p className="font-roboto-mono text-[11px] uppercase tracking-[0.2em] text-[#54C6AA]">{servicesHero.date_label}</p>
             <p className="mt-2 font-poppins text-xl text-white">{servicesHero.date}</p>
             <p className="mt-4 font-roboto-mono text-3xl font-bold tracking-[0.14em] text-white">{countdown}</p>
           </div>
@@ -71,9 +71,9 @@ export default function ServicesHero() {
           <div className="absolute inset-0 rounded-[26px] bg-[radial-gradient(circle_at_center,rgba(84,198,170,0.22)_0%,transparent_70%)] blur-3xl" />
           <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-black/40 p-5">
             <RemoteAssetImage
-              src={iaAcademyAssets.heroTime}
-              fallbackSrc={iaAcademyAssets.fallbackTime}
-              alt="Robot IA en servicios"
+              src={iaAcademyAssets.hero_time}
+              fallbackSrc={iaAcademyAssets.fallback_time}
+              alt={servicesHero.image_alt}
               className="h-[430px] w-full object-contain lg:h-[520px]"
             />
           </div>
