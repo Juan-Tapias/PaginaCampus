@@ -10,18 +10,17 @@ export default function PartnersTravelingSpaceship() {
 
   const x = useTransform(scrollYProgress, scrollRange, ["25vw", "0vw", "-35vw", "-35vw", "-35vw", "-35vw", "-35vw"]);
 
-const y = useTransform(
+  const y = useTransform(
     scrollYProgress,
-    scrollRange, 
-    // [0, 0.15, 0.3, 0.45, 0.65, 0.85, 1] -> Tu scrollRange actual
+    scrollRange,
     [
-      "0vh",   // 0: Inicio
-      "5vh",   // 0.15: Bajando
-      "0vh",  // 0.3: Llega a Testimonios
-      "-100vh",  // 0.45: Se queda anclada en Testimonios
-      "-100vh",// 0.65: El usuario bajó a Formación, la nave se queda atrás (sube visualmente)
-      "-150vh",// 0.85: Sube aún más para estar fuera de cámara
-      "-150vh" // 1: Footer (totalmente fuera)
+      "0vh",
+      "5vh",
+      "0vh",
+      "-50vh",
+      "-100vh",
+      "-150vh",
+      "-200vh"
     ]
   );
 
@@ -38,13 +37,13 @@ const y = useTransform(
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.04, 0.06, 0.23, 0.25, 0.38, 0.42],
-    [1, 1, 0.5, 0.5, 1, 1, 0]
+    [0, 0.04, 0.06, 0.13, 0.25, 0.38, 0.42],
+    [1, 1, 0.5, 0.5, 1, 1, 1]
   );
   const blur = useTransform(
     scrollYProgress,
     [0.08, 0.1, 0.23, 0.25],
-    ["blur(0px)", "blur(40px)", "blur(40px)", "blur(0px)"]
+    ["blur(0px)", "blur(40px)", "blur(0px)", "blur(0px)"]
   );
 
   // Springs para fluidez total (suavizamos el damping para que sea más orgánico)

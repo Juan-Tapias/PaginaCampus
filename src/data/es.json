@@ -219,6 +219,23 @@
       ],
       "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2FOrbit-remove.png?alt=media"
     },
+    "selection":{
+      "subheader": "POR QUÉ LAS EMPRESAS LÍDERES NOS ELIGEN",
+      "carrusel":[
+        {"title": "Talento <br/> Certificado",
+        "subtitle":"Filtramos y evaluamos las capacidades técnicas para asegurar que recibas solo a los mejores",
+        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media"},
+        {"title": "Crecimiento <br/> a tu medida",
+        "subtitle":"Armamos equipos de tecnología completos, listos para integrarse y escalar tus proyectos hoy mismo.",
+        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media"},
+        {"title": "Modelos <br/> Adaptables",
+        "subtitle":"Ofrecemos diferentes formas de contratación que se ajustan al presupuesto y flujo de tu empresa.",
+        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media"},
+        {"title": "Cero Riesgo <br/> de Selección",
+        "subtitle":"Hacemos seguimiento constante, si el talento no cumple tus expectativas, lo reemplazamos sin costos adicionales.",
+        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame%20121405.png?alt=media"}
+      ]
+    },
     "recruiters": {
       "eyebrow": "RECLUTADORES DE TALENTO",
       "heading": "Empresas que contratan talento Campuslands",

@@ -7,7 +7,7 @@ import { partnersPage } from './partnersData';
 import LazySpaceshipCanvas from './LazySpaceshipCanvas';
 
 const { hero, assets } = partnersPage;
-
+ 
 export default function PartnersHero() {
   const [isHired, setIsHired] = useState(false);
   const containerRef = useRef(null);

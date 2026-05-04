@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar';
 const PartnersHero = dynamic(() => import('@/components/Partners/PartnersHero'), { ssr: false });
 const ConnectionCycle = dynamic(() => import('@/components/Partners/ConnectionCycle'), { ssr: false });
 const TestimonialsSection = dynamic(() => import('@/components/Partners/TestimonialsSection'), { ssr: false });
+const PartnersSelectionCarousel = dynamic(() => import('@/components/Partners/PartnersSelectionCarousel'), { ssr: false });
 const SpecializedTrainingSection = dynamic(
   () => import('@/components/Partners/SpecializedTrainingSection'),
   { ssr: false },
@@ -21,16 +22,27 @@ const PartnersTravelingSpaceship = dynamic(() => import('@/components/Partners/P
 export default function PartnersPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
-      <PartnersTravelingSpaceship />
+      <div className="relative">
+        {/* Contenedor Sticky para la Nave */}
+        <div className="sticky top-0 h-screen w-full z-10 overflow-hidden pointer-events-none">
+          <PartnersTravelingSpaceship />
+        </div>
 
-      <PartnersHero />
-      <ConnectionCycle />
-      <TestimonialsSection />
-      <SpecializedTrainingSection />
+        {/* Contenido que scrollea encima */}
+        <div className="relative z-20 -mt-[100vh]">
+          <PartnersHero />
+          <ConnectionCycle />
+          <TestimonialsSection />
+        </div>
+      </div>
 
-      <RecruitersSection />
-      <PartnersContactSection />
-      <Footer />
+      <div className="relative z-40 bg-black">
+        <PartnersSelectionCarousel />
+        <SpecializedTrainingSection />
+        <RecruitersSection />
+        <PartnersContactSection />
+        <Footer />
+      </div>
 
       {/* Navbar al final para asegurar visibilidad sobre secciones 3D */}
       <Navbar />
