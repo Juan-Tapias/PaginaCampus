@@ -21,7 +21,7 @@ const PartnersContactSection = dynamic(() => import('@/components/Partners/Partn
 
 const PartnersTravelingSpaceship = dynamic(() => import('@/components/Partners/PartnersTravelingSpaceship'), { ssr: false });
 
-export default function PartnersPage() {
+export default function EmpleaPage() {
   const { scrollYProgress } = useScroll();
   
   // Las estrellas se vuelven más sutiles después del Hero
