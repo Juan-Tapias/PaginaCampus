@@ -2,47 +2,56 @@
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useState, useEffect, useRef } from 'react';
-import { Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
+import { Environment, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 import Spaceship from './Spaceship';
 
 interface CanvasProps {
-  modelScale?: any; 
+  modelScale?: any;
   modelRotation?: [number, number, number];
   modelPosition?: [number, number, number];
-  customRotation?: any[]; 
-  customPosition?: any[]; 
+  customRotation?: any[];
+  customPosition?: any[];
 }
 
-function Scene({ 
-  modelScale, 
-  modelRotation, 
+// Detecta si el dispositivo tiene recursos limitados — solo en cliente para evitar hydration mismatch
+function useDeviceTier(): 'low' | 'high' {
+  const [tier, setTier] = useState<'low' | 'high'>('high'); // 'high' como valor SSR seguro
+
+  useEffect(() => {
+    const nav = navigator as any;
+    const cores = nav.hardwareConcurrency ?? 4;
+    const mem = nav.deviceMemory ?? 4;
+    setTier(cores <= 4 || mem <= 2 ? 'low' : 'high');
+  }, []);
+
+  return tier;
+}
+
+function Scene({
+  modelScale,
+  modelRotation,
   modelPosition,
-  customRotation, 
-  customPosition 
+  customRotation,
+  customPosition,
 }: CanvasProps) {
   const groupRef = useRef<THREE.Group>(null);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!groupRef.current) return;
-    
-    // Prioridad: customValue (viaje global) > modelValue (local/estático)
-    const activeScale = modelScale; 
+    const activeScale = modelScale;
     const activeRot = customRotation || modelRotation;
     const activePos = customPosition || modelPosition;
 
-    // Aplicamos Escala (MotionValue o número)
     const s = typeof activeScale?.get === 'function' ? activeScale.get() : (activeScale || 0.4);
     groupRef.current.scale.set(s, s, s);
 
-    // Aplicamos Rotación
     if (activeRot && Array.isArray(activeRot)) {
       groupRef.current.rotation.x = typeof activeRot[0]?.get === 'function' ? activeRot[0].get() : activeRot[0];
       groupRef.current.rotation.y = typeof activeRot[1]?.get === 'function' ? activeRot[1].get() : activeRot[1];
       groupRef.current.rotation.z = typeof activeRot[2]?.get === 'function' ? activeRot[2].get() : activeRot[2];
     }
-    
-    // Aplicamos Posición
+
     if (activePos && Array.isArray(activePos)) {
       groupRef.current.position.x = typeof activePos[0]?.get === 'function' ? activePos[0].get() : activePos[0];
       groupRef.current.position.y = typeof activePos[1]?.get === 'function' ? activePos[1].get() : activePos[1];
@@ -52,11 +61,7 @@ function Scene({
 
   return (
     <group ref={groupRef}>
-      <Spaceship
-        scale={1} // El scale real lo maneja el groupRef
-        position={[0, 0, 0]}
-        rotation={[0, 0, 0]}
-      />
+      <Spaceship scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]} />
     </group>
   );
 }
@@ -66,55 +71,68 @@ export default function PartnersSpaceshipCanvas({
   modelRotation,
   modelPosition,
   customRotation,
-  customPosition
+  customPosition,
 }: CanvasProps) {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => { setIsClient(true); }, []);
+  const tier = useDeviceTier();
 
   if (!isClient) return null;
+
+  const isLow = tier === 'low';
 
   return (
     <div className="w-full h-full min-h-[400px]">
       <Canvas
-        shadows
-        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+        shadows={!isLow}
+        gl={{
+          antialias: !isLow,
+          alpha: true,
+          powerPreference: 'high-performance',
+          // Reduce precision on low-end
+          precision: isLow ? 'lowp' : 'highp',
+        }}
         style={{ background: 'transparent' }}
         onCreated={({ gl }) => {
           gl.setClearColor(0x000000, 0);
           gl.shadowMap.type = THREE.PCFShadowMap;
+          // Limit pixel ratio on low-end devices
+          gl.setPixelRatio(isLow ? 1 : Math.min(window.devicePixelRatio, 1.5));
         }}
-        dpr={[1, 1.5]}
+        dpr={isLow ? 1 : [1, 1.5]}
+        frameloop={isLow ? 'demand' : 'always'}
       >
         <PerspectiveCamera makeDefault position={[0, 0, 12]} fov={45} />
 
         <Suspense fallback={null}>
-          <Environment preset="city" />
+          {/* 'sunset' es mucho más ligero que 'city' */}
+          <Environment preset={isLow ? 'dawn' : 'city'} />
 
-          <Scene 
-            modelScale={modelScale} 
+          <Scene
+            modelScale={modelScale}
             modelRotation={modelRotation}
             modelPosition={modelPosition}
             customRotation={customRotation}
             customPosition={customPosition}
           />
 
-          <ContactShadows
-            position={[0, -3.5, 0]}
-            opacity={0.4}
-            scale={15}
-            blur={2}
-            far={4.5}
-          />
+          {/* ContactShadows eliminado en low-tier por ser muy costoso */}
+          {!isLow && (
+            <mesh position={[0, -3.5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+              <planeGeometry args={[15, 15]} />
+              <shadowMaterial opacity={0.2} />
+            </mesh>
+          )}
         </Suspense>
 
-        <ambientLight intensity={0.05} />
-        <spotLight 
-          position={[15, 20, 15]} 
-          angle={0.3} 
-          penumbra={1} 
-          intensity={1.2} 
-          castShadow 
-          shadow-mapSize={[1024, 1024]}
+        <ambientLight intensity={isLow ? 0.4 : 0.05} />
+        <spotLight
+          position={[15, 20, 15]}
+          angle={0.3}
+          penumbra={1}
+          intensity={isLow ? 0.8 : 1.2}
+          castShadow={!isLow}
+          shadow-mapSize={isLow ? [512, 512] : [1024, 1024]}
         />
       </Canvas>
     </div>

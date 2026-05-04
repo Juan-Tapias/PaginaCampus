@@ -29,6 +29,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${poppins.variable} ${robotoMono.variable}`}>
+      <head>
+        {/* Preconnect a Firebase Storage para acelerar carga de imágenes y modelos 3D */}
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload del modelo 3D principal — el asset más pesado de la página */}
+        <link
+          rel="preload"
+          href="https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
