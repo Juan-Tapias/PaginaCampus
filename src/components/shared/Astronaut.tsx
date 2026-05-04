@@ -204,15 +204,6 @@ function ModeloSolido({ url }: { url: string }) {
         position={[0, -1.4, 0]}
         visible={isVisible}
       />
-      {/* Sombra de contacto suave sobre la luna */}
-      <ContactShadows
-        position={[0, -1.4, 0]}
-        opacity={0.65}
-        scale={10}
-        blur={2.5}
-        far={4}
-        color="#000000"
-      />
     </group>
   )
 }

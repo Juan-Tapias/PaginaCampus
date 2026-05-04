@@ -11,14 +11,6 @@ const { hero, assets } = partnersPage;
 export default function PartnersHero() {
   const [isHired, setIsHired] = useState(false);
   const containerRef = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-  const shipY = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const shipScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);  
-  const shipOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {

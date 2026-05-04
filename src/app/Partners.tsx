@@ -21,7 +21,6 @@ const PartnersTravelingSpaceship = dynamic(() => import('@/components/Partners/P
 export default function PartnersPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
-      {/* La nave al principio para que sea el fondo (background) */}
       <PartnersTravelingSpaceship />
 
       <PartnersHero />
@@ -32,7 +31,7 @@ export default function PartnersPage() {
       <RecruitersSection />
       <PartnersContactSection />
       <Footer />
-      
+
       {/* Navbar al final para asegurar visibilidad sobre secciones 3D */}
       <Navbar />
     </main>

@@ -215,7 +215,7 @@
         {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fmysql-horizontal%201.svg?alt=media", "name": "MySQL"},
         {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%20(1)%201.svg?alt=media", "name": "Postgre"},
         {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpython-logo-inkscape%201.svg?alt=media", "name": "Python"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media", "name": "ReactNative"}
+        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media", "name": "React"}
       ],
       "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2FOrbit-remove.png?alt=media"
     },
