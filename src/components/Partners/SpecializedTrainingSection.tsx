@@ -11,27 +11,27 @@ export default function SpecializedTrainingSection() {
   const isInView = useInView(sectionRef, { margin: "0px 0px 200px 0px" });
 
   const { positionedItems, getLogoSize } = useMemo(() => {
-    // ... (rest of the useMemo content remains same)
     const layoutMap: Record<string, { x: number, y: number, scale: number, delay: number }> = {
-      python: { x: -260, y: -160, scale: 1.2, delay: 0 },
-      react: { x: 260, y: -140, scale: 1.2, delay: 0.3 },
-      reactnative: { x: 260, y: -140, scale: 1.2, delay: 0.3 },
-      bootstrap: { x: -420, y: -60, scale: 1.4, delay: 0.6 },
-      mysql: { x: 420, y: -40, scale: 1.4, delay: 0.9 },
-      postgresql: { x: -340, y: 40, scale: 1.1, delay: 1.2 },
-      postgre: { x: -340, y: 40, scale: 1.1, delay: 1.2 },
-      typescript: { x: 340, y: 30, scale: 1.1, delay: 1.5 },
-
-      javascript: { x: -110, y: 170, scale: 1.3, delay: 0.4 },
+      python: { x: -250, y: -220, scale: 1.2, delay: 0 },
+      react: { x: 250, y: -220, scale: 1.2, delay: 0.3 },
+      reactnative: { x: 250, y: -140, scale: 1.2, delay: 0.3 },
+      bootstrap: { x: -410, y: -60, scale: 1.4, delay: 0.6 },
+      mysql: { x: 380, y: -60, scale: 1.4, delay: 0.9 },
+      postgresql: { x: -330, y: 40, scale: 1.1, delay: 1.2 },
+      postgre: { x: -330, y: 40, scale: 1.1, delay: 1.2 },
+      typescript: { x: 330, y: 40, scale: 1.1, delay: 1.5 },
+      javascript: { x: -100, y: 170, scale: 1.3, delay: 0.4 },
       css: { x: 0, y: 190, scale: 1.3, delay: 0.7 },
-      html: { x: 110, y: 170, scale: 1.3, delay: 1.0 },
+      html: { x: 100, y: 170, scale: 1.3, delay: 1.0 },
     };
 
     const items = tecnologias.map((tech: any) => {
       const key = (tech.name || "").toLowerCase().trim();
       return {
         ...tech,
-        layout: layoutMap[key] || { x: 0, y: 0, scale: 1, delay: 0 }
+        layout: layoutMap[key] || { x: 0, y: 0, scale: 1, delay: 0 },
+        // Generamos un tiempo aleatorio estable para cada logo
+        randomDuration: 8 + Math.random() * 4
       };
     });
 
@@ -47,6 +47,7 @@ export default function SpecializedTrainingSection() {
 
   return (
     <section 
+      ref={sectionRef}
       id="specialized-training" 
       className="relative overflow-hidden py-20 lg:min-h-[760px] lg:py-0"
     >
@@ -99,32 +100,27 @@ export default function SpecializedTrainingSection() {
             </motion.div>
           </div>
 
-          {/* Capa 1: Logos Flotantes Individuales (Al frente de la nave z-10) */}
           <div className="absolute inset-0 z-20 pointer-events-none">
             {positionedItems.map((item: any, index: number) => (
-              <motion.div
+              <div
                 key={index}
                 className="absolute left-1/2 top-1/2 pointer-events-auto"
                 style={{
-                  translateX: '-50%',
-                  translateY: '-50%',
-                  x: item.layout.x,
-                  scale: item.layout.scale,
-                }}
-                // Animación mucho más sutil y lenta para las tecnologías
-                animate={isInView ? { 
-                  y: [item.layout.y, item.layout.y - 8, item.layout.y],
-                  rotate: [0, 1, -1, 0]
-                } : { y: item.layout.y }}
-                transition={{
-                  duration: 7 + Math.random() * 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: item.layout.delay
+                  transform: `translate(calc(-50% + ${item.layout.x}px), calc(-50% + ${item.layout.y}px)) scale(${item.layout.scale})`
                 }}
               >
-                <div className="group relative flex flex-col items-center">
-                  {/* Simplificamos el brillo al hover para ser menos pesado */}
+                <motion.div
+                  animate={isInView ? { 
+                    y: [0, -25, 0],
+                  } : { y: 0 }}
+                  transition={{
+                    duration: item.randomDuration,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: item.layout.delay
+                  }}
+                  className="group relative flex flex-col items-center"
+                >
                   <div className="absolute inset-0 -z-10 bg-[#54C6AA]/5 blur-2xl rounded-full scale-0 group-hover:scale-125 transition-transform duration-700" />
 
                   <img
@@ -136,8 +132,8 @@ export default function SpecializedTrainingSection() {
                   <span className="mt-6 font-roboto-mono text-[11px] text-white/50 uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     {item.name}
                   </span>
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             ))}
           </div>
 

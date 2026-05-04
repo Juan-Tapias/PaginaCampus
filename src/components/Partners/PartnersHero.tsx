@@ -7,18 +7,10 @@ import { partnersPage } from './partnersData';
 import LazySpaceshipCanvas from './LazySpaceshipCanvas';
 
 const { hero, assets } = partnersPage;
-
+ 
 export default function PartnersHero() {
   const [isHired, setIsHired] = useState(false);
   const containerRef = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-  const shipY = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const shipScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);  
-  const shipOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,7 +21,6 @@ export default function PartnersHero() {
 
   return (
     <section ref={containerRef} className="relative min-h-screen overflow-hidden pt-28 lg:min-h-[696px] lg:pt-0">
-      <StarField />
 
       <div className="container relative z-20 mx-auto grid min-h-[calc(100vh-7rem)] grid-cols-1 items-center gap-8 px-6 pb-16 lg:min-h-[696px] lg:grid-cols-[0.82fr_1.18fr] lg:px-12 lg:pb-0">
         <motion.div
