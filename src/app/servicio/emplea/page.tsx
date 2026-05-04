@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import StarField from '@/components/shared/StarField';
+import PageLoader from '@/components/shared/PageLoader';
 
 const PartnersHero = dynamic(() => import('@/components/Partners/PartnersHero'), { ssr: false });
 const ConnectionCycle = dynamic(() => import('@/components/Partners/ConnectionCycle'), { ssr: false });
@@ -23,12 +25,18 @@ const PartnersTravelingSpaceship = dynamic(() => import('@/components/Partners/P
 
 export default function EmpleaPage() {
   const { scrollYProgress } = useScroll();
+  const [isLoaded, setIsLoaded] = useState(false);
   
   // Las estrellas se vuelven más sutiles después del Hero
   const starOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0.3]);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-black text-white">
+    <>
+      <PageLoader onComplete={() => setIsLoaded(true)} />
+      <main
+        className="min-h-screen overflow-hidden bg-black text-white"
+        style={{ visibility: isLoaded ? 'visible' : 'hidden' }}
+      >
       {/* Fondo de Estrellas Global */}
       <motion.div 
         style={{ opacity: starOpacity }}
@@ -62,5 +70,6 @@ export default function EmpleaPage() {
       {/* Navbar al final para asegurar visibilidad sobre secciones 3D */}
       <Navbar />
     </main>
+    </>
   );
 }

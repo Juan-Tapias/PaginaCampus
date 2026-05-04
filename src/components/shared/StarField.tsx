@@ -1,155 +1,153 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useEffect, useRef } from 'react';
+
+const STAR_COUNT = 180;
+const SHOOTING_STAR_INTERVAL = 5000;
+
+interface Star {
+  x: number; y: number; r: number;
+  color: string; alpha: number;
+  twinkleDelta: number; twinkleSpeed: number;
+  dx: number; dy: number; // parallax drift
+}
 
 export default function StarField() {
-  const [mounted, setMounted] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
-  const [shootingStars, setShootingStars] = useState<{ id: number; top: number; left: number; angle: number }[]>([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
-  // Capas de estrellas 
-  const layers = useMemo(() =>
-    [0.012, 0.025, 0.05].map((speed, layerIdx) => ({
-      speed,
-      stars: Array.from({ length: layerIdx === 0 ? 120 : layerIdx === 1 ? 60 : 25 }, (_, i) => ({
-        id: `${layerIdx}-${i}`,
-        top: Math.random() * 100,
-        left: Math.random() * 100,
-        size: layerIdx === 0 ? Math.random() * 1.5 + 0.3 : layerIdx === 1 ? Math.random() * 2.5 + 1.0 : Math.random() * 4.0 + 2.0,
-        delay: Math.random() * 5,
-        duration: Math.random() * 4 + 2,
-        color: i % 10 === 0 ? "#67e8f9" : i % 15 === 0 ? "#c084fc" : i % 20 === 0 ? "#fde047" : "white",
-        glow: layerIdx === 2 && i % 3 === 0,
-        driftX: (Math.random() - 0.5) * 5, // Deriva constante
-        driftY: (Math.random() - 0.5) * 5
-      })),
-    })),
-  []);
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Lógica de Estrellas Fugaces
-  useEffect(() => {
-    if (!mounted) return;
-    const triggerShootingStar = () => {
-      const id = Date.now();
-      setShootingStars(prev => [...prev, {
-        id,
-        top: Math.random() * 40,
-        left: Math.random() * 100,
-        angle: 20 + Math.random() * 20
-      }]);
-      setTimeout(() => {
-        setShootingStars(prev => prev.filter(s => s.id !== id));
-      }, 2000);
+    // --- Resize ---
+    let W = 0, H = 0;
+    const resize = () => {
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
     };
+    resize();
+    const ro = new ResizeObserver(resize);
+    ro.observe(canvas);
 
-    const interval = setInterval(() => {
-      if (Math.random() > 0.7) triggerShootingStar();
-    }, 4000);
+    // --- Stars ---
+    const COLORS = ['#ffffff', '#ffffff', '#ffffff', '#67e8f9', '#c084fc', '#fde047'];
+    const stars: Star[] = Array.from({ length: STAR_COUNT }, () => ({
+      x: Math.random(),
+      y: Math.random(),
+      r: Math.random() * 1.6 + 0.3,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      alpha: Math.random() * 0.5 + 0.3,
+      twinkleDelta: Math.random() * Math.PI * 2,
+      twinkleSpeed: Math.random() * 0.015 + 0.005,
+      dx: (Math.random() - 0.5) * 0.00008,
+      dy: (Math.random() - 0.5) * 0.00008,
+    }));
 
-    return () => clearInterval(interval);
-  }, []);
+    // --- Shooting stars ---
+    interface ShootingStar { x: number; y: number; vx: number; vy: number; life: number; maxLife: number; }
+    let shooters: ShootingStar[] = [];
+    let shootTimer = 0;
 
-  // Parallax + Deriva Automática
-  useEffect(() => {
-    let animationFrame: number;
-    const handleMouseMove = (e: MouseEvent) => {
-      const { innerWidth, innerHeight } = window;
-      mouseRef.current = {
-        x: (e.clientX / innerWidth - 0.5) * 2,
-        y: (e.clientY / innerHeight - 0.5) * 2,
-      };
+    // --- Mouse parallax (throttled) ---
+    let mouseX = 0, mouseY = 0;
+    const onMouse = (e: MouseEvent) => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
     };
+    window.addEventListener('mousemove', onMouse, { passive: true });
 
-    const update = () => {
-      layers.forEach((layer, i) => {
-        const el = document.getElementById(`star-layer-${i}`);
-        if (el) {
-          // Combinamos el mouse con un pequeño vaivén automático
-          const autoX = Math.sin(Date.now() * 0.0005) * 15 * (i + 1);
-          const autoY = Math.cos(Date.now() * 0.0005) * 15 * (i + 1);
-          const dx = mouseRef.current.x * layer.speed * 150 + autoX;
-          const dy = mouseRef.current.y * layer.speed * 150 + autoY;
-          el.style.transform = `translate(${dx}px, ${dy}px)`;
+    // --- Render loop ---
+    let raf: number;
+    let last = 0;
+    const draw = (ts: number) => {
+      const dt = ts - last;
+      last = ts;
+      raf = requestAnimationFrame(draw);
+
+      ctx.clearRect(0, 0, W, H);
+
+      // Subtle nebula gradient (cheap, single draw call)
+      const grad = ctx.createRadialGradient(W * 0.3, H * 0.2, 0, W * 0.3, H * 0.2, W * 0.7);
+      grad.addColorStop(0, 'rgba(80,30,160,0.04)');
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Stars
+      const px = mouseX * 12;
+      const py = mouseY * 12;
+
+      for (const s of stars) {
+        if (!reduced) {
+          s.twinkleDelta += s.twinkleSpeed;
+          s.x += s.dx;
+          s.y += s.dy;
+          if (s.x < 0) s.x = 1; if (s.x > 1) s.x = 0;
+          if (s.y < 0) s.y = 1; if (s.y > 1) s.y = 0;
         }
-      });
-      animationFrame = requestAnimationFrame(update);
+        const alpha = reduced ? s.alpha : s.alpha * (0.6 + 0.4 * Math.sin(s.twinkleDelta));
+        ctx.beginPath();
+        ctx.arc(s.x * W + px * s.r, s.y * H + py * s.r, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = s.color;
+        ctx.globalAlpha = alpha;
+        ctx.fill();
+      }
+
+      // Shooting stars
+      if (!reduced) {
+        shootTimer += dt;
+        if (shootTimer > SHOOTING_STAR_INTERVAL && Math.random() > 0.5) {
+          shootTimer = 0;
+          shooters.push({
+            x: Math.random() * W,
+            y: Math.random() * H * 0.4,
+            vx: 4 + Math.random() * 3,
+            vy: 2 + Math.random() * 2,
+            life: 0,
+            maxLife: 60 + Math.random() * 40,
+          });
+        }
+
+        shooters = shooters.filter(s => s.life < s.maxLife);
+        for (const s of shooters) {
+          s.x += s.vx; s.y += s.vy; s.life++;
+          const progress = s.life / s.maxLife;
+          const alpha = progress < 0.1 ? progress * 10 : progress > 0.7 ? (1 - progress) / 0.3 : 1;
+          const tailLen = 80;
+          const grd = ctx.createLinearGradient(s.x - s.vx * tailLen / 4, s.y - s.vy * tailLen / 4, s.x, s.y);
+          grd.addColorStop(0, 'transparent');
+          grd.addColorStop(1, `rgba(255,255,255,${alpha * 0.8})`);
+          ctx.globalAlpha = 1;
+          ctx.beginPath();
+          ctx.moveTo(s.x - s.vx * tailLen / 4, s.y - s.vy * tailLen / 4);
+          ctx.lineTo(s.x, s.y);
+          ctx.strokeStyle = grd;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+      }
+
+      ctx.globalAlpha = 1;
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    update();
+    raf = requestAnimationFrame(draw);
+
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrame);
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      window.removeEventListener('mousemove', onMouse);
     };
-  }, [layers]);
-
-  if (!mounted) return null;
+  }, []);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none bg-transparent">
-      
-      {/* 1. Nebulosas Pulsantes */}
-      <div className="absolute inset-0 opacity-30 mix-blend-screen">
-        <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] rounded-full bg-purple-900/30 blur-[150px] animate-pulse" style={{ animationDuration: '15s' }} />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[70%] h-[70%] rounded-full bg-blue-900/30 blur-[150px] animate-pulse" style={{ animationDuration: '12s' }} />
-      </div>
-
-      {/* 2. Capas de Estrellas */}
-      {layers.map((layer, i) => (
-        <div
-          key={i}
-          id={`star-layer-${i}`}
-          className="absolute inset-[-20%] will-change-transform"
-        >
-          {layer.stars.map((s) => (
-            <span
-              key={s.id}
-              style={{
-                position: "absolute",
-                top: `${s.top}%`,
-                left: `${s.left}%`,
-                width: `${s.size}px`,
-                height: `${s.size}px`,
-                borderRadius: "50%",
-                background: s.color,
-                boxShadow: s.glow ? `0 0 ${s.size * 3}px ${s.color}` : "none",
-                animation: `twinkle ${s.duration}s ${s.delay}s infinite ease-in-out`,
-                opacity: 0.8
-              }}
-            />
-          ))}
-        </div>
-      ))}
-
-      {/* 3. Estrellas Fugaces */}
-      {shootingStars.map(star => (
-        <div
-          key={star.id}
-          className="absolute h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
-          style={{
-            top: `${star.top}%`,
-            left: `${star.left}%`,
-            width: '150px',
-            transform: `rotate(${star.angle}deg)`,
-            animation: 'shooting-star 1.5s linear forwards'
-          }}
-        />
-      ))}
-
-      {/* 4. Estilos Inline para animaciones específicas */}
-      <style>{`
-        @keyframes shooting-star {
-          0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
-          10% { opacity: 1; }
-          70% { opacity: 1; }
-          100% { transform: translateX(300%) rotate(25deg); opacity: 0; }
-        }
-      `}</style>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      aria-hidden="true"
+    />
   );
 }
