@@ -17,7 +17,7 @@ export default function PartnersSelectionCarousel() {
   }, []);
 
   return (
-    <section className="relative bg-black py-24 overflow-hidden">
+    <section className="relative bg-transparent py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mx-auto max-w-[1100px]">
           {/* Subheader verde */}

@@ -112,7 +112,7 @@ export default function RecruitersSection() {
   const companies = getRecruiterLogos();
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 lg:min-h-[1124px]">
+    <section className="relative overflow-hidden bg-transparent py-24 lg:min-h-[1124px]">
       {/* Fondo de ambientación */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(84,198,170,0.05)_0%,transparent_70%)]" />
