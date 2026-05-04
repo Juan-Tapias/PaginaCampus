@@ -1,7 +1,6 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
+// ... rest of imports
 import { partnersPage } from './partnersData';
 import LazySpaceshipCanvas from './LazySpaceshipCanvas';
 
@@ -9,6 +8,18 @@ const { testimonials, assets } = partnersPage;
 
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
+  const containerRef = useRef(null);
+
+  // Capturamos el progreso de entrada a la sección
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "center center"]
+  });
+
+  // Animación de llegada (desde arriba, zoom-in y fade-in)
+  const shipY = useTransform(scrollYProgress, [0, 1], [-200, 0]);
+  const shipScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const shipOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -21,7 +32,7 @@ export default function TestimonialsSection() {
   const current = testimonials.items[active];
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 lg:min-h-[715px] lg:py-0">
+    <section ref={containerRef} className="relative overflow-hidden py-24 lg:min-h-[715px] lg:py-0">
       <div className="container relative z-20 mx-auto grid min-h-[560px] grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-12">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -30,31 +41,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           className="relative h-[260px] opacity-70 sm:h-[360px] lg:h-[500px]"
         >
-          {/* Intensified Cinematic Vignette and Shadow */}
-          <div className="pointer-events-none absolute inset-0 z-0"
-            style={{
-              background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 65%)'
-            }}
-          />
-          {/* Capa 1: Sombra base profunda */}
-          <div className="pointer-events-none absolute inset-0 z-20 rounded-lg"
-            style={{
-              boxShadow: 'inset 0 0 150px 60px rgba(0,0,0,1)'
-            }}
-          />
-          {/* Capa 2: Oscurecimiento extra de esquinas */}
-          <div className="pointer-events-none absolute inset-0 z-20 rounded-lg"
-            style={{
-              background: 'radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.8) 100%)'
-            }}
-          />
-
-          <LazySpaceshipCanvas
-            className="absolute inset-0 z-10 h-full w-full"
-            modelScale={0.8}
-            modelRotation={[0, -0.4, 0]}
-            modelPosition={[6, 0, 3]}
-          />
+          {/* El espacio para la nave global */}
 
           {/* Línea inferior brillante */}
           <div className="absolute inset-x-8 bottom-8 z-20 h-px bg-gradient-to-r from-transparent via-[#54C6AA]/60 to-transparent" />

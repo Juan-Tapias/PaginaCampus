@@ -16,16 +16,23 @@ const PartnersContactSection = dynamic(() => import('@/components/Partners/Partn
   ssr: false,
 });
 
+const PartnersTravelingSpaceship = dynamic(() => import('@/components/Partners/PartnersTravelingSpaceship'), { ssr: false });
+
 export default function PartnersPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
+      {/* La nave al principio para que sea el fondo (background) */}
+      <PartnersTravelingSpaceship />
+
       <PartnersHero />
       <ConnectionCycle />
       <TestimonialsSection />
       <SpecializedTrainingSection />
+
       <RecruitersSection />
       <PartnersContactSection />
       <Footer />
+      
       {/* Navbar al final para asegurar visibilidad sobre secciones 3D */}
       <Navbar />
     </main>

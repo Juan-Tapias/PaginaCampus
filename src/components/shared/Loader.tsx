@@ -32,9 +32,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   const { progress } = useProgress();
 
   // Pre-calculamos los valores para evitar el error de hidratación SSR/Client
-  const initialRotations = useMemo(() => 
+  const initialRotations = useMemo(() =>
     letters.map((_, i) => ((i * 37 + 13) % 120) - 60), // Valores deterministas, no Math.random()
-  []);
+    []);
 
   const getStatusMessage = (p: number) => {
     if (p < 20) return 'Iniciando protocolos...';
@@ -110,18 +110,34 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       </AnimatePresence>
 
       {/* Letras de CAMPUSLANDS */}
-      <motion.div className="flex gap-2 md:gap-4 mb-8 px-4 flex-wrap justify-center items-end relative z-50">
+      <motion.div 
+        className="flex mb-8 px-4 flex-wrap justify-center items-end relative z-[100] 
+                   [--letter-scale:0.4px] sm:[--letter-scale:0.6px] md:[--letter-scale:0.85px]"
+        style={{ gap: 'calc(var(--letter-scale) * 15)' }} // Distancia proporcional a la escala
+      >
         {letters.map((src, i) => {
           const total = letters.length;
           const mid = (total - 1) / 2;
           const distFromMid = i - mid;
           const scrambledOffsets = [4, -3, 1, 5, -2, 0, 3, -5, 2, -1, -4];
 
+          // Alturas originales de los SVGs para mantener proporciones reales
+          const originalHeights = [101, 101, 99, 130, 99, 101, 132, 101, 99, 133, 101];
+          const h = originalHeights[i];
+
+          // La 'P' (índice 3) tiene un descendente, ajustamos su posición vertical
+          const isDescender = i === 3;
+
           return (
             <motion.img
               key={i}
               src={typeof src === 'string' ? src : src.src}
               alt={`letter-${i}`}
+              style={{
+                height: `calc(var(--letter-scale) * ${h})`,
+                width: 'auto',
+                marginBottom: isDescender ? `calc(var(--letter-scale) * -30)` : '0'
+              }}
               // Estado inicial: Desplazadas lateralmente para mezclar el orden
               initial={{
                 opacity: 0,
@@ -132,11 +148,11 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
               animate={
                 hasImpacted
                   ? {
-                    // ORDEN CORRECTO + ALINEACIÓN EN ARCO
+                    // ALINEACIÓN RECTA Y LIMPIA
                     opacity: 1,
-                    y: -180 + (Math.pow(distFromMid, 2) * 6),
-                    x: 0, // Vuelven a su posición real en la palabra
-                    rotate: distFromMid * 7,
+                    y: -180, 
+                    x: 0,
+                    rotate: 0,
                     scale: 1,
                     filter: ["brightness(1)", "brightness(2.5)", "brightness(1.3)"],
                     transition: {
@@ -157,7 +173,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
               }
               exit={{ opacity: 1, y: -200 }}
               transition={{ duration: 0.3 }}
-              className="h-10 sm:h-16 md:h-24 w-auto object-contain origin-bottom"
+              className="object-contain origin-bottom"
             />
           );
         })}
@@ -180,7 +196,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             }}
             exit={{ opacity: 1, y: -20 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-col items-center relative z-50"
+            className="flex flex-col items-center relative z-[100]"
           >
             <motion.p
               className="font-roboto-mono text-sm md:text-xl tracking-[0.5em] text-cyan-400 uppercase drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]"

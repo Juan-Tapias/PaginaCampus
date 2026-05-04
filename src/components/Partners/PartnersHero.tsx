@@ -1,7 +1,6 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+// ... rest of imports
 import Navbar from '@/components/layout/Navbar';
 import StarField from '@/components/shared/StarField';
 import { partnersPage } from './partnersData';
@@ -11,16 +10,25 @@ const { hero, assets } = partnersPage;
 
 export default function PartnersHero() {
   const [isHired, setIsHired] = useState(false);
+  const containerRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  const shipY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const shipScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);  
+  const shipOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsHired(prev => !prev);
-    }, 6000); // 4s animation + 2s pause
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black pt-28 lg:min-h-[696px] lg:pt-0">
+    <section ref={containerRef} className="relative min-h-screen overflow-hidden pt-28 lg:min-h-[696px] lg:pt-0">
       <StarField />
 
       <div className="container relative z-20 mx-auto grid min-h-[calc(100vh-7rem)] grid-cols-1 items-center gap-8 px-6 pb-16 lg:min-h-[696px] lg:grid-cols-[0.82fr_1.18fr] lg:px-12 lg:pb-0">
@@ -63,12 +71,7 @@ export default function PartnersHero() {
           transition={{ duration: 0.95, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-10 h-[390px] lg:h-[570px]"
         >
-          <LazySpaceshipCanvas
-            modelScale={0.4}
-            modelRotation={[0.5, -0.5, 0]}
-            modelPosition={[0, 1, 0]}
-            className="absolute inset-0 h-full w-full"
-          />
+          {/* El espacio para la nave global */}
 
           <div className="absolute bottom-7 left-1/2 flex w-full max-w-[580px] -translate-x-1/2 flex-col items-center lg:bottom-[72px]">
             <div className="relative w-full p-4">
@@ -96,7 +99,7 @@ export default function PartnersHero() {
                     transition={{ duration: 0.55, delay: 0.5 + index * 0.08 }}
                     className="flex flex-col items-center"
                   >
-                    <div className={`relative flex size-[74px] items-center justify-center rounded-full border transition-all duration-700 sm:size-[88px] lg:size-[94px] ${
+                    <div className={`relative flex size-[74px] items-center justify-ceser rounded-full border transition-all duration-700 sm:size-[88px] lg:size-[94px] ${
                       isHired 
                         ? 'border-[#54C6AA] shadow-[0_0_26px_rgba(84,198,170,0.35)]' 
                         : 'border-[#56B4FF] shadow-[0_0_26px_rgba(86,180,255,0.35)]'
