@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Briefcase, Rocket, Globe, GraduationCap, ExternalLink } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import data from '../../data/es.json';
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
     { name: 'Emplea', href: '/servicio/emplea'},
     { name: 'FullService', href: '#'}, //Pendiente link 
     { name: 'Campuslands Internacional', href: '#'}, //Pendiente link
-    { name: 'Campuslands IA Academy', href: '/servicio/IaAcademy'},
+    { name: 'Campuslands IA Academy', href: '/IaAcademy'},
   ];
 
   useEffect(() => {

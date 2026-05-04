@@ -253,10 +253,10 @@
   },
   "ia_academy": {
     "assets": {
-      "hero_robot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation.svg?alt=media",
-      "hero_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation-hero.svg?alt=media",
-      "hero_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2FIA-representation-tiempo.svg?alt=media",
-      "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia-academy%2Fia-logo.svg?alt=media",
+      "hero_robot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation.svg?alt=media",
+      "hero_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation-hero.svg?alt=media",
+      "hero_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation-tiempo.svg?alt=media",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Fia-logo.svg?alt=media",
       "fallback_hero": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media",
       "fallback_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media",
       "fallback_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media",

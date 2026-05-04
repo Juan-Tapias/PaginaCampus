@@ -18,18 +18,19 @@ export default function EvolvingTeamsSection() {
   const current = evolvingTeams[active];
 
   return (
-    <section className="relative overflow-hidden px-6 py-24 lg:px-12 lg:py-32">
+    <section className="relative overflow-hidden px-6 py-20 lg:px-12 lg:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-[1320px] bg-gradient-to-r from-transparent via-[#2D4A50]/60 to-transparent" />
       <div className="container relative mx-auto max-w-[1302px]">
         <div className="mx-auto max-w-[860px] text-center">
           <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
             {iaEvolvingTeams.eyebrow}
           </p>
-          <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.16] text-[#E9E9E9] sm:text-[44px] lg:text-[56px]">
+          <h2 className="mt-4 font-poppins text-[40px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[48px] lg:text-[58px]">
             {iaEvolvingTeams.heading}
           </h2>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[920px] rounded-[14px] border border-white/10 bg-[#0B0C12] p-8 lg:p-12">
+        <div className="mx-auto mt-14 max-w-[980px] rounded-[16px] border border-white/10 bg-[#171A20]/90 p-8 shadow-[0_18px_56px_rgba(0,0,0,0.45)] lg:p-12">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.author}
@@ -38,11 +39,11 @@ export default function EvolvingTeamsSection() {
               exit={{ opacity: 0, filter: 'blur(8px)' }}
               transition={{ duration: 0.6 }}
             >
-              <p className="font-poppins text-xl italic leading-[1.75] text-[#E9E9E9] lg:text-[26px]">
+              <p className="font-poppins text-[20px] italic leading-[1.7] text-[#E9E9E9] lg:text-[30px]">
                 "{current.quote}"
               </p>
               <div className="mt-10">
-                <p className="font-poppins text-lg font-semibold tracking-wide text-white">{current.author}</p>
+                <p className="font-poppins text-[20px] font-semibold tracking-wide text-white lg:text-[22px]">{current.author}</p>
                 <p className="mt-1 font-roboto-mono text-xs uppercase tracking-[0.2em] text-[#54C6AA]">
                   {current.role} · {current.company}
                 </p>

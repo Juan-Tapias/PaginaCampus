@@ -2,84 +2,46 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CalendarDays } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import RemoteAssetImage from './RemoteAssetImage';
 import { iaAcademyAssets, iaAcademyHero } from './iaAcademyData';
 
 export default function IaAcademyHero() {
   return (
-    <section className="relative overflow-hidden px-6 pb-16 pt-28 lg:px-12 lg:pb-24">
+    <section className="relative overflow-hidden px-6 pb-16 pt-28 lg:px-12 lg:pb-20 lg:pt-32">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-[12%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(84,198,170,0.2)_0%,rgba(84,198,170,0)_72%)]" />
+        <div className="absolute right-[14%] top-[16%] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(84,176,255,0.28)_0%,rgba(84,176,255,0.08)_36%,transparent_72%)]" />
       </div>
 
-      <div className="container relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-[1302px] grid-cols-1 items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="container relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-[1302px] grid-cols-1 items-start gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-120px' }}
           transition={{ duration: 0.65 }}
-          className="max-w-[620px]"
+          className="max-w-[560px] pt-10"
         >
-          <div className="mb-8 flex items-center gap-4">
-            <div className="flex size-12 items-center justify-center rounded-full border border-white/15 bg-white/5 p-2">
-              <RemoteAssetImage
-                src={iaAcademyAssets.logo}
-                fallbackSrc={iaAcademyAssets.fallback_logo}
-                alt={iaAcademyHero.logo_alt}
-                className="size-full object-contain"
-              />
-            </div>
-            <span className="font-roboto-mono text-xs uppercase tracking-[0.28em] text-[#54C6AA]">
-              {iaAcademyHero.eyebrow}
-            </span>
-          </div>
-
-          <h1 className="font-poppins text-[40px] font-semibold leading-[1.08] text-[#E9E9E9] sm:text-[52px] lg:text-[64px]">
+          <h1 className="font-poppins text-[42px] font-semibold leading-[1.08] text-[#E9E9E9] sm:text-[54px] lg:text-[60px]">
             {iaAcademyHero.heading}
-            <span className="mt-2 block italic text-[#54C6AA]">{iaAcademyHero.highlight}</span>
+            {' '}
+            <span className="italic text-[#8871E3]">{iaAcademyHero.highlight}</span>
           </h1>
 
-          <p className="mt-8 max-w-[580px] font-poppins text-lg leading-[1.55] text-[#CFCFCF] lg:text-[22px]">
-            {iaAcademyHero.description}
+          <p className="mt-10 max-w-[560px] font-poppins text-[24px] italic leading-[1.35] text-[#D1D1D1]/90 lg:text-[27px]">
+            {iaAcademyHero.quote}
+          </p>
+          <p className="mt-8 font-poppins text-[32px] italic leading-none text-[#BFBFBF] lg:text-[40px]">
+            {iaAcademyHero.quote_author}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#ia-services-preview"
-              className="inline-flex min-h-[50px] items-center justify-center rounded-[4px] bg-[#5E39DA] px-6 font-roboto-mono text-base text-[#E9E9E9] transition-colors hover:bg-[#6D4AE0]"
-            >
-              {iaAcademyHero.primary_cta}
-            </a>
-            <a
-              href="#ia-plans"
-              className="inline-flex min-h-[50px] items-center justify-center rounded-[4px] border border-white/30 bg-white/5 px-6 font-roboto-mono text-base text-[#E9E9E9] transition-colors hover:bg-white/10"
-            >
-              {iaAcademyHero.secondary_cta}
-            </a>
+          <div className="mt-10 max-w-[280px]">
+            <RemoteAssetImage
+              src={iaAcademyAssets.logo}
+              fallbackSrc={iaAcademyAssets.fallback_logo}
+              alt={iaAcademyHero.logo_alt}
+              className="h-auto w-full object-contain"
+            />
           </div>
-
-          <Link
-            href={iaAcademyHero.next_masterclass.href}
-            className="group mt-12 block max-w-[560px] rounded-xl border border-[#54C6AA]/35 bg-[#0B0D14]/90 p-5 transition-all hover:border-[#54C6AA] hover:shadow-[0_0_30px_rgba(84,198,170,0.18)]"
-            id="ia-services-preview"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <p className="font-roboto-mono text-[11px] uppercase tracking-[0.24em] text-[#54C6AA]">
-                  {iaAcademyHero.next_masterclass.title}
-                </p>
-                <h2 className="mt-2 font-poppins text-xl font-medium text-white">
-                  {iaAcademyHero.next_masterclass.topic}
-                </h2>
-                <p className="mt-3 flex items-center gap-2 font-roboto-mono text-xs uppercase tracking-[0.18em] text-white/70">
-                  <CalendarDays size={14} />
-                  {iaAcademyHero.next_masterclass.date}
-                </p>
-              </div>
-              <ArrowRight className="size-5 shrink-0 text-[#54C6AA] transition-transform group-hover:translate-x-1" />
-            </div>
-          </Link>
         </motion.div>
 
         <motion.div
@@ -87,16 +49,59 @@ export default function IaAcademyHero() {
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{ once: true, margin: '-120px' }}
           transition={{ duration: 0.7, delay: 0.08 }}
-          className="relative mx-auto w-full max-w-[640px]"
+          className="relative mx-auto w-full max-w-[640px] lg:pt-8"
         >
-          <div className="absolute inset-0 rounded-[28px] bg-[radial-gradient(circle_at_center,rgba(94,57,218,0.28)_0%,rgba(84,198,170,0.06)_52%,transparent_78%)] blur-2xl" />
-          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/45 p-6 backdrop-blur-xl">
+          <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(93,173,255,0.5)_0%,rgba(53,120,255,0.14)_45%,transparent_72%)] blur-2xl" />
+
+          <div className="relative mx-auto w-full max-w-[620px]">
             <RemoteAssetImage
               src={iaAcademyAssets.hero_robot}
               fallbackSrc={iaAcademyAssets.fallback_hero}
               alt={iaAcademyHero.hero_image_alt}
-              className="h-[440px] w-full object-contain lg:h-[540px]"
+              className="h-[360px] w-full object-contain sm:h-[420px] lg:h-[460px]"
             />
+
+            <Link
+              href={iaAcademyHero.next_masterclass.href}
+              className="group relative mt-1 block rounded-[18px] border border-white/10 bg-[#222327]/94 px-5 pb-4 pt-5 shadow-[0_16px_36px_rgba(0,0,0,0.45)] transition-colors hover:bg-[#292A2F]"
+              id="ia-services-preview"
+              aria-label={iaAcademyHero.next_masterclass.action_aria_label}
+            >
+              <div className="absolute -top-10 left-0 inline-flex h-9 items-center gap-2 rounded-full border border-[#00D4C3]/50 bg-[#07282A]/90 px-4 font-roboto-mono text-xs tracking-[0.08em] text-[#48E4D6]">
+                <span className="size-2 rounded-full bg-[#1FE6D5]" />
+                {iaAcademyHero.masterclass_badge}
+              </div>
+
+              <h2 className="pr-8 font-poppins text-[22px] leading-[1.34] text-[#E9E9E9] sm:text-[26px] lg:text-[34px]">
+                {iaAcademyHero.next_masterclass.title}
+              </h2>
+
+              <div className="mt-4 flex items-end gap-6 pr-8 sm:gap-7 sm:pr-10">
+                <div className="min-w-[72px] sm:min-w-[78px]">
+                  <p className="font-poppins text-[44px] leading-[0.95] text-white sm:text-[50px] lg:text-[56px]">
+                    {iaAcademyHero.next_masterclass.day}
+                  </p>
+                  <p className="mt-1 font-poppins text-[22px] leading-none text-white/80 sm:text-[26px] lg:text-[34px]">
+                    {iaAcademyHero.next_masterclass.month_year}
+                  </p>
+                </div>
+
+                <div className="pb-1">
+                  <p className="font-poppins text-[20px] text-white sm:text-[24px] lg:text-[28px]">
+                    {iaAcademyHero.next_masterclass.speaker}
+                  </p>
+                  <p className="mt-1 font-poppins text-[18px] text-[#8B72E6] sm:text-[20px] lg:text-[26px]">
+                    {iaAcademyHero.next_masterclass.role}
+                  </p>
+                  <p className="mt-1 font-poppins text-[24px] text-white/90 sm:text-[27px] lg:text-[35px]">
+                    {iaAcademyHero.next_masterclass.time}
+                  </p>
+                </div>
+              </div>
+
+              <ChevronRight className="absolute right-4 top-1/2 size-8 -translate-y-1/2 text-white/85 transition-transform group-hover:translate-x-1" />
+              <span className="absolute inset-x-0 bottom-0 h-[2px] rounded-b-[18px] bg-gradient-to-r from-transparent via-[#2DD5C8] to-transparent opacity-80" />
+            </Link>
           </div>
         </motion.div>
       </div>

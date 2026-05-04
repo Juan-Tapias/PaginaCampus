@@ -5,21 +5,22 @@ import { iaContactForm } from './iaAcademyData';
 
 export default function IaContactSection() {
   return (
-    <section className="relative overflow-hidden bg-black px-6 py-24 lg:px-12 lg:py-28">
+    <section className="relative overflow-hidden bg-black px-6 py-20 lg:px-12 lg:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-[1320px] bg-gradient-to-r from-transparent via-[#2D4A50]/60 to-transparent" />
       <div className="container relative mx-auto max-w-[1302px]">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">{iaContactForm.eyebrow}</p>
-          <h2 className="mt-4 font-poppins text-[34px] font-semibold leading-[1.15] text-[#E9E9E9] sm:text-[44px]">
+          <h2 className="mt-4 font-poppins text-[40px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[48px] lg:text-[56px]">
             {iaContactForm.title}
           </h2>
-          <p className="mx-auto mt-5 max-w-[620px] font-poppins text-[17px] leading-[1.65] text-white/75">
+          <p className="mx-auto mt-5 max-w-[680px] font-poppins text-[17px] leading-[1.65] text-white/75 lg:text-[20px]">
             {iaContactForm.subtitle}
           </p>
         </div>
 
         <form
           onSubmit={(event) => event.preventDefault()}
-          className="mx-auto mt-14 grid w-full max-w-[760px] grid-cols-1 gap-9"
+          className="mx-auto mt-14 grid w-full max-w-[820px] grid-cols-1 gap-10 rounded-[14px] border border-white/10 bg-[#171A20]/88 p-8 shadow-[0_18px_52px_rgba(0,0,0,0.45)] lg:p-10"
         >
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <label className="flex flex-col gap-3">
@@ -28,7 +29,7 @@ export default function IaContactSection() {
               </span>
               <input
                 type="text"
-                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors focus:border-[#54C6AA]"
+                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors placeholder:text-white/25 focus:border-[#54C6AA]"
               />
             </label>
             <label className="flex flex-col gap-3">
@@ -37,7 +38,7 @@ export default function IaContactSection() {
               </span>
               <input
                 type="email"
-                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors focus:border-[#54C6AA]"
+                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors placeholder:text-white/25 focus:border-[#54C6AA]"
               />
             </label>
           </div>
@@ -49,7 +50,7 @@ export default function IaContactSection() {
               </span>
               <input
                 type="text"
-                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors focus:border-[#54C6AA]"
+                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors placeholder:text-white/25 focus:border-[#54C6AA]"
               />
             </label>
             <label className="flex flex-col gap-3">
@@ -58,7 +59,7 @@ export default function IaContactSection() {
               </span>
               <input
                 type="text"
-                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors focus:border-[#54C6AA]"
+                className="h-11 border-0 border-b border-white/20 bg-transparent font-poppins text-white outline-none transition-colors placeholder:text-white/25 focus:border-[#54C6AA]"
               />
             </label>
           </div>
