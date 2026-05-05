@@ -30,7 +30,7 @@ export default function FormationPlansSection() {
       <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-[1320px] bg-gradient-to-r from-transparent via-[#2D4A50]/70 to-transparent" />
       <div className="container relative mx-auto max-w-[1302px]">
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
+          initial={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-120px' }}
           transition={{ duration: 0.6 }}
