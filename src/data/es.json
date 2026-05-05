@@ -58,68 +58,69 @@
     "subheading": "Ecosistema de Alianzas",
     "description": "Estas empresas ya contratan y patrocinan talento Campuslands.",
       "companies": [
-        { "name": "2nv", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.webp?alt=media", "type": "partner" },
-        { "name": "Aliaddo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.webp?alt=media", "type": "partner" },
-        { "name": "Amaris", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.webp?alt=media", "type": "partner" },
-        { "name": "Applus", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.webp?alt=media", "type": "partner" },
-        { "name": "Conexalab", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.webp?alt=media", "type": "main" },
+        { "name": "2nv", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.svg?alt=media", "type": "partner" },
+        { "name": "Aliaddo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.svg?alt=media", "type": "partner" },
+        { "name": "Amaris", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.svg?alt=media", "type": "partner" },
+        { "name": "Applus", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.svg?alt=media", "type": "partner" },
+        { "name": "Conexalab", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.svg?alt=media", "type": "main" },
         { "name": "Construsoft", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConstrusoft.webp?alt=media", "type": "partner" },
-        { "name": "Cure Latam", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.webp?alt=media", "type": "partner" },
-        { "name": "Denario", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.webp?alt=media", "type": "partner" },
-        { "name": "Essa", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.webp?alt=media", "type": "partner" },
-        { "name": "Foscal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.webp?alt=media", "type": "partner" },
-        { "name": "Galapago", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.webp?alt=media", "type": "partner" },
-        { "name": "Globant", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.webp?alt=media", "type": "partner" },
-        { "name": "Grafo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.webp?alt=media", "type": "partner" },
+        { "name": "Cure Latam", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.svg?alt=media", "type": "partner" },
+        { "name": "Denario", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.svg?alt=media", "type": "partner" },
+        { "name": "Essa", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.svg?alt=media", "type": "partner" },
+        { "name": "Foscal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.svg?alt=media", "type": "partner" },
+        { "name": "Galapago", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.svg?alt=media", "type": "partner" },
+        { "name": "Globant", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.svg?alt=media", "type": "partner" },
+        { "name": "Grafo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.svg?alt=media", "type": "partner" },
         { "name": "Mantis", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmantis.webp?alt=media", "type": "partner" },
-        { "name": "Mbc", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.webp?alt=media", "type": "partner" },
-        { "name": "Planetalp", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetaIp.webp?alt=media", "type": "partner" },
-        { "name": "PrismHr", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.webp?alt=media", "type": "partner" },
+        { "name": "Mbc", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.svg?alt=media", "type": "partner" },
+        { "name": "Planetalp", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetalp.svg?alt=media", "type": "partner" },
+        { "name": "PrismHr", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.svg?alt=media", "type": "partner" },
         { "name": "SIO", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSIO.webp?alt=media", "type": "partner" },
-        { "name": "Solvo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.webp?alt=media", "type": "partner" },
-        { "name": "Syscom", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.webp?alt=media", "type": "partner" },
-        { "name": "TecnoEduca", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.webp?alt=media", "type": "partner" },
-        { "name": "Todosistemas", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodosistemas.webp?alt=media", "type": "partner" },
+        { "name": "Solvo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.svg?alt=media", "type": "partner" },
+        { "name": "Syscom", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.svg?alt=media", "type": "partner" },
+        { "name": "TecnoEduca", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.svg?alt=media", "type": "partner" },
+        { "name": "Todosistemas", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodoSistems.svg?alt=media", "type": "partner" },
         { "name": "Wiedii", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwiedii.webp?alt=media", "type": "partner" },
-        { "name": "Xrm", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.webp?alt=media", "type": "partner" },
-        { "name": "Alpes Solutionn", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.webp?alt=media", "type": "partner" },
+        { "name": "Xrm", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.svg?alt=media", "type": "partner" },
+        { "name": "Alpes Solutionn", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.svg?alt=media", "type": "partner" },
         { "name": "Arcetec", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Farcetec.webp?alt=media", "type": "partner" },
-        { "name": "Copower", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.webp?alt=media", "type": "partner" },
-        { "name": "Dataglobbal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.webp?alt=media", "type": "partner" },
-        { "name": "Digital Process", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.webp?alt=media", "type": "partner" },
-        { "name": "Disfarma", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.webp?alt=media", "type": "partner" },
+        { "name": "Copower", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.svg?alt=media", "type": "partner" },
+        { "name": "Dataglobbal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.svg?alt=media", "type": "partner" },
+        { "name": "Digital Process", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.svg?alt=media", "type": "partner" },
+        { "name": "Disfarma", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.svg?alt=media", "type": "partner" },
         { "name": "Electro Software", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FElectro%20Software.webp?alt=media", "type": "partner" },
-        { "name": "Facilpos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.webp?alt=media", "type": "partner" },
+        { "name": "Facilpos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.svg?alt=media", "type": "partner" },
         { "name": "Factura Powered by Detecno", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFactura%20Powered%20by%20detecno.webp?alt=media", "type": "partner" },
         { "name": "Inncube", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FInncube.webp?alt=media", "type": "partner" },
         { "name": "Iridian", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIridian.webp?alt=media", "type": "partner" },
         { "name": "IvoLegal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIvoLegal.webp?alt=media", "type": "partner" },
         { "name": "Kontrol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FKontrol.webp?alt=media", "type": "partner" },
-        { "name": "La Esmeralda", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.webp?alt=media", "type": "partner" },
+        { "name": "La Esmeralda", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.svg?alt=media", "type": "partner" },
         { "name": "Lechecol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLechecol.webp?alt=media", "type": "partner" },
         { "name": "Macondo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmacondo.webp?alt=media", "type": "partner" },
-        { "name": "Masabi", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.webp?alt=media", "type": "partner" },
+        { "name": "Masabi", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.svg?alt=media", "type": "partner" },
         { "name": "Pensemos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPensemos.webp?alt=media", "type": "partner" },
-        { "name": "Pix Robotics", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.webp?alt=media", "type": "partner" },
-        { "name": "Qnt", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.webp?alt=media", "type": "partner" },
+        { "name": "Pix Robotics", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.svg?alt=media", "type": "partner" },
+        { "name": "Qnt", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.svg?alt=media", "type": "partner" },
         { "name": "Quibor", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQuibor.webp?alt=media", "type": "partner" },
         { "name": "Sistemas y Computadores", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSistemas%20y%20computadores.webp?alt=media", "type": "partner" },
-        { "name": "SmartData", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.webp?alt=media", "type": "partner" },
-        { "name": "Software Medico", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.webp?alt=media", "type": "partner" },
-        { "name": "Vensure", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.webp?alt=media", "type": "partner" },
+        { "name": "SmartData", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.svg?alt=media", "type": "partner" },
+        { "name": "Software Medico", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.svg?alt=media", "type": "partner" },
+        { "name": "Vensure", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.svg?alt=media", "type": "partner" },
         { "name": "Wmwise", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media", "type": "partner" }
       ]
   },
   "partners_page": {
     "assets": {
       "campers": [
-        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media",
         "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media",
         "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media",
         "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper4.webp?alt=media"
       ],
       "helmet": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcasco.webp?alt=media",
-      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media"
+      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media",
+      "mosaico": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fnave-mosaico.png?alt=media"
     },
     "hero": {
       "heading": "Potencia tu tripulación de stack tecnológico con",
@@ -743,6 +744,84 @@
       {
         "title": "10. Legislación Aplicable y Jurisdicción:",
         "text": "Cualquier controversia derivada de la interpretación, aplicación o cumplimiento de los presentes términos será sometida a las leyes del país donde esté registrada la Organización, y cualquier disputa se resolverá ante los tribunales competentes de dicha jurisdicción, salvo pacto expreso entre las partes."
+      }
+    ]
+  },
+  "staffing_page": {
+    "hero": {
+      "eyebrow": "CAMPUSLANDS STAFFING",
+      "heading": "Impulsa tu crecimiento con equipos de ingeniería de",
+      "highlight": "alto rendimiento.",
+      "description": "Conectamos la innovación de Campuslands con los desafíos técnicos de tu empresa. Equipos de alto rendimiento listos para integrarse y escalar tus proyectos tecnológicos.",
+      "cta": "↓ Nuestras opciones de Staffing ↓",
+      "hero_image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2FAstronautas.png?alt=media"
+    },
+    "services": [
+      {
+        "eyebrow": "NIVEL CORPORATIVO",
+        "tag": "WORLD CLASS",
+        "title": "Staffing Global",
+        "description": "Desarrollo BPO internacional de alto impacto para compañías que operan en mercados globales competitivos.",
+        "features": ["Gestión Centralizada", "Estándares Globales", "Equipos Remotos de élite", "Tracking de Alto Rendimiento"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fmundo.png?alt=media",
+        "imageSize": "contain",
+        "cta": "Solicitar talento",
+        "cta_href": "#contacto",
+        "levels": [
+          {
+            "name": "JUNIOR BÁSICO",
+            "summary": "Experiencia Campuslands",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia Campuslands"]
+          },
+          {
+            "name": "JUNIOR PLUS",
+            "summary": "Experiencia laboral previa",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+          },
+          {
+            "name": "DEV MID",
+            "summary": "Amplia experiencia laboral",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+          }
+        ]
+      },
+      {
+        "eyebrow": "NIVEL CORPORATIVO",
+        "tag": "LATAM CORE",
+        "title": "Staffing Nacional",
+        "description": "Soluciones ágiles diseñadas específicamente para medianas empresas locales que buscan robustecer sus departamentos técnicos.",
+        "features": ["Contratación Flexible", "Garantía de Reposición", "Talento Curado", "Niveles a Elección"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fcolombia.png?alt=media",
+        "cta": "Solicitar talento",
+        "cta_href": "#contacto",
+        "levels": [
+          {
+            "name": "JUNIOR BÁSICO",
+            "summary": "Experiencia Campuslands",
+            "details": ["Formación a medida.", "2 HdV por vacante.", "Garantía 1 mes.", "Experiencia Campuslands"]
+          },
+          {
+            "name": "JUNIOR PLUS",
+            "summary": "Experiencia laboral previa",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+          },
+          {
+            "name": "DEV MID",
+            "summary": "Amplia experiencia laboral",
+            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+          }
+        ]
+      },
+      {
+        "eyebrow": "OUTSOURCING ESTRATÉGICO",
+        "tag": "BPO PROJECTS",
+        "title": "Staffing Full Service",
+        "description": "Delegue la ejecución técnica completa a células de trabajo gestionadas bajo los estándares de excelencia de nuestra academia.",
+        "features": ["Células Dedicadas", "Ejecución End-to-End", "Monitoreo Campuslands", "Agilidad Garantizada"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fengranaje.png?alt=media",
+        "cta": "Solicitar servicio",
+        "cta_href": "#contacto",
+        "levels": []
       }
     ]
   }

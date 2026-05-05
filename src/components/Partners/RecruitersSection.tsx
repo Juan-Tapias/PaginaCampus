@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+'use client';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { partnerCompanies, partnersPage, type PartnerCompany } from './partnersData';
 
@@ -77,6 +78,8 @@ function RecruiterCard({ company, index }: { company: PartnerCompany, index: num
             <img
               src={company.image}
               alt={company.name}
+              loading="lazy"
+              decoding="async"
               className="max-h-[58px] max-w-[142px] object-contain brightness-0 invert grayscale opacity-60 group-hover:opacity-100 transition-opacity duration-300"
             />
           </motion.div>
@@ -86,18 +89,18 @@ function RecruiterCard({ company, index }: { company: PartnerCompany, index: num
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -60, opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 h-full w-full"
             style={{
-              backgroundImage: `url(${assets.helmet})`,
+              backgroundImage: `url(${assets.mosaico})`,
               backgroundSize: '500% 400%',
               backgroundPosition: `${bgX}% ${bgY}%`,
               backgroundRepeat: 'no-repeat',
               filter: 'brightness(1.2) contrast(1.1)'
             }}
           >
-            {/* Overlay de escaneo sutil */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#54C6AA]/5 to-transparent animate-pulse" />
+            {/* Overlay de escaneo sutil (sin animación costosa) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#54C6AA]/5 to-transparent opacity-60" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -110,6 +113,19 @@ function RecruiterCard({ company, index }: { company: PartnerCompany, index: num
 
 export default function RecruitersSection() {
   const companies = getRecruiterLogos();
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [gridVisible, setGridVisible] = useState(false);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setGridVisible(true); obs.disconnect(); } },
+      { rootMargin: '200px' }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-transparent py-24 lg:min-h-[1124px]">
@@ -145,13 +161,16 @@ export default function RecruitersSection() {
           </motion.p>
         </div>
 
-        <div className="mx-auto grid max-w-[1100px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border-t border-l border-[#2A2A2A]">
-          {companies.map((company, index) => (
-            <RecruiterCard 
-              key={company.name} 
-              company={company} 
-              index={index} 
+        <div ref={gridRef} className="mx-auto grid max-w-[1100px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border-t border-l border-[#2A2A2A]">
+          {gridVisible && companies.map((company, index) => (
+            <RecruiterCard
+              key={company.name}
+              company={company}
+              index={index}
             />
+          ))}
+          {!gridVisible && companies.map((company) => (
+            <div key={company.name} className="h-[138px] lg:h-[176px] border border-[#2A2A2A] bg-[#080808]" />
           ))}
         </div>
 
