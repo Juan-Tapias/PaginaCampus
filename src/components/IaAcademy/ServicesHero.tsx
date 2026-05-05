@@ -87,7 +87,6 @@ export default function ServicesHero() {
           <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-black/45 p-5">
             <RemoteAssetImage
               src={iaAcademyAssets.hero_time}
-              fallbackSrc={iaAcademyAssets.fallback_time}
               alt={servicesHero.image_alt}
               className="h-[430px] w-full object-contain lg:h-[520px]"
             />

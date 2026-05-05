@@ -46,7 +46,6 @@ export default function TechSpecialistSection() {
           <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[#0B0D13]/86 p-5">
             <RemoteAssetImage
               src={iaAcademyAssets.hero_crossed}
-              fallbackSrc={iaAcademyAssets.fallback_crossed}
               alt={iaTechSpecialist.image_alt}
               className="h-[420px] w-full object-contain lg:h-[470px]"
             />
