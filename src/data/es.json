@@ -380,26 +380,37 @@
       },
       "evolving_teams": {
         "eyebrow": "EQUIPOS QUE EVOLUCIONARON",
-        "heading": "Historias de adopción con resultados medibles",
+        "heading": "Equipos que evolucionaron",
+        "subtitle": "Historias reales de equipos que ya despegaron con IA Academy",
         "item_aria_prefix": "Ver historia",
         "items": [
           {
-            "quote": "Pasamos de pruebas aisladas a procesos automatizados en menos de 6 semanas. El equipo entendió cómo implementar IA en producción.",
-            "author": "ANDRÉS MORA",
-            "role": "Head of Operations",
-            "company": "Logística LATAM"
+            "quote": "“IA Academy nos dio herramientas concretas para acelerar nuestros procesos. El enfoque práctico nos permitió aplicar lo que aprendido desde el primer día.”",
+            "author": "Laura Gómez",
+            "role": "Tech Lead",
+            "company": "InnovApp",
+            "time_ago": "Hace 2 Semanas"
           },
           {
-            "quote": "El programa nos dio un marco de decisión para priorizar casos con ROI real. Hoy tenemos un roadmap de IA sostenible.",
-            "author": "DIANA CASTRO",
-            "role": "Innovation Lead",
-            "company": "Fintech Regional"
+            "quote": "“La formación de 8 horas fue ideal para nuestro equipo. Los casos por industria marcaron la diferencia y resolvieron dudas específicas”",
+            "author": "Carlos Herrera",
+            "role": "Director de Talento",
+            "company": "Grupo Andino",
+            "time_ago": "Hace 2 Semanas"
           },
           {
-            "quote": "La diferencia estuvo en la ejecución: sesiones aplicadas a nuestros propios flujos y seguimiento por resultados.",
-            "author": "SANTIAGO RUIZ",
-            "role": "CTO",
-            "company": "HealthTech"
+            "quote": "“Excelente acompañamiento. Adaptaron el contenido a educación superior y nos dejaron material listo para incorporar en clase.”",
+            "author": "Miguel Ángel López",
+            "role": "Docente Universitario",
+            "company": "",
+            "time_ago": "Hace 2 Semanas"
+          },
+          {
+            "quote": "“Más que un curso, fue una experiencia de estrategia digital. Las automatizaciones de seguimiento nos ahorran horas cada semana.”",
+            "author": "Juliana Restrepo",
+            "role": "Fundadora",
+            "company": "CrecePyme",
+            "time_ago": "Hace 3 Semanas"
           }
         ]
       },

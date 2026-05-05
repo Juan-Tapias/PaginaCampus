@@ -12,7 +12,7 @@ export const iaContactForm = iaAcademy.landing.contact;
 export const iaServicesView = iaAcademy.services_view;
 
 export const iaPlans = iaFormationPlans.cards;
-export const specialistItems = iaTechSpecialist.items;
+export const specialistModules = iaTechSpecialist.modules;
 export const evolvingTeams = iaEvolvingTeams.items;
 export const aiTechBooks = iaTechnologies.books;
 export const servicesHero = iaServicesView.hero;

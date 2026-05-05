@@ -1,56 +1,64 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { BrainCircuit } from 'lucide-react';
 import RemoteAssetImage from './RemoteAssetImage';
-import { iaAcademyAssets, iaTechSpecialist, specialistItems } from './iaAcademyData';
+import { iaAcademyAssets, iaTechSpecialist, specialistModules } from './iaAcademyData';
+
+const desktopModulePositions = [
+  'lg:left-[28px] lg:top-[162px]',
+  'lg:left-[76px] lg:bottom-[118px]',
+  'lg:right-[24px] lg:top-[162px]',
+  'lg:right-[72px] lg:bottom-[118px]',
+];
 
 export default function TechSpecialistSection() {
   return (
-    <section className="relative overflow-hidden px-6 py-20 lg:px-12 lg:py-28">
-      <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-[1320px] bg-gradient-to-r from-transparent via-[#2D4A50]/60 to-transparent" />
-      <div className="container relative mx-auto grid max-w-[1302px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.08fr_0.92fr]">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-120px' }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="font-roboto-mono text-xs uppercase tracking-[0.24em] text-[#54C6AA]">
-            {iaTechSpecialist.eyebrow}
-          </p>
-          <h2 className="mt-4 font-poppins text-[40px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[48px] lg:text-[58px]">
+    <section className="relative overflow-hidden px-6 py-20 lg:px-12 lg:pb-20 lg:pt-28">
+      <div className="container relative mx-auto max-w-[1320px]">
+        <div className="mx-auto max-w-[1060px] text-center">
+          <h2 className="font-poppins text-[30px] font-semibold leading-[1.16] tracking-[-0.01em] text-[#F1F1F1] sm:text-[36px] lg:text-[34px]">
             {iaTechSpecialist.heading}
           </h2>
-          <div className="mt-10 grid gap-4">
-            {specialistItems.map((item) => (
+          <p className="mx-auto mt-5 max-w-[1010px] font-poppins text-[17px] font-normal leading-[1.32] text-[#E5E5E5] sm:text-[20px] lg:text-[20px]">
+            {iaTechSpecialist.description}
+          </p>
+        </div>
+
+        <div className="relative mx-auto mt-12 min-h-[610px] max-w-[1070px] lg:mt-14">
+          <RemoteAssetImage
+            src={iaAcademyAssets.hero_crossed}
+            alt={iaTechSpecialist.image_alt}
+            className="relative z-10 mx-auto h-[430px] w-auto max-w-none mix-blend-screen sm:h-[520px] lg:h-[596px]"
+          />
+
+          <div className="relative z-20 mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:absolute lg:inset-0 lg:mt-0 lg:block">
+            {specialistModules.map((module, index) => (
               <div
-                key={item}
-                className="flex items-start gap-4 rounded-[10px] border border-white/10 bg-[#171A20]/88 p-5 shadow-[0_8px_30px_rgba(0,0,0,0.38)]"
+                key={module.label}
+                className={`flex flex-col items-center text-center lg:absolute lg:w-[250px] ${desktopModulePositions[index] || ''}`}
               >
-                <CheckCircle2 className="mt-0.5 shrink-0 text-[#54C6AA]" size={18} />
-                <p className="font-poppins text-[16px] leading-relaxed text-[#D9D9D9] lg:text-[18px]">{item}</p>
+                <div className="flex h-12 w-12 items-center justify-center rounded-[7px] bg-[#342078] shadow-[0_0_28px_rgba(124,88,255,0.16)]">
+                  <BrainCircuit size={21} strokeWidth={1.8} className="text-[#9B7AFF]" />
+                </div>
+                <p className="mt-7 font-roboto-mono text-[14px] font-normal uppercase leading-none tracking-[0.03em] text-[#2FE0BC]">
+                  {module.label}
+                </p>
+                <h3 className="mt-3 font-poppins text-[21px] font-semibold leading-[1.12] text-[#F2F2F2]">
+                  {module.title}
+                </h3>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-120px' }}
-          transition={{ duration: 0.65 }}
-          className="relative mx-auto w-full max-w-[560px]"
-        >
-          <div className="absolute inset-0 rounded-[24px] bg-[radial-gradient(circle_at_center,rgba(88,160,255,0.26)_0%,transparent_74%)] blur-3xl" />
-          <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[#0B0D13]/86 p-5">
-            <RemoteAssetImage
-              src={iaAcademyAssets.hero_crossed}
-              alt={iaTechSpecialist.image_alt}
-              className="h-[420px] w-full object-contain lg:h-[470px]"
-            />
-          </div>
-        </motion.div>
+        <div className="relative z-30 mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:-mt-3 p-8">
+          <button className="h-[52px] w-[172px] bg-[#6637E8] font-roboto-mono text-[16px] font-normal text-white transition-colors hover:bg-[#7446F2]">
+            {iaTechSpecialist.primary_cta}
+          </button>
+          <button className="h-[52px] w-[230px] border border-[#9A9A9A] bg-[#222222]/92 font-roboto-mono text-[16px] font-normal text-[#E8E8E8] transition-colors hover:border-[#C7C7C7] hover:bg-[#2A2A2A]">
+            {iaTechSpecialist.secondary_cta}
+          </button>
+        </div>
       </div>
     </section>
   );
