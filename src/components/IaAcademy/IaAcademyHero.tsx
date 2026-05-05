@@ -63,8 +63,13 @@ export default function IaAcademyHero() {
               id="ia-services-preview"
               aria-label={iaAcademyHero.next_masterclass.action_aria_label}
             >
-              <div className="absolute -top-10 left-0 inline-flex h-10 items-center gap-2 rounded-full border border-[#00D4C3]/65 bg-[rgba(0,20,28,0.32)] px-5 font-roboto-mono text-[22px] tracking-[0.06em] text-[#3FE8DC] shadow-[inset_0_0_16px_rgba(0,212,195,0.18),0_0_16px_rgba(0,212,195,0.22)] backdrop-blur-[2px]">
-                <span className="size-[10px] rounded-full bg-[#1FE6D5] shadow-[0_0_8px_rgba(31,230,213,0.95)]" />
+              <div className="absolute -top-10 left-0 inline-flex h-7 items-center gap-2 rounded-full border border-[#00D4C3]/65 bg-[rgba(0,20,28,0.32)] px-3.5 pb-[1px] font-roboto-mono text-[14px] tracking-[0.05em] text-[#3FE8DC] shadow-[inset_0_0_12px_rgba(0,212,195,0.16),0_0_12px_rgba(0,212,195,0.2)] backdrop-blur-[2px]">
+                <motion.span
+                  aria-hidden
+                  className="size-[7px] rounded-full bg-[#1FE6D5] shadow-[0_0_6px_rgba(31,230,213,0.85)]"
+                  animate={{ scale: [1, 1.16, 1], opacity: [0.88, 1, 0.88] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
+                />
                 {iaAcademyHero.masterclass_badge}
               </div>
 
@@ -74,7 +79,7 @@ export default function IaAcademyHero() {
 
               <div className="mt-3 flex items-end gap-6 pr-8 sm:gap-7 sm:pr-10">
                 <div className="min-w-[72px] sm:min-w-[78px]">
-                  <p className="font-poppins text-[38px] leading-[0.95] text-[#EDEDED] sm:text-[40px] lg:text-[32px]">
+                  <p className="font-poppins text-[38px] leading-[0.95] text-[#EDEDED] sm:text-[40px] lg:text-[32px] text-center pb-2">
                     {iaAcademyHero.next_masterclass.day}
                   </p>
                   <p className="mt-1 font-poppins text-[20px] leading-none text-[#DCDCDC] sm:text-[22px] lg:text-[16px]">
@@ -95,7 +100,7 @@ export default function IaAcademyHero() {
                 </div>
               </div>
 
-              <ChevronRight className="absolute right-4 top-1/2 size-5 -translate-y-1/2 text-[#F2F2F2] transition-transform group-hover:translate-x-1" />
+              <ChevronRight className="absolute right-4 top-1/2 size-8 -translate-y-1/2 text-[#F2F2F2] transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </motion.div>
