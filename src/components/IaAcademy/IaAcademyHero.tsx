@@ -67,8 +67,8 @@ export default function IaAcademyHero() {
                 <motion.span
                   aria-hidden
                   className="size-[7px] rounded-full bg-[#1FE6D5] shadow-[0_0_6px_rgba(31,230,213,0.85)]"
-                  animate={{ scale: [1, 1.16, 1], opacity: [0.88, 1, 0.88] }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
+                  animate={{ scale: [0.5, 1.2, 1], opacity: [0.9, 0.98, 0.9] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
                 />
                 {iaAcademyHero.masterclass_badge}
               </div>

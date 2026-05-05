@@ -287,40 +287,96 @@
         "description": "Elige el plan que mejor impulse tu misión hacia la Inteligencia Artificial",
         "cards": [
           {
-            "id": "talento",
-            "title": "Talento IA para equipos internos",
-            "subtitle": "Upskilling técnico",
-            "description": "Entrenamos perfiles de producto y desarrollo con frameworks de adopción rápida."
+            "id": "ignition",
+            "mission": "MISSION 01",
+            "title": "Ignition",
+            "duration": "4 horas",
+            "includes_label": "INCLUYE",
+            "features": [
+              "Intro a ChatGPT",
+              "Ingeniería de Prompts",
+              "Acceso a Comunidad"
+            ],
+            "cta": "INSCRIBIRME AHORA"
           },
           {
-            "id": "liderazgo",
-            "title": "Liderazgo y estrategia IA",
-            "subtitle": "Toma de decisión",
-            "description": "Alineamos dirección, métricas y riesgos para implementar IA con enfoque de negocio."
+            "id": "booster",
+            "mission": "MISSION 02",
+            "title": "Booster",
+            "duration": "8 horas",
+            "includes_label": "INCLUYE",
+            "features": [
+              "Intro a ChatGPT",
+              "Ingeniería de Prompts",
+              "Acceso a Comunidad"
+            ],
+            "cta": "INSCRIBIRME AHORA"
           },
           {
-            "id": "automatizacion",
-            "title": "Automatización operativa",
-            "subtitle": "Procesos y ROI",
-            "description": "Diseñamos casos de uso con impacto en tiempos, costos y calidad de ejecución."
+            "id": "liftoff",
+            "mission": "MISSION 03",
+            "title": "Liftoff",
+            "duration": "12 horas",
+            "includes_label": "INCLUYE",
+            "features": [
+              "Intro a ChatGPT",
+              "Ingeniería de Prompts",
+              "Acceso a Comunidad"
+            ],
+            "cta": "INSCRIBIRME AHORA"
           },
           {
-            "id": "gobernanza",
-            "title": "Gobernanza y escalabilidad",
-            "subtitle": "Seguridad y continuidad",
-            "description": "Estandarizamos prácticas de uso, seguridad y seguimiento para escalar sin fricción."
+            "id": "odyssey",
+            "mission": "MISSION 04",
+            "title": "Odyssey",
+            "duration": "Personalizado",
+            "includes_label": "INCLUYE",
+            "features": [
+              "Intro a ChatGPT",
+              "Ingeniería de Prompts",
+              "Acceso a Comunidad"
+            ],
+            "cta": "INSCRIBIRME AHORA"
+          },
+          {
+            "id": "nebula",
+            "mission": "MISSION 05",
+            "title": "Nébula",
+            "duration": "Pregrabado",
+            "includes_label": "INCLUYE",
+            "features": [
+              "Intro a ChatGPT",
+              "Ingeniería de Prompts",
+              "Acceso a Comunidad"
+            ],
+            "cta": "ACCEDER AHORA"
           }
         ]
       },
       "specialist": {
-        "eyebrow": "ESPECIALISTA EN TECNOLOGÍAS",
-        "heading": "Estructura técnica para convertir teoría en operación",
+        "heading": "Especialistas en las tecnologías que mueven tu negocio",
+        "description": "Entrenamos talento en las herramientas más demandadas para asegurar una integración inmediata a tus proyectos.",
         "image_alt": "Especialista IA Academy",
-        "items": [
-          "Diseño de casos de uso priorizados por impacto",
-          "Implementación guiada con sesiones hands-on",
-          "Métricas de productividad y performance por cohorte"
-        ]
+        "modules": [
+          {
+            "label": "MODULE 01",
+            "title": "Formación Práctica"
+          },
+          {
+            "label": "MODULE 02",
+            "title": "Entregables Listos"
+          },
+          {
+            "label": "MODULE 03",
+            "title": "Entregables Listos"
+          },
+          {
+            "label": "MODULE 04",
+            "title": "Rutas Flexibles"
+          }
+        ],
+        "primary_cta": "Adquirir plan",
+        "secondary_cta": "Generar diagnóstico"
       },
       "evolving_teams": {
         "eyebrow": "EQUIPOS QUE EVOLUCIONARON",
