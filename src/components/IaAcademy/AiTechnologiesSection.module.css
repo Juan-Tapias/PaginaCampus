@@ -1,123 +1,231 @@
 .shelf {
-  perspective: 3600px;
+  perspective: 3500px;
+  transform-style: preserve-3d;
+}
+
+.bookRows {
+  display: grid;
+  gap: 56px;
+  justify-items: center;
+}
+
+.bookRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .bookContainer {
-  --width: 46px;
-  --height: calc(var(--width) * 4.4);
-  --depth: calc(var(--width) * 2.8);
-  --padding: 24px;
+  --width: 64px;
+  --height: 336px;
+  --depth: 176px;
+  --padding: 12px;
 
   width: calc(var(--width) + var(--padding));
   height: var(--height);
   display: grid;
   place-items: center;
-  transform-style: preserve-3d;
-  transform: translateZ(calc(var(--depth) / -2));
-  transition: transform 0.32s ease, width 0.32s ease;
+  border: 0;
+  padding: 0;
+  background: transparent;
   cursor: pointer;
+  transform: translateZ(calc(var(--depth) / -2));
+  transform-style: preserve-3d;
+  transition: width 0.36s ease, transform 0.36s ease;
 }
 
 .bookContainer:hover {
-  transform: translateY(-10px) translateZ(calc(var(--depth) / -2));
+  transform: translateY(-11px) translateZ(calc(var(--depth) / -2));
 }
 
-.bookContainer:has(input:checked) {
+.bookContainerActive {
   width: calc(var(--depth) + var(--padding));
   transform: translateZ(0);
 }
 
 .book {
+  position: relative;
   width: var(--width);
   height: var(--height);
-  position: relative;
+  color: #e8e8e8;
+  filter: drop-shadow(0 16px 26px rgba(0, 0, 0, 0.52));
   transform-style: preserve-3d;
-  transition: transform 0.32s ease;
-  color: #727272;
-  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.5));
+  transition: transform 0.36s ease;
 }
 
 .book > div {
   position: absolute;
-  transition: background-color 0.32s ease;
+  transition: background 0.36s ease, opacity 0.24s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.book > div:nth-child(-n + 2) {
-  background: #e7e7e7;
-  height: var(--height);
+.spineFace,
+.backFace {
   width: var(--width);
+  height: var(--height);
+  background: linear-gradient(168deg, #18152a 0%, #1a1d1d 58%, #1d2e27 100%);
 }
 
-.book > div:nth-child(1) {
+.spineFace {
   transform: rotateY(0deg) translateZ(calc(var(--depth) / 2));
 }
 
-.book > div:nth-child(2) {
+.backFace {
   transform: rotateY(180deg) translateZ(calc(var(--depth) / 2));
 }
 
-.book > div:nth-child(3),
-.book > div:nth-child(4) {
-  background: #4e4e4e;
-  height: var(--height);
-  width: var(--depth);
+.coverFace,
+.sideFace {
   left: calc(var(--width) * -1);
+  width: var(--depth);
+  height: var(--height);
+  background: linear-gradient(168deg, #18152a 0%, #1a1d1d 58%, #1d2e27 100%);
 }
 
-.book > div:nth-child(3) {
+.coverFace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
 }
 
-.book > div:nth-child(4) {
+.sideFace {
+  background: linear-gradient(180deg, #2d2d2d 0%, #242424 100%);
   transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
 }
 
-.book > input {
-  position: absolute;
+.bookActive {
+  width: var(--depth);
+  transform: none;
+  transform-style: flat;
+}
+
+.bookActive .spineFace,
+.bookActive .backFace,
+.bookActive .sideFace {
   opacity: 0;
-  width: 0;
-  height: 0;
+  pointer-events: none;
 }
 
-.book:has(> input:checked) {
-  transform: translateZ(calc(var(--width) / -2)) rotateY(-90deg);
-}
-
-.book:has(> input:checked) > div:nth-child(3),
-.book:has(> input:checked) > div:nth-child(4) {
-  background: #ffffff;
-}
-
-.book:has(> input:checked) > div:nth-child(-n + 2) {
-  background: #6a6a6a;
+.bookActive .coverFace {
+  left: 0;
+  width: var(--depth);
+  transform: none;
+  background: linear-gradient(168deg, #191726 0%, #1d2020 56%, #1d3028 100%);
 }
 
 .frontLabel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  color: #efefef;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-wrap: nowrap;
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  margin: 18px auto;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #111111;
-  font-family: var(--font-roboto-mono), monospace;
-}
-
-.spineLabel {
-  margin-top: 18px;
+  transform: translate(-50%, -50%) rotate(180deg);
   text-align: center;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #ffffff;
-  font-family: var(--font-roboto-mono), monospace;
+  pointer-events: none;
 }
 
-.placeholder {
-  height: 78px;
-  width: 78px;
-  border-radius: 8px;
-  background: #e62828;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 0 24px rgba(230, 40, 40, 0.24);
+.logoMark,
+.coverLogo {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 3px dashed #ff1717;
+  border-radius: 5px;
+}
+
+.logoMark {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+}
+
+.coverLogo {
+  margin-top: 36px;
+}
+
+.coverTitle {
+  display: block;
+  max-width: 150px;
+  margin-top: 34px;
+  color: #f1f1f1;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.18;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .bookRows {
+    gap: 44px;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 12px 0 4px;
+    justify-items: start;
+  }
+
+  .bookRow {
+    justify-content: flex-start;
+    min-width: max-content;
+  }
+
+  .bookContainer {
+    --width: 52px;
+    --height: 272px;
+    --depth: 150px;
+    --padding: 12px;
+  }
+
+  .frontLabel {
+    font-size: 18px;
+  }
+
+  .logoMark {
+    bottom: 20px;
+  }
+
+  .coverTitle {
+    max-width: 126px;
+    margin-top: 28px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 520px) {
+  .bookRows {
+    gap: 34px;
+  }
+
+  .bookContainer {
+    --width: 44px;
+    --height: 230px;
+    --depth: 126px;
+    --padding: 10px;
+  }
+
+  .frontLabel {
+    font-size: 15px;
+  }
+
+  .logoMark {
+    bottom: 16px;
+  }
+
+  .coverTitle {
+    max-width: 106px;
+    font-size: 16px;
+  }
 }

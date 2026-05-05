@@ -416,81 +416,95 @@
       },
       "technologies": {
         "eyebrow": "TECNOLOGÍAS DE IA",
-        "heading": "Biblioteca técnica para despliegues reales",
+        "heading": "Tecnologías de IA que potencian tu trabajo",
         "description": "Explora las rutas de entrenamiento por tecnología. Las integraciones visuales finales de logos se mantienen en placeholder según diseño.",
-        "activate_book_aria_prefix": "Activar libro",
-        "placeholder_count": 6,
+        "activate_book_aria_prefix": "Activar tecnología",
+        "placeholder_count": 14,
         "books": [
-          "Prompts",
-          "Agents",
-          "RAG",
-          "MLOps",
-          "LangChain",
-          "n8n",
-          "LLM Ops",
-          "Guardrails",
-          "Vector DB",
-          "Evals"
+          "ChatGPT",
+          "Make",
+          "Gemini",
+          "Claude",
+          "Microsoft Copilot Open Ai",
+          "Github Copilot",
+          "Midjourney",
+          "Notion AI",
+          "Zapier",
+          "Perplexity",
+          "NotebookLM",
+          "Read AI",
+          "ElevenLabs",
+          "HeyGen"
         ]
       },
       "contact": {
-        "eyebrow": "DIAGNÓSTICO IA",
-        "title": "Activa tu ruta IA Academy",
-        "subtitle": "Cuéntanos tu objetivo y armamos una sesión de diagnóstico.",
+        "eyebrow": "PLANES DE FORMACIÓN ESPACIAL",
+        "title": "Diagnóstico de Adopción de IA",
+        "subtitle": "En solo 4 pasos hacemos un análisis completo para iniciar el proceso con tu empresa.",
+        "step_label": "PASO 1",
+        "step_title": "Datos básicos",
+        "progress": 25,
         "fields": {
-          "name": "Nombre completo",
-          "email": "Email corporativo",
-          "team_size": "Tamaño del equipo",
-          "goal": "Objetivo principal"
+          "company_name": "Nombre de la empresa",
+          "full_name": "Nombre completo",
+          "phone": "Teléfono Contacto",
+          "corporate_email": "Correo electrónico corporativo:"
         },
-        "cta": "Solicitar diagnóstico"
+        "cta": "Siguiente"
       }
     },
     "services_view": {
       "hero": {
         "back_href": "/IaAcademy",
-        "back_button_label": "Volver a IA Academy",
-        "title": "Servicios IA Academy",
-        "subtitle": "Sesiones en vivo, implementación guiada y roadmap operativo.",
-        "date_label": "Próxima transmisión",
-        "date": "16 MAY · 18:30 COT",
+        "back_button_label": "Volver",
+        "countdown": "00:10",
+        "title": "La Masterclass empezará pronto",
+        "subtitle": "Haz click en el siguiente botón para participar",
+        "cta": "Ir a la clase",
         "countdown_target_iso": "2026-05-16T18:30:00-05:00",
         "image_alt": "Robot IA en servicios"
       },
       "upcoming_sessions": {
-        "eyebrow": "PRÓXIMAS SESIONES",
-        "heading": "Agenda de masterclasses y workshops",
+        "heading": "¡No te pierdas las próximas!",
         "items": [
           {
-            "title": "Arquitectura de agentes IA para soporte interno",
-            "date": "16 MAY · 18:30 COT",
-            "duration": "60 min"
+            "id": "masterclass-prompts-gemini-01",
+            "title": "Ingeniería de Prompts aplicada a Gemini y otras herramientas",
+            "day": "30",
+            "month_year": "Abr 2026",
+            "speaker": "Alejandro Hernandez",
+            "role": "Especialista en IA",
+            "time": "9:00 AM"
           },
           {
-            "title": "Automatización con RAG y workflows empresariales",
-            "date": "23 MAY · 18:30 COT",
-            "duration": "75 min"
+            "id": "masterclass-prompts-gemini-02",
+            "title": "Ingeniería de Prompts aplicada a Gemini y otras herramientas",
+            "day": "30",
+            "month_year": "Abr 2026",
+            "speaker": "Alejandro Hernandez",
+            "role": "Especialista en IA",
+            "time": "9:00 AM"
           },
           {
-            "title": "Gobernanza y observabilidad en productos IA",
-            "date": "30 MAY · 18:30 COT",
-            "duration": "60 min"
-          },
-          {
-            "title": "Escalamiento de equipos IA: de piloto a operación",
-            "date": "06 JUN · 18:30 COT",
-            "duration": "60 min"
+            "id": "masterclass-prompts-gemini-03",
+            "title": "Ingeniería de Prompts aplicada a Gemini y otras herramientas",
+            "day": "30",
+            "month_year": "Abr 2026",
+            "speaker": "Alejandro Hernandez",
+            "role": "Especialista en IA",
+            "time": "9:00 AM"
           }
         ]
       },
       "replay": {
-        "eyebrow": "VIDEO SESSION",
+        "eyebrow": "Última transmisión",
         "title": "Última transmisión",
-        "description": "Revisa la sesión más reciente y comparte el enlace con tu equipo.",
-        "cta": "Ver transmisión",
+        "description": "IA para profesionales - 28 Abril 2026 - Santiago Laguado Osorio",
+        "cta": "Reproducir transmisión",
         "close_aria_label": "Cerrar modal",
         "iframe_title": "Última transmisión IA Academy",
-        "youtube_embed": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "youtube_embed": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "video_url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7"
       }
     }
   },
