@@ -22,9 +22,9 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65 }}
-          className="mx-auto flex max-w-[640px] flex-col items-center text-center"
+          className="mx-auto grid max-w-[1060px] grid-cols-1 items-center gap-10 pt-14 lg:grid-cols-[1fr_1fr] lg:gap-16"
         >
-          <div className="relative h-[430px] w-full sm:h-[500px] lg:h-[520px]">
+          <div className="relative h-[340px] w-full sm:h-[400px] lg:h-[420px]">
             <div className="pointer-events-none absolute left-1/2 top-[46%] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(93,220,220,0.24)_0%,rgba(54,148,171,0.12)_34%,transparent_70%)] blur-xl" />
             <RemoteAssetImage
               src={iaAcademyAssets.hero_time}
@@ -36,15 +36,17 @@ export default function ServicesHero() {
             </div>
           </div>
 
-          <h1 className="mt-8 font-poppins text-[24px] font-semibold leading-tight text-[#F4F4F4] sm:text-[28px]">
-            {servicesHero.title}
-          </h1>
-          <p className="mt-4 font-poppins text-[18px] font-normal leading-relaxed text-[#D9D9D9] sm:text-[20px]">
-            {servicesHero.subtitle}
-          </p>
-          <button className="mt-7 h-[52px] w-[174px] rounded-[4px] bg-[#6637E8] font-roboto-mono text-[16px] font-normal text-white transition-colors hover:bg-[#7446F2]">
-            {servicesHero.cta}
-          </button>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h1 className="font-poppins text-[24px] font-semibold leading-tight text-[#F4F4F4] sm:text-[28px] lg:text-[32px]">
+              {servicesHero.title}
+            </h1>
+            <p className="mt-4 max-w-[440px] font-poppins text-[18px] font-normal leading-relaxed text-[#D9D9D9] sm:text-[20px]">
+              {servicesHero.subtitle}
+            </p>
+            <button className="mt-7 h-[52px] w-[220px] rounded-[4px] bg-[#6637E8] font-roboto-mono text-[16px] font-normal text-white transition-colors hover:bg-[#7446F2]">
+              {servicesHero.cta}
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>

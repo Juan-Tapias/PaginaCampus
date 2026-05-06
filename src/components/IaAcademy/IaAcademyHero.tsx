@@ -18,7 +18,7 @@ export default function IaAcademyHero() {
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65 }}
-          className="max-w-[560px] pt-10"
+          className="max-w-[560px] pt-20"
         >
           <h1 className="whitespace-pre-line font-poppins text-[42px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[50px] lg:text-[40px]">
             {iaAcademyHero.heading}
@@ -54,7 +54,7 @@ export default function IaAcademyHero() {
             <RemoteAssetImage
               src={iaAcademyAssets.hero_robot}
               alt={iaAcademyHero.hero_image_alt}
-              className="h-[330px] w-full object-contain sm:h-[360px] lg:h-[360px]"
+              className="h-[330px] w-full origin-center scale-[1.85] object-contain sm:h-[360px] sm:scale-[1.85] lg:h-[360px] lg:scale-[1.85] lg:translate-y-[50px]"
             />
 
             <Link

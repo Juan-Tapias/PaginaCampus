@@ -2,8 +2,53 @@
 
 import { useId, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './AiTechnologiesSection.module.css';
 import { aiTechBooks, iaTechnologies } from './iaAcademyData';
+
+const getImageUrl = (bookName: string) => {
+  const map: Record<string, string> = {
+    'Make': 'make',
+    'Notion AI': 'notion',
+    'Zapier': 'zapier',
+    'Perplexity': 'perplexity',
+    'ElevenLabs': 'elevenlabs',
+    'HeyGen': 'heyyen',
+    'Microsoft Copilot': 'microsftcopilot',
+    'Gemini': 'gemini',
+    'ChatGPT': 'chatgpt',
+    'Github Copilot': 'githubcopilot',
+    'NotebookLM': 'notebooklm',
+    'Claude': 'claude',
+    'Read AI': 'readai',
+    'Midjourney': 'midjourney',
+  };
+  const key = map[bookName];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return key ? (iaTechnologies as any).images_url?.[key] : '';
+};
+
+const getDescription = (bookName: string) => {
+  const map: Record<string, string> = {
+    'Make': 'make',
+    'Notion AI': 'notion',
+    'Zapier': 'Zapier', // Note: Zapier is capitalized in descripcion_ia
+    'Perplexity': 'perplexity',
+    'ElevenLabs': 'elevenlabs',
+    'HeyGen': 'heyyen',
+    'Microsoft Copilot': 'microsftcopilot',
+    'Gemini': 'gemini',
+    'ChatGPT': 'chatgpt',
+    'Github Copilot': 'githubcopilot',
+    'NotebookLM': 'notebooklm',
+    'Claude': 'claude',
+    'Read AI': 'readai',
+    'Midjourney': 'midjourney',
+  };
+  const key = map[bookName];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return key ? (iaTechnologies as any).descripcion_ia?.[key] : '';
+};
 
 export default function AiTechnologiesSection() {
   const [activeBook, setActiveBook] = useState<number | null>(null);
@@ -32,6 +77,8 @@ export default function AiTechnologiesSection() {
                 {row.map((book, itemIndex) => {
                   const index = rowIndex * 7 + itemIndex;
                   const isActive = activeBook === index;
+                  const imageUrl = getImageUrl(book);
+                  const description = getDescription(book);
 
                   return (
                     <button
@@ -42,16 +89,26 @@ export default function AiTechnologiesSection() {
                       aria-label={`${iaTechnologies.activate_book_aria_prefix} ${book}`}
                       aria-pressed={isActive}
                       aria-controls={`${sectionId}-book-${index}`}
+                      style={{ zIndex: isActive ? 10 : 1 }}
                     >
                       <div id={`${sectionId}-book-${index}`} className={`${styles.book} ${isActive ? styles.bookActive : ''}`}>
                         <div className={styles.spineFace}>
-                          <span className={styles.logoMark} />
+                          {imageUrl && (
+                            <Image src={imageUrl} alt={book} width={28} height={28} className={styles.logoMark} />
+                          )}
                           <span className={styles.frontLabel}>{book}</span>
                         </div>
                         <div className={styles.backFace} />
                         <div className={styles.coverFace}>
-                          <span className={styles.coverLogo} />
-                          <span className={styles.coverTitle}>{book}</span>
+                          <div className={styles.coverHeader}>
+                            {imageUrl && (
+                              <Image src={imageUrl} alt={book} width={48} height={48} className={styles.coverLogo} />
+                            )}
+                            <span className={styles.coverTitle}>{book}</span>
+                          </div>
+                          {description && (
+                            <p className={styles.coverDescription}>{description}</p>
+                          )}
                         </div>
                         <div className={styles.sideFace} />
                       </div>
