@@ -11,16 +11,18 @@ export default function FormationPlansSection() {
   const desktopCards = useMemo(
     () =>
       iaPlans.map((plan, index) => {
-        const distance = index - activeIndex;
-        const absDistance = Math.abs(distance);
+        // Layout estático basado en el centro (índice 2) para que no se muevan de lugar
+        const layoutDistance = index - 2;
+        const layoutAbsDistance = Math.abs(layoutDistance);
+        const isActive = index === activeIndex;
 
         return {
           ...plan,
-          x: distance * 222,
-          y: absDistance === 0 ? 72 : absDistance === 1 ? 38 : 0,
-          scale: 1,
+          x: layoutDistance * 222,
+          y: (layoutAbsDistance === 0 ? 72 : layoutAbsDistance === 1 ? 38 : 0) - (isActive ? 20 : 0),
+          scale: isActive ? 1.05 : 1,
           opacity: 1,
-          zIndex: 20 - absDistance,
+          zIndex: isActive ? 50 : 20 - layoutAbsDistance,
           blur: 0,
         };
       }),
@@ -65,7 +67,11 @@ export default function FormationPlansSection() {
                 filter: `blur(${card.blur}px)`,
               }}
               transition={{ type: 'spring', stiffness: 200, damping: 24 }}
-              className="absolute flex h-[398px] w-[246px] flex-col overflow-hidden rounded-[9px] border border-[#5B5B64]/75 bg-[linear-gradient(180deg,rgba(29,27,39,0.96)_0%,rgba(30,44,38,0.92)_100%)] px-6 py-7 text-left shadow-[0_18px_44px_rgba(0,0,0,0.36)]"
+              className={`absolute flex h-[398px] w-[246px] flex-col overflow-hidden rounded-[9px] border px-6 py-7 text-left shadow-[0_18px_44px_rgba(0,0,0,0.36)] transition-colors duration-300 ${
+                index === activeIndex 
+                  ? 'border-[#54C6AA] bg-[linear-gradient(180deg,rgba(30,44,38,0.98)_0%,rgba(20,30,25,0.95)_100%)]' 
+                  : 'border-[#5B5B64]/75 bg-[linear-gradient(180deg,rgba(29,27,39,0.96)_0%,rgba(30,44,38,0.92)_100%)]'
+              }`}
               style={{ zIndex: card.zIndex as number }}
             >
               <p className="font-roboto-mono text-[12px] uppercase tracking-[0.02em] text-[#D6D1DC]">
@@ -103,11 +109,10 @@ export default function FormationPlansSection() {
               key={plan.id}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`rounded-lg border p-5 text-left transition-colors ${
-                activeIndex === index
+              className={`rounded-lg border p-5 text-left transition-colors ${activeIndex === index
                   ? 'border-[#54C6AA] bg-[#15171D] text-white'
                   : 'border-white/10 bg-[#0E1015] text-white/75'
-              }`}
+                }`}
             >
               <p className="font-roboto-mono text-[10px] uppercase tracking-[0.2em] text-[#54C6AA]">{plan.mission}</p>
               <h3 className="mt-2 font-poppins text-2xl">{plan.title}</h3>
