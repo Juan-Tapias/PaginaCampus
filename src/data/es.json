@@ -2141,5 +2141,17 @@
         "levels": []
       }
     ]
+  },
+  "se_un_camper": {
+    "hero": {
+      "heading_line1": "Hackea tu futuro: ",
+      "heading_highlight": "domina el código",
+      "heading_line2": " y conquista la industria.",
+      "description": "Entra a un ecosistema de aprendizaje diseñado para jóvenes con hambre de éxito. Programación, inglés y liderazgo en un solo lugar.",
+      "primary_cta": "Quiero iniciar",
+      "secondary_cta": "Hacer tour virtual",
+      "orbit3d": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit.glb?alt=media",
+      "globeimagen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FEllipse.png?alt=media"
+    }
   }
 }

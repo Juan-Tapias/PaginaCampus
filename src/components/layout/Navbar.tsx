@@ -33,12 +33,14 @@ export default function Navbar() {
 
   const getLinkHref = (link: string) => {
     if (link === 'INICIO') return '/';
+    if (link === 'SÉ UN CAMPER') return '/camper';
     if (link === 'SERVICIOS') return '#';
     return `/#${link.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
   const isActiveLink = (link: string) => {
     if (link === 'INICIO') return pathname === '/';
+    if (link === 'SÉ UN CAMPER') return pathname.includes('/camper');
     if (link === 'SERVICIOS') {
       return (
         pathname.includes('/servicio') ||

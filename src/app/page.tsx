@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#08080a] to-transparent z-10 pointer-events-none" />
               </div>
             </div>
-            <div className="relative z-40">
+            <div className="relative z-40 bg-black">
               <KPISection />
               <PartnersSection />
               <HeadSection />
