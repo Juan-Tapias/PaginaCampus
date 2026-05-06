@@ -18,7 +18,7 @@ export default function Navbar() {
     { name: 'Emplea', href: '/servicio/emplea'},
     { name: 'FullService', href: '#'}, //Pendiente link 
     { name: 'Campuslands Internacional', href: '#'}, //Pendiente link
-    { name: 'Campuslands IA Academy', href: '/IaAcademy'},
+    { name: 'Campuslands IA Academy', href: '/servicio/IaAcademy'},
   ];
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Navbar() {
         pathname.includes('/servicio') ||
         pathname.includes('/Partners') ||
         pathname.includes('/Services') ||
-        pathname.includes('/IaAcademy')
+        pathname.includes('/servicio/IaAcademy')
       );
     }
     return false;

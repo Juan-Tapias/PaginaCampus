@@ -31,7 +31,7 @@
       }
     ]
   },
-  "mission_control":{
+  "mission_control": {
     "heading": "Módulos de aprendizaje",
     "subheading": "Pilares Operativos",
     "description": "Programas intensivos diseñados para triunfar en las industria tecnologica",
@@ -53,62 +53,262 @@
       }
     ]
   },
-  "strategic_partners":{
+  "strategic_partners": {
     "heading": "Nuestros aliados estratégicos",
     "subheading": "Ecosistema de Alianzas",
     "description": "Estas empresas ya contratan y patrocinan talento Campuslands.",
-      "companies": [
-        { "name": "2nv", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.svg?alt=media", "type": "partner" },
-        { "name": "Aliaddo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.svg?alt=media", "type": "partner" },
-        { "name": "Amaris", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.svg?alt=media", "type": "partner" },
-        { "name": "Applus", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.svg?alt=media", "type": "partner" },
-        { "name": "Conexalab", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.svg?alt=media", "type": "main" },
-        { "name": "Construsoft", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConstrusoft.webp?alt=media", "type": "partner" },
-        { "name": "Cure Latam", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.svg?alt=media", "type": "partner" },
-        { "name": "Denario", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.svg?alt=media", "type": "partner" },
-        { "name": "Essa", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.svg?alt=media", "type": "partner" },
-        { "name": "Foscal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.svg?alt=media", "type": "partner" },
-        { "name": "Galapago", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.svg?alt=media", "type": "partner" },
-        { "name": "Globant", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.svg?alt=media", "type": "partner" },
-        { "name": "Grafo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.svg?alt=media", "type": "partner" },
-        { "name": "Mantis", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmantis.webp?alt=media", "type": "partner" },
-        { "name": "Mbc", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.svg?alt=media", "type": "partner" },
-        { "name": "Planetalp", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetalp.svg?alt=media", "type": "partner" },
-        { "name": "PrismHr", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.svg?alt=media", "type": "partner" },
-        { "name": "SIO", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSIO.webp?alt=media", "type": "partner" },
-        { "name": "Solvo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.svg?alt=media", "type": "partner" },
-        { "name": "Syscom", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.svg?alt=media", "type": "partner" },
-        { "name": "TecnoEduca", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.svg?alt=media", "type": "partner" },
-        { "name": "Todosistemas", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodoSistems.svg?alt=media", "type": "partner" },
-        { "name": "Wiedii", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwiedii.webp?alt=media", "type": "partner" },
-        { "name": "Xrm", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.svg?alt=media", "type": "partner" },
-        { "name": "Alpes Solutionn", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.svg?alt=media", "type": "partner" },
-        { "name": "Arcetec", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Farcetec.webp?alt=media", "type": "partner" },
-        { "name": "Copower", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.svg?alt=media", "type": "partner" },
-        { "name": "Dataglobbal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.svg?alt=media", "type": "partner" },
-        { "name": "Digital Process", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.svg?alt=media", "type": "partner" },
-        { "name": "Disfarma", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.svg?alt=media", "type": "partner" },
-        { "name": "Electro Software", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FElectro%20Software.webp?alt=media", "type": "partner" },
-        { "name": "Facilpos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.svg?alt=media", "type": "partner" },
-        { "name": "Factura Powered by Detecno", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFactura%20Powered%20by%20detecno.webp?alt=media", "type": "partner" },
-        { "name": "Inncube", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FInncube.webp?alt=media", "type": "partner" },
-        { "name": "Iridian", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIridian.webp?alt=media", "type": "partner" },
-        { "name": "IvoLegal", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIvoLegal.webp?alt=media", "type": "partner" },
-        { "name": "Kontrol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FKontrol.webp?alt=media", "type": "partner" },
-        { "name": "La Esmeralda", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.svg?alt=media", "type": "partner" },
-        { "name": "Lechecol", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLechecol.webp?alt=media", "type": "partner" },
-        { "name": "Macondo", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmacondo.webp?alt=media", "type": "partner" },
-        { "name": "Masabi", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.svg?alt=media", "type": "partner" },
-        { "name": "Pensemos", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPensemos.webp?alt=media", "type": "partner" },
-        { "name": "Pix Robotics", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.svg?alt=media", "type": "partner" },
-        { "name": "Qnt", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.svg?alt=media", "type": "partner" },
-        { "name": "Quibor", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQuibor.webp?alt=media", "type": "partner" },
-        { "name": "Sistemas y Computadores", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSistemas%20y%20computadores.webp?alt=media", "type": "partner" },
-        { "name": "SmartData", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.svg?alt=media", "type": "partner" },
-        { "name": "Software Medico", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.svg?alt=media", "type": "partner" },
-        { "name": "Vensure", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.svg?alt=media", "type": "partner" },
-        { "name": "Wmwise", "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media", "type": "partner" }
-      ]
+    "companies": [
+      {
+        "name": "2nv",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Aliaddo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Amaris",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Applus",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Conexalab",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.svg?alt=media",
+        "type": "main"
+      },
+      {
+        "name": "Construsoft",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConstrusoft.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Cure Latam",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Denario",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Essa",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Foscal",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Galapago",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Globant",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Grafo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Mantis",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmantis.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Mbc",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Planetalp",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetalp.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "PrismHr",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "SIO",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSIO.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Solvo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Syscom",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "TecnoEduca",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Todosistemas",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodoSistems.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Wiedii",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwiedii.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Xrm",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Alpes Solutionn",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Arcetec",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Farcetec.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Copower",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Dataglobbal",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Digital Process",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Disfarma",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Electro Software",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FElectro%20Software.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Facilpos",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Factura Powered by Detecno",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFactura%20Powered%20by%20detecno.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Inncube",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FInncube.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Iridian",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIridian.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "IvoLegal",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIvoLegal.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Kontrol",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FKontrol.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "La Esmeralda",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Lechecol",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLechecol.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Macondo",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmacondo.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Masabi",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Pensemos",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPensemos.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Pix Robotics",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Qnt",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Quibor",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQuibor.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Sistemas y Computadores",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSistemas%20y%20computadores.webp?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "SmartData",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Software Medico",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Vensure",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.svg?alt=media",
+        "type": "partner"
+      },
+      {
+        "name": "Wmwise",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media",
+        "type": "partner"
+      }
+    ]
   },
   "partners_page": {
     "assets": {
@@ -135,31 +335,100 @@
     "connection_cycle": {
       "heading": "Ciclo de Conexión Tech Leap",
       "subheading": "Seis etapas de ingeniería diseñadas para garantizar el match perfecto entre tu stack y nuestro talento",
-"code_lines": [
-  { "text": "// --- CAMPUSLANDS CORE: MAIN_MISSION_CONTROL ---", "color": "text-gray-300" },
-  { "text": "// Protocolo de Ignición de Talento v2.1", "color": "text-gray-300" },
-  { "text": "// Estado: ESPERANDO_LANZAMIENTO", "color": "text-gray-400" },
-  { "text": "", "color": "text-transparent" },
-  { "text": "const MISION = {", "color": "text-[#7E61E1]" },
-  { "text": "  id: \"CAMPUS_ALPHA\",", "color": "text-[#009B74]" },
-  { "text": "  objetivo: \"Colonizar_Industria_Tech\",", "color": "text-[#009B74]" },
-  { "text": "  coordenadas: [\"LATAM\", \"GLOBAL\"],", "color": "text-[#009B74]" },
-  { "text": "  tripulacion: [] // Lista para nuevos Campers", "color": "text-gray-300" },
-  { "text": "};", "color": "text-white/80" },
-  { "text": "", "color": "text-transparent" },
-  { "text": "// Validando sistemas...", "color": "text-gray-400" },
-  { "text": "if (rastroTalento.formacion === \"ALTO_RENDIMIENTO\") {", "color": "text-[#7E61E1]" },
-  { "text": "  MISION.tripulacion.push(camperId);", "color": "text-gray-300" },
-  { "text": "  console.log(`> Camper [${camperId}] acoplado a la Misión.`);", "color": "text-[#009B74]" },
-  { "text": "  actualizarEcosistema(rastroTalento.lenguajes);", "color": "text-gray-300" },
-  { "text": "  ejecutarPropulsionBoost(); // ALERTA: Potencia al 100%", "color": "text-[#56B4FF]" },
-  { "text": "} else {", "color": "text-[#7E61E1]" },
-  { "text": "  throw new Error(\"Formación insuficiente. Re-calibrando sistema...\");", "color": "text-[#7E61E1]" },
-  { "text": "}", "color": "text-gray-300" },
-  { "text": "}", "color": "text-gray-300" },
-  { "text": "", "color": "text-transparent" },
-  { "text": "}", "color": "text-gray-300" }
-    ],
+      "code_lines": [
+        {
+          "text": "// --- CAMPUSLANDS CORE: MAIN_MISSION_CONTROL ---",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "// Protocolo de Ignición de Talento v2.1",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "// Estado: ESPERANDO_LANZAMIENTO",
+          "color": "text-gray-400"
+        },
+        {
+          "text": "",
+          "color": "text-transparent"
+        },
+        {
+          "text": "const MISION = {",
+          "color": "text-[#7E61E1]"
+        },
+        {
+          "text": "  id: \"CAMPUS_ALPHA\",",
+          "color": "text-[#009B74]"
+        },
+        {
+          "text": "  objetivo: \"Colonizar_Industria_Tech\",",
+          "color": "text-[#009B74]"
+        },
+        {
+          "text": "  coordenadas: [\"LATAM\", \"GLOBAL\"],",
+          "color": "text-[#009B74]"
+        },
+        {
+          "text": "  tripulacion: [] // Lista para nuevos Campers",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "};",
+          "color": "text-white/80"
+        },
+        {
+          "text": "",
+          "color": "text-transparent"
+        },
+        {
+          "text": "// Validando sistemas...",
+          "color": "text-gray-400"
+        },
+        {
+          "text": "if (rastroTalento.formacion === \"ALTO_RENDIMIENTO\") {",
+          "color": "text-[#7E61E1]"
+        },
+        {
+          "text": "  MISION.tripulacion.push(camperId);",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "  console.log(`> Camper [${camperId}] acoplado a la Misión.`);",
+          "color": "text-[#009B74]"
+        },
+        {
+          "text": "  actualizarEcosistema(rastroTalento.lenguajes);",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "  ejecutarPropulsionBoost(); // ALERTA: Potencia al 100%",
+          "color": "text-[#56B4FF]"
+        },
+        {
+          "text": "} else {",
+          "color": "text-[#7E61E1]"
+        },
+        {
+          "text": "  throw new Error(\"Formación insuficiente. Re-calibrando sistema...\");",
+          "color": "text-[#7E61E1]"
+        },
+        {
+          "text": "}",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "}",
+          "color": "text-gray-300"
+        },
+        {
+          "text": "",
+          "color": "text-transparent"
+        },
+        {
+          "text": "}",
+          "color": "text-gray-300"
+        }
+      ],
       "steps": [
         {
           "title": "Diagnóstico",
@@ -208,33 +477,68 @@
       "subheading": "Nuestro pensum acorde a las necesidades del mercado.",
       "track": "INTELIGENCIA ARTIFICIAL - PROGRAMACIÓN - HABILIDADES SOCIOEMOCIONALES",
       "technologies": [
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2FJavascript-shield.svg?alt=media", "name": "Javascript"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fbootstrap-5%201.svg?alt=media", "name": "Bootstrap"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fcss-3-svgrepo-com.svg?alt=media", "name": "CSS"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fts-lettermark-blue%201.svg?alt=media", "name": "TypeScript"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fhtml-5-logo-svgrepo-com.svg?alt=media", "name": "HTML"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fmysql-horizontal%201.svg?alt=media", "name": "MySQL"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%20(1)%201.svg?alt=media", "name": "Postgre"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpython-logo-inkscape%201.svg?alt=media", "name": "Python"},
-        {"logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media", "name": "React"}
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2FJavascript-shield.svg?alt=media",
+          "name": "Javascript"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fbootstrap-5%201.svg?alt=media",
+          "name": "Bootstrap"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fcss-3-svgrepo-com.svg?alt=media",
+          "name": "CSS"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fts-lettermark-blue%201.svg?alt=media",
+          "name": "TypeScript"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fhtml-5-logo-svgrepo-com.svg?alt=media",
+          "name": "HTML"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fmysql-horizontal%201.svg?alt=media",
+          "name": "MySQL"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%20(1)%201.svg?alt=media",
+          "name": "Postgre"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpython-logo-inkscape%201.svg?alt=media",
+          "name": "Python"
+        },
+        {
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media",
+          "name": "React"
+        }
       ],
       "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2FOrbit-remove.png?alt=media"
     },
-    "selection":{
+    "selection": {
       "subheader": "POR QUÉ LAS EMPRESAS LÍDERES NOS ELIGEN",
-      "carrusel":[
-        {"title": "Talento <br/> Certificado",
-        "subtitle":"Filtramos y evaluamos las capacidades técnicas para asegurar que recibas solo a los mejores",
-        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media"},
-        {"title": "Crecimiento <br/> a tu medida",
-        "subtitle":"Armamos equipos de tecnología completos, listos para integrarse y escalar tus proyectos hoy mismo.",
-        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media"},
-        {"title": "Modelos <br/> Adaptables",
-        "subtitle":"Ofrecemos diferentes formas de contratación que se ajustan al presupuesto y flujo de tu empresa.",
-        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media"},
-        {"title": "Cero Riesgo <br/> de Selección",
-        "subtitle":"Hacemos seguimiento constante, si el talento no cumple tus expectativas, lo reemplazamos sin costos adicionales.",
-        "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame%20121405.png?alt=media"}
+      "carrusel": [
+        {
+          "title": "Talento <br/> Certificado",
+          "subtitle": "Filtramos y evaluamos las capacidades técnicas para asegurar que recibas solo a los mejores",
+          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media"
+        },
+        {
+          "title": "Crecimiento <br/> a tu medida",
+          "subtitle": "Armamos equipos de tecnología completos, listos para integrarse y escalar tus proyectos hoy mismo.",
+          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media"
+        },
+        {
+          "title": "Modelos <br/> Adaptables",
+          "subtitle": "Ofrecemos diferentes formas de contratación que se ajustan al presupuesto y flujo de tu empresa.",
+          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media"
+        },
+        {
+          "title": "Cero Riesgo <br/> de Selección",
+          "subtitle": "Hacemos seguimiento constante, si el talento no cumple tus expectativas, lo reemplazamos sin costos adicionales.",
+          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame%20121405.png?alt=media"
+        }
       ]
     },
     "recruiters": {
@@ -281,7 +585,7 @@
           "role": "Especialista en IA",
           "time": "9:00 AM",
           "action_aria_label": "Abrir servicios IA Academy",
-          "href": "/IaAcademy/servicios"
+          "href": "/servicio/IaAcademy/clases"
         }
       },
       "formation_plans": {
@@ -428,7 +732,7 @@
           "Make",
           "Gemini",
           "Claude",
-          "Microsoft Copilot Open Ai",
+          "Microsoft Copilot",
           "Github Copilot",
           "Midjourney",
           "Notion AI",
@@ -438,12 +742,44 @@
           "Read AI",
           "ElevenLabs",
           "HeyGen"
-        ]
+        ],
+        "images_url": {
+          "make": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-make.png?alt=media",
+          "notion": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-notionai.png?alt=media",
+          "zapier": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-zapier.png?alt=media",
+          "perplexity": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-perpleity.png?alt=media",
+          "elevenlabs": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-evenlabs.png?alt=media",
+          "heyyen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-HeyGen.png?alt=media",
+          "microsftcopilot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-microsoft-copilot.png?alt=media",
+          "gemini": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-gemini.png?alt=media",
+          "chatgpt": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-chatgpt.png?alt=media",
+          "githubcopilot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-githubcopilot.png?alt=media",
+          "notebooklm": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-notebooklm.png?alt=media",
+          "claude": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-claude.png?alt=media",
+          "readai": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-readai.png?alt=media",
+          "midjourney": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-midjourney.png?alt=media"
+        },
+        "descripcion_ia": {
+          "chatgpt": "Chatbot conversacional avanzado y versatil",
+          "make": "Automatización de flujos de trabajos avanzados",
+          "gemini": "Modelo de lenguaje multimodal de Google",
+          "claude": "Asistente de IA ético e intuitivo",
+          "microsftcopilot": "Asistente integrado en productos de Microsoft",
+          "githubcopilot": "Asistente de codificación para desarrolladores",
+          "midjourney": "Generador de imágenes artísticas de alta calidad",
+          "notion": "Asistente de escritura y organización de Notion",
+          "Zapier": "Automatización de tareas entre aplicaciones web",
+          "perplexity": "Motor de busqueda conversacional y preciso",
+          "notebooklm": "Herramienta de investigación y resumen de documetos",
+          "readai": "Asistente de IA para reuniones y resúmenes",
+          "elevenlabs": "Sintetizador de voz de alta calidad",
+          "heyyen": "Generador de videos con avatares de IA"
+        }
       },
       "contact": {
         "eyebrow": "PLANES DE FORMACIÓN ESPACIAL",
         "title": "Diagnóstico de Adopción de IA",
-        "subtitle": "En solo 4 pasos hacemos un análisis completo para iniciar el proceso con tu empresa.",
+        "subtitle": "En solo 10 pasos hacemos un análisis completo para iniciar el proceso con tu empresa.",
         "step_label": "PASO 1",
         "step_title": "Datos básicos",
         "progress": 25,
@@ -453,12 +789,842 @@
           "phone": "Teléfono Contacto",
           "corporate_email": "Correo electrónico corporativo:"
         },
-        "cta": "Siguiente"
+        "cta": "Siguiente",
+        "form_sections": [
+          {
+            "id": "general_empresa",
+            "title": "INFORMACIÓN DE LA EMPRESA",
+            "fields": [
+              {
+                "id": "empresa",
+                "type": "text",
+                "label": "Empresa",
+                "required": true
+              },
+              {
+                "id": "sector",
+                "type": "text",
+                "label": "Sector / industria",
+                "required": true
+              },
+              {
+                "id": "actividad",
+                "type": "text",
+                "label": "Actividad principal",
+                "required": true
+              },
+              {
+                "id": "tamano",
+                "type": "radio",
+                "label": "Tamaño de la empresa (empleados)",
+                "required": true,
+                "options": [
+                  {
+                    "label": "1-10",
+                    "value": "1-10"
+                  },
+                  {
+                    "label": "11-50",
+                    "value": "11-50"
+                  },
+                  {
+                    "label": "51-200",
+                    "value": "51-200"
+                  },
+                  {
+                    "label": "200+",
+                    "value": "200+"
+                  }
+                ]
+              },
+              {
+                "id": "tipo_cliente",
+                "type": "radio",
+                "label": "Tipo de cliente",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Empresas (B2B)",
+                    "value": "B2B"
+                  },
+                  {
+                    "label": "Personas (B2C)",
+                    "value": "B2C"
+                  },
+                  {
+                    "label": "Mixto",
+                    "value": "Mixto"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "general_contacto",
+            "title": "DATOS DE QUIEN RESPONDE",
+            "fields": [
+              {
+                "id": "nombre",
+                "type": "text",
+                "label": "Nombre completo",
+                "required": true
+              },
+              {
+                "id": "cargo",
+                "type": "text",
+                "label": "Cargo o rol",
+                "required": true
+              },
+              {
+                "id": "area",
+                "type": "text",
+                "label": "Área",
+                "required": true
+              },
+              {
+                "id": "nivel_cargo",
+                "type": "radio",
+                "label": "Nivel del cargo",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Directivo",
+                    "value": "Directivo"
+                  },
+                  {
+                    "label": "Jefe / Coordinador",
+                    "value": "Jefe"
+                  },
+                  {
+                    "label": "Profesional",
+                    "value": "Profesional"
+                  },
+                  {
+                    "label": "Operativo",
+                    "value": "Operativo"
+                  }
+                ]
+              },
+              {
+                "id": "personal_cargo",
+                "type": "radio",
+                "label": "¿Tiene personal a cargo?",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Sí",
+                    "value": "Si"
+                  },
+                  {
+                    "label": "No",
+                    "value": "No"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "general_info_entrevista",
+            "title": "MANEJO DE INFORMACIÓN",
+            "fields": [
+              {
+                "id": "tipo_info",
+                "type": "checkbox",
+                "label": "Tipo de información que maneja",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "Operativa",
+                    "value": "Operativa"
+                  },
+                  {
+                    "label": "Administrativa",
+                    "value": "Administrativa"
+                  },
+                  {
+                    "label": "Financiera",
+                    "value": "Financiera"
+                  },
+                  {
+                    "label": "Comercial",
+                    "value": "Comercial"
+                  },
+                  {
+                    "label": "Clientes",
+                    "value": "Clientes"
+                  },
+                  {
+                    "label": "Documental",
+                    "value": "Documental"
+                  }
+                ]
+              },
+              {
+                "id": "info_sensible",
+                "type": "radio",
+                "label": "¿Trabaja con información sensible?",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Sí",
+                    "value": "Si"
+                  },
+                  {
+                    "label": "No",
+                    "value": "No"
+                  }
+                ]
+              },
+              {
+                "id": "info_organizada",
+                "type": "radio",
+                "label": "¿La información llega organizada?",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Sí",
+                    "value": "Si"
+                  },
+                  {
+                    "label": "No",
+                    "value": "No"
+                  },
+                  {
+                    "label": "Parcialmente",
+                    "value": "Parcialmente"
+                  }
+                ]
+              },
+              {
+                "id": "fecha",
+                "type": "date",
+                "label": "Fecha de la entrevista",
+                "required": true
+              },
+              {
+                "id": "entrevistador",
+                "type": "text",
+                "label": "Entrevistador / asesor",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": "contexto",
+            "title": "CONTEXTO Y OPORTUNIDAD",
+            "fields": [
+              {
+                "id": "presencia_ia",
+                "type": "radio",
+                "label": "Hoy, ¿qué tan presente está la IA en la forma en que trabaja su empresa?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "No la usamos todavía",
+                    "value": "nada"
+                  },
+                  {
+                    "label": "La hemos probado de forma aislada",
+                    "value": "aislada"
+                  },
+                  {
+                    "label": "Algunas personas ya la usan en tareas puntuales",
+                    "value": "puntual"
+                  },
+                  {
+                    "label": "Ya se usa en varias actividades del día a día",
+                    "value": "frecuente"
+                  }
+                ]
+              },
+              {
+                "id": "tareas_presion",
+                "type": "checkbox",
+                "label": "¿En qué tipo de tareas sienten hoy más presión, desgaste o pérdida de tiempo?",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "Redacción de correos, mensajes o documentos",
+                    "value": "redaccion"
+                  },
+                  {
+                    "label": "Búsqueda y organización de información",
+                    "value": "busqueda"
+                  },
+                  {
+                    "label": "Elaboración de informes o reportes",
+                    "value": "informes"
+                  },
+                  {
+                    "label": "Atención de solicitudes repetitivas",
+                    "value": "atencion"
+                  },
+                  {
+                    "label": "Seguimiento de tareas, pedidos o casos",
+                    "value": "seguimiento"
+                  },
+                  {
+                    "label": "Registro manual de datos",
+                    "value": "registro"
+                  },
+                  {
+                    "label": "Análisis para tomar decisiones",
+                    "value": "analisis"
+                  },
+                  {
+                    "label": "Otra",
+                    "value": "otra"
+                  }
+                ]
+              },
+              {
+                "id": "mejorar_primero",
+                "type": "radio",
+                "label": "Si la IA les ayudara bien, ¿qué les gustaría mejorar primero?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Productividad del equipo",
+                    "value": "productividad"
+                  },
+                  {
+                    "label": "Organización de la información",
+                    "value": "organizacion"
+                  },
+                  {
+                    "label": "Mejor toma de decisiones",
+                    "value": "decisiones"
+                  },
+                  {
+                    "label": "Respuesta más rápida a clientes o solicitudes",
+                    "value": "respuesta"
+                  },
+                  {
+                    "label": "Menos trabajo manual y repetitivo",
+                    "value": "menos_manual"
+                  },
+                  {
+                    "label": "Mayor control operativo",
+                    "value": "control"
+                  },
+                  {
+                    "label": "Otra",
+                    "value": "otra"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "uso_actual",
+            "title": "USO ACTUAL Y CRITERIO DE ADOPCIÓN",
+            "fields": [
+              {
+                "id": "herramientas_usadas",
+                "type": "checkbox",
+                "label": "¿Qué herramientas de IA han usado o probado hasta ahora?",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "ChatGPT",
+                    "value": "chatgpt"
+                  },
+                  {
+                    "label": "Gemini",
+                    "value": "gemini"
+                  },
+                  {
+                    "label": "Claude",
+                    "value": "claude"
+                  },
+                  {
+                    "label": "Copilot",
+                    "value": "copilot"
+                  },
+                  {
+                    "label": "Perplexity",
+                    "value": "perplexity"
+                  },
+                  {
+                    "label": "NotebookLM",
+                    "value": "notebooklm"
+                  },
+                  {
+                    "label": "No hemos usado ninguna",
+                    "value": "ninguna"
+                  },
+                  {
+                    "label": "Otra",
+                    "value": "otra"
+                  }
+                ]
+              },
+              {
+                "id": "como_usan",
+                "type": "radio",
+                "label": "¿Cómo usan hoy esas herramientas?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Solo para pruebas o curiosidad",
+                    "value": "pruebas"
+                  },
+                  {
+                    "label": "Para tareas personales de productividad",
+                    "value": "personales"
+                  },
+                  {
+                    "label": "Para apoyar tareas del trabajo",
+                    "value": "apoyo"
+                  },
+                  {
+                    "label": "Como parte frecuente del trabajo del equipo",
+                    "value": "frecuente"
+                  }
+                ]
+              },
+              {
+                "id": "claridad_tareas",
+                "type": "radio",
+                "label": "¿Qué tan claro tienen hoy qué tareas sí podrían apoyarse con IA y cuáles no?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Nada claro",
+                    "value": "nada"
+                  },
+                  {
+                    "label": "Poco claro",
+                    "value": "poco"
+                  },
+                  {
+                    "label": "Medianamente claro",
+                    "value": "medio"
+                  },
+                  {
+                    "label": "Muy claro",
+                    "value": "muy"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "gpt",
+            "title": "POTENCIAL PARA AGENTES GPT",
+            "fields": [
+              {
+                "id": "tareas_repetitivas",
+                "type": "radio",
+                "label": "¿Existen tareas que su equipo repita con frecuencia y que sigan una lógica similar?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "No realmente",
+                    "value": "no"
+                  },
+                  {
+                    "label": "Algunas, pero cambian mucho",
+                    "value": "algunas"
+                  },
+                  {
+                    "label": "Sí, varias",
+                    "value": "varias"
+                  },
+                  {
+                    "label": "Sí, son muy frecuentes y bastante repetitivas",
+                    "value": "frecuentes"
+                  }
+                ]
+              },
+              {
+                "id": "uso_sentido",
+                "type": "radio",
+                "label": "¿Cuál de estos usos tendría más sentido para ustedes en una primera etapa?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Un asistente para redactar mejor",
+                    "value": "redactar"
+                  },
+                  {
+                    "label": "Un asistente para resumir y organizar información",
+                    "value": "resumir"
+                  },
+                  {
+                    "label": "Un asistente para apoyar análisis o decisiones",
+                    "value": "analisis"
+                  },
+                  {
+                    "label": "Un asistente para responder según un rol o necesidad específica",
+                    "value": "responder"
+                  },
+                  {
+                    "label": "Aún no lo tenemos claro",
+                    "value": "no_claro"
+                  }
+                ]
+              },
+              {
+                "id": "utilidad_gpt",
+                "type": "radio",
+                "label": "¿Qué tan útil sería contar con un GPT personalizado para una tarea concreta del negocio?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Poco útil",
+                    "value": "poco"
+                  },
+                  {
+                    "label": "Interesante, pero no prioritario",
+                    "value": "interesante"
+                  },
+                  {
+                    "label": "Útil",
+                    "value": "util"
+                  },
+                  {
+                    "label": "Muy útil y aplicable de inmediato",
+                    "value": "muy_util"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "n8n",
+            "title": "POTENCIAL PARA AUTOMATIZACIÓN CON N8N",
+            "fields": [
+              {
+                "id": "retrabajo",
+                "type": "checkbox",
+                "label": "¿Dónde sienten más retrabajo o repetición entre herramientas?",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "Recibir información y volverla a digitar",
+                    "value": "digitar"
+                  },
+                  {
+                    "label": "Pasar datos de un canal a otro",
+                    "value": "pasar"
+                  },
+                  {
+                    "label": "Hacer seguimiento manual",
+                    "value": "seguimiento"
+                  },
+                  {
+                    "label": "Consolidar reportes",
+                    "value": "reportes"
+                  },
+                  {
+                    "label": "Validar información antes de actuar",
+                    "value": "validar"
+                  },
+                  {
+                    "label": "Aún no identificamos algo así",
+                    "value": "no_identificamos"
+                  }
+                ]
+              },
+              {
+                "id": "procesos_canal",
+                "type": "radio",
+                "label": "¿Hoy manejan procesos donde la información entra por un canal y debe organizarse o registrarse en otro?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "No",
+                    "value": "no"
+                  },
+                  {
+                    "label": "Sí, pero ocasionalmente",
+                    "value": "ocasional"
+                  },
+                  {
+                    "label": "Sí, pasa con frecuencia",
+                    "value": "frecuencia"
+                  },
+                  {
+                    "label": "Sí, es parte crítica de la operación",
+                    "value": "critica"
+                  }
+                ]
+              },
+              {
+                "id": "herramientas_diarias",
+                "type": "checkbox",
+                "label": "¿Qué herramientas o canales hacen parte de su operación diaria?",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "Correo",
+                    "value": "correo"
+                  },
+                  {
+                    "label": "WhatsApp",
+                    "value": "whatsapp"
+                  },
+                  {
+                    "label": "Excel",
+                    "value": "excel"
+                  },
+                  {
+                    "label": "Google Sheets",
+                    "value": "sheets"
+                  },
+                  {
+                    "label": "Google Drive",
+                    "value": "drive"
+                  },
+                  {
+                    "label": "Microsoft 365",
+                    "value": "m365"
+                  },
+                  {
+                    "label": "Formularios",
+                    "value": "formularios"
+                  },
+                  {
+                    "label": "CRM",
+                    "value": "crm"
+                  },
+                  {
+                    "label": "ERP o software administrativo",
+                    "value": "erp"
+                  },
+                  {
+                    "label": "Agenda o calendario",
+                    "value": "agenda"
+                  },
+                  {
+                    "label": "Otra",
+                    "value": "otra"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "seguridad",
+            "title": "SEGURIDAD Y VIABILIDAD",
+            "fields": [
+              {
+                "id": "manejo_seguro",
+                "type": "radio",
+                "label": "¿Qué tan definido está el manejo seguro de información cuando se usa IA?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "No tenemos criterios",
+                    "value": "no"
+                  },
+                  {
+                    "label": "Hay cuidado general, pero nada formal",
+                    "value": "cuidado"
+                  },
+                  {
+                    "label": "Tenemos algunas reglas básicas",
+                    "value": "basicas"
+                  },
+                  {
+                    "label": "Tenemos lineamientos claros",
+                    "value": "claros"
+                  }
+                ]
+              },
+              {
+                "id": "tipo_info_formacion",
+                "type": "checkbox",
+                "label": "¿Con qué tipo de información trabajarían en una formación con IA?",
+                "required": true,
+                "helpText": "Marque todas las que apliquen.",
+                "options": [
+                  {
+                    "label": "Información pública",
+                    "value": "publica"
+                  },
+                  {
+                    "label": "Información interna no sensible",
+                    "value": "interna"
+                  },
+                  {
+                    "label": "Datos comerciales",
+                    "value": "comerciales"
+                  },
+                  {
+                    "label": "Datos de clientes",
+                    "value": "clientes"
+                  },
+                  {
+                    "label": "Información sensible o confidencial",
+                    "value": "sensible"
+                  },
+                  {
+                    "label": "No estamos seguros aún",
+                    "value": "no_seguros"
+                  }
+                ]
+              },
+              {
+                "id": "alcance_logico",
+                "type": "radio",
+                "label": "¿Cuál sería el alcance más lógico para empezar una primera etapa?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "Solo una persona líder",
+                    "value": "lider"
+                  },
+                  {
+                    "label": "Un área pequeña",
+                    "value": "area_pequena"
+                  },
+                  {
+                    "label": "Un equipo de varias personas",
+                    "value": "equipo"
+                  },
+                  {
+                    "label": "Varias áreas al mismo tiempo",
+                    "value": "varias_areas"
+                  }
+                ]
+              },
+              {
+                "id": "licencias_ia",
+                "type": "radio",
+                "label": "¿La empresa cuenta con licencias pagas de herramientas de IA o estaría dispuesta a activarlas?",
+                "required": true,
+                "helpText": "Marque una opción.",
+                "options": [
+                  {
+                    "label": "No tiene y no contempla pagar por ahora",
+                    "value": "no_contempla"
+                  },
+                  {
+                    "label": "No tiene, pero podría evaluarlo",
+                    "value": "evaluar"
+                  },
+                  {
+                    "label": "Sí, tiene algunas licencias",
+                    "value": "algunas"
+                  },
+                  {
+                    "label": "Sí, ya invierte en estas herramientas",
+                    "value": "invierte"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "abiertas",
+            "title": "RESPUESTAS ABIERTAS",
+            "fields": [
+              {
+                "id": "cuello_botella",
+                "type": "textarea",
+                "label": "Si pudieras resolver un solo cuello de botella con IA en los próximos 3 meses, ¿cuál sería?",
+                "required": true
+              },
+              {
+                "id": "tareas_perdida_tiempo",
+                "type": "textarea",
+                "label": "Menciona hasta 3 tareas repetitivas o procesos donde más tiempo pierde hoy el equipo.",
+                "required": true
+              },
+              {
+                "id": "restricciones",
+                "type": "textarea",
+                "label": "¿Hay alguna restricción importante que debamos tener en cuenta para implementar IA?",
+                "helpText": "Ej: seguridad, herramientas actuales, resistencia al cambio, políticas internas, acceso a datos.",
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "uso_interno",
+            "title": "USO INTERNO IA ACADEMY — OPCIONAL",
+            "fields": [
+              {
+                "id": "ruta_sugerida",
+                "type": "radio",
+                "label": "Ruta sugerida preliminar",
+                "required": false,
+                "options": [
+                  {
+                    "label": "Base aplicada",
+                    "value": "base_aplicada"
+                  },
+                  {
+                    "label": "Agentes GPT",
+                    "value": "agentes_gpt"
+                  },
+                  {
+                    "label": "Automatización con n8n",
+                    "value": "aut_n8n"
+                  }
+                ]
+              },
+              {
+                "id": "horas_sugeridas",
+                "type": "radio",
+                "label": "Horas sugeridas",
+                "required": false,
+                "options": [
+                  {
+                    "label": "8h",
+                    "value": "8h"
+                  },
+                  {
+                    "label": "12h",
+                    "value": "12h"
+                  },
+                  {
+                    "label": "16h",
+                    "value": "16h"
+                  },
+                  {
+                    "label": "20h",
+                    "value": "20h"
+                  }
+                ]
+              },
+              {
+                "id": "casos_uso",
+                "type": "textarea",
+                "label": "Posibles casos de uso o mini proyectos identificados",
+                "required": false
+              },
+              {
+                "id": "observaciones",
+                "type": "textarea",
+                "label": "Observaciones del asesor",
+                "required": false
+              }
+            ]
+          }
+        ]
       }
     },
     "services_view": {
       "hero": {
-        "back_href": "/IaAcademy",
+        "back_href": "/servicio/IaAcademy",
         "back_button_label": "Volver",
         "countdown": "00:10",
         "title": "La Masterclass empezará pronto",
@@ -527,33 +1693,105 @@
         "name": "Salón Principal",
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFrontal.webp?alt=media",
         "links": [
-          { "key": "lateral-izquierdo", "label": "Lateral izquierdo", "position": { "x": 15, "y": 60 }, "direction": "left" },
-          { "key": "lateral-derecho", "label": "Lateral derecho", "position": { "x": 82, "y": 60 }, "direction": "right" }
+          {
+            "key": "lateral-izquierdo",
+            "label": "Lateral izquierdo",
+            "position": {
+              "x": 15,
+              "y": 60
+            },
+            "direction": "left"
+          },
+          {
+            "key": "lateral-derecho",
+            "label": "Lateral derecho",
+            "position": {
+              "x": 82,
+              "y": 60
+            },
+            "direction": "right"
+          }
         ]
       },
       "lateral-izquierdo": {
         "name": "Lateral izquierdo",
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralzquierdo.webp?alt=media",
         "links": [
-          { "key": "fondo", "label": "Explorar el Fondo", "position": { "x": 30, "y": 40 }, "direction": "forward" },
-          { "key": "frontal", "label": "Volver al Inicio", "position": { "x": 85, "y": 65 }, "direction": "right" }
+          {
+            "key": "fondo",
+            "label": "Explorar el Fondo",
+            "position": {
+              "x": 30,
+              "y": 40
+            },
+            "direction": "forward"
+          },
+          {
+            "key": "frontal",
+            "label": "Volver al Inicio",
+            "position": {
+              "x": 85,
+              "y": 65
+            },
+            "direction": "right"
+          }
         ]
       },
       "lateral-derecho": {
         "name": "Lateral derecho",
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralDerecho.webp?alt=media",
         "links": [
-          { "key": "frontal", "label": "Volver al Inicio", "position": { "x": 15, "y": 65 }, "direction": "left" },
-          { "key": "fondo", "label": "Ir al Fondo", "position": { "x": 70, "y": 40 }, "direction": "forward" }
+          {
+            "key": "frontal",
+            "label": "Volver al Inicio",
+            "position": {
+              "x": 15,
+              "y": 65
+            },
+            "direction": "left"
+          },
+          {
+            "key": "fondo",
+            "label": "Ir al Fondo",
+            "position": {
+              "x": 70,
+              "y": 40
+            },
+            "direction": "forward"
+          }
         ]
       },
       "fondo": {
         "name": "Fondo",
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFondo.webp?alt=media",
         "links": [
-          { "key": "lateral-derecho", "label": "lateral derecho", "position": { "x": 25, "y": 55 }, "direction": "left" },
-          { "key": "lateral-izquierdo", "label": "lateral izquierdo", "position": { "x": 75, "y": 55 }, "direction": "right" },
-          { "key": "frontal", "label": "Regresar al Inicio", "position": { "x": 50, "y": 80 }, "direction": "forward" }
+          {
+            "key": "lateral-derecho",
+            "label": "lateral derecho",
+            "position": {
+              "x": 25,
+              "y": 55
+            },
+            "direction": "left"
+          },
+          {
+            "key": "lateral-izquierdo",
+            "label": "lateral izquierdo",
+            "position": {
+              "x": 75,
+              "y": 55
+            },
+            "direction": "right"
+          },
+          {
+            "key": "frontal",
+            "label": "Regresar al Inicio",
+            "position": {
+              "x": 50,
+              "y": 80
+            },
+            "direction": "forward"
+          }
         ]
       }
     }
@@ -583,10 +1821,26 @@
     },
     "social_heading": "Más detalles de nuestra misión en redes",
     "social_links": [
-      { "name": "INSTAGRAM", "url": "https://www.instagram.com/campuslands/", "icon": "/icons/Instagram.svg" },
-      { "name": "TIKTOK", "url": "https://www.tiktok.com/@campuslands", "icon": "/icons/Tiktok.svg" },
-      { "name": "LINKEDIN", "url": "https://www.linkedin.com/school/campuslands/", "icon": "/icons/LinkedIn.svg" },
-      { "name": "FACEBOOK", "url": "https://www.facebook.com/campuslands", "icon": "/icons/Facebook.svg" }
+      {
+        "name": "INSTAGRAM",
+        "url": "https://www.instagram.com/campuslands/",
+        "icon": "/icons/Instagram.svg"
+      },
+      {
+        "name": "TIKTOK",
+        "url": "https://www.tiktok.com/@campuslands",
+        "icon": "/icons/Tiktok.svg"
+      },
+      {
+        "name": "LINKEDIN",
+        "url": "https://www.linkedin.com/school/campuslands/",
+        "icon": "/icons/LinkedIn.svg"
+      },
+      {
+        "name": "FACEBOOK",
+        "url": "https://www.facebook.com/campuslands",
+        "icon": "/icons/Facebook.svg"
+      }
     ],
     "legal": {
       "privacy": "Politicas de Tratamiento de datos personales",
@@ -608,95 +1862,111 @@
       "7. DISPOSICIONES FINALES PARA EL CUMPLIMIENTO DE LA POLÍTICA"
     ],
     "content": [
-      { "title": "INTRODUCCIÓN",
-        "text": "En cumplimiento a lo dispuesto en la Ley 1581 de 2012 y su Decreto Reglamentario 1377 de 2013, CAMPUSLANDS S.A.S. BIC reconoce la importancia de salvaguardar la información personal de los estudiantes, docentes, colaboradores y padres de familia, al tiempo que reconoce su compromiso con las prácticas comerciales responsables y éticas.\n\nEsta Política de Tratamiento de Datos Personales evidencia el crecimiento empresarial responsable, al igual que nuestra obediencia a las disposiciones legales establecidas, con la finalidad garantizar nuestro compromiso con la seguridad y privacidad de datos del público en general con quienes podamos llegar a tener algún tipo de interacción en sentido general.\n\nCAMPUSLANDS S.A.S. BIC comprende que los datos personales deben ser administrados con extremo cuidado dado su valor, es por ello que se establece la presente política por medio de la cual se dictan los parámetros a través de los cuales se recopilará, almacenará, procesará, transferirá y se eliminarán los datos personales.\n\nLa sinergia entre nuestra labor educativa y nuestros intereses empresariales se materializa en nuestra voluntad de no solo cumplir con las leyes y regulaciones pertinentes en materia de protección de datos, sino también de educar a nuestra comunidad y colaboradores sobre la importancia de la privacidad y la seguridad en un mundo digitalizado." },
-       {"title":"1. ALCANCE DE LA POLÍTICA",
-        "subtitle":"1.1. RESPONSABLE DEL TRATAMIENTO DE DATOS PERSONALES",
-        "text":"CAMPUSLANDS S.A.S. BIC, en adelante, Campuslands, institución privada de carácter social, con NIT 901.628.406-1, actuando como responsable de la información y en cumplimiento de la Ley de protección de Datos personales 1581 de 2012 y sus decretos reglamentarios, se identifica a través de los siguientes datos:\n\nPERSONERÍA JURÍDICA: Reconocida mediante registro de matrícula el 31 de agosto de 2022 por Cámara de Comercio de Bucaramanga.\n\nDOMICILIO PRINCIPAL: Edificio Zenith Piso 6 – Zona Franca Santander - Floridablanca\n\nTELÉFONO: 3118807659\n\nCORREO ELECTRÓNICO: contacto@Campuslands.com\n\nPÁGINA WEB: www.Campuslands.com"
-       },
-       {"title":"1.2. DEFINICIONES",
-        "text":"Para el desarrollo e implementación de esta política, Campuslands adopta las definiciones establecidas en la Ley 1581 de 2012 y el capítulo I del Decreto 1377 de 2013, para una comprensión adecuada de la presente política:\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
-       },
-       {"title":"1.3. PRINCIPIOS PARA EL TRATAMIENTO DE DATOS PERSONALES",
-        "text":"Principio de legalidad en materia de tratamiento de datos: Campuslands busca garantizar el cumplimiento de la normatividad de protección de datos personales, estableciendo obligaciones y procedimientos para sus empleados, proveedores, estudiantes, profesores y demás partes interesadas de la institución./Principio de finalidad: El tratamiento de datos personales que realiza Campuslands está sometida y atiende una finalidad legítima, la cual es informada al respectivo titular de los datos personales en el momento de la recolección de su información./nPrincipio de libertad: El tratamiento de datos personales solo puede efectuarse con el consentimiento, previo, expreso e informado del titular. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización, o en ausencia de mandato legal o judicial que revele el consentimiento.\nPrincipio de veracidad o calidad: Campuslands internamente ha dispuesto mecanismos de actualización de la información personal, con el propósito que ésta sea veraz, completa, exacta y actualizada.\nPrincipio de transparencia: En cumplimiento de este principio, Campuslands garantiza el derecho del titular a obtener de ésta, en cualquier momento y sin restricciones, información acerca de la existencia de cualquier tipo de información o dato personal que sea de su interés o titularidad.\nPrincipio de acceso y circulación restringida: Campuslands ha dispuesto controles de acceso a la información personal contenida en las bases de datos. También ha dispuesto internamente, mecanismos para que sus funcionarios puedan tener acceso solo a la información que de acuerdo a su cargo deban conocer.\nPrincipio de confidencialidad: Todas y cada una de las personas que interactúen en el tratamiento de datos personales realizado por Campuslands, y que administren, manejen, actualicen o tenga acceso a otro tipo que se encuentre en bases de datos o que sea suministrada en la ejecución y ejercicio de sus funciones se comprometen a conservar y mantener de manera estrictamente confidencial y a no revelarla a terceros.\nPrincipio de responsabilidad demostrada: Campuslands está en capacidad de demostrar ante la Superintendencia de industria y comercio, que ha implementado las obligaciones exigidas por la legislación colombiana en protección de datos personales.\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
-       },
-       {"title":"1.4. OBJETIVO Y ALCANCE DE LA POLÍTICA",
-        "text":"El objetivo principal de la presente política es establecer parámetros claros y consecuentes para el manejo, protección y uso adecuado de los datos personales de estudiantes, proveedores, docentes, personal administrativo y cualquier otra persona que tenga relación con la institución que reposen en bases de datos, archivos físicos y electrónicos.\n\nEl alcance de la política de tratamientos de datos personales abarca todos los procesos, sistemas y actividades relacionadas con la recolección, almacenamiento, uso, circulación, actualización y supresión de datos personales llevadas a cabo por Campuslands."
-      },
-       {"title":"1.5. TITULARES A QUIEN VA DIRIGIDA LA POLÍTICA",
-        "text":"Se entiende por titulares las personas cuyos datos personales son objeto de tratamiento en la institución. La presente política está dirigida a cualquier titular de la información, ya sea actuando en su nombre o como representante legal que, con ocasión, a las actividades para las cuales se encuentre vinculado con la institución, se requiera de su información personal para el desarrollo de las mismas. Entre estos, sin limitarse a: estudiantes inscritos, admitidos, prospectos, egresados, profesores y empleados."
-      },
-       {"title":"1.6. CUMPLIMIENTO NORMATIVO DEL RÉGIMEN DE PROTECCIÓN DE DATOS PERSONALES",
-        "text":"Esta política de tratamiento de datos personales de cumplimiento al régimen de protección de datos personales en Colombia, en especial, los artículo 15 y 20 de la constitución política nacional, la ley 1581 de 2012, el capítulo 25 del decreto 1074 de 2015 y demás normas que la modifiquen, complementen o adicionen."
-      },
-       {"title":"2. FINALIDADES DEL TRATAMIENTO DE LA INFORMACIÓN SEGÚN LAS BASES DE DATOS",
-        "text":"Conforme a la clasificación de los datos personales, establecida en el Registro Nacional de Bases de Datos, los datos personales a los cuales la institución realiza tratamiento son los siguientes:\n\nDatos generales y específicos de identificación de la persona: nombres, apellidos, tipo de identificación, número de identificación, fecha y lugar de expedición, nombre, estado civil, sexo, nacionalidad, lugar y fecha de nacimiento, edad.\nDatos específicos de la identificación de la persona: firma, firma electrónica, otros documentos de identificación, datos de la familia.\nDatos de ubicación relacionados con actividad comercial o profesional de la persona: dirección, teléfono, celular, dirección de correo electrónico.\nDatos socioeconómicos como estrato, propiedad de la vivienda, bienes muebles e inmuebles, ingreso, egresos, inversiones, etc.\nDatos de información tributaria de la persona.\nDatos de información tributaria de la persona.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de nivel educativo, capacitación y/o historial académico de la persona.\nDatos generales relacionados con la afiliación y aportes al sistema integral de seguridad social: EPS, IPS, ARL, AFP, etc.\nDatos de antecedentes judiciales y/o disciplinarios de la persona.\nDatos personales de acceso a sistemas de información: usuarios, IP, claves, perfiles, etc.\nDatos biométricos de la persona: fotografía, voz, videos, etc.\nDatos de la descripción morfológica de la persona: color de piel, color de iris, color y tipo de cabellos, señales particulares, estatura, peso, complexión, etc.\nDatos relacionados con la salud de la persona y su estado incluyendo: resultados de laboratorio, estudios, diagnósticos médicos, psicológicos, psiquiátricos, medicamentos, tratamientos terapéuticos.\nDatos sobre la pertenencia a sindicatos, organizaciones sociales, de derechos humanos, religiosos, políticas, convicciones religiosas, filosóficas o políticas.\nDatos de preferencia, identidad y orientación sexual de la persona, origen étnico-racial.\nDatos sobre población en condición vulnerable.\nDatos sobre personas en situación de discapacidad."
-      },
-      {"title":"2.1. DE LA BASE DE DATOS ESTUDIANTES PROSPECTOS",
-        "text":"Recolección de los datos personales\n\nCampuslands recoge la información de los estudiantes prospectos a través de los canales habilitados por la institución como: Chat, encuestas, formularios, convenios, eventos académicos y culturales, entre otros que se consideren importantes de implementar para esta finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nFinalidades del tratamiento de los datos personales"
-      },
-      {"title":"2.2. BASES DE DATOS INSCRITOS Y ADMITIDOS",
-        "text":"Recolección de datos personales\n\nLa institución recoge información de personas inscritas y admitidas a través de los siguientes medios: formulario de inscripción y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nLa recolección de esta información tiene las siguientes finalidades: La promoción y difusión de programas académicos; el seguimiento del proceso de inscripción y admisión al programa académico de interés, contacto con el prospecto (entrevistas, admitidos y no admitidos); reportes ante entes externos nacionales; la investigación institucional; invitaciones para participar en actividades académicas, científicas o culturales, recepción de información sobre la oferta académica, envío de encuestas para mejoramiento del servicio y fines estadísticos, conocimiento de noticias de interés, así como también para verificar las inscripciones y garantizar espacios de atención a los estudiantes en situación de discapacidad."
-      },
-      {"title":"2.3. BASES DE DATOS ESTUDIANTES",
-        "text":"Recolección de datos personales\n\nCampuslands recolecta información de estudiantes a través de los siguientes medios: sistemas de información de notas, calificaciones académicas, historia académica, hojas de vida con sus respectivos soporte, formularios físicos y digitales de servicios culturales, académicos y de bienestar, encuestas, votaciones, evaluaciones, pruebas diagnósticas, aplicativos web y móviles, video, fotografía, redes sociales, video vigilancia, cookies y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la información personal recolectada por la institución son:\n\nEl seguimiento a la administración académica y la permanencia efectiva de los estudiantes, en línea con las estrategias de la institución sujeta a las disposiciones legales vigentes.\nLa gestión sobre el programa de empleabilidad nacionales e internacionales (remisión de hoja de vida a terceras entidades para tales efectos y afiliación a riesgos laborales), en el caso de nuestros estudiantes.\nGeneración de reportes, informes y estadísticas para gestión interna.\nGestión de evaluación de perfiles para determinar el nivel de reconocimiento por méritos académicos.\nPrestación de servicios académicos y administrativos.\nProgramas de educación no formal.\nInvestigación de conductas de los estudiantes.\nContacto, gestión e información.\nBecas e incentivos.\nFelicitaciones, sugerencias, quejas y reclamos.\nTramites de actividades culturales, deportivas, de prevención y promoción de la salud.\nComunicaciones internas y externas.\nRegistro y control académico.\nEnvió de encuestas para el mejoramiento del servicio y fines estadísticos.\nRevisión de situaciones de violencia, con el propósito de presentar posibles rutas de intervención: psicológica, académica y/o jurídica."
-      },
-      {"title":"2.4. BASE DE DATOS EGRESADOS",
-       "text":"Recolección de datos personales\nLa institución recolecta la información de los egresados a través de los siguientes medios dispuestos durante su estadía en Campuslands como estudiante: sistemas de información de actualización de datos de egresados, formularios virtuales y físicos y otros medios que se estipulen con el tiempo.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de uso por las cuales Campuslands recolecta datos personales de egresados son:\n\nConstrucción y consolidación de canales de comunicación permanente en calidad de egresado.\nPromoción, divulgación y aplicación de ofertas académicas y de empleo.\nGestión de beneficios a través de alianzas, convenios, descuentos en productos y servicios en salud, deporte, recreación, servicios profesionales y publicaciones.\nGestión de la información sobre oferta de educación no formal.\nTodas las actividades que genere la institución dirigida a los egresados en investigación, docencia y extensión, incluyendo las labores de investigación institucional para el mejoramiento continuo de los procesos sustantivos de Campuslands."
-      },
-      {"title":"2.5. BASE DE DATOS DE PROFESORES",
-       "text":"Recolección de datos personales\nCampuslands recolecta información, a través de los siguientes medios: línea telefónica, chat, encuestas, eventos académicos y culturales, hojas de vida y soportes profesionales, correos electrónicos, planillas de asistencia, video vigilancia, sistemas de gestión institucionales y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nContratación.\nEstudio de las hojas de vida.\nVerificación de cumplimiento de disposiciones del reglamento del profesor y demás normas institucionales.\nComunicación con fines de movilidad nacional e internacional, oferta académica.\nDesarrollo profesoral y de la investigación."
-      },
-      {"title":"2.6. BASE DE DATOS EMPLEADOS",
-       "text":"Recolección de datos personales\nCampuslands recolecta información de sus servidores públicos a través de los siguientes medios: sistemas de información de nómina y recursos humanos, contratos, hojas de vida y soportes, sistemas de gestión institucionales, video vigilancia y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nProcesos de selección de personal, capacitación, procesos formativos.\nEstudios de seguridad para el candidato seleccionado.\nContratación y gestión de nómina, gestión de incapacidades, afiliación, actividades de prevención y gestión de la salud.\nExamen médico ocupacional.\nEntrevistas de seguimiento recomendaciones médicas de orden laboral, diagnósticos médicos, incapacidades por accidentes de trabajo, enfermedad laboral, pérdida de capacidad laboral.\nMediciones ambientales, ocupacionales, diagnósticos de salud, encuestas de morbilidad sentida\nCaracterización de la población en niveles de actividad física.\nEjecución de actividades de fotografía, video de vigilancia y seguridad en las instalaciones.\nGestión de recursos para el aprendizaje.\nProgramas de educación no formal.\nLegalización de gastos de viaje."
-      },
-      {"title":"2.7. BASE DE DATOS DE LOS CONTRATISTAS",
-       "text":"Recolección de la información\nCampuslands recolecta información de la base de datos de los contratistas, a través de los siguientes medios: formularios físicos y virtuales, hojas de vida con soportes profesionales y otros medios que la institución considere pertinentes a la finalidad.\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de los datos personales son:\n1. Gestión de contratación de personas naturales para la prestación de servicios.\n2. Contratación de conferencias extranjeros.\n3. Gestión administrativa, manejo de información financiera, contable, fiscal y legal.\n4. Gestión de cuentas de cobro para los respectivos pagos.\n5. Formalización de contratos.\n6. Reporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\n7. Comunicación para la verificación de la prestación del servicio."
+      {
+        "title": "INTRODUCCIÓN",
+        "text": "En cumplimiento a lo dispuesto en la Ley 1581 de 2012 y su Decreto Reglamentario 1377 de 2013, CAMPUSLANDS S.A.S. BIC reconoce la importancia de salvaguardar la información personal de los estudiantes, docentes, colaboradores y padres de familia, al tiempo que reconoce su compromiso con las prácticas comerciales responsables y éticas.\n\nEsta Política de Tratamiento de Datos Personales evidencia el crecimiento empresarial responsable, al igual que nuestra obediencia a las disposiciones legales establecidas, con la finalidad garantizar nuestro compromiso con la seguridad y privacidad de datos del público en general con quienes podamos llegar a tener algún tipo de interacción en sentido general.\n\nCAMPUSLANDS S.A.S. BIC comprende que los datos personales deben ser administrados con extremo cuidado dado su valor, es por ello que se establece la presente política por medio de la cual se dictan los parámetros a través de los cuales se recopilará, almacenará, procesará, transferirá y se eliminarán los datos personales.\n\nLa sinergia entre nuestra labor educativa y nuestros intereses empresariales se materializa en nuestra voluntad de no solo cumplir con las leyes y regulaciones pertinentes en materia de protección de datos, sino también de educar a nuestra comunidad y colaboradores sobre la importancia de la privacidad y la seguridad en un mundo digitalizado."
       },
       {
-    "title": "2.8. BASE DE DATOS PROVEEDORES, ACREEDORES Y OTROS",
-    "text": "Recolección de la información\nCampuslands recolecta información de los proveedores, acreedores, donantes, entre otros, a través de los siguientes medios: formulario de inscripción de proveedores, físicos, virtuales y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLa institución de recolección de información personal de esta base de datos es:\n\nCreación y actualización de proveedores, acreedores, deudores y donantes.\nGeneración y remisión de certificado de ingresos y retenciones.\nContabilización de facturas proveedores, causación para crear la cuenta por pagar, salarios, retenciones.\nComunicaciones sobre campañas informativas.\nComunicaciones dirigidas a donantes y agradecimientos.\nGestión de certificados tributarios.\nReporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\nGestión administrativa, manejo de información financiera, contable, fiscal y legal.\nSeguimiento a ingresos y donantes."
-  },
-  {
-    "title": "2.9. BASE DE DATOS PETICIONES, QUEJAS Y RECLAMOS",
-    "text": "Recolección de los datos personales\nCampuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de los siguientes medios: buzones físicos de peticiones, quejas y reclamos – PQR, formulario virtual, apertura de cuentas de correo electrónico, mensajería instantánea y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de datos personales de esta base de datos son: conocer los intereses, reclamaciones y sugerencias de los usuarios internos o externos y dar trámite a la solicitud ya sea felicitación, queja, de consulta y reclamo o sugerencia, sobre los servicios que presta la institución, ejercer el derecho de conocer, actualizar y rectificar la información personal que tienen bajo custodia Campuslands."
-  },
-    {
-      "title": "2.10. BASE DE DATOS VIDEO VIGILANCIA",
-      "text": "Campuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de cámaras de video vigilancia, en aras de propender por la seguridad de los bienes y personas que se encuentran en las instalaciones."
-    },
-    {
-      "title": "2.11. DATOS PERSONALES SENSIBLES",
-      "text": "La recolección de datos personales sensibles de titulares Campuslands tiene las finalidades que se especifican para cada caso:"
-    },
-    {
-    "title": "2.12. DATOS PERSONALES DE NIÑOS, NIÑAS Y ADOLESCENTES",
-    "text": "Campuslands realiza tratamiento de datos personales de niños, niñas y adolescentes con el fin de garantizar el derecho a la educación, la formación integral y el bienestar de los estudiantes, hijos menores o adolescentes de los profesores y empleados administrativos. El tratamiento se realiza siempre y cuando:\n\nLa finalidad del tratamiento responda al interés superior de los niños, niñas y adolescentes.\nEl tratamiento realizado por Campuslands asegure el respeto de sus derechos fundamentales.\nSe respete el derecho que le asiste al menor de ser escuchado, opinión que será valorada teniendo en cuenta la madurez, autonomía y capacidad para entender el tratamiento del dato.\nSe cumplan con los requisitos previstos en la ley 1581 de 2012 para el tratamiento de datos personales.\nLa institución recolecta datos personales de menores de edad en los siguientes eventos:\n\nProceso de admisión e inscripción a los programas formativos de la institución.\nServicios académicos, administrativos y culturales que ofrece la institución y que benefician a estudiantes menores de edad.\nActividades extracurriculares organizadas por Campuslands en las que asistan estudiantes de instituciones educativas que tienen alianza o independientes a Campuslands.\nPor parte de los hijos menores de edad, de funcionarios de Campuslands para efectos de afiliación al sistema de seguridad social, para el beneficio de actividades de bienestar laboral, entre otros.\nEn eventos curriculares y extracurriculares para la toma de fotografías y videos para su difusión."
-  },
-  {
-    "title": "3.1. RECOLECCIÓN",
-    "text": "Campuslands realiza la recolección de la información personal, a través de los siguientes medios. Sin limitarse a ellos:\n\n• a. Aplicativos y formularios virtuales: Cuando ingresa a los diferentes servicios soportados por sistemas de información y aplicaciones.\n• b. Chat: cuando se solicita información a través de medios virtuales.\n• c. Llamadas telefónicas: en consulta por vía telefónica se capturan datos personales, incluida la grabación de la llamada.\nd. Formularios físicos: Cuando acceden a algunos de nuestros servicios por los canales presenciales, se obtienen sus datos personales a través de formularios físicos, encuestas dirigidas a la comunidad académica, entre otros.\n• e. Cuando se encuentra en las instalaciones de Campuslands con el propósito de velar por la seguridad de los bienes y las personas.\n\nLa institución garantiza que, en los instrumentos de recolección de información personal, se solicita la autorización para el tratamiento de datos personales, de manera libre, previa, expresa y en general, cuenta con todos los requisitos establecidos en las disposiciones legales para la protección de datos personales."
-  },
-  {
-    "title": "3.2. ALMACENAMIENTO",
-    "text": "El almacenamiento de la información personal de bases de datos y archivos con información personal puede ser efectuado por Campuslands mediante las siguientes formas:\n1. Servidor propio\n2. Servidor externo a cargo de un tercero\n3. Archivo en custodia de un tercero\n4. Archivo propio interno\n5. Computador institucional personal\n\nCampuslands cuenta con medidas de seguridad física, técnicas y administrativas para evitar la consulta y el acceso no autorizado a las bases de datos y archivos con información personal. Así mismo, exige a los encargados de la información, medidas conducentes a la seguridad y confidencialidad de la información suministrada."
-  },
-  {
-    "title": "3.3. CIRCULACIÓN",
-    "text": "La circulación de la información personal en Campuslands opera de manera restringida hacia nuestros encargados de la información, implementando las medidas de seguridad para evitar un uso no adecuado."
-  },
-  {
-    "title": "3.4. TRANSMISIÓN NACIONAL DE DATOS PERSONALES",
-    "text": "Los procesos de tratamiento de datos personales en recolección, circulación, almacenamiento, uso y supresión podrán ser transmitidos a terceros con los que tenga relación contractual a nivel nacional o internacional para la custodia y almacenamiento, siempre que cuenten con los estándares de seguridad en la protección de datos personales fijados por la superintendencia de industria y comercio.\n\nLa transmisión de datos personales que realiza Campuslands se puede generar en algunos casos en las siguientes operaciones del tratamiento:\n\n• a. Recolección: cuando se le solicite al encargado capturar información personal a nombre de Campuslands.\n• b. Almacenamiento: cuando se le solicita a un encargado almacenar la información tanto física como electrónica con las debidas medidas de seguridad y confidencialidad.\n• c. Uso: cuando se solicita al encargado realizar ciertas operaciones a nombre de la institución, como llamadas telefónicas, digitalización de la información, entre otros."
-  },
-  {
-    "title": "3.5. TRANSMISIÓN INTERNACIONAL DE DATOS PERSONALES",
-    "text": "En algunos casos, la institución ha dispuesto proveedores internacionales para el almacenamiento de la información personal, de manera específica, dirección de correos electrónicos institucionales, gestión de información de la comunidad académica, como puede ser: información profesional y comercial, hábitos de vida saludable, experiencia laboral y profesional."
-  },
-  {
-    "title": "3.6. TRANSFERENCIA NACIONAL E INTERNACIONAL DE DATOS PERSONALES",
-    "text": "Campuslands por regla general, no realiza transferencias nacionales e internacionales de los datos personales que tiene bajo su custodia, salvo en el caso de que los estudiantes, profesores y empleados apliquen a una solicitud de internacionalización o en los convenios y/o contratos internacionales."
-  }
+        "title": "1. ALCANCE DE LA POLÍTICA",
+        "subtitle": "1.1. RESPONSABLE DEL TRATAMIENTO DE DATOS PERSONALES",
+        "text": "CAMPUSLANDS S.A.S. BIC, en adelante, Campuslands, institución privada de carácter social, con NIT 901.628.406-1, actuando como responsable de la información y en cumplimiento de la Ley de protección de Datos personales 1581 de 2012 y sus decretos reglamentarios, se identifica a través de los siguientes datos:\n\nPERSONERÍA JURÍDICA: Reconocida mediante registro de matrícula el 31 de agosto de 2022 por Cámara de Comercio de Bucaramanga.\n\nDOMICILIO PRINCIPAL: Edificio Zenith Piso 6 – Zona Franca Santander - Floridablanca\n\nTELÉFONO: 3118807659\n\nCORREO ELECTRÓNICO: contacto@Campuslands.com\n\nPÁGINA WEB: www.Campuslands.com"
+      },
+      {
+        "title": "1.2. DEFINICIONES",
+        "text": "Para el desarrollo e implementación de esta política, Campuslands adopta las definiciones establecidas en la Ley 1581 de 2012 y el capítulo I del Decreto 1377 de 2013, para una comprensión adecuada de la presente política:\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
+      },
+      {
+        "title": "1.3. PRINCIPIOS PARA EL TRATAMIENTO DE DATOS PERSONALES",
+        "text": "Principio de legalidad en materia de tratamiento de datos: Campuslands busca garantizar el cumplimiento de la normatividad de protección de datos personales, estableciendo obligaciones y procedimientos para sus empleados, proveedores, estudiantes, profesores y demás partes interesadas de la institución./Principio de finalidad: El tratamiento de datos personales que realiza Campuslands está sometida y atiende una finalidad legítima, la cual es informada al respectivo titular de los datos personales en el momento de la recolección de su información./nPrincipio de libertad: El tratamiento de datos personales solo puede efectuarse con el consentimiento, previo, expreso e informado del titular. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización, o en ausencia de mandato legal o judicial que revele el consentimiento.\nPrincipio de veracidad o calidad: Campuslands internamente ha dispuesto mecanismos de actualización de la información personal, con el propósito que ésta sea veraz, completa, exacta y actualizada.\nPrincipio de transparencia: En cumplimiento de este principio, Campuslands garantiza el derecho del titular a obtener de ésta, en cualquier momento y sin restricciones, información acerca de la existencia de cualquier tipo de información o dato personal que sea de su interés o titularidad.\nPrincipio de acceso y circulación restringida: Campuslands ha dispuesto controles de acceso a la información personal contenida en las bases de datos. También ha dispuesto internamente, mecanismos para que sus funcionarios puedan tener acceso solo a la información que de acuerdo a su cargo deban conocer.\nPrincipio de confidencialidad: Todas y cada una de las personas que interactúen en el tratamiento de datos personales realizado por Campuslands, y que administren, manejen, actualicen o tenga acceso a otro tipo que se encuentre en bases de datos o que sea suministrada en la ejecución y ejercicio de sus funciones se comprometen a conservar y mantener de manera estrictamente confidencial y a no revelarla a terceros.\nPrincipio de responsabilidad demostrada: Campuslands está en capacidad de demostrar ante la Superintendencia de industria y comercio, que ha implementado las obligaciones exigidas por la legislación colombiana en protección de datos personales.\n\nAUTORIZACIÓN: consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.\nBASE DE DATOS: conjunto organizado de datos personales que sea objeto de tratamiento.\nDATO PERSONAL: Cualquier información vinculada o que pueda asociarse con una o varias personas naturales determinadas o determinantes.\nDATO PÚBLICO: Es el dato que no sea semiprivado, privado o sensible. Son considerados datos públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público.\nDATO SENSIBLE: Se entiende por datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar su discriminación, tales como aquellos que revelen el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos o que promueva intereses de cualquier partido político o que garanticen los derechos y garantías de partidos políticos de posición, así como los datos relativos a la salud, a la vida sexual, y los datos biométricos.\nDATO SEMIPRIVADO: Es semiprivado el dato que no tiene naturaleza íntima, reservada, ni pública y cuyo conocimiento o divulgación puede interesar no sólo a su titular sino a cierto sector o grupo de personas o a la sociedad en general.\nDATO PRIVADO: Es el dato que por su naturaleza íntima o reservada sólo es relevante para el titular.\nENCARGADO DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, realice el tratamiento de datos personales por cuenta del responsable del tratamiento.\nRESPONSABLE DEL TRATAMIENTO: Persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros, decide sobre la base de datos y/o el tratamiento de los datos.\nTITULAR: Persona natural, que actúa por sí misma o en nombre legal de otros (por ejemplo, menores de edad), cuyos datos personales sean objeto de tratamiento.\nTRATAMIENTO: Cualquier operación o conjunto de operaciones sobre datos personales, tales como recolección, almacenamiento, uso, circulación o supresión.\nTRANSFERENCIA: La transferencia de datos tiene lugar cuando el responsable y/o encargado del tratamiento de datos personales, ubicado en Colombia, envía la información o los datos personales a un receptor, que a su vez es responsable del tratamiento y se encuentra dentro o fuera del país.\nTRANSMISIÓN: Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia cuando tenga por objeto la realización de un tratamiento por el encargado por cuenta del responsable."
+      },
+      {
+        "title": "1.4. OBJETIVO Y ALCANCE DE LA POLÍTICA",
+        "text": "El objetivo principal de la presente política es establecer parámetros claros y consecuentes para el manejo, protección y uso adecuado de los datos personales de estudiantes, proveedores, docentes, personal administrativo y cualquier otra persona que tenga relación con la institución que reposen en bases de datos, archivos físicos y electrónicos.\n\nEl alcance de la política de tratamientos de datos personales abarca todos los procesos, sistemas y actividades relacionadas con la recolección, almacenamiento, uso, circulación, actualización y supresión de datos personales llevadas a cabo por Campuslands."
+      },
+      {
+        "title": "1.5. TITULARES A QUIEN VA DIRIGIDA LA POLÍTICA",
+        "text": "Se entiende por titulares las personas cuyos datos personales son objeto de tratamiento en la institución. La presente política está dirigida a cualquier titular de la información, ya sea actuando en su nombre o como representante legal que, con ocasión, a las actividades para las cuales se encuentre vinculado con la institución, se requiera de su información personal para el desarrollo de las mismas. Entre estos, sin limitarse a: estudiantes inscritos, admitidos, prospectos, egresados, profesores y empleados."
+      },
+      {
+        "title": "1.6. CUMPLIMIENTO NORMATIVO DEL RÉGIMEN DE PROTECCIÓN DE DATOS PERSONALES",
+        "text": "Esta política de tratamiento de datos personales de cumplimiento al régimen de protección de datos personales en Colombia, en especial, los artículo 15 y 20 de la constitución política nacional, la ley 1581 de 2012, el capítulo 25 del decreto 1074 de 2015 y demás normas que la modifiquen, complementen o adicionen."
+      },
+      {
+        "title": "2. FINALIDADES DEL TRATAMIENTO DE LA INFORMACIÓN SEGÚN LAS BASES DE DATOS",
+        "text": "Conforme a la clasificación de los datos personales, establecida en el Registro Nacional de Bases de Datos, los datos personales a los cuales la institución realiza tratamiento son los siguientes:\n\nDatos generales y específicos de identificación de la persona: nombres, apellidos, tipo de identificación, número de identificación, fecha y lugar de expedición, nombre, estado civil, sexo, nacionalidad, lugar y fecha de nacimiento, edad.\nDatos específicos de la identificación de la persona: firma, firma electrónica, otros documentos de identificación, datos de la familia.\nDatos de ubicación relacionados con actividad comercial o profesional de la persona: dirección, teléfono, celular, dirección de correo electrónico.\nDatos socioeconómicos como estrato, propiedad de la vivienda, bienes muebles e inmuebles, ingreso, egresos, inversiones, etc.\nDatos de información tributaria de la persona.\nDatos de información tributaria de la persona.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de la historia laboral de la persona, experiencia laboral, cargo, fechas de ingreso y retiro, anotaciones, llamados de atención, etc.\nDatos de nivel educativo, capacitación y/o historial académico de la persona.\nDatos generales relacionados con la afiliación y aportes al sistema integral de seguridad social: EPS, IPS, ARL, AFP, etc.\nDatos de antecedentes judiciales y/o disciplinarios de la persona.\nDatos personales de acceso a sistemas de información: usuarios, IP, claves, perfiles, etc.\nDatos biométricos de la persona: fotografía, voz, videos, etc.\nDatos de la descripción morfológica de la persona: color de piel, color de iris, color y tipo de cabellos, señales particulares, estatura, peso, complexión, etc.\nDatos relacionados con la salud de la persona y su estado incluyendo: resultados de laboratorio, estudios, diagnósticos médicos, psicológicos, psiquiátricos, medicamentos, tratamientos terapéuticos.\nDatos sobre la pertenencia a sindicatos, organizaciones sociales, de derechos humanos, religiosos, políticas, convicciones religiosas, filosóficas o políticas.\nDatos de preferencia, identidad y orientación sexual de la persona, origen étnico-racial.\nDatos sobre población en condición vulnerable.\nDatos sobre personas en situación de discapacidad."
+      },
+      {
+        "title": "2.1. DE LA BASE DE DATOS ESTUDIANTES PROSPECTOS",
+        "text": "Recolección de los datos personales\n\nCampuslands recoge la información de los estudiantes prospectos a través de los canales habilitados por la institución como: Chat, encuestas, formularios, convenios, eventos académicos y culturales, entre otros que se consideren importantes de implementar para esta finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nFinalidades del tratamiento de los datos personales"
+      },
+      {
+        "title": "2.2. BASES DE DATOS INSCRITOS Y ADMITIDOS",
+        "text": "Recolección de datos personales\n\nLa institución recoge información de personas inscritas y admitidas a través de los siguientes medios: formulario de inscripción y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\n\nLa recolección de esta información tiene las siguientes finalidades: La promoción y difusión de programas académicos; el seguimiento del proceso de inscripción y admisión al programa académico de interés, contacto con el prospecto (entrevistas, admitidos y no admitidos); reportes ante entes externos nacionales; la investigación institucional; invitaciones para participar en actividades académicas, científicas o culturales, recepción de información sobre la oferta académica, envío de encuestas para mejoramiento del servicio y fines estadísticos, conocimiento de noticias de interés, así como también para verificar las inscripciones y garantizar espacios de atención a los estudiantes en situación de discapacidad."
+      },
+      {
+        "title": "2.3. BASES DE DATOS ESTUDIANTES",
+        "text": "Recolección de datos personales\n\nCampuslands recolecta información de estudiantes a través de los siguientes medios: sistemas de información de notas, calificaciones académicas, historia académica, hojas de vida con sus respectivos soporte, formularios físicos y digitales de servicios culturales, académicos y de bienestar, encuestas, votaciones, evaluaciones, pruebas diagnósticas, aplicativos web y móviles, video, fotografía, redes sociales, video vigilancia, cookies y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la información personal recolectada por la institución son:\n\nEl seguimiento a la administración académica y la permanencia efectiva de los estudiantes, en línea con las estrategias de la institución sujeta a las disposiciones legales vigentes.\nLa gestión sobre el programa de empleabilidad nacionales e internacionales (remisión de hoja de vida a terceras entidades para tales efectos y afiliación a riesgos laborales), en el caso de nuestros estudiantes.\nGeneración de reportes, informes y estadísticas para gestión interna.\nGestión de evaluación de perfiles para determinar el nivel de reconocimiento por méritos académicos.\nPrestación de servicios académicos y administrativos.\nProgramas de educación no formal.\nInvestigación de conductas de los estudiantes.\nContacto, gestión e información.\nBecas e incentivos.\nFelicitaciones, sugerencias, quejas y reclamos.\nTramites de actividades culturales, deportivas, de prevención y promoción de la salud.\nComunicaciones internas y externas.\nRegistro y control académico.\nEnvió de encuestas para el mejoramiento del servicio y fines estadísticos.\nRevisión de situaciones de violencia, con el propósito de presentar posibles rutas de intervención: psicológica, académica y/o jurídica."
+      },
+      {
+        "title": "2.4. BASE DE DATOS EGRESADOS",
+        "text": "Recolección de datos personales\nLa institución recolecta la información de los egresados a través de los siguientes medios dispuestos durante su estadía en Campuslands como estudiante: sistemas de información de actualización de datos de egresados, formularios virtuales y físicos y otros medios que se estipulen con el tiempo.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de uso por las cuales Campuslands recolecta datos personales de egresados son:\n\nConstrucción y consolidación de canales de comunicación permanente en calidad de egresado.\nPromoción, divulgación y aplicación de ofertas académicas y de empleo.\nGestión de beneficios a través de alianzas, convenios, descuentos en productos y servicios en salud, deporte, recreación, servicios profesionales y publicaciones.\nGestión de la información sobre oferta de educación no formal.\nTodas las actividades que genere la institución dirigida a los egresados en investigación, docencia y extensión, incluyendo las labores de investigación institucional para el mejoramiento continuo de los procesos sustantivos de Campuslands."
+      },
+      {
+        "title": "2.5. BASE DE DATOS DE PROFESORES",
+        "text": "Recolección de datos personales\nCampuslands recolecta información, a través de los siguientes medios: línea telefónica, chat, encuestas, eventos académicos y culturales, hojas de vida y soportes profesionales, correos electrónicos, planillas de asistencia, video vigilancia, sistemas de gestión institucionales y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nContratación.\nEstudio de las hojas de vida.\nVerificación de cumplimiento de disposiciones del reglamento del profesor y demás normas institucionales.\nComunicación con fines de movilidad nacional e internacional, oferta académica.\nDesarrollo profesoral y de la investigación."
+      },
+      {
+        "title": "2.6. BASE DE DATOS EMPLEADOS",
+        "text": "Recolección de datos personales\nCampuslands recolecta información de sus servidores públicos a través de los siguientes medios: sistemas de información de nómina y recursos humanos, contratos, hojas de vida y soportes, sistemas de gestión institucionales, video vigilancia y otros medios que Campuslands considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de la información de esta base de datos son:\n\nProcesos de selección de personal, capacitación, procesos formativos.\nEstudios de seguridad para el candidato seleccionado.\nContratación y gestión de nómina, gestión de incapacidades, afiliación, actividades de prevención y gestión de la salud.\nExamen médico ocupacional.\nEntrevistas de seguimiento recomendaciones médicas de orden laboral, diagnósticos médicos, incapacidades por accidentes de trabajo, enfermedad laboral, pérdida de capacidad laboral.\nMediciones ambientales, ocupacionales, diagnósticos de salud, encuestas de morbilidad sentida\nCaracterización de la población en niveles de actividad física.\nEjecución de actividades de fotografía, video de vigilancia y seguridad en las instalaciones.\nGestión de recursos para el aprendizaje.\nProgramas de educación no formal.\nLegalización de gastos de viaje."
+      },
+      {
+        "title": "2.7. BASE DE DATOS DE LOS CONTRATISTAS",
+        "text": "Recolección de la información\nCampuslands recolecta información de la base de datos de los contratistas, a través de los siguientes medios: formularios físicos y virtuales, hojas de vida con soportes profesionales y otros medios que la institución considere pertinentes a la finalidad.\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de los datos personales son:\n1. Gestión de contratación de personas naturales para la prestación de servicios.\n2. Contratación de conferencias extranjeros.\n3. Gestión administrativa, manejo de información financiera, contable, fiscal y legal.\n4. Gestión de cuentas de cobro para los respectivos pagos.\n5. Formalización de contratos.\n6. Reporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\n7. Comunicación para la verificación de la prestación del servicio."
+      },
+      {
+        "title": "2.8. BASE DE DATOS PROVEEDORES, ACREEDORES Y OTROS",
+        "text": "Recolección de la información\nCampuslands recolecta información de los proveedores, acreedores, donantes, entre otros, a través de los siguientes medios: formulario de inscripción de proveedores, físicos, virtuales y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLa institución de recolección de información personal de esta base de datos es:\n\nCreación y actualización de proveedores, acreedores, deudores y donantes.\nGeneración y remisión de certificado de ingresos y retenciones.\nContabilización de facturas proveedores, causación para crear la cuenta por pagar, salarios, retenciones.\nComunicaciones sobre campañas informativas.\nComunicaciones dirigidas a donantes y agradecimientos.\nGestión de certificados tributarios.\nReporte de obligaciones tributarias y legales ante entidades administrativas y organismos de control.\nGestión administrativa, manejo de información financiera, contable, fiscal y legal.\nSeguimiento a ingresos y donantes."
+      },
+      {
+        "title": "2.9. BASE DE DATOS PETICIONES, QUEJAS Y RECLAMOS",
+        "text": "Recolección de los datos personales\nCampuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de los siguientes medios: buzones físicos de peticiones, quejas y reclamos – PQR, formulario virtual, apertura de cuentas de correo electrónico, mensajería instantánea y otros medios que la institución considere pertinentes a la finalidad.\n\nFinalidades del tratamiento de los datos personales\nLas finalidades de la recolección de datos personales de esta base de datos son: conocer los intereses, reclamaciones y sugerencias de los usuarios internos o externos y dar trámite a la solicitud ya sea felicitación, queja, de consulta y reclamo o sugerencia, sobre los servicios que presta la institución, ejercer el derecho de conocer, actualizar y rectificar la información personal que tienen bajo custodia Campuslands."
+      },
+      {
+        "title": "2.10. BASE DE DATOS VIDEO VIGILANCIA",
+        "text": "Campuslands recolecta información de la comunidad académica en general y de terceros no vinculados con la institución, a través de cámaras de video vigilancia, en aras de propender por la seguridad de los bienes y personas que se encuentran en las instalaciones."
+      },
+      {
+        "title": "2.11. DATOS PERSONALES SENSIBLES",
+        "text": "La recolección de datos personales sensibles de titulares Campuslands tiene las finalidades que se especifican para cada caso:"
+      },
+      {
+        "title": "2.12. DATOS PERSONALES DE NIÑOS, NIÑAS Y ADOLESCENTES",
+        "text": "Campuslands realiza tratamiento de datos personales de niños, niñas y adolescentes con el fin de garantizar el derecho a la educación, la formación integral y el bienestar de los estudiantes, hijos menores o adolescentes de los profesores y empleados administrativos. El tratamiento se realiza siempre y cuando:\n\nLa finalidad del tratamiento responda al interés superior de los niños, niñas y adolescentes.\nEl tratamiento realizado por Campuslands asegure el respeto de sus derechos fundamentales.\nSe respete el derecho que le asiste al menor de ser escuchado, opinión que será valorada teniendo en cuenta la madurez, autonomía y capacidad para entender el tratamiento del dato.\nSe cumplan con los requisitos previstos en la ley 1581 de 2012 para el tratamiento de datos personales.\nLa institución recolecta datos personales de menores de edad en los siguientes eventos:\n\nProceso de admisión e inscripción a los programas formativos de la institución.\nServicios académicos, administrativos y culturales que ofrece la institución y que benefician a estudiantes menores de edad.\nActividades extracurriculares organizadas por Campuslands en las que asistan estudiantes de instituciones educativas que tienen alianza o independientes a Campuslands.\nPor parte de los hijos menores de edad, de funcionarios de Campuslands para efectos de afiliación al sistema de seguridad social, para el beneficio de actividades de bienestar laboral, entre otros.\nEn eventos curriculares y extracurriculares para la toma de fotografías y videos para su difusión."
+      },
+      {
+        "title": "3.1. RECOLECCIÓN",
+        "text": "Campuslands realiza la recolección de la información personal, a través de los siguientes medios. Sin limitarse a ellos:\n\n• a. Aplicativos y formularios virtuales: Cuando ingresa a los diferentes servicios soportados por sistemas de información y aplicaciones.\n• b. Chat: cuando se solicita información a través de medios virtuales.\n• c. Llamadas telefónicas: en consulta por vía telefónica se capturan datos personales, incluida la grabación de la llamada.\nd. Formularios físicos: Cuando acceden a algunos de nuestros servicios por los canales presenciales, se obtienen sus datos personales a través de formularios físicos, encuestas dirigidas a la comunidad académica, entre otros.\n• e. Cuando se encuentra en las instalaciones de Campuslands con el propósito de velar por la seguridad de los bienes y las personas.\n\nLa institución garantiza que, en los instrumentos de recolección de información personal, se solicita la autorización para el tratamiento de datos personales, de manera libre, previa, expresa y en general, cuenta con todos los requisitos establecidos en las disposiciones legales para la protección de datos personales."
+      },
+      {
+        "title": "3.2. ALMACENAMIENTO",
+        "text": "El almacenamiento de la información personal de bases de datos y archivos con información personal puede ser efectuado por Campuslands mediante las siguientes formas:\n1. Servidor propio\n2. Servidor externo a cargo de un tercero\n3. Archivo en custodia de un tercero\n4. Archivo propio interno\n5. Computador institucional personal\n\nCampuslands cuenta con medidas de seguridad física, técnicas y administrativas para evitar la consulta y el acceso no autorizado a las bases de datos y archivos con información personal. Así mismo, exige a los encargados de la información, medidas conducentes a la seguridad y confidencialidad de la información suministrada."
+      },
+      {
+        "title": "3.3. CIRCULACIÓN",
+        "text": "La circulación de la información personal en Campuslands opera de manera restringida hacia nuestros encargados de la información, implementando las medidas de seguridad para evitar un uso no adecuado."
+      },
+      {
+        "title": "3.4. TRANSMISIÓN NACIONAL DE DATOS PERSONALES",
+        "text": "Los procesos de tratamiento de datos personales en recolección, circulación, almacenamiento, uso y supresión podrán ser transmitidos a terceros con los que tenga relación contractual a nivel nacional o internacional para la custodia y almacenamiento, siempre que cuenten con los estándares de seguridad en la protección de datos personales fijados por la superintendencia de industria y comercio.\n\nLa transmisión de datos personales que realiza Campuslands se puede generar en algunos casos en las siguientes operaciones del tratamiento:\n\n• a. Recolección: cuando se le solicite al encargado capturar información personal a nombre de Campuslands.\n• b. Almacenamiento: cuando se le solicita a un encargado almacenar la información tanto física como electrónica con las debidas medidas de seguridad y confidencialidad.\n• c. Uso: cuando se solicita al encargado realizar ciertas operaciones a nombre de la institución, como llamadas telefónicas, digitalización de la información, entre otros."
+      },
+      {
+        "title": "3.5. TRANSMISIÓN INTERNACIONAL DE DATOS PERSONALES",
+        "text": "En algunos casos, la institución ha dispuesto proveedores internacionales para el almacenamiento de la información personal, de manera específica, dirección de correos electrónicos institucionales, gestión de información de la comunidad académica, como puede ser: información profesional y comercial, hábitos de vida saludable, experiencia laboral y profesional."
+      },
+      {
+        "title": "3.6. TRANSFERENCIA NACIONAL E INTERNACIONAL DE DATOS PERSONALES",
+        "text": "Campuslands por regla general, no realiza transferencias nacionales e internacionales de los datos personales que tiene bajo su custodia, salvo en el caso de que los estudiantes, profesores y empleados apliquen a una solicitud de internacionalización o en los convenios y/o contratos internacionales."
+      }
     ]
   },
   "terms_and_conditions": {
@@ -764,7 +2034,12 @@
         "tag": "WORLD CLASS",
         "title": "Staffing Global",
         "description": "Desarrollo BPO internacional de alto impacto para compañías que operan en mercados globales competitivos.",
-        "features": ["Gestión Centralizada", "Estándares Globales", "Equipos Remotos de élite", "Tracking de Alto Rendimiento"],
+        "features": [
+          "Gestión Centralizada",
+          "Estándares Globales",
+          "Equipos Remotos de élite",
+          "Tracking de Alto Rendimiento"
+        ],
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fmundo.png?alt=media",
         "imageSize": "contain",
         "cta": "Solicitar talento",
@@ -773,17 +2048,32 @@
           {
             "name": "JUNIOR BÁSICO",
             "summary": "Experiencia Campuslands",
-            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia Campuslands"]
+            "details": [
+              "Formación a la medida.",
+              "2 hojas de vida por vacante.",
+              "Garantía: 1 mes.",
+              "Experiencia Campuslands"
+            ]
           },
           {
             "name": "JUNIOR PLUS",
             "summary": "Experiencia laboral previa",
-            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+            "details": [
+              "Formación a la medida.",
+              "2 hojas de vida por vacante.",
+              "Garantía: 1 mes.",
+              "Experiencia laboral previa."
+            ]
           },
           {
             "name": "DEV MID",
             "summary": "Amplia experiencia laboral",
-            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+            "details": [
+              "Formación a la medida.",
+              "2 hojas de vida por vacante.",
+              "Garantía: 2 meses.",
+              "Amplia experiencia laboral."
+            ]
           }
         ]
       },
@@ -792,7 +2082,12 @@
         "tag": "LATAM CORE",
         "title": "Staffing Nacional",
         "description": "Soluciones ágiles diseñadas específicamente para medianas empresas locales que buscan robustecer sus departamentos técnicos.",
-        "features": ["Contratación Flexible", "Garantía de Reposición", "Talento Curado", "Niveles a Elección"],
+        "features": [
+          "Contratación Flexible",
+          "Garantía de Reposición",
+          "Talento Curado",
+          "Niveles a Elección"
+        ],
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fcolombia.png?alt=media",
         "cta": "Solicitar talento",
         "cta_href": "#contacto",
@@ -800,17 +2095,32 @@
           {
             "name": "JUNIOR BÁSICO",
             "summary": "Experiencia Campuslands",
-            "details": ["Formación a medida.", "2 HdV por vacante.", "Garantía 1 mes.", "Experiencia Campuslands"]
+            "details": [
+              "Formación a medida.",
+              "2 HdV por vacante.",
+              "Garantía 1 mes.",
+              "Experiencia Campuslands"
+            ]
           },
           {
             "name": "JUNIOR PLUS",
             "summary": "Experiencia laboral previa",
-            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 1 mes.", "Experiencia laboral previa."]
+            "details": [
+              "Formación a la medida.",
+              "2 hojas de vida por vacante.",
+              "Garantía: 1 mes.",
+              "Experiencia laboral previa."
+            ]
           },
           {
             "name": "DEV MID",
             "summary": "Amplia experiencia laboral",
-            "details": ["Formación a la medida.", "2 hojas de vida por vacante.", "Garantía: 2 meses.", "Amplia experiencia laboral."]
+            "details": [
+              "Formación a la medida.",
+              "2 hojas de vida por vacante.",
+              "Garantía: 2 meses.",
+              "Amplia experiencia laboral."
+            ]
           }
         ]
       },
@@ -819,7 +2129,12 @@
         "tag": "BPO PROJECTS",
         "title": "Staffing Full Service",
         "description": "Delegue la ejecución técnica completa a células de trabajo gestionadas bajo los estándares de excelencia de nuestra academia.",
-        "features": ["Células Dedicadas", "Ejecución End-to-End", "Monitoreo Campuslands", "Agilidad Garantizada"],
+        "features": [
+          "Células Dedicadas",
+          "Ejecución End-to-End",
+          "Monitoreo Campuslands",
+          "Agilidad Garantizada"
+        ],
         "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fengranaje.png?alt=media",
         "cta": "Solicitar servicio",
         "cta_href": "#contacto",
