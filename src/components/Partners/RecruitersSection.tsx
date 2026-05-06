@@ -175,11 +175,6 @@ export default function RecruitersSection() {
         </div>
 
         {/* Decoración inferior */}
-        <div className="mt-16 flex justify-center items-center gap-4 opacity-30">
-          <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#54C6AA]" />
-          <span className="font-roboto-mono text-[10px] text-[#54C6AA] tracking-[0.4em]">MISSION STATUS: ACTIVE</span>
-          <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#54C6AA]" />
-        </div>
       </div>
     </section>
   );
