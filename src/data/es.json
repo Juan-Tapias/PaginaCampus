@@ -244,12 +244,14 @@
     },
     "form": {
       "fields": {
-        "name": "Nombre completo",
-        "email": "Email",
-        "reason": "Razón de requerimiento"
+        "title": "¿Listo para escalar tu equipo?",
+        "name": "Karolain Huérfano",
+        "role": "Ejecutiva de Relaciones Comerciales",
+        "contact": "+57 323 673 6422",
+        "email": "karolain.huerfano@campuslands.com",
+        "direction": "Floridablanca, Colombia"
       },
-      "cta": "Enviar solicitud",
-      "legal": "AL ENVIAR, ACEPTAS EL PROTOCOLO DE TRATAMIENTO DE DATOS_V2.0"
+      "cta": "Contactar ahora"
     }
   },
   "ia_academy": {
