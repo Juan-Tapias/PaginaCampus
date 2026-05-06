@@ -123,9 +123,9 @@
       "mosaico": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fnave-mosaico.png?alt=media"
     },
     "hero": {
-      "heading": "Potencia tu tripulación de stack tecnológico con",
-      "highlight": "talento de élite",
-      "subheading": "Elimina la carga operativa en la contratación. Nosotros validamos, tú escalas",
+      "heading": "Impulsa tu crecimiento con  ",
+      "highlight": "talento tecnológico de élite",
+      "subheading": "Simplificamos tu contratación técnica. Entregamos talento validado y listo para producir resultados.",
       "primary_cta": "Solicitar talento",
       "secondary_cta": "Ver modelos",
       "metric": "+800 Talentos Campus trabajando en empresas tech",
@@ -162,28 +162,28 @@
     ],
       "steps": [
         {
-          "title": "Requerimientos",
-          "description": "Mapeamos tu stack y definimos las necesidades de tu operación."
+          "title": "Diagnóstico",
+          "description": "Definimos el perfil técnico y los objetivos de tu proyecto."
         },
         {
           "title": "Validación Talento",
-          "description": "Filtramos perfiles por nivel técnico, inglés y habilidades de equipo."
+          "description": "Validamos la capacidad técnica con pruebas de alto nivel."
         },
         {
           "title": "Postulaciones",
-          "description": "Presentamos candidatos listos para entrevistas técnicas y culturales."
+          "description": "Te entregamos una selección de expertos listos para iniciar."
         },
         {
           "title": "Selección",
-          "description": "Acompañamos el proceso con evidencia de desempeño y soft skills."
+          "description": "Eliges el talento que mejor se adapte a tu cultura interna."
         },
         {
-          "title": "Contratación",
-          "description": "Conectamos el talento elegido con tu operación sin fricción."
+          "title": "Vinculación",
+          "description": "Modelos de vinculación flexibles adaptados a tu estructura financiera."
         },
         {
-          "title": "Seguimiento",
-          "description": "Medimos adaptación, desempeño y permanencia durante el aterrizaje."
+          "title": "Garantía",
+          "description": "Acompañamiento contínuo y garantía activa de reposición de talento."
         }
       ]
     },
