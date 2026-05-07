@@ -667,19 +667,23 @@
         "modules": [
           {
             "label": "MODULE 01",
-            "title": "Formación Práctica"
+            "title": "Formación Práctica",
+            "descripcion_ia": "Aprende con casos reales. Sin teoría vacía, solo ejecución aplicado al mercado actual."
           },
           {
             "label": "MODULE 02",
-            "title": "Entregables Listos"
+            "title": "Entregables Listos",
+            "descripcion_ia": "Sal de cada sesión con herramientas y activos digitales listos para implementar en tu trabajo."
           },
           {
             "label": "MODULE 03",
-            "title": "Entregables Listos"
+            "title": "Entregables Listos",
+            "descripcion_ia": "Nuestra comunidad y mentores están dispuestos 24/7 para resolver tus dudas técnicas."
           },
           {
             "label": "MODULE 04",
-            "title": "Rutas Flexibles"
+            "title": "Rutas Flexibles",
+            "descripcion_ia": "Personaliza tu aprendizaje según tu nivel, desde principiante hasta experto en Nébula."
           }
         ],
         "primary_cta": "Adquirir plan",
