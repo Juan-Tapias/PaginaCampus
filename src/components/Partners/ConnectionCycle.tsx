@@ -41,7 +41,7 @@ export default function ConnectionCycle() {
 
       <div className="relative z-20 mx-auto w-full px-10 lg:px-20">
         <header className="mb-24 text-center">
-          <motion.h2 className="font-poppins text-[40px] font-semibold text-white sm:text-[56px] leading-tight">
+          <motion.h2 className="font-poppins text-[32px] font-semibold text-white sm:text-[32px] leading-tight">
             {connection_cycle.heading}
           </motion.h2>
           <motion.p className="mt-6 font-poppins text-gray-400 max-w-4xl mx-auto text-xl">
