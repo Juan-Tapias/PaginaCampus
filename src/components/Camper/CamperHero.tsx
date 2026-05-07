@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import OrbitGlobe3D from '../../shared/OrbitGlobe3D';
-import data from '../../../data/es.json';
+import OrbitGlobe3D from '../shared/OrbitGlobe3D';
+import data from '@/data/es.json';
 
 export default function CamperHero() {
   const { hero } = data.se_un_camper;
@@ -12,23 +12,21 @@ export default function CamperHero() {
       
       <div className="container relative z-40 mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-0 h-full">
         
-        {/* Lado Izquierdo: Modelo 3D Orbit */}
         <div className="w-full lg:w-[45%] h-[400px] sm:h-[500px] lg:h-full flex justify-center items-center relative">
           <OrbitGlobe3D />
         </div>
 
-        {/* Lado Derecho: Contenido */}
         <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left lg:pl-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="font-poppins text-4xl sm:text-5xl md:text-[56px] font-semibold tracking-tight mb-6 leading-[1.1] text-white"
+            className="font-poppins text-4xl sm:text-5xl md:text-[56px] font-semibold tracking-tight mb-6 leading-[1.2] text-white"
           >
             {hero.heading_line1}
             <br className="hidden sm:block" />
-            <span className="text-[#3BC4A5] italic font-semibold drop-shadow-[0_0_15px_rgba(59,196,165,0.4)]">
+            <span className="text-[#3BC4A5] italic text-[56px] font-semibold">
               {hero.heading_highlight}
             </span>
             <span className="text-white"> y</span>
@@ -41,7 +39,7 @@ export default function CamperHero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-poppins text-gray-300 text-base md:text-lg max-w-xl mb-10 leading-relaxed font-light"
+            className="font-poppins text-gray-300 text-regular text-[20px] md:text-lg max-w-xl mb-10 leading-relaxed font-light"
           >
             {hero.description}
           </motion.p>

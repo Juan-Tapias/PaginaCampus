@@ -2152,6 +2152,41 @@
       "secondary_cta": "Hacer tour virtual",
       "orbit3d": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit.glb?alt=media",
       "globeimagen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FEllipse.png?alt=media"
+    },
+    "training_routes": {
+      "badge": "17 Años en Adelante!\\nSin límite de edad",
+      "heading": "Rutas de\\nentrenamiento",
+      "description": "Diferentes rutas que responden a distintos perfiles y momentos de vida. Jóvenes, adultos y profesionales en re-educación.",
+      "cards": [
+        {
+          "mission": "MISSION 01",
+          "title": "DIURNO",
+          "duration": "10 Meses",
+          "includes_label": "INCLUYE",
+          "features": [
+            "Programación",
+            "Habilidades socioemocionales",
+            "Inglés"
+          ],
+          "cta": "INSCRIBIRME AHORA"
+        },
+        {
+          "mission": "MISSION 02",
+          "title": "NOCTURNO",
+          "duration": "13 Meses",
+          "includes_label": "INCLUYE",
+          "features": [
+            "Programación",
+            "Habilidades socioemocionales"
+          ],
+          "cta": "INSCRIBIRME AHORA"
+        }
+      ],
+      "ticker": "RECLUTANDO_NODO_BOGOTA... PROCESANDO_TALENTO_CALI... ",
+      "banner": {
+        "text": "EN CAMPUSLANDS PUEDES ACCEDER A NUESTROS PROGRAMAS CON 0% DE INTERÉS",
+        "link_text": "CONOCE NUESTROS SISTEMAS DE FINANCIAMIENTO"
+      }
     }
   }
 }

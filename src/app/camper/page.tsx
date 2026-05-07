@@ -5,7 +5,8 @@ import StarField from '@/components/shared/StarField';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
-const CamperHero = dynamic(() => import('@/components/home/sections/CamperHero'), { ssr: false });
+const CamperHero = dynamic(() => import('@/components/Camper/CamperHero'), { ssr: false });
+const TrainingRoutes = dynamic(() => import('@/components/Camper/TrainingRoutes'), { ssr: false });
 
 export default function CamperPage() {
   return (
@@ -18,6 +19,7 @@ export default function CamperPage() {
       {/* Contenido */}
       <div className="relative z-10">
         <CamperHero />
+        <TrainingRoutes />
         <Footer />
       </div>
 
