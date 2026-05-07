@@ -20,7 +20,6 @@ export default function MissionControlSection() {
   const { mission_control } = es.footer;
   const [isClient, setIsClient] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [showTour, setShowTour] = useState(false);
   const [selectedSede, setSelectedSede] = useState<string>("");
   
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -149,14 +148,16 @@ export default function MissionControlSection() {
                 {mission_control.cta_button}
               </motion.button>
               
-              <motion.button
-                onClick={() => setShowTour(true)}
+              <motion.a
+                href="https://campuslandsvistual.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(62, 216, 150, 0.1)', borderColor: '#3ed896' }}
                 whileTap={{ scale: 0.98 }}
                 className={`border border-white/20 text-white px-6 md:px-8 py-3 rounded-full font-mono text-[11px] md:text-[13px] uppercase tracking-[0.2em] transition-all bg-black/50 backdrop-blur-sm`}
               >
                 {mission_control.cta_button_2}
-              </motion.button>
+              </motion.a>
 
               {/* Selector de Sedes */}
               <div className="relative min-w-[200px]">
@@ -186,26 +187,7 @@ export default function MissionControlSection() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {showTour && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black"
-          >
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              onClick={() => setShowTour(false)}
-              className="absolute top-8 right-8 z-[110] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-xl border border-white/20 rounded-full text-white transition-all"
-            >
-              <X size={24} />
-            </motion.button>
-            <TourVirtual />
-          </motion.div>
-        )}
-      </AnimatePresence>
+
     </>
   );
 }
