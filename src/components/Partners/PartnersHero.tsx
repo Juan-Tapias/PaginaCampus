@@ -1,10 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-// ... rest of imports
-import Navbar from '@/components/layout/Navbar';
-import StarField from '@/components/shared/StarField';
+import { motion } from 'framer-motion';
 import { partnersPage } from './partnersData';
-import LazySpaceshipCanvas from './LazySpaceshipCanvas';
+
 
 const { hero, assets } = partnersPage;
  
@@ -29,9 +26,9 @@ export default function PartnersHero() {
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-30 max-w-[535px] text-center lg:mt-20 lg:text-left"
         >
-          <h1 className="font-poppins text-[40px] font-semibold leading-[1.14] tracking-normal text-[#E9E9E9] sm:text-5xl lg:text-[48px]">
+          <h1 className="font-poppins text-[48px] font-semibold leading-[1.14] tracking-normal text-[#E9E9E9] sm:text-5xl">
             {hero.heading}{' '}
-            <span className="block italic text-[#54C6AA] drop-shadow-[0_0_18px_rgba(84,198,170,0.24)]">
+            <span className="block italic text-[#54C6AA]">
               {hero.highlight}
             </span>
           </h1>
@@ -62,11 +59,8 @@ export default function PartnersHero() {
           transition={{ duration: 0.95, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-10 h-[390px] lg:h-[570px]"
         >
-          {/* El espacio para la nave global */}
-
           <div className="absolute bottom-7 left-1/2 flex w-full max-w-[580px] -translate-x-1/2 flex-col items-center lg:bottom-[72px]">
             <div className="relative w-full p-4">
-              {/* Ping-Pong Scanner Line */}
               <motion.div
                 initial={false}
                 animate={{ left: isHired ? '0%' : '100%' }}

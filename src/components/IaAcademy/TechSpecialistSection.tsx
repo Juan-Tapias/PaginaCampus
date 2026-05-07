@@ -6,9 +6,9 @@ import { iaAcademyAssets, iaTechSpecialist, specialistModules } from './iaAcadem
 
 const desktopModulePositions = [
   'lg:left-[28px] lg:top-[162px]',
-  'lg:left-[76px] lg:bottom-[118px]',
+  'lg:left-[76px] lg:top-[380px]', // Cambiado de bottom-[118px] a top-[380px] para crecer hacia abajo
   'lg:right-[24px] lg:top-[162px]',
-  'lg:right-[72px] lg:bottom-[118px]',
+  'lg:right-[72px] lg:top-[380px]', // Cambiado de bottom-[118px] a top-[380px]
 ];
 
 export default function TechSpecialistSection() {
@@ -35,9 +35,9 @@ export default function TechSpecialistSection() {
             {specialistModules.map((module, index) => (
               <div
                 key={module.label}
-                className={`flex flex-col items-center text-center lg:absolute lg:w-[250px] ${desktopModulePositions[index] || ''}`}
+                className={`flex flex-col items-center text-center relative lg:absolute lg:w-[250px] group cursor-pointer ${desktopModulePositions[index] || ''}`}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-[7px] bg-[#342078] shadow-[0_0_28px_rgba(124,88,255,0.16)]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[7px] bg-[#342078] shadow-[0_0_28px_rgba(124,88,255,0.16)] transition-transform duration-300 group-hover:scale-110">
                   <BrainCircuit size={21} strokeWidth={1.8} className="text-[#9B7AFF]" />
                 </div>
                 <p className="mt-7 font-roboto-mono text-[14px] font-normal uppercase leading-none tracking-[0.03em] text-[#2FE0BC]">
@@ -46,6 +46,15 @@ export default function TechSpecialistSection() {
                 <h3 className="mt-3 font-poppins text-[21px] font-semibold leading-[1.12] text-[#F2F2F2]">
                   {module.title}
                 </h3>
+                
+                {/* Contenedor colapsable para el hover */}
+                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out w-full opacity-0 group-hover:opacity-100">
+                  <div className="overflow-hidden">
+                    <p className="mt-3 font-poppins text-[14px] font-normal leading-[1.32] text-[#8b8b8b]">
+                      {module.descripcion_ia}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
