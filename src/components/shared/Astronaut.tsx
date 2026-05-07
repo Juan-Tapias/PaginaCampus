@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useRef, useEffect, useMemo } from 'react'
+import React, { useRef, useEffect, useMemo, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, Environment, PerspectiveCamera, Sphere, useAnimations, useTexture, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei'
+import { useGLTF, Environment, PerspectiveCamera, Sphere, useAnimations, useTexture, AdaptiveDpr, AdaptiveEvents, ContactShadows } from '@react-three/drei'
 import data from '../../data/es.json'
 
 const { models_3d } = data;
@@ -49,7 +49,8 @@ function RealisticMoon() {
   })
 
   return (
-    <group position={[0, -18.2, 0]}>      <Sphere ref={moonRef} args={[17, 28, 28]}>
+    <group position={[0, -18.2, 0]}>
+      <Sphere ref={moonRef} args={[17, 28, 28]} receiveShadow>
         <meshStandardMaterial
           map={moonTexture}
           bumpMap={moonTexture}
@@ -125,6 +126,7 @@ function SpeedLines() {
 
 function ModeloSolido({ url }: { url: string }) {
   const groupRef = useRef<THREE.Group>(null)
+  const [isVisible, setIsVisible] = useState(false)
   
   const { scene, animations } = useGLTF(url, true) as any;
   const { actions, names } = useAnimations(animations, groupRef)
@@ -152,6 +154,10 @@ function ModeloSolido({ url }: { url: string }) {
         action.timeScale = 0.85;
       }
     }
+
+    // Ocultar el primer frame
+    const timer = setTimeout(() => setIsVisible(true), 150);
+    return () => clearTimeout(timer);
   }, [actions, names, scene])
 
   const lastScrollY = useRef(0)
@@ -196,6 +202,7 @@ function ModeloSolido({ url }: { url: string }) {
         object={scene}
         scale={sharedState.isMobile ? 3.0 : 4.4}
         position={[0, -1.4, 0]}
+        visible={isVisible}
       />
     </group>
   )
@@ -240,10 +247,12 @@ function SceneManager({ children }: { children: React.ReactNode }) {
 
 export default function Astronaut() {
   const [isClient, setIsClient] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
   const [paused, setPaused] = React.useState(false);
 
   React.useEffect(() => {
     setIsClient(true);
+    setMounted(true);
 
     const handleResize = () => {
       sharedState.viewport.width = window.innerWidth;
@@ -279,7 +288,7 @@ export default function Astronaut() {
     };
   }, []);
 
-  if (!isClient) return null;
+  if (!mounted) return null;
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none w-full h-full">
@@ -288,6 +297,7 @@ export default function Astronaut() {
         shadows={{ type: THREE.PCFShadowMap }}
         gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
         dpr={[1, 1.2]}
+        style={{ pointerEvents: 'none' }}
       >
         <PerspectiveCamera
           makeDefault
@@ -295,15 +305,24 @@ export default function Astronaut() {
           fov={45}
         />
 
-        <ambientLight intensity={0.2} color="#ffffff" />
+        <ambientLight intensity={0.25} color="#ffffff" />
 
         <directionalLight
           castShadow
-          position={[5, 12, 10]}
-          intensity={2.0}
+          position={[10, 15, 10]}
+          intensity={2.5}
           color="#ffffff"
-          shadow-mapSize={[512, 512]}
+          shadow-mapSize={[1024, 1024]}
           shadow-bias={-0.0001}
+        />
+
+        {/* Rim Light (Luz de contorno para resaltar el modelo) */}
+        <spotLight
+          position={[-10, 10, -10]}
+          intensity={4}
+          angle={0.3}
+          penumbra={1}
+          color="#8E6FE1"
         />
 
         {/* Luces de acento — intensidad reducida */}

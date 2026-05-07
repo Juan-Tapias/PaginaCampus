@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef, useCallback, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { OrbitLienzo } from '../../shared/Astronaut_head';

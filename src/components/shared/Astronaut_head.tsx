@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useMemo } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, PerspectiveCamera, Environment, Float, Stars } from '@react-three/drei'
@@ -20,7 +20,66 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
   const meshRef = useRef<THREE.Group>(null)
   const [hovered, setHovered] = React.useState(false)
   
-  const { scene } = useGLTF(url, true) as any;
+  // Cargamos el modelo original
+  const { scene: originalScene } = useGLTF(url, true) as any;
+  
+  // CLONAMOS LA ESCENA Y MATERIALES: 
+  // Esto es vital para que al navegar de regreso todo se re-inicialice correctamente
+  const scene = useMemo(() => {
+    const clone = originalScene.clone();
+    clone.traverse((child: any) => {
+      if (child.isMesh) {
+        child.material = child.material.clone();
+        // Inyectamos el shader de derretido
+        child.material.onBeforeCompile = (shader: any) => {
+          shader.uniforms.uTime = { value: 0 };
+          shader.uniforms.uMouse = { value: new THREE.Vector3(99, 99, 99) };
+          child.userData.shader = shader;
+
+          shader.vertexShader = `
+            uniform float uTime;
+            uniform vec3 uMouse;
+            varying float vDist;
+            ${shader.vertexShader}
+          `;
+
+          shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `
+            #include <begin_vertex>
+            vec4 pGlobal = modelMatrix * vec4(position, 1.0);
+            vDist = distance(pGlobal.xyz, uMouse);
+            
+            // Radio de influencia suave
+            float d = smoothstep(3.0, 0.0, vDist);
+            
+            // Efecto de ondulación fluida y líquida
+            float freq = 4.0;
+            float amp = 0.05;
+            float onda = sin(uTime * 4.0 - vDist * freq) * amp * d;
+            
+            transformed += normal * onda;
+            
+            // Atracción sutil hacia el mouse (efecto imán/derretido)
+            vec3 dirToMouse = normalize(uMouse - pGlobal.xyz);
+            transformed += dirToMouse * 0.1 * d;
+          `);
+
+          shader.fragmentShader = `
+            varying float vDist;
+            ${shader.fragmentShader}
+          `;
+
+          shader.fragmentShader = shader.fragmentShader.replace('#include <dithering_fragment>', `
+            #include <dithering_fragment>
+            float gBrillo = smoothstep(2.5, 0.0, vDist);
+            vec3 glowColor = mix(vec3(0.0, 1.0, 0.8), vec3(0.6, 0.2, 1.0), gBrillo);
+            gl_FragColor.rgb = mix(gl_FragColor.rgb, glowColor * 2.0, gBrillo * 0.5);
+          `);
+        };
+      }
+    });
+    return clone;
+  }, [originalScene]);
+
   const _v3 = new THREE.Vector3()
 
   useEffect(() => {
@@ -28,60 +87,7 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
       const box = new THREE.Box3().setFromObject(scene)
       const center = box.getCenter(new THREE.Vector3())
       scene.position.sub(center)
-
-      scene.traverse((child: THREE.Object3D) => {
-        if ((child as THREE.Mesh).isMesh) {
-          const m = child as THREE.Mesh
-          m.castShadow = true
-          m.receiveShadow = true
-
-          if (m.material) {
-            const mat = Array.isArray(m.material) ? m.material[0] : m.material
-            mat.onBeforeCompile = (shader: any) => {
-              shader.uniforms.uTime = { value: 0 }
-              shader.uniforms.uMouse = { value: new THREE.Vector3(99, 99, 99) }
-
-              m.userData.shader = shader
-
-              shader.vertexShader = `
-                uniform float uTime;
-                uniform vec3 uMouse;
-                varying float vDist;
-                ${shader.vertexShader}
-              `
-              shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `
-                #include <begin_vertex>
-                vec4 pGlobal = modelMatrix * vec4(position, 1.0);
-                vDist = distance(pGlobal.xyz, uMouse);
-                
-                // 1. Radio de influencia (más pequeño y sutil)
-                float d = smoothstep(2.5, 0.0, vDist);
-                
-                // 2. Efecto de atracción hacia el ratón (menos agresivo)
-                vec3 dirToMouse = normalize(uMouse - pGlobal.xyz);
-                transformed += dirToMouse * 0.08 * d;
-                
-                // 3. Efecto de ondulación gelatinosa (amplitud reducida)
-                float onda = sin(uTime * 6.0 - vDist * 4.0) * 0.03 * d;
-                transformed += normal * onda;
-              `)
-              shader.fragmentShader = `
-                varying float vDist;
-                ${shader.fragmentShader}
-              `
-              shader.fragmentShader = shader.fragmentShader.replace('#include <dithering_fragment>', `
-                #include <dithering_fragment>
-                // Brillo concentrado en un radio menor
-                float gBrillo = smoothstep(2.0, 0.0, vDist);
-                
-                vec3 glowColor = mix(vec3(0.0, 1.0, 0.8), vec3(0.6, 0.2, 1.0), gBrillo);
-                // Menos intensidad en el color final
-                gl_FragColor.rgb = mix(gl_FragColor.rgb, glowColor * 1.8, gBrillo * 0.4);
-              `)
-            }
-          }
-        }
-      })
+      
       if (meshRef.current) {
         meshRef.current.rotation.y = -Math.PI / 2
       }
@@ -162,6 +168,7 @@ export function OrbitLienzo({ alCargar, referenciaBurbuja }: OrbitProps) {
 
     const handleVisibility = () => {
       if (document.hidden) setPaused(true)
+      else setPaused(false)
     }
     document.addEventListener("visibilitychange", handleVisibility)
 

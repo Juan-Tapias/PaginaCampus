@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ArrowUp } from 'lucide-react'
@@ -21,7 +23,7 @@ interface ViewConfig {
 
 const VIEWS: Record<ViewKey, ViewConfig> = tour_virtual.views as Record<ViewKey, ViewConfig>;
 
-export default function TourVirtual() {
+export function TourVirtual() {
   const [currentViewKey, setCurrentViewKey] = useState<ViewKey>('frontal')
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({})

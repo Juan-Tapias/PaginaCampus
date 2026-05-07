@@ -1,4 +1,3 @@
-'use client';
 
 import Navbar from "../../layout/Navbar";
 import StarField from "../../shared/StarField";
@@ -31,7 +30,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen w-full flex items-center overflow-hidden bg-transparent">
-      <Navbar />
 
       <StarField />
 
@@ -115,6 +113,6 @@ export default function Hero() {
 
       </div>
 
-    </section>
+      </section>
   );
 }
