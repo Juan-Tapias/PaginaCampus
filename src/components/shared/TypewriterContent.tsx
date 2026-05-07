@@ -8,6 +8,8 @@ interface TypewriterProps {
   lineClassName?: string;
   align?: 'center' | 'left';
   scrolling?: boolean;
+  loop?: boolean;
+  loopDelay?: number;
 }
 
 export default function TypewriterContent({
@@ -16,15 +18,28 @@ export default function TypewriterContent({
   lineClassName,
   align = 'center',
   scrolling = true,
+  loop = false,
+  loopDelay = 4000,
 }: TypewriterProps) {
   const [cursor, setCursor] = useState<[number, number]>([0, 0]);
+  const [isFinished, setIsFinished] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
+    if (isFinished && !loop) return;
+
     intervalRef.current = setInterval(() => {
       setCursor((prev) => {
         const [li, ci] = prev;
-        if (li >= lines.length) return [0, 0];
+        
+        if (li >= lines.length) {
+          if (loop) {
+            setIsFinished(false);
+            return [0, 0];
+          }
+          setIsFinished(true);
+          return prev;
+        }
 
         if (ci < lines[li].text.length) {
           return [li, ci + 1];
@@ -34,15 +49,22 @@ export default function TypewriterContent({
           return [li + 1, 0];
         }
 
-        setTimeout(() => {
-          setCursor([0, 0]);
-        }, 4000);
+        // Si llegamos al final de la última línea
+        if (loop) {
+          setIsFinished(true);
+          setTimeout(() => {
+            setIsFinished(false);
+            setCursor([0, 0]);
+          }, loopDelay);
+        } else {
+          setIsFinished(true);
+        }
 
         return [li + 1, 0];
       });
     }, 55);
     return () => clearInterval(intervalRef.current!);
-  }, [lines]);
+  }, [lines, loop, isFinished, loopDelay]);
 
   const [currentLine, currentChar] = cursor;
 

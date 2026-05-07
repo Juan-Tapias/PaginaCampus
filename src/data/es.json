@@ -2156,6 +2156,158 @@
       "secondary_cta": "Hacer tour virtual",
       "orbit3d": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit.glb?alt=media",
       "globeimagen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FEllipse.png?alt=media"
+    },
+    "training_routes": {
+      "badge": "17 Años en Adelante!\nSin límite de edad",
+      "heading": "Rutas de\n entrenamiento",
+      "description": "Diferentes rutas que responden a distintos perfiles y momentos de vida. Jóvenes, adultos y profesionales en re-educación.",
+      "cards": [
+        {
+          "mission": "MISSION 01",
+          "title": "DIURNO",
+          "duration": "10 Meses",
+          "includes_label": "INCLUYE",
+          "features": [
+            "Programación",
+            "Habilidades socioemocionales",
+            "Inglés"
+          ],
+          "cta": "INSCRIBIRME AHORA"
+        },
+        {
+          "mission": "MISSION 02",
+          "title": "NOCTURNO",
+          "duration": "13 Meses",
+          "includes_label": "INCLUYE",
+          "features": [
+            "Programación",
+            "Habilidades socioemocionales"
+          ],
+          "cta": "INSCRIBIRME AHORA"
+        }
+      ],
+      "ticker": "RECLUTANDO_NODO_BOGOTA... PROCESANDO_TALENTO_CALI... ",
+      "banner": {
+        "text": "EN CAMPUSLANDS PUEDES ACCEDER A NUESTROS PROGRAMAS CON 0% DE INTERÉS",
+        "link_text": "CONOCE NUESTROS SISTEMAS DE FINANCIAMIENTO"
+      }
+    },
+    "talent_deployment": {
+      "heading": "Sistema de despliegue de talento",
+      "subheading": "Ruta para impulsar tu carrera y posicionarte en el futuro tecnológico de la industria",
+      "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit-floating.png?alt=media",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Reclutamiento",
+          "description": "Inscríbete en el formulario, presenta una entrevista y pruebas."
+        },
+        {
+          "number": "2",
+          "title": "Formación tech",
+          "description": "Domina de tecnologías de vanguardia, IA, Inglés y Habilidades S.E."
+        },
+        {
+          "number": "3",
+          "title": "Práctica Laboral",
+          "description": "Te entregamos una selección de expertos listos para iniciar."
+        },
+        {
+          "number": "4",
+          "title": "Despega a la industria",
+          "description": "Demuestra tus habilidades trabajando en empresas del sector TI."
+        }
+      ]
+    },
+    "financing": {
+      "title": "Financia tu futuro",
+      "options": [
+        {
+          "title": "Pago a cuotas",
+          "description": "Divide el costo del programa en cuotas accesibles, pensadas para que avances sin presión"
+        },
+        {
+          "title": "Convenios empresariales",
+          "description": "Accede a beneficios exclusivos a través de nuestros aliados financieros y facilita tu camino profesional"
+        }
+      ],
+      "cta": "Solicitar asesoría",
+      "partners": [
+        {
+          "name": "Financiera Comultrasan",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-comultrasan.svg?alt=media",
+          "link": "https://www.financieracomultrasan.com.co/"
+        },
+        {
+          "name": "Crediservir",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-crediservir.svg?alt=media",
+          "link": "https://www.crediservir.coop/"
+        },
+        {
+          "name": "Finecoop",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-finecoop.svg?alt=media",
+          "link": "https://finecoop.com.co/"
+        },
+        {
+          "name": "Creditea",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-creditea.svg?alt=media",
+          "link": "https://www.creditea.mx/"
+        },
+        {
+          "name": "Lumni",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-lumni.svg?alt=media",
+          "link": "https://www.lumni.net/"
+        }
+      ]
+    },
+    "requirements": {
+      "title": "¿Qué necesitas para empezar?",
+      "cta": "Registrarme",
+      "terminal": {
+        "header": "TERMINAL://SYSTEM_REQUIREMENTS",
+        "lines": [
+          {
+            "text": "# Verificando perfil de aspirante...",
+            "color": "text-gray-500"
+          },
+          {
+            "text": "> DISPONIBILIDAD: Inmersión total (4h - 8h/día, L-V) Dependiendo del programa",
+            "color": "text-[#3BC4A5]"
+          },
+          {
+            "text": "> MINDSET: Orientado a resolución de problemas complejos",
+            "color": "text-[#3BC4A5]"
+          },
+          {
+            "text": "> UBICACIÓN: Presencial en Campuslands Core o Virtual según programa",
+            "color": "text-[#3BC4A5]"
+          },
+          {
+            "text": "> PASIÓN: Documentada en proyectos o aprendizaje autónomo",
+            "color": "text-[#3BC4A5]"
+          }
+        ],
+        "status_label": "STATUS:",
+        "status_value": "READY_FOR_STARTING"
+      }
+    },
+    "success_stories": {
+      "title": "Historias de éxito",
+      "description": "Conoce cómo nuestros campers transformaron su talento en oportunidades reales dentro de la industria tecnológica",
+      "tooltip": "Estamos orgullosos de nuestros Campers",
+      "orbit_image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit-float.png?alt=media",
+      "videos": [
+        {
+          "id": 1,
+          "url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
+          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media"
+        },
+        {
+          "id": 2,
+          "url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
+          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media"
+        }
+      ]
     }
   }
 }

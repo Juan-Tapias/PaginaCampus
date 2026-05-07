@@ -1,88 +1,95 @@
 'use client';
 
-import { Suspense, useEffect, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, Environment, Float, PresentationControls } from '@react-three/drei';
+import { Suspense, useEffect, useMemo } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { useGLTF, Environment, OrbitControls, Html } from '@react-three/drei';
 import * as THREE from 'three';
 import data from '@/data/es.json';
 
 const { orbit3d, globeimagen } = data.se_un_camper.hero;
 
-// Preload the model
-useGLTF.preload(orbit3d);
+// 1. PRE-CARGA DEL MODELO
+useGLTF.preload(`${orbit3d}&v=2`);
 
-function Model() {
-  const { scene, animations } = useGLTF(orbit3d);
-  const mixer = useRef<THREE.AnimationMixer | null>(null);
+function Model() {  
+  const { scene } = useGLTF(`${orbit3d}&v=2`);
+  const clonedScene = useMemo(() => scene.clone(), [scene]);
 
   useEffect(() => {
-    if (animations && animations.length > 0) {
-      mixer.current = new THREE.AnimationMixer(scene);
-      const action = mixer.current.clipAction(animations[0]);
-      action.play();
+    if (clonedScene) {
+      clonedScene.traverse((child) => {
+        if ((child as THREE.Mesh).isMesh) {
+          const mesh = child as THREE.Mesh;
+          mesh.frustumCulled = false;
+          mesh.castShadow = true;
+          mesh.receiveShadow = true;
+          
+          if (mesh.material) {
+            if (Array.isArray(mesh.material)) {
+              mesh.material = mesh.material.map(mat => mat.clone());
+            } else {
+              mesh.material = mesh.material.clone();
+            }
+          }
+        }
+      });
     }
-    return () => {
-      mixer.current?.stopAllAction();
-    };
-  }, [animations, scene]);
-
-  useFrame((state, delta) => {
-    mixer.current?.update(delta);
-  });
+  }, [clonedScene]);
 
   return (
-    <Float
-      speed={2} 
-      rotationIntensity={0.1} 
-      floatIntensity={0.5}
-      floatingRange={[-0.1, 0.1]}
+    <group 
+      scale={1.4} 
+      position={[0, -0.1, 0.1]} 
+      rotation={[0.4, 0.1, 0]} 
+      dispose={null}
     >
-      <primitive 
-        object={scene} 
-        scale={1.2} 
-        position={[0, -1.5, 0]} 
-        rotation={[0, 0.5, 0]}
-      />
-    </Float>
+      <primitive object={clonedScene} />
+    </group>
   );
 }
 
 export default function OrbitGlobe3D() {
   return (
-    <div className="w-full h-full min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] relative pointer-events-auto cursor-grab active:cursor-grabbing flex items-center justify-center">
+    <div className="w-full h-full min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] relative flex items-center justify-center">
       
-      {/* Imagen del Globo Base */}
+      {/* Background Image */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[450px] pointer-events-none z-0 flex justify-center opacity-90">
         <img 
           src={globeimagen} 
           alt="Globe Code Base" 
-          className="w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(59,196,165,0.15)]"
+          className="w-[70%] h-auto object-contain drop-shadow-[0_0_25px_rgba(59,196,165,0.15)]"
         />
       </div>
 
       <Canvas
+        shadows
         className="relative z-10"
         camera={{ position: [0, 0, 5], fov: 45 }}
-        gl={{ alpha: true, antialias: true }}
+        gl={{ 
+          alpha: true, 
+          antialias: true, 
+          powerPreference: "high-performance",
+        }}
       >
-        <ambientLight intensity={1.5} />
-        <directionalLight position={[10, 10, 5]} intensity={2} color="#ffffff" />
-        <directionalLight position={[-10, 5, -5]} intensity={1} color="#3BC4A5" />
-        <directionalLight position={[0, -10, 5]} intensity={0.5} color="#6637E8" />
+        <ambientLight intensity={1.2} />
+        <directionalLight 
+          castShadow
+          position={[10, 10, 5]} 
+          intensity={2.5} 
+          color="#ffffff" 
+          shadow-mapSize={[1024, 1024]}
+        />
+        <directionalLight position={[-10, 5, -5]} intensity={1.2} color="#3BC4A5" />
+        <directionalLight position={[0, -10, 5]} intensity={0.8} color="#6637E8" />
+                
+        <OrbitControls 
+          enableZoom={false} 
+          enablePan={false}
+          enableRotate={false}
+        />
         
-        <Environment preset="city" />
-        
-        <Suspense fallback={null}>
-          <PresentationControls
-            global
-            snap={true}
-            speed={2}
-            rotation={[0, 0, 0]}
-            polar={[-Math.PI / 4, Math.PI / 4]}
-            azimuth={[-Math.PI / 2, Math.PI / 2]}
-          >
-            <Model />
-          </PresentationControls>
+        <Suspense>
+          <Model />
         </Suspense>
       </Canvas>
     </div>
