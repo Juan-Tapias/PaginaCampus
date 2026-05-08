@@ -25,7 +25,7 @@ export default function TalentDeployment() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-semibold text-white mb-4"
+          className="text-[28px] md:text-[32px] font-medium text-white mb-4"
         >
           {talent_deployment.heading}
         </motion.h2>
