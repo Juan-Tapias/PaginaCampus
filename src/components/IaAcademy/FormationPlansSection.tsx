@@ -52,7 +52,7 @@ export default function FormationPlansSection() {
           )}
         </motion.div>
 
-        <div className="relative mt-[78px] hidden h-[472px] items-start justify-center lg:flex">
+        <div className="relative mt-[78px] hidden h-[520px] items-start justify-center lg:flex">
           {desktopCards.map((card, index) => (
             <motion.button
               key={card.id}
@@ -67,7 +67,7 @@ export default function FormationPlansSection() {
                 filter: `blur(${card.blur}px)`,
               }}
               transition={{ type: 'spring', stiffness: 200, damping: 24 }}
-              className={`absolute flex h-[398px] w-[246px] flex-col overflow-hidden rounded-[9px] border px-6 py-7 text-left shadow-[0_18px_44px_rgba(0,0,0,0.36)] transition-colors duration-300 ${
+              className={`absolute flex h-[450px] w-[246px] flex-col overflow-hidden rounded-[9px] border px-6 py-7 text-left shadow-[0_18px_44px_rgba(0,0,0,0.36)] transition-colors duration-300 ${
                 index === activeIndex 
                   ? 'border-[#54C6AA] bg-[linear-gradient(180deg,rgba(30,44,38,0.98)_0%,rgba(20,30,25,0.95)_100%)]' 
                   : 'border-[#5B5B64]/75 bg-[linear-gradient(180deg,rgba(29,27,39,0.96)_0%,rgba(30,44,38,0.92)_100%)]'
