@@ -40,9 +40,14 @@ export default function Footer() {
                 <a href="/TermsAndConditions" className="text-white/30 hover:text-white text-[10px] md:text-xs transition-colors">{legal.terms}</a>
               </div>
 
-              <p className="text-white/20 font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase">
-                {legal.copyright}
-              </p>
+              <div className="flex flex-col items-center md:items-end gap-2">
+                <p className="text-white/20 font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase">
+                  {legal.copyright}
+                </p>
+                <p className="text-white font-mono text-[10px] md:text-[10px] opacity-15 hover:opacity-100 transition-opacity cursor-default text-center md:text-right">
+                  Esta pagina fue creada por un Camper recien graduado. By J'Martinez
+                </p>
+              </div>
             </div>
           </div>
         </div>
