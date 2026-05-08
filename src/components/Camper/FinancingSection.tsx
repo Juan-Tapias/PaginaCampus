@@ -136,7 +136,7 @@ export default function FinancingSection() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-semibold text-white mb-12"
+            className="text-[28px] md:text-[32px] font-medium text-white mb-12"
           >
             {financing.title}
           </motion.h2>
