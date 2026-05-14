@@ -11,7 +11,6 @@ export default function RequirementsSection() {
     <section className="relative w-full py-8 bg-black overflow-hidden">
       <div className="max-w-5xl mx-auto min-h-[70vh] flex flex-col justify-center px-6 lg:px-12">
         
-        {/* Header: Title and CTA */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-4">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
@@ -30,7 +29,9 @@ export default function RequirementsSection() {
             whileTap={{ scale: 0.95 }}
             className="bg-[#5E39DA] text-white font-roboto-mono font-medium text-sm w-[152px] h-[52px] uppercase tracking-widest rounded-sm hover:bg-[#6D4AE0] transition-all shadow-[0_0_30px_rgba(94,57,218,0.3)]"
           >
+            <a href={requirements.cta_link} target="_blank">
             {requirements.cta}
+            </a>
           </motion.button>
         </div>
 

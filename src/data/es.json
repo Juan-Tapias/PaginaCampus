@@ -7,7 +7,14 @@
       "SERVICIOS",
       "NOSOTROS"
     ],
-    "action_button": "Contactar"
+    "action_button": "Contactar",
+    "service_items": [
+      { "name": "Staffing", "href": "/servicio/staffing" },
+      { "name": "Emplea", "href": "/servicio/emplea" },
+      { "name": "FullService", "href": "#" },
+      { "name": "Campuslands Internacional", "href": "#" },
+      { "name": "Campuslands IA Academy", "href": "/servicio/IaAcademy" }
+    ]
   },
   "status_badge": {
     "status": "ABIERTA",
@@ -22,12 +29,14 @@
       {
         "text": "INICIA TU MISIÓN",
         "type": "primary",
-        "color": "purple"
+        "color": "purple",
+        "link": "https://camper.campuslands.com/login"
       },
       {
         "text": "RECLUTA TALENTO",
         "type": "secondary",
-        "style": "outline"
+        "style": "outline",
+        "link": "servicio/emplea"
       }
     ]
   },
@@ -2177,7 +2186,8 @@
             "Habilidades socioemocionales",
             "Inglés"
           ],
-          "cta": "INSCRIBIRME AHORA"
+          "cta": "INSCRIBIRME AHORA",
+          "cta_href": "https://wa.me/573009711559?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20jornada%20diurna.%20%C2%A1Muchas%20gracias!"
         },
         {
           "mission": "MISSION 02",
@@ -2188,7 +2198,8 @@
             "Programación",
             "Habilidades socioemocionales"
           ],
-          "cta": "INSCRIBIRME AHORA"
+          "cta": "INSCRIBIRME AHORA",
+          "cta_href": "https://wa.me/573009711559?text=Hola,%20buen%20d%C3%ADa.%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20la%20jornada%20nocturna,%20%C2%BFme%20podr%C3%ADan%20ayudar%20con%20la%20informaci%C3%B3n?"
         }
       ],
       "ticker": "RECLUTANDO_NODO_BOGOTA... PROCESANDO_TALENTO_CALI... ",
@@ -2268,6 +2279,7 @@
     "requirements": {
       "title": "¿Qué necesitas para empezar?",
       "cta": "Registrarme",
+      "cta_link": "https://camper.campuslands.com/login",
       "terminal": {
         "header": "TERMINAL://SYSTEM_REQUIREMENTS",
         "lines": [

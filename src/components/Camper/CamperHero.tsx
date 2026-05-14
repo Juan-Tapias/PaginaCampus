@@ -51,9 +51,9 @@ export default function CamperHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            <button className="bg-[#6637E8] text-white w-full sm:w-auto px-8 h-[50px] rounded-[4px] font-roboto-mono text-[15px] hover:bg-[#7446F2] transition-colors shadow-[0_0_20px_rgba(102,55,232,0.3)]">
+            <a href="http://wa.me/573009711559" target="_blank" rel="noopener noreferrer" className="bg-[#6637E8] text-white w-full sm:w-auto px-8 h-[50px] rounded-[4px] font-roboto-mono text-[15px] hover:bg-[#7446F2] transition-colors shadow-[0_0_20px_rgba(102,55,232,0.3)] flex items-center justify-center gap-3">
               {hero.primary_cta}
-            </button>
+            </a>
             <a href="https://campuslandsvistual.web.app/" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-gray-500 text-gray-300 w-full sm:w-auto px-6 h-[50px] rounded-[4px] font-roboto-mono text-[15px] hover:border-gray-300 hover:text-white transition-colors flex items-center justify-center gap-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 21h18"/>

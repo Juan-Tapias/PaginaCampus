@@ -38,7 +38,6 @@ export default function TrainingRoutes() {
             <div className="w-full max-w-[300px] h-[2px] bg-gradient-to-r from-transparent via-[#009B74] to-transparent opacity-60" />
           </motion.div>
 
-          {/* Right Column - Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 relative">
             {training_routes.cards.map((card, index) => (
               <motion.div
@@ -49,11 +48,9 @@ export default function TrainingRoutes() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="relative overflow-hidden bg-[#1A1D20]/80 backdrop-blur-sm border border-white/5 rounded-2xl p-8 flex flex-col h-full w-[320px] hover:bg-[#1f2327]/90 transition-colors group"
               >
-                {/* Efectos de difuminado (Glows) */}
                 <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#7E61E1] rounded-full mix-blend-screen filter blur-[70px] opacity-30 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-[#009B74] rounded-full mix-blend-screen filter blur-[70px] opacity-20 transition-opacity duration-500 pointer-events-none" />
 
-                {/* Contenido de la tarjeta */}
                 <div className="relative z-10 flex flex-col h-full">
                   <div>
                     <span className="text-gray-400 text-[12px] font-mono tracking-widest mb-2 block">
@@ -83,9 +80,11 @@ export default function TrainingRoutes() {
                     </ul>
                   </div>
 
+                  <a href={card.cta_href} target="_blank">
                   <button className="w-full py-3 px-6 border border-white/20 rounded text-gray-300 text-sm font-mono hover:bg-white/5 hover:text-white transition-all uppercase tracking-wider mt-auto">
                     {card.cta}
                   </button>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -156,7 +155,6 @@ export default function TrainingRoutes() {
           </div>
         </div>
 
-        {/* Bottom Marquee */}
         <div className="w-full overflow-hidden border-t border-white/10 bg-black/20 py-2">
           <div className="flex whitespace-nowrap">
             <motion.div 
