@@ -7,19 +7,11 @@ import { ChevronDown, ExternalLink } from 'lucide-react';
 import data from '../../data/es.json';
 
 export default function Navbar() {
-  const { logo, links, action_button } = data.navbar;
+  const { logo, links, action_button, service_items } = data.navbar;
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
-
-  const serviceItems = [
-    { name: 'Staffing', href: '/servicio/staffing'},
-    { name: 'Emplea', href: '/servicio/emplea'},
-    { name: 'FullService', href: '#'}, //Pendiente link 
-    { name: 'Campuslands Internacional', href: '#'}, //Pendiente link
-    { name: 'Campuslands IA Academy', href: '/servicio/IaAcademy'},
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,7 +99,7 @@ export default function Navbar() {
                           className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[260px] p-2 bg-black/80 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[1000] pointer-events-auto"
                         >
                           <div className="flex flex-col gap-1">
-                            {serviceItems.map((item) => (
+                            {service_items.map((item) => (
                               <a
                                 key={item.name}
                                 href={item.href}

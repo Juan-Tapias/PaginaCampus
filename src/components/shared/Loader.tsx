@@ -113,7 +113,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       <motion.div 
         className="flex mb-8 px-4 flex-wrap justify-center items-end relative z-[100] 
                    [--letter-scale:0.4px] sm:[--letter-scale:0.6px] md:[--letter-scale:0.85px]"
-        style={{ gap: 'calc(var(--letter-scale) * 15)' }} // Distancia proporcional a la escala
+        style={{ gap: 'calc(var(--letter-scale) * 15)' }} 
       >
         {letters.map((src, i) => {
           const total = letters.length;
@@ -121,11 +121,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           const distFromMid = i - mid;
           const scrambledOffsets = [4, -3, 1, 5, -2, 0, 3, -5, 2, -1, -4];
 
-          // Alturas originales de los SVGs para mantener proporciones reales
           const originalHeights = [101, 101, 99, 130, 99, 101, 132, 101, 99, 133, 101];
           const h = originalHeights[i];
 
-          // La 'P' (índice 3) tiene un descendente, ajustamos su posición vertical
           const isDescender = i === 3;
 
           return (
@@ -138,7 +136,6 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
                 width: 'auto',
                 marginBottom: isDescender ? `calc(var(--letter-scale) * -30)` : '0'
               }}
-              // Estado inicial: Desplazadas lateralmente para mezclar el orden
               initial={{
                 opacity: 0,
                 y: 100,
@@ -148,7 +145,6 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
               animate={
                 hasImpacted
                   ? {
-                    // ALINEACIÓN RECTA Y LIMPIA
                     opacity: 1,
                     y: -180, 
                     x: 0,
@@ -163,7 +159,6 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
                     }
                   }
                   : {
-                    // Se mantienen mezcladas mientras carga
                     opacity: 1,
                     y: 0,
                     x: scrambledOffsets[i] * 40,
@@ -179,43 +174,6 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         })}
       </motion.div>
 
-      {/* Tagline */}
-      <AnimatePresence>
-        {showTagline && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
-            animate={hasImpacted ? {
-              opacity: 1,
-              y: 150,
-              scale: 1.1,
-              filter: 'blur(0px)'
-            } : {
-              opacity: 1,
-              y: 0,
-              filter: 'blur(0px)'
-            }}
-            exit={{ opacity: 1, y: -20 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-col items-center relative z-[100]"
-          >
-            <motion.p
-              className="font-roboto-mono text-sm md:text-xl tracking-[0.5em] text-cyan-400 uppercase drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]"
-              animate={{ opacity: [0.5, 1, 0.5], scale: [0.98, 1, 0.98] }}
-              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            >
-              Go for it
-            </motion.p>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: '100%' }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-2 w-32 md:w-48"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Efecto CRT sutil */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-[101] pointer-events-none opacity-20" />
     </motion.div>
   );

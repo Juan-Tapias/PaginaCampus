@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
-import { Play, Pause, X, MapPin } from 'lucide-react';
+import { Play, Pause, X, MapPin, ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import es from '../../../data/es.json';
 import MissionGlobe, { MissionGlobeHandle, Location } from '../../shared/MissionGlobe';
@@ -14,13 +14,16 @@ const SEDES: Location[] = [
   { name: 'Cúcuta', lat: 7.8939, lng: -72.5078, mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Campuslands+Cucuta' },
   { name: 'San Gil', lat: 6.5583, lng: -73.1319, mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Campuslands+San+Gil' },
   { name: 'Guatemala', lat: 14.6349, lng: -90.5069, mapsUrl: 'https://www.google.com/maps/place/Campuslands/@14.6222193,-100.270113,6z/data=!4m10!1m2!2m1!1sCampuslands+Guatemala!3m6!1s0x8589a3b61a018d91:0x3b8f5bb6cc476d2b!8m2!3d14.6222193!4d-90.5142536!15sChVDYW1wdXNsYW5kcyBHdWF0ZW1hbGGSARtzb2Z0d2FyZV90cmFpbmluZ19pbnN0aXR1dGXgAQA!16s%2Fg%2F11ys3sw_hd?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D' },
+  { name: 'Zona Franca', lat: 7.0547, lng: -73.0859, mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Campuslands+Zona+Franca+Santander' },
 ];
 
 export default function MissionControlSection() {
   const { mission_control } = es.footer;
   const [isClient, setIsClient] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const [selectedSede, setSelectedSede] = useState<string>("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const globeRef = useRef<MissionGlobeHandle>(null);
@@ -29,8 +32,7 @@ export default function MissionControlSection() {
     setIsClient(true);
   }, []);
 
-  const handleSedeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const sedeName = e.target.value;
+  const handleSedeChange = (sedeName: string) => {
     setSelectedSede(sedeName);
     
     if (sedeName === "") {
@@ -70,14 +72,43 @@ export default function MissionControlSection() {
             ref={videoRef}
             src={mission_control.video_url} 
             autoPlay 
-            loop 
-            muted 
+            loop  
             playsInline 
-            preload="none"
+            preload="auto"
+            muted={isMuted}
             className="w-full h-full object-cover"
           />
           
-          <div className="absolute bottom-6 right-6 z-30">
+          <div className="absolute bottom-6 right-6 z-30 flex gap-4">
+            <motion.button
+              onClick={() => setIsMuted(!isMuted)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-12 h-12 flex items-center justify-center bg-black/40 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-[#3ed896]/20 hover:border-[#3ed896]/40 transition-colors shadow-xl"
+            >
+              <AnimatePresence mode="wait">
+                {isMuted ? (
+                  <motion.div
+                    key="volume-x"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                  >
+                    <VolumeX size={20} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="volume-2"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                  >
+                    <Volume2 size={20} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
+
             <motion.button
               onClick={togglePlay}
               whileHover={{ scale: 1.1 }}
@@ -111,7 +142,7 @@ export default function MissionControlSection() {
         </motion.div>
       </section>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 min-h-[700px] flex flex-col justify-center py-20">
+      <div className="container mx-auto px-6 lg:px-12 relative z-30 min-h-[700px] flex flex-col justify-center py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center relative z-20">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.p
@@ -160,25 +191,64 @@ export default function MissionControlSection() {
               </motion.a>
 
               {/* Selector de Sedes */}
-              <div className="relative min-w-[200px]">
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[#3ed896] pointer-events-none">
-                  <MapPin size={16} />
-                </div>
-                <select
-                  value={selectedSede}
-                  onChange={handleSedeChange}
-                  className="w-full bg-black/40 backdrop-blur-xl border border-[#3ed896]/30 text-white pl-11 pr-4 py-3 rounded-full font-mono text-[11px] md:text-[13px] appearance-none cursor-pointer focus:outline-none focus:border-[#3ed896] hover:bg-[#3ed896]/5 transition-all uppercase tracking-wider"
+              <div className="relative min-w-[220px]">
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="w-full bg-black/40 backdrop-blur-xl border border-[#3ed896]/30 text-white pl-11 pr-10 py-3 rounded-full font-mono text-[11px] md:text-[13px] flex items-center justify-between cursor-pointer focus:outline-none focus:border-[#3ed896] hover:bg-[#3ed896]/10 transition-all uppercase tracking-wider group shadow-[0_0_20px_rgba(62,216,150,0.05)]"
                 >
-                  <option value="" className="bg-[#090A0F]">Localizar Sede</option>
-                  {SEDES.map(sede => (
-                    <option key={sede.name} value={sede.name} className="bg-[#090A0F]">
-                      {sede.name}
-                    </option>
-                  ))}
-                </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 text-[10px]">
-                  ▼
-                </div>
+                  <div className="flex items-center gap-2">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[#3ed896]">
+                      <MapPin size={16} />
+                    </div>
+                    <span className="text-left truncate">{selectedSede || "Localizar Sede"}</span>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-gray-500 group-hover:text-[#3ed896] transition-colors"
+                  >
+                    <ChevronDown size={14} />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {isDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                      className="absolute top-full left-0 mt-2 w-full bg-[#090A0F]/95 backdrop-blur-xl border border-[#3ed896]/20 rounded-2xl overflow-hidden z-50 shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+                    >
+                      <div className="py-2">
+                        <button
+                          onClick={() => {
+                            handleSedeChange("");
+                            setIsDropdownOpen(false);
+                          }}
+                          className="w-full text-left px-5 py-2.5 text-[11px] md:text-[12px] text-gray-400 hover:bg-[#3ed896]/10 hover:text-white transition-colors font-mono uppercase"
+                        >
+                          Localizar Sede
+                        </button>
+                        {SEDES.map(sede => (
+                          <button
+                            key={sede.name}
+                            onClick={() => {
+                              handleSedeChange(sede.name);
+                              setIsDropdownOpen(false);
+                            }}
+                            className="w-full text-left px-5 py-2.5 text-[11px] md:text-[12px] text-white hover:bg-[#3ed896]/10 transition-colors font-mono uppercase flex items-center justify-between group"
+                          >
+                            <span className="group-hover:text-[#3ed896] transition-colors">{sede.name}</span>
+                            {selectedSede === sede.name && (
+                              <div className="w-1.5 h-1.5 bg-[#3ed896] rounded-full" />
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>

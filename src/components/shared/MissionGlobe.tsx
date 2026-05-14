@@ -65,7 +65,7 @@ const MissionGlobe = forwardRef<MissionGlobeHandle>((_, ref) => {
   if (!isClient) return null;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.8, rotate: -20 }}
       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
       transition={{ duration: 1.8, ease: "easeOut" }}
@@ -83,7 +83,7 @@ const MissionGlobe = forwardRef<MissionGlobeHandle>((_, ref) => {
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
           bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
           pointsData={[
-            { lat: 7.0547, lng: -73.0859, size: 0.8, color: '#3ed896', label: 'Santander (HQ)' },
+            { lat: 7.0547, lng: -73.0859, size: 0.8, color: '#3ed896', label: 'Zona Franca' },
             { lat: 7.8939, lng: -72.5078, size: 0.5, color: '#3ed896', label: 'Cúcuta' },
             { lat: 4.7110, lng: -74.0721, size: 0.5, color: '#3ed896', label: 'Bogotá' },
             { lat: 6.5583, lng: -73.1319, size: 0.5, color: '#3ed896', label: 'San Gil' },
@@ -93,13 +93,13 @@ const MissionGlobe = forwardRef<MissionGlobeHandle>((_, ref) => {
           pointAltitude={0.01}
           pointRadius="size"
           ringsData={[
-            { 
-              lat: currentLocation?.lat || 7.0547, 
-              lng: currentLocation?.lng || -73.0859, 
-              color: '#3ed896', 
-              maxR: currentLocation ? 8 : 5, 
-              propagationSpeed: 2, 
-              repeatPeriod: 1000 
+            {
+              lat: currentLocation?.lat || 7.0547,
+              lng: currentLocation?.lng || -73.0859,
+              color: '#3ed896',
+              maxR: currentLocation ? 8 : 5,
+              propagationSpeed: 2,
+              repeatPeriod: 1000
             }
           ]}
           ringColor="color"
@@ -108,10 +108,9 @@ const MissionGlobe = forwardRef<MissionGlobeHandle>((_, ref) => {
           ringRepeatPeriod="repeatPeriod"
         />
         <div className="absolute inset-0 rounded-full bg-[#3ed896]/10 blur-[100px] pointer-events-none -z-10" />
-        <div 
-          className={`absolute inset-0 rounded-full shadow-[inset_0_0_120px_rgba(0,0,0,0.9)] pointer-events-none transition-opacity duration-1000 ${
-            showLocationLabel ? 'opacity-20' : 'opacity-100'
-          }`} 
+        <div
+          className={`absolute inset-0 rounded-full shadow-[inset_0_0_120px_rgba(0,0,0,0.9)] pointer-events-none transition-opacity duration-1000 ${showLocationLabel ? 'opacity-20' : 'opacity-100'
+            }`}
         />
 
         <AnimatePresence>

@@ -8,71 +8,96 @@ import data from '../../data/es.json'
 
 const { models_3d } = data;
 
-// Ruta estática desde la carpeta public
 const orbitModelUrl = models_3d.orbit_head;
 
 interface OrbitProps {
   alCargar: () => void
   referenciaBurbuja: React.RefObject<HTMLDivElement | null>
+  estaHablando?: boolean
 }
 
-function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCargar: () => void, referenciaBurbuja: React.RefObject<HTMLDivElement | null> }) {
+function OrbitModel({ url, alCargar, referenciaBurbuja, estaHablando }: { url: string, alCargar: () => void, referenciaBurbuja: React.RefObject<HTMLDivElement | null>, estaHablando?: boolean }) {
   const meshRef = useRef<THREE.Group>(null)
   const [hovered, setHovered] = React.useState(false)
-  
-  // Cargamos el modelo original
+  const progressRef = useRef(0)
+
   const { scene: originalScene } = useGLTF(url, true) as any;
-  
-  // CLONAMOS LA ESCENA Y MATERIALES: 
-  // Esto es vital para que al navegar de regreso todo se re-inicialice correctamente
+
   const scene = useMemo(() => {
     const clone = originalScene.clone();
     clone.traverse((child: any) => {
       if (child.isMesh) {
         child.material = child.material.clone();
-        // Inyectamos el shader de derretido
+        
+        // Inyectamos el shader para la transformación en esfera
         child.material.onBeforeCompile = (shader: any) => {
-          shader.uniforms.uTime = { value: 0 };
-          shader.uniforms.uMouse = { value: new THREE.Vector3(99, 99, 99) };
+          shader.uniforms.uMorphProgress = { value: 0.0 };
+          shader.uniforms.uTime = { value: 0.0 };
           child.userData.shader = shader;
 
           shader.vertexShader = `
+            uniform float uMorphProgress;
             uniform float uTime;
-            uniform vec3 uMouse;
-            varying float vDist;
+            varying vec3 vCustomPosition;
             ${shader.vertexShader}
           `;
 
           shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `
             #include <begin_vertex>
-            vec4 pGlobal = modelMatrix * vec4(position, 1.0);
-            vDist = distance(pGlobal.xyz, uMouse);
             
-            // Radio de influencia suave
-            float d = smoothstep(3.0, 0.0, vDist);
+            vCustomPosition = position;
             
-            // Efecto de ondulación fluida y líquida
-            float freq = 4.0;
-            float amp = 0.05;
-            float onda = sin(uTime * 4.0 - vDist * freq) * amp * d;
+            // Crear forma de esfera (Mucho más pequeña, tipo ChatGPT)
+            vec3 positionEsferica = normalize(position) * 0.5; 
             
-            transformed += normal * onda;
+            // Deformación suave y orgánica (tipo blob/fluido), aún más lenta y sutil
+            float waves = sin(uTime * 1.2 + position.y * 1.5) * 0.04;
+            waves += cos(uTime * 0.8 + position.x * 1.0) * 0.02;
+            positionEsferica += normal * waves * uMorphProgress;
             
-            // Atracción sutil hacia el mouse (efecto imán/derretido)
-            vec3 dirToMouse = normalize(uMouse - pGlobal.xyz);
-            transformed += dirToMouse * 0.1 * d;
+            // Interpolar entre cabeza y esfera
+            transformed = mix(position, positionEsferica, uMorphProgress);
           `);
 
           shader.fragmentShader = `
-            varying float vDist;
+            uniform float uMorphProgress;
+            uniform float uTime;
+            varying vec3 vCustomPosition;
             ${shader.fragmentShader}
           `;
 
           shader.fragmentShader = shader.fragmentShader.replace('#include <dithering_fragment>', `
             #include <dithering_fragment>
-            float gBrillo = smoothstep(2.5, 0.0, vDist);
-            vec3 glowColor = mix(vec3(0.0, 1.0, 0.8), vec3(0.6, 0.2, 1.0), gBrillo);
-            gl_FragColor.rgb = mix(gl_FragColor.rgb, glowColor * 2.0, gBrillo * 0.5);
+            
+            if (uMorphProgress > 0.0) {
+              // Colores suaves y brillantes tipo ChatGPT / Siri
+              vec3 colorAzul = vec3(0.2, 0.5, 1.0); 
+              vec3 colorMorado = vec3(0.6, 0.2, 0.8);
+              vec3 colorCian = vec3(0.3, 1.0, 0.9);
+              vec3 colorBlanco = vec3(1.0, 1.0, 1.0);
+              
+              // Mezcla suave de colores basada en la posición
+              float factor = sin(vCustomPosition.y * 4.0 + uTime * 2.0) * 0.5 + 0.5;
+              vec3 colorEsfera = mix(colorAzul, colorMorado, factor);
+              
+              // Añadir destellos de cian
+              float destellos = cos(vCustomPosition.x * 3.0 - uTime) * 0.5 + 0.5;
+              colorEsfera = mix(colorEsfera, colorCian, destellos * 0.5);
+              
+              // Efecto de borde brillante (Fresnel) muy suave y luminoso
+              float fresnel = 1.0 - abs(dot(normalize(vCustomPosition), vec3(0.0, 0.0, 1.0)));
+              fresnel = pow(fresnel, 2.0);
+              colorEsfera = mix(colorEsfera, colorBlanco, fresnel * 0.6);
+              
+              // Líneas de frecuencia súper sutiles y minimalistas en los bordes
+              vec3 posNorm = normalize(vCustomPosition);
+              float lados = smoothstep(0.7, 0.95, abs(posNorm.x));
+              float lineas = step(0.9, sin(vCustomPosition.y * 60.0 - uTime * 40.0));
+              colorEsfera = mix(colorEsfera, colorBlanco, lados * lineas * 0.2);
+              
+              // Mezclar el color original del modelo con el de la esfera
+              gl_FragColor.rgb = mix(gl_FragColor.rgb, colorEsfera, uMorphProgress);
+            }
           `);
         };
       }
@@ -87,7 +112,7 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
       const box = new THREE.Box3().setFromObject(scene)
       const center = box.getCenter(new THREE.Vector3())
       scene.position.sub(center)
-      
+
       if (meshRef.current) {
         meshRef.current.rotation.y = -Math.PI / 2
       }
@@ -103,15 +128,20 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
 
       const mouse3D = _v3.set(mouseNDC.x * 2.8, mouseNDC.y * 2.8, 1.5)
 
+      // Transición suave para el morph a esfera
+      const targetProgress = estaHablando ? 1.0 : 0.0
+      progressRef.current = THREE.MathUtils.lerp(progressRef.current, targetProgress, 0.03)
+
       scene.traverse((child: THREE.Object3D) => {
         if ((child as THREE.Mesh).isMesh && child.userData.shader) {
+          child.userData.shader.uniforms.uMorphProgress.value = progressRef.current
           child.userData.shader.uniforms.uTime.value = t
-          const targetMouse = hovered ? mouse3D : new THREE.Vector3(99, 99, 99)
-          child.userData.shader.uniforms.uMouse.value.copy(targetMouse)
         }
       })
 
-      const targetScale = esMovil ? 2.0 : 3.2
+      // Respiración/pulso sutil al estar sobre el modelo
+      const pulse = hovered ? Math.sin(t * 3.0) * 0.1 : 0
+      const targetScale = (esMovil ? 2.0 : 3.2) + pulse
       meshRef.current.scale.setScalar(THREE.MathUtils.lerp(meshRef.current.scale.x, targetScale, 0.1))
 
       const rotFactor = hovered ? 0.7 : 0.4
@@ -120,8 +150,11 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
       meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, targetRotY, 0.04)
       meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, targetRotX, 0.04)
 
-      const targetX = esMovil ? 0 : -2.5
-      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, targetX, 0.1)
+      // Seguimiento de posición leve con el mouse
+      const targetX = esMovil ? 0 : -2.5 + mouseNDC.x * 0.5
+      const targetY = mouseNDC.y * 0.4
+      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, targetX, 0.05)
+      meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, targetY, 0.05)
 
       // Burbuja de saludo de Orbit
       if (referenciaBurbuja.current) {
@@ -139,7 +172,7 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
   })
 
   return (
-    <group 
+    <group
       ref={meshRef}
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
@@ -149,14 +182,14 @@ function OrbitModel({ url, alCargar, referenciaBurbuja }: { url: string, alCarga
   )
 }
 
-export function OrbitLienzo({ alCargar, referenciaBurbuja }: OrbitProps) {
+export function OrbitLienzo({ alCargar, referenciaBurbuja, estaHablando }: OrbitProps) {
   const [isClient, setIsClient] = React.useState(false)
   const [paused, setPaused] = React.useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
     setIsClient(true)
-    
+
     // Optimización: Pausar el renderizado 3D cuando no esté en pantalla
     const observer = new IntersectionObserver(([entry]) => {
       setPaused(!entry.isIntersecting)
@@ -195,7 +228,7 @@ export function OrbitLienzo({ alCargar, referenciaBurbuja }: OrbitProps) {
 
         <React.Suspense fallback={null}>
           <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-            <OrbitModel url={orbitModelUrl} alCargar={alCargar} referenciaBurbuja={referenciaBurbuja} />
+            <OrbitModel url={orbitModelUrl} alCargar={alCargar} referenciaBurbuja={referenciaBurbuja} estaHablando={estaHablando} />
           </Float>
           <Stars radius={100} depth={50} count={800} factor={4} saturation={0} fade speed={1} />
         </React.Suspense>

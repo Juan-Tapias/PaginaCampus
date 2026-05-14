@@ -1,65 +1,16 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect, FormEvent } from 'react';
+import { useState, useRef, useCallback, useEffect, FormEvent   } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { OrbitLienzo } from '../../shared/Astronaut_head';
 import es from '../../../data/es.json';
+import { Mic } from 'lucide-react';
+import TypewriterText from '../../shared/TypewriterText';
+import GlitchTypewriter from '../../shared/GlitchTypewriter';
+import { useSpeech } from '../../../hooks/useSpeech';
 
-function TypewriterText({ text, speed = 50 }: { text: string, speed?: number }) {
-  const [displayedText, setDisplayedText] = useState('');
-  const [iteration, setIteration] = useState(0);
-  
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayedText(text.slice(0, i));
-      i++;
-      if (i > text.length) {
-        clearInterval(interval);
-      }
-    }, speed);
-    return () => clearInterval(interval);
-  }, [text, iteration, speed]);
-  
-  return <span>{displayedText}</span>;
-}
+// TypewriterText y GlitchTypewriter han sido extraídos a componentes compartidos.
 
-function GlitchTypewriter({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState('');
-
-  useEffect(() => {
-    if (!text) return;
-    const result = Array(text.length).fill('');
-    let currentIdx = 0;
-    let glitchCount = 0;
-    const GLITCH_STEPS = 3; // Menos pasos para que sea más rápido
-
-    const interval = setInterval(() => {
-      if (currentIdx >= text.length) {
-        setDisplayedText(text);
-        clearInterval(interval);
-        return;
-      }
-      
-      if (glitchCount < GLITCH_STEPS) {
-        // Mostrar ceros y unos aleatorios en la posición actual
-        const glitch = Math.random() > 0.5 ? '1' : '0';
-        setDisplayedText(result.slice(0, currentIdx).join('') + glitch);
-        glitchCount++;
-      } else {
-        // Revelar el carácter real y saltar al siguiente
-        result[currentIdx] = text[currentIdx];
-        setDisplayedText(result.slice(0, currentIdx + 1).join(''));
-        currentIdx++;
-        glitchCount = 0;
-      }
-    }, 10); // 10ms es muy rápido y estable
-    
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return <span>{displayedText}</span>;
-}
 
 export default function HeadSection() {
   const { orbit_chat } = es;
@@ -70,30 +21,47 @@ export default function HeadSection() {
   const [isTyping, setIsTyping] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const { isListening, isSpeaking, speak, startListening } = useSpeech();
+  const listenTimeoutRef = useRef<any>(null);
+
   const bubbleRef = useRef<HTMLDivElement>(null);
+
+  const handleListen = () => {
+    const recognition = startListening((text, isFinal) => {
+      setInputValue(text);
+
+      if (listenTimeoutRef.current) clearTimeout(listenTimeoutRef.current);
+
+      listenTimeoutRef.current = setTimeout(() => {
+        recognition?.stop();
+        if (text.trim()) {
+          executeSendMessage(text);
+        }
+      }, 1000); // Aumentado a 1 segundo para dar más tiempo al usuario
+    });
+  };
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const handleLoad = useCallback(() => {
     setTimeout(() => setLoaded(true), 500);
   }, []);
 
-  const handleSendMessage = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!inputValue.trim() || isLoading) return;
+  const executeSendMessage = async (text: string) => {
+    if (!text.trim() || isLoading) return;
 
-    const userMsg = inputValue.trim();
+    const userMsg = text.trim();
     setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
     setInputValue('');
     setIsTyping(true);
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://chatbot-pagina-web-1.onrender.com/ask', {
+      const response = await fetch(process.env.NEXT_PUBLIC_CHATBOT_API_URL || 'https://chatbot-pagina-web-1.onrender.com/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           question: userMsg,
-          history: messages 
+          history: messages
         }),
       });
 
@@ -105,6 +73,9 @@ export default function HeadSection() {
       const result = await response.json();
       const answer: string = result.answer || result.response || 'Sin respuesta.';
       setMessages(prev => [...prev, { role: 'orbit', text: answer }]);
+
+      // --- Voz del Personaje (Navegador) ---
+      speak(answer);
     } catch (error) {
       const msg = error instanceof Error ? error.message : 'Error desconocido.';
       setMessages(prev => [...prev, { role: 'orbit', text: `⚠️ ${msg}` }]);
@@ -114,10 +85,15 @@ export default function HeadSection() {
     }
   };
 
+  const handleSendMessage = async (e: FormEvent) => {
+    e.preventDefault();
+    executeSendMessage(inputValue);
+  };
+
   return (
     <section className="relative w-full min-h-screen bg-transparent flex items-center justify-center py-20 overflow-hidden">
       <div className="z-10 absolute inset-0">
-        <OrbitLienzo alCargar={handleLoad} referenciaBurbuja={bubbleRef} />
+        <OrbitLienzo alCargar={handleLoad} referenciaBurbuja={bubbleRef} estaHablando={isSpeaking} />
       </div>
 
       <div ref={bubbleRef} className="absolute top-0 left-0 z-50 pointer-events-none" style={{ transition: 'transform 0.05s linear' }}>
@@ -168,7 +144,7 @@ export default function HeadSection() {
                       <div className={`max-w-[80%] p-3 rounded-xl font-mono text-sm ${msg.role === 'user'
                         ? 'bg-[#5E39DA] text-white rounded-br-none'
                         : 'bg-white/5 text-gray-300 border border-white/5 rounded-bl-none'
-                      }`}>
+                        }`}>
                         {msg.role === 'orbit' ? <GlitchTypewriter text={msg.text} /> : msg.text}
                       </div>
                     </div>
@@ -193,6 +169,14 @@ export default function HeadSection() {
                     disabled={isLoading}
                     className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white font-mono text-sm focus:outline-none focus:border-[#5E39DA]/50 transition-colors disabled:opacity-50"
                   />
+                  <button
+                    type="button"
+                    onClick={handleListen}
+                    disabled={isLoading}
+                    className={`${isListening ? 'bg-red-500/20 text-red-400 animate-pulse' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'} p-2 px-4 rounded-lg transition-all duration-300 disabled:opacity-50`}
+                  >
+                    <Mic className="w-5 h-5" />
+                  </button>
                   <button
                     type="submit"
                     disabled={isLoading}

@@ -50,9 +50,9 @@ export default function ModulesSection() {
               <p className="text-gray-400 font-poppins leading-relaxed text-sm md:text-base mb-10 min-h-[80px]">
                 {mod.description}
               </p>
-              <button className="text-[#1781b5] font-roboto-mono text-xs font-bold tracking-[0.2em] hover:text-[#54C6AA] transition-colors flex items-center gap-2 group">
+              <p className="text-[#1781b5] font-roboto-mono text-xs font-bold tracking-[0.2em] transition-colors flex items-center gap-2 group">
                 {mod.link}
-              </button>
+              </p>
             </motion.div>
           ))}
         </div>

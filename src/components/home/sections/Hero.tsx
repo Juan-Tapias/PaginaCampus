@@ -1,5 +1,4 @@
 
-import Navbar from "../../layout/Navbar";
 import StarField from "../../shared/StarField";
 import TypewriterContent from "../../shared/TypewriterContent";
 import data from "../../../data/es.json";
@@ -89,26 +88,25 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full lg:w-auto"
           >
             {hero_content.call_to_actions.map((cta, index) => (
+            <a key={index} href={cta.link} target="_blank">
               <button
-                key={index}
                 className={`font-roboto-mono group relative overflow-hidden w-full sm:w-[220px] h-[56px] flex items-center justify-center transition-all duration-300 pointer-events-auto active:scale-95 ${cta.type === 'primary'
                     ? 'bg-[#5E39DA] text-white hover:bg-[#6D4AE0] shadow-[0_0_30px_rgba(94,57,218,0.3)]'
                     : 'bg-white/5 border border-white/10 text-white hover:bg-white/10 backdrop-blur-sm'
                   }`}
               >
                 <span className="relative z-10 uppercase text-[16px] font-normal leading-[1.5] tracking-normal">
-                  {cta.text}
+                    {cta.text}
                 </span>
               </button>
+            </a>
             ))}
           </motion.div>
 
         </div>
 
-        {/* Lado Derecho: Espacio vacío para el Astronauta 3D */}
         <div className="w-full lg:w-[45%] hidden lg:block h-[500px] pointer-events-none">
-          {/* El Astronauta se renderiza en el fondo con canvas fixed. 
-              Este div solo empuja el layout para que el texto no se monte sobre él en desktop. */}
+
         </div>
 
       </div>
