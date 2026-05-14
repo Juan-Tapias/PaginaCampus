@@ -26,18 +26,13 @@ export default function TypewriterContent({
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (isFinished && !loop) return;
+    if (isFinished) return;
 
     intervalRef.current = setInterval(() => {
       setCursor((prev) => {
         const [li, ci] = prev;
         
         if (li >= lines.length) {
-          if (loop) {
-            setIsFinished(false);
-            return [0, 0];
-          }
-          setIsFinished(true);
           return prev;
         }
 
@@ -50,14 +45,12 @@ export default function TypewriterContent({
         }
 
         // Si llegamos al final de la última línea
+        setIsFinished(true);
         if (loop) {
-          setIsFinished(true);
           setTimeout(() => {
             setIsFinished(false);
             setCursor([0, 0]);
           }, loopDelay);
-        } else {
-          setIsFinished(true);
         }
 
         return [li + 1, 0];
@@ -94,7 +87,6 @@ export default function TypewriterContent({
               </div>
             );
           }
-          // Futuras líneas
           return <div key={i} className="min-h-[2.5em]" />;
         })}
       </div>

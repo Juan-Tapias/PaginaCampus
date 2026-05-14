@@ -62,7 +62,7 @@ export default function RequirementsSection() {
               align="left" 
               scrolling={false}
               loop={true}
-              loopDelay={10000}
+              loopDelay={15000}
               className="h-auto text-sm md:text-lg"
             />
 
