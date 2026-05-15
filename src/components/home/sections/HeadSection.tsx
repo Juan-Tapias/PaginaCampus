@@ -9,9 +9,6 @@ import TypewriterText from '../../shared/TypewriterText';
 import GlitchTypewriter from '../../shared/GlitchTypewriter';
 import { useSpeech } from '../../../hooks/useSpeech';
 
-// TypewriterText y GlitchTypewriter han sido extraídos a componentes compartidos.
-
-
 export default function HeadSection() {
   const { orbit_chat } = es;
   const [loaded, setLoaded] = useState(false);
@@ -56,7 +53,7 @@ export default function HeadSection() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_CHATBOT_API_URL || 'https://chatbot-pagina-web-1.onrender.com/ask', {
+      const response = await fetch(process.env.NEXT_PUBLIC_CHATBOT_API_URL || 'https://unheard-circling-tyke.ngrok-free.dev/webhook-test/4b246b53-e271-468e-af3a-a2cff0a3e5cc', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -71,7 +68,19 @@ export default function HeadSection() {
       }
 
       const result = await response.json();
-      const answer: string = result.answer || result.response || 'Sin respuesta.';
+      
+      // Intentar obtener la respuesta de varias formas comunes en n8n
+      let answer = 'Sin respuesta.';
+      
+      if (typeof result === 'string') {
+        answer = result;
+      } else if (Array.isArray(result) && result.length > 0) {
+        const first = result[0];
+        answer = first.output || first.response || first.answer || first.text || first.msg || (typeof first === 'string' ? first : 'Sin respuesta.');
+      } else {
+        answer = result.output || result.response || result.answer || result.text || result.msg || 'Sin respuesta.';
+      }
+
       setMessages(prev => [...prev, { role: 'orbit', text: answer }]);
 
       // --- Voz del Personaje (Navegador) ---

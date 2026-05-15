@@ -22,23 +22,28 @@ export default function IaAcademyHero() {
         >
           <h1 className="whitespace-pre-line font-poppins text-[42px] font-semibold leading-[1.1] text-[#E9E9E9] sm:text-[50px] lg:text-[40px]">
             {iaAcademyHero.heading}
-            {' '}
             <span className="italic text-[#8871E3]">{iaAcademyHero.highlight}</span>
+            {' '}
+            {iaAcademyHero.heading2}
           </h1>
 
-          <p className="mt-9 max-w-[560px] font-poppins text-[22px] italic leading-[1.42] text-[#D1D1D1]/90 lg:text-[21px]">
+          <p className="mt-9 max-w-[560px] font-poppins font-thin text-[20px] leading-[1.5] text-[#D1D1D1]/90">
             {iaAcademyHero.quote}
           </p>
-          <p className="mt-8 font-poppins text-[28px] italic leading-none text-[#BFBFBF] lg:text-[22px]">
-            {iaAcademyHero.quote_author}
+          <p className="mt-8 font-poppins font-thin text-[20px] leading-[1.5] text-[#BFBFBF]">
+            {iaAcademyHero.quote_author}{' '}
+            <span className="font-semibold text-[#8871E3]">
+              {iaAcademyHero.quote_highlight}
+            </span>
           </p>
 
-          <div className="mt-10 max-w-[260px]">
-            <RemoteAssetImage
-              src={iaAcademyAssets.logo}
-              alt={iaAcademyHero.logo_alt}
-              className="h-auto w-full object-contain"
-            />
+          <div className="relative z-30 mt-8 flex flex-row gap-4 sm:flex-row lg:-mt-3 py-8">
+            <button className="h-[52px] w-[172px] bg-[#5E39DA] font-roboto-mono text-[16px] font-light text-[#E9E9E9] transition-colors hover:bg-[#7446F2]">
+              {iaAcademyHero.hero_primary_cta}
+            </button>
+            <button className="h-[52px] w-[230px] border border-[#A6A6A6] bg-[#45454580] font-roboto-mono text-[16px] font-normal text-[#E8E8E8] transition-colors hover:border-[#C7C7C7] hover:bg-[#2A2A2A]">
+              {iaAcademyHero.hero_secondary_cta}
+            </button>
           </div>
         </motion.div>
 
