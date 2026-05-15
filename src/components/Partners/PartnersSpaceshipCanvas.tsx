@@ -106,7 +106,7 @@ export default function PartnersSpaceshipCanvas({
 
         <Suspense fallback={null}>
           {/* 'sunset' es mucho más ligero que 'city' */}
-          <Environment preset={isLow ? 'dawn' : 'city'} />
+          <Environment files={isLow ? '/hdri/kiara_1_dawn_1k.hdr' : '/hdri/potsdamer_platz_1k.hdr'} />
 
           <Scene
             modelScale={modelScale}

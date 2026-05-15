@@ -332,7 +332,7 @@ export default function Astronaut() {
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
 
-        <Environment preset="night" blur={sharedState.isMobile ? 0 : 0.8} />
+        <Environment files="/hdri/dikhololo_night_1k.hdr" blur={sharedState.isMobile ? 0 : 0.8} />
 
         <React.Suspense fallback={null}>
           <SceneManager>

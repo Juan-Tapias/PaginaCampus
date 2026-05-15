@@ -125,7 +125,7 @@ export default function OrbitIntro3D({ onImpact, onReady }: { onImpact: () => vo
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={35} />
         
         <Suspense fallback={null}>
-          <Environment preset="city" />
+          <Environment files="/hdri/potsdamer_platz_1k.hdr" />
           
           <RealisticMoon />
 

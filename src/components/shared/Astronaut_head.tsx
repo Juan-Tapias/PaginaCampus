@@ -224,7 +224,7 @@ export function OrbitLienzo({ alCargar, referenciaBurbuja, estaHablando }: Orbit
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1.5} />
         <spotLight position={[-5, 5, 5]} angle={0.15} penumbra={1} intensity={2} color="#7c4dff" />
-        <Environment preset="night" />
+        <Environment files="/hdri/dikhololo_night_1k.hdr" />
 
         <React.Suspense fallback={null}>
           <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
