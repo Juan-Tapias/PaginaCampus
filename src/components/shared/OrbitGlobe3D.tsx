@@ -10,11 +10,11 @@ const { orbit_run } = data.models_3d;
 const { orbit3d } = data.se_un_camper.hero;
 
 // Pre-carga de ambos modelos
-useGLTF.preload(`${orbit_run}&v=2`);
-useGLTF.preload(`${orbit3d}&v=2`);
+useGLTF.preload(`${orbit_run}`);
+useGLTF.preload(`${orbit3d}`);
 
 function Model() {
-  const { scene, animations } = useGLTF(`${orbit_run}&v=2`);
+  const { scene, animations } = useGLTF(`${orbit_run}`);
   const { actions } = useAnimations(animations, scene);
 
   useEffect(() => {
@@ -68,10 +68,10 @@ function CodeSphere() {
     "",
     "const { orbit_run } = data.models_3d;",
     "",
-    "useGLTF.preload(`${orbit_run}&v=2`);",
+    "useGLTF.preload(`${orbit_run}`);",
     "",
     "function Model() {",
-    "  const { scene, animations } = useGLTF(`${orbit_run}&v=2`);",
+    "  const { scene, animations } = useGLTF(`${orbit_run}`);",
     "  const { actions } = useAnimations(animations, scene);",
     "",
     "  useEffect(() => {",

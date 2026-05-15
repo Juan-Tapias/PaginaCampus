@@ -1878,7 +1878,7 @@
       "description": "Visita nuestras sedes y descubre cómo Campuslands está transformando el talento tech a nivel continental.",
       "cta_button": "Agendar visita",
       "cta_button_2": "Tour Virtual",
-      "video_url": "/assets/Video_Campuslands.mp4",
+      "video_url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FVide%20Diego%20Horizontal.mp4?alt=media",
       "badge": "BASE LOCATION | COORDENATES"
     },
     "social_heading": "Más detalles de nuestra misión en redes",
