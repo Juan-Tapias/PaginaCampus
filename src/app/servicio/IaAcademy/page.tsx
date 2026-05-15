@@ -4,11 +4,14 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import StarField from '@/components/shared/StarField';
 import IaAcademyHero from '@/components/IaAcademy/IaAcademyHero';
+import IaFrustrationSection from '@/components/IaAcademy/IaFrustrationSection';
 import FormationPlansSection from '@/components/IaAcademy/FormationPlansSection';
 import TechSpecialistSection from '@/components/IaAcademy/TechSpecialistSection';
 import EvolvingTeamsSection from '@/components/IaAcademy/EvolvingTeamsSection';
+import IaMethodSection from '@/components/IaAcademy/IaMethodSection';
 import AiTechnologiesSection from '@/components/IaAcademy/AiTechnologiesSection';
 import IaContactSection from '@/components/IaAcademy/IaContactSection';
+import IaExpertImplementationSection from '@/components/IaAcademy/IaExpertImplementationSection';
 
 export default function IaAcademyPage() {
   return (
@@ -19,11 +22,14 @@ export default function IaAcademyPage() {
 
       <div className="relative z-20">
         <IaAcademyHero />
+        <IaFrustrationSection />
         <FormationPlansSection />
         <TechSpecialistSection />
         <EvolvingTeamsSection />
+        <IaMethodSection />
         <AiTechnologiesSection />
         <IaContactSection />
+        <IaExpertImplementationSection />
         <Footer />
       </div>
 

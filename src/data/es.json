@@ -69,252 +69,252 @@
     "companies": [
       {
         "name": "2nv",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2F2nv.svg?alt=media",
+        "image": "/assets/2nv.svg",
         "type": "partner"
       },
       {
         "name": "Aliaddo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Faliaddo.svg?alt=media",
+        "image": "/assets/aliaddo.svg",
         "type": "partner"
       },
       {
         "name": "Amaris",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAmaris.svg?alt=media",
+        "image": "/assets/Amaris.svg",
         "type": "partner"
       },
       {
         "name": "Applus",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FApplus.svg?alt=media",
+        "image": "/assets/Applus.svg",
         "type": "partner"
       },
       {
         "name": "Conexalab",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConexalab.svg?alt=media",
+        "image": "/assets/Conexalab.svg",
         "type": "main"
       },
       {
         "name": "Construsoft",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FConstrusoft.webp?alt=media",
+        "image": "/assets/Construsoft.webp",
         "type": "partner"
       },
       {
         "name": "Cure Latam",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCure%20latam.svg?alt=media",
+        "image": "/assets/Cure latam.svg",
         "type": "partner"
       },
       {
         "name": "Denario",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdenario.svg?alt=media",
+        "image": "/assets/denario.svg",
         "type": "partner"
       },
       {
         "name": "Essa",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fessa.svg?alt=media",
+        "image": "/assets/essa.svg",
         "type": "partner"
       },
       {
         "name": "Foscal",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFoscal.svg?alt=media",
+        "image": "/assets/Foscal.svg",
         "type": "partner"
       },
       {
         "name": "Galapago",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGalapago.svg?alt=media",
+        "image": "/assets/Galapago.svg",
         "type": "partner"
       },
       {
         "name": "Globant",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGlobant.svg?alt=media",
+        "image": "/assets/Globant.svg",
         "type": "partner"
       },
       {
         "name": "Grafo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FGrafo.svg?alt=media",
+        "image": "/assets/Grafo.svg",
         "type": "partner"
       },
       {
         "name": "Mantis",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmantis.webp?alt=media",
+        "image": "/assets/mantis.webp",
         "type": "partner"
       },
       {
         "name": "Mbc",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmbc.svg?alt=media",
+        "image": "/assets/mbc.svg",
         "type": "partner"
       },
       {
         "name": "Planetalp",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPlanetalp.svg?alt=media",
+        "image": "/assets/Planetalp.svg",
         "type": "partner"
       },
       {
         "name": "PrismHr",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPrismHr.svg?alt=media",
+        "image": "/assets/PrismHr.svg",
         "type": "partner"
       },
       {
         "name": "SIO",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSIO.webp?alt=media",
+        "image": "/assets/SIO.webp",
         "type": "partner"
       },
       {
         "name": "Solvo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSolvo.svg?alt=media",
+        "image": "/assets/Solvo.svg",
         "type": "partner"
       },
       {
         "name": "Syscom",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSyscom.svg?alt=media",
+        "image": "/assets/Syscom.svg",
         "type": "partner"
       },
       {
         "name": "TecnoEduca",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTecnoEduca.svg?alt=media",
+        "image": "/assets/TecnoEduca.svg",
         "type": "partner"
       },
       {
         "name": "Todosistemas",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FTodoSistems.svg?alt=media",
+        "image": "/assets/TodoSistems.svg",
         "type": "partner"
       },
       {
         "name": "Wiedii",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwiedii.webp?alt=media",
+        "image": "/assets/wiedii.webp",
         "type": "partner"
       },
       {
         "name": "Xrm",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FXrm.svg?alt=media",
+        "image": "/assets/Xrm.svg",
         "type": "partner"
       },
       {
         "name": "Alpes Solutionn",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FAlpes%20solutionn.svg?alt=media",
+        "image": "/assets/Alpes solutionn.svg",
         "type": "partner"
       },
       {
         "name": "Arcetec",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Farcetec.webp?alt=media",
+        "image": "/assets/arcetec.webp",
         "type": "partner"
       },
       {
         "name": "Copower",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FCopower.svg?alt=media",
+        "image": "/assets/Copower.svg",
         "type": "partner"
       },
       {
         "name": "Dataglobbal",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fdataglobbal.svg?alt=media",
+        "image": "/assets/dataglobbal.svg",
         "type": "partner"
       },
       {
         "name": "Digital Process",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDigital%20Process.svg?alt=media",
+        "image": "/assets/Digital Process.svg",
         "type": "partner"
       },
       {
         "name": "Disfarma",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FDisfarma.svg?alt=media",
+        "image": "/assets/Disfarma.svg",
         "type": "partner"
       },
       {
         "name": "Electro Software",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FElectro%20Software.webp?alt=media",
+        "image": "/assets/Electro Software.webp",
         "type": "partner"
       },
       {
         "name": "Facilpos",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Ffacilpos.svg?alt=media",
+        "image": "/assets/facilpos.svg",
         "type": "partner"
       },
       {
         "name": "Factura Powered by Detecno",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FFactura%20Powered%20by%20detecno.webp?alt=media",
+        "image": "/assets/Factura Powered by detecno.webp",
         "type": "partner"
       },
       {
         "name": "Inncube",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FInncube.webp?alt=media",
+        "image": "/assets/Inncube.webp",
         "type": "partner"
       },
       {
         "name": "Iridian",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIridian.webp?alt=media",
+        "image": "/assets/Iridian.webp",
         "type": "partner"
       },
       {
         "name": "IvoLegal",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FIvoLegal.webp?alt=media",
+        "image": "/assets/IvoLegal.webp",
         "type": "partner"
       },
       {
         "name": "Kontrol",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FKontrol.webp?alt=media",
+        "image": "/assets/Kontrol.webp",
         "type": "partner"
       },
       {
         "name": "La Esmeralda",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLa%20esmeralda.svg?alt=media",
+        "image": "/assets/La esmeralda.svg",
         "type": "partner"
       },
       {
         "name": "Lechecol",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FLechecol.webp?alt=media",
+        "image": "/assets/Lechecol.webp",
         "type": "partner"
       },
       {
         "name": "Macondo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmacondo.webp?alt=media",
+        "image": "/assets/macondo.webp",
         "type": "partner"
       },
       {
         "name": "Masabi",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fmasabi.svg?alt=media",
+        "image": "/assets/masabi.svg",
         "type": "partner"
       },
       {
         "name": "Pensemos",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPensemos.webp?alt=media",
+        "image": "/assets/Pensemos.webp",
         "type": "partner"
       },
       {
         "name": "Pix Robotics",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FPix%20robotics.svg?alt=media",
+        "image": "/assets/Pix robotics.svg",
         "type": "partner"
       },
       {
         "name": "Qnt",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQnt.svg?alt=media",
+        "image": "/assets/Qnt.svg",
         "type": "partner"
       },
       {
         "name": "Quibor",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FQuibor.webp?alt=media",
+        "image": "/assets/Quibor.webp",
         "type": "partner"
       },
       {
         "name": "Sistemas y Computadores",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSistemas%20y%20computadores.webp?alt=media",
+        "image": "/assets/Sistemas y computadores.webp",
         "type": "partner"
       },
       {
         "name": "SmartData",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FSmartData.svg?alt=media",
+        "image": "/assets/SmartData.svg",
         "type": "partner"
       },
       {
         "name": "Software Medico",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fsoftware%20medico.svg?alt=media",
+        "image": "/assets/software medico.svg",
         "type": "partner"
       },
       {
         "name": "Vensure",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2FVensure.svg?alt=media",
+        "image": "/assets/Vensure.svg",
         "type": "partner"
       },
       {
         "name": "Wmwise",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empresas%2Fwmwise.webp?alt=media",
+        "image": "/assets/wmwise.webp",
         "type": "partner"
       }
     ]
@@ -322,14 +322,14 @@
   "partners_page": {
     "assets": {
       "campers": [
-        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media",
-        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media",
-        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media",
-        "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper4.webp?alt=media"
+        "/assets/camper2.webp",
+        "/assets/camper1.webp",
+        "/assets/camper2.webp",
+        "/assets/camper4.webp"
       ],
-      "helmet": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcasco.webp?alt=media",
-      "spaceship": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fspaceship.glb?alt=media",
-      "mosaico": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fnave-mosaico.png?alt=media"
+      "helmet": "/assets/casco.webp",
+      "spaceship": "/assets/spaceship.glb",
+      "mosaico": "/assets/nave-mosaico.png"
     },
     "hero": {
       "heading": "Impulsa tu crecimiento con  ",
@@ -471,13 +471,13 @@
           "quote": "Colaborar con un Camper fue una decisión clave para el crecimiento de nuestra empresa. Su preparación, junto con su disposición para aprender, adaptarse y contribuir de manera significativa, marcaron una gran diferencia en nuestro equipo. Estamos ansiosos de seguir contratando talento de alto calibre confiados plenamente en Campusland.",
           "author": "CRISTIAN VELEZ",
           "role": "Director @Mantis App",
-          "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcristian.webp?alt=media"
+          "image": "/assets/cristian.webp"
         },
         {
           "quote": "Nos ha encantado el talento TI proveniente de Campuslands, con quienes hemos desarrollado el proyecto Coding Queendom. Actualmente, 17 mujeres forman parte de esta iniciativa, y estamos comprometidos a incrementar este número en los próximos años.",
           "author": "CLÉMENT MEMAIN",
           "role": "CEO Consulting @Data/AI",
-          "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fclement.webp?alt=media"
+          "image": "/assets/clement.webp"
         }
       ]
     },
@@ -487,43 +487,43 @@
       "track": "INTELIGENCIA ARTIFICIAL - PROGRAMACIÓN - HABILIDADES SOCIOEMOCIONALES",
       "technologies": [
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2FJavascript-shield.svg?alt=media",
+          "logo": "/assets/Javascript-shield.svg",
           "name": "Javascript"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fbootstrap-5%201.svg?alt=media",
+          "logo": "/assets/bootstrap-5 1.svg",
           "name": "Bootstrap"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fcss-3-svgrepo-com.svg?alt=media",
+          "logo": "/assets/css-3-svgrepo-com.svg",
           "name": "CSS"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fts-lettermark-blue%201.svg?alt=media",
+          "logo": "/assets/ts-lettermark-blue 1.svg",
           "name": "TypeScript"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fhtml-5-logo-svgrepo-com.svg?alt=media",
+          "logo": "/assets/html-5-logo-svgrepo-com.svg",
           "name": "HTML"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fmysql-horizontal%201.svg?alt=media",
+          "logo": "/assets/mysql-horizontal 1.svg",
           "name": "MySQL"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%20(1)%201.svg?alt=media",
+          "logo": "/assets/pngwing.com (1) 1.svg",
           "name": "Postgre"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpython-logo-inkscape%201.svg?alt=media",
+          "logo": "/assets/python-logo-inkscape 1.svg",
           "name": "Python"
         },
         {
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/logos%2Fpngwing.com%201.svg?alt=media",
+          "logo": "/assets/pngwing.com 1.svg",
           "name": "React"
         }
       ],
-      "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2FOrbit-remove.png?alt=media"
+      "orbit": "/assets/Orbit-remove.png"
     },
     "selection": {
       "subheader": "POR QUÉ LAS EMPRESAS LÍDERES NOS ELIGEN",
@@ -531,22 +531,22 @@
         {
           "title": "Talento <br/> Certificado",
           "subtitle": "Filtramos y evaluamos las capacidades técnicas para asegurar que recibas solo a los mejores",
-          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_sala-tecnologica-con-prog_2884768380%202.png?alt=media"
+          "slide": "/assets/magnific_sala-tecnologica-con-prog_2884768380 2.png"
         },
         {
           "title": "Crecimiento <br/> a tu medida",
           "subtitle": "Armamos equipos de tecnología completos, listos para integrarse y escalar tus proyectos hoy mismo.",
-          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2Fmagnific_equipo-de-3-astronautas-d_2884848068%201.png?alt=media"
+          "slide": "/assets/magnific_equipo-de-3-astronautas-d_2884848068 1.png"
         },
         {
           "title": "Modelos <br/> Adaptables",
           "subtitle": "Ofrecemos diferentes formas de contratación que se ajustan al presupuesto y flujo de tu empresa.",
-          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame423124.png?alt=media"
+          "slide": "/assets/Frame423124.png"
         },
         {
           "title": "Cero Riesgo <br/> de Selección",
           "subtitle": "Hacemos seguimiento constante, si el talento no cumple tus expectativas, lo reemplazamos sin costos adicionales.",
-          "slide": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/empleabilidad%2FFrame%20121405.png?alt=media"
+          "slide": "/assets/Frame 121405.png"
         }
       ]
     },
@@ -569,18 +569,22 @@
   },
   "ia_academy": {
     "assets": {
-      "hero_robot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation.png?alt=media",
-      "hero_crossed": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation-hero.svg?alt=media",
-      "hero_time": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2FIA-representation-tiempo.svg?alt=media",
-      "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Fia-logo.svg?alt=media"
+      "hero_robot": "/assets/IA-representation.png",
+      "hero_crossed": "/assets/IA-representation-hero.svg",
+      "hero_time": "/assets/IA-representation-tiempo.svg",
+      "logo": "/assets/ia-logo.svg"
     },
     "landing": {
       "hero": {
         "eyebrow": "IA ACADEMY",
-        "heading": "Evoluciona a la velocidad\nde la",
-        "highlight": "tecnología",
-        "quote": "\"No es la especie más fuerte ni la más inteligente la que sobrevive, sino la que mejor se adapta a los cambio\"",
-        "quote_author": "- Charles Darwin",
+        "heading": "Convierte la IA en el \n",
+        "highlight": "Sistema Operativo",
+        "heading2": "de tu empresa",
+        "quote": "Si llegaste aquí, sabes que la IA es clave para tu negocio en 2026… pero aún no tienes claro cómo integrarla en la operación diaria",
+        "quote_author": "No te falta visión.",
+        "quote_highlight": "Te falta un sistema de Implementación claro.",
+        "hero_primary_cta": "Ver programas",
+        "hero_secondary_cta": "Contactar ahora",
         "primary_cta": "Explorar servicios",
         "secondary_cta": "Ver sesiones",
         "logo_alt": "IA Academy",
@@ -596,6 +600,22 @@
           "action_aria_label": "Abrir servicios IA Academy",
           "href": "/servicio/IaAcademy/clases"
         }
+      },
+      "frustration": {
+        "heading": "Entendemos la frustración de ver que la industria avanza mientras tú lo piensas",
+        "cards": [
+          {
+            "text": "Tu equipo experimenta con IA, pero sin dirección estratégica"
+          },
+          {
+            "text": "Tu competencia avanza más rápido porque ejecuta mejor"
+          },
+          {
+            "text": "Sigues operando con tareas manuales que consumen tiempo crítico"
+          }
+        ],
+        "footer_text": "En un entorno donde la velocidad define el mercado, la improvisación es cara. Sin sistema, la IA se vuelve ruido.",
+        "cta": "Quiero Implementar IA"
       },
       "formation_plans": {
         "eyebrow": "PLANES DE FORMACIÓN ESPACIAL",
@@ -762,20 +782,20 @@
           "HeyGen"
         ],
         "images_url": {
-          "make": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-make.png?alt=media",
-          "notion": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-notionai.png?alt=media",
-          "zapier": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-zapier.png?alt=media",
-          "perplexity": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-perpleity.png?alt=media",
-          "elevenlabs": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-evenlabs.png?alt=media",
-          "heyyen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-HeyGen.png?alt=media",
-          "microsftcopilot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-microsoft-copilot.png?alt=media",
-          "gemini": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-gemini.png?alt=media",
-          "chatgpt": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-chatgpt.png?alt=media",
-          "githubcopilot": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-githubcopilot.png?alt=media",
-          "notebooklm": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-notebooklm.png?alt=media",
-          "claude": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-claude.png?alt=media",
-          "readai": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-readai.png?alt=media",
-          "midjourney": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/ia_academy%2Flogo-midjourney.png?alt=media"
+          "make": "/assets/logo-make.png",
+          "notion": "/assets/logo-notionai.png",
+          "zapier": "/assets/logo-zapier.png",
+          "perplexity": "/assets/logo-perpleity.png",
+          "elevenlabs": "/assets/logo-evenlabs.png",
+          "heyyen": "/assets/logo-HeyGen.png",
+          "microsftcopilot": "/assets/logo-microsoft-copilot.png",
+          "gemini": "/assets/logo-gemini.png",
+          "chatgpt": "/assets/logo-chatgpt.png",
+          "githubcopilot": "/assets/logo-githubcopilot.png",
+          "notebooklm": "/assets/logo-notebooklm.png",
+          "claude": "/assets/logo-claude.png",
+          "readai": "/assets/logo-readai.png",
+          "midjourney": "/assets/logo-midjourney.png"
         },
         "descripcion_ia": {
           "chatgpt": "Chatbot conversacional avanzado y versatil",
@@ -1638,6 +1658,30 @@
             ]
           }
         ]
+      },
+      "expert_implementation": {
+        "title": "Implementa AI con Acompañamiento Experto",
+        "subtitle": "Diagnóstico, diseño e implementación de sistemas de IA adaptados a tu contexto: procesos, equipos y objetivos",
+        "cta": "Implementa IA Ahora",
+        "image": "/assets/teamia.png"
+      },
+      "method": {
+        "title": "Método IA Academy",
+        "description": "Sistema de implementación ejecutivo para maximizar recursos, acelerar ejecución y escalar tu operación",
+        "primary_cta": "Quiero Iniciar",
+        "secondary_cta": "Ir a Masterclass IA",
+        "benefits_heading": "Con el método IA Academy obtienes:",
+        "pillars": [
+          { "label": "Valor" },
+          { "label": "Velocidad" },
+          { "label": "Visión" }
+        ],
+        "benefits": [
+          "Sistemas reutilizables que escalan con tu empresa",
+          "Procesos automatizados aplicables a tu operación",
+          "Una arquitectura clara de implementación de IA",
+          "Capacidad interna para liderar con IA (Sin dependencia total)"
+        ]
       }
     },
     "services_view": {
@@ -1691,16 +1735,16 @@
         "close_aria_label": "Cerrar modal",
         "iframe_title": "Última transmisión IA Academy",
         "youtube_embed": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "video_url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7"
+        "video_url": "/assets/Video_Campuslands.mp4"
       }
     }
   },
   "models_3d": {
-    "orbit_run": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_run_fast_draco.glb?alt=media",
-    "moon": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Fmoon.webp?alt=media",
-    "orbit_head": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_cara_optimized.glb?alt=media",
-    "orbit_intro": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_intro.glb?alt=media",
-    "orbit_entrada_nave": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/modelos%2Forbit_entrada_nave.glb?alt=media"
+    "orbit_run": "/assets/orbit_run_fast_draco.glb",
+    "moon": "/assets/moon.webp",
+    "orbit_head": "/assets/orbit_cara_optimized.glb",
+    "orbit_intro": "/assets/orbit_intro.glb",
+    "orbit_entrada_nave": "/assets/orbit_entrada_nave.glb"
   },
   "tour_virtual": {
     "loading_text": "Cargando Entorno...",
@@ -1709,7 +1753,7 @@
     "views": {
       "frontal": {
         "name": "Salón Principal",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFrontal.webp?alt=media",
+        "image": "/assets/SalonFrontal.webp",
         "links": [
           {
             "key": "lateral-izquierdo",
@@ -1733,7 +1777,7 @@
       },
       "lateral-izquierdo": {
         "name": "Lateral izquierdo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralzquierdo.webp?alt=media",
+        "image": "/assets/SalonLateralzquierdo.webp",
         "links": [
           {
             "key": "fondo",
@@ -1757,7 +1801,7 @@
       },
       "lateral-derecho": {
         "name": "Lateral derecho",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonLateralDerecho.webp?alt=media",
+        "image": "/assets/SalonLateralDerecho.webp",
         "links": [
           {
             "key": "frontal",
@@ -1781,7 +1825,7 @@
       },
       "fondo": {
         "name": "Fondo",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/tour%2FSalonFondo.webp?alt=media",
+        "image": "/assets/SalonFondo.webp",
         "links": [
           {
             "key": "lateral-derecho",
@@ -1834,7 +1878,7 @@
       "description": "Visita nuestras sedes y descubre cómo Campuslands está transformando el talento tech a nivel continental.",
       "cta_button": "Agendar visita",
       "cta_button_2": "Tour Virtual",
-      "video_url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
+      "video_url": "/assets/Video_Campuslands.mp4",
       "badge": "BASE LOCATION | COORDENATES"
     },
     "social_heading": "Más detalles de nuestra misión en redes",
@@ -2044,7 +2088,7 @@
       "highlight": "alto rendimiento.",
       "description": "Conectamos la innovación de Campuslands con los desafíos técnicos de tu empresa. Equipos de alto rendimiento listos para integrarse y escalar tus proyectos tecnológicos.",
       "cta": "↓ Nuestras opciones de Staffing ↓",
-      "hero_image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2FAstronautas.png?alt=media"
+      "hero_image": "/assets/Astronautas.png"
     },
     "services": [
       {
@@ -2058,7 +2102,7 @@
           "Equipos Remotos de élite",
           "Tracking de Alto Rendimiento"
         ],
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fmundo.png?alt=media",
+        "image": "/assets/mundo.png",
         "imageSize": "contain",
         "cta": "Solicitar talento",
         "cta_href": "#contacto",
@@ -2106,7 +2150,7 @@
           "Talento Curado",
           "Niveles a Elección"
         ],
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fcolombia.png?alt=media",
+        "image": "/assets/colombia.png",
         "cta": "Solicitar talento",
         "cta_href": "#contacto",
         "levels": [
@@ -2153,7 +2197,7 @@
           "Monitoreo Campuslands",
           "Agilidad Garantizada"
         ],
-        "image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/staffing%2Fengranaje.png?alt=media",
+        "image": "/assets/engranaje.png",
         "cta": "Solicitar servicio",
         "cta_href": "#contacto",
         "levels": []
@@ -2168,8 +2212,8 @@
       "description": "Entra a un ecosistema de aprendizaje diseñado para jóvenes con hambre de éxito. Programación, inglés y liderazgo en un solo lugar.",
       "primary_cta": "Quiero iniciar",
       "secondary_cta": "Hacer tour virtual",
-      "orbit3d": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit.glb?alt=media",
-      "globeimagen": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FEllipse.png?alt=media"
+      "orbit3d": "/assets/Orbit.glb",
+      "globeimagen": "/assets/Ellipse.png"
     },
     "training_routes": {
       "badge": "17 Años en Adelante!\nSin límite de edad",
@@ -2211,7 +2255,7 @@
     "talent_deployment": {
       "heading": "Sistema de despliegue de talento",
       "subheading": "Ruta para impulsar tu carrera y posicionarte en el futuro tecnológico de la industria",
-      "orbit": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit-floating.png?alt=media",
+      "orbit": "/assets/Orbit-floating.png",
       "steps": [
         {
           "number": "1",
@@ -2251,22 +2295,22 @@
       "partners": [
         {
           "name": "Financiera Comultrasan",
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-comultrasan.svg?alt=media",
+          "logo": "/assets/logo-comultrasan.svg",
           "link": "https://www.financieracomultrasan.com.co/"
         },
         {
           "name": "Crediservir",
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-crediservir.svg?alt=media",
+          "logo": "/assets/logo-crediservir.svg",
           "link": "https://www.crediservir.coop/"
         },
         {
           "name": "Finecoop",
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-finecoop.svg?alt=media",
+          "logo": "/assets/logo-finecoop.svg",
           "link": "https://finecoop.com.co/"
         },
         {
           "name": "Creditea",
-          "logo": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2Flogo-creditea.svg?alt=media",
+          "logo": "/assets/logo-creditea.svg",
           "link": "https://www.creditea.mx/"
         }
       ]
@@ -2307,17 +2351,17 @@
       "title": "Historias de éxito",
       "description": "Conoce cómo nuestros campers transformaron su talento en oportunidades reales dentro de la industria tecnológica",
       "tooltip": "Estamos orgullosos de nuestros Campers",
-      "orbit_image": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/talent_up%2FOrbit-float.png?alt=media",
+      "orbit_image": "/assets/Orbit-float.png",
       "videos": [
         {
           "id": 1,
-          "url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
-          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper1.webp?alt=media"
+          "url": "/assets/Video_Campuslands.mp4",
+          "thumbnail": "/assets/camper1.webp"
         },
         {
           "id": 2,
-          "url": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/Video_Campuslands.mp4?alt=media&token=119795bd-f500-45de-aa00-7f23e62ae7e7",
-          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/paginacampus.firebasestorage.app/o/campers%2Fcamper2.webp?alt=media"
+          "url": "/assets/Video_Campuslands.mp4",
+          "thumbnail": "/assets/camper2.webp"
         }
       ]
     }
