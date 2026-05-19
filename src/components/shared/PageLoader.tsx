@@ -43,7 +43,6 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
       { target: 90, duration: 500 },   // Texturas y materiales
     ];
 
-    let current = 0;
     const timers: NodeJS.Timeout[] = [];
 
     let elapsed = 0;

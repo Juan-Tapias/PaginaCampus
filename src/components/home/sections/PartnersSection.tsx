@@ -60,27 +60,49 @@ export default function PartnersSection() {
   const [paused, setPaused] = useState(false);
   const consumingRef = useRef(false);
 
+  const transitionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const consumingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const cycleTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startTransition = (targetBatch: number) => {
+    if (transitionTimeoutRef.current) clearTimeout(transitionTimeoutRef.current);
+    if (consumingTimeoutRef.current) clearTimeout(consumingTimeoutRef.current);
+
+    consumingRef.current = true;
+    setIsExiting(true);
+
+    transitionTimeoutRef.current = setTimeout(() => {
+      setBatch(targetBatch);
+      setIsExiting(false);
+
+      consumingTimeoutRef.current = setTimeout(() => {
+        consumingRef.current = false;
+      }, 600);
+    }, EXIT_MS);
+  };
+
   useEffect(() => {
-    const cycle = setInterval(() => {
-      consumingRef.current = true;
-      setIsExiting(true);
+    if (paused || isExiting || totalBatches <= 1) return;
 
-      setTimeout(() => {
-        setBatch(prev => (prev + 1 >= totalBatches ? 0 : prev + 1));
-        setIsExiting(false);
-        setTimeout(() => { consumingRef.current = false; }, 600);
-      }, EXIT_MS);
-
-    }, DISPLAY_MS + EXIT_MS);
-
-    const handleVisibility = () => setPaused(document.hidden);
-    document.addEventListener('visibilitychange', handleVisibility);
+    cycleTimeoutRef.current = setTimeout(() => {
+      startTransition((batch + 1) % totalBatches);
+    }, DISPLAY_MS);
 
     return () => {
-      clearInterval(cycle);
-      document.removeEventListener('visibilitychange', handleVisibility);
+      if (cycleTimeoutRef.current) clearTimeout(cycleTimeoutRef.current);
     };
-  }, [totalBatches]);
+  }, [batch, isExiting, paused, totalBatches]);
+
+  useEffect(() => {
+    const handleVisibility = () => setPaused(document.hidden);
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibility);
+      if (transitionTimeoutRef.current) clearTimeout(transitionTimeoutRef.current);
+      if (consumingTimeoutRef.current) clearTimeout(consumingTimeoutRef.current);
+      if (cycleTimeoutRef.current) clearTimeout(cycleTimeoutRef.current);
+    };
+  }, []);
 
   const currentPartners = batches[batch] ?? [];
   const positions = getUniformPositions(currentPartners.length);
@@ -160,7 +182,10 @@ export default function PartnersSection() {
 
       <AnimatePresence mode="wait">
         {!isExiting && (
-          <motion.div key={`batch-${batch}`} className="absolute inset-0 z-10 pointer-events-none">
+          <motion.div
+            key={`batch-${batch}`}
+            className="absolute inset-0 z-10 pointer-events-none"
+          >
             {currentPartners.map((partner, i) => {
               const pos = positions[i] ?? positions[0];
 
@@ -235,13 +260,8 @@ export default function PartnersSection() {
             <button
               key={i}
               onClick={() => {
-                consumingRef.current = true;
-                setIsExiting(true);
-                setTimeout(() => {
-                  setBatch(i);
-                  setIsExiting(false);
-                  setTimeout(() => { consumingRef.current = false; }, 600);
-                }, EXIT_MS);
+                if (i === batch || isExiting) return;
+                startTransition(i);
               }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${i === batch ? 'bg-[#54C6AA] scale-125' : 'bg-white/20 hover:bg-white/40'
                 }`}
